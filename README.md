@@ -1,2 +1,4 @@
-# dcos.ionoid.io
-Ionoid documentation
+
+# doc.ionoid.io
+Ionoid IoT User Documentation
+
