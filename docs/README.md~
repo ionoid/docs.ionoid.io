@@ -1,0 +1,6 @@
+* [Create an Ionoid IoT Account](../Register/register.md)
+* [New Project](../NewProject/newProject.md)
+  * [Add New Device](../NewDevice/newDevice.md)
+* [Deploy Apps ](../DeployApp/deployApp.md)
+  * [Update Apps](../UpdateApp/updateApp.md)
+  * [Rollback Apps](../RollbackApp/rollbackApp.md)
