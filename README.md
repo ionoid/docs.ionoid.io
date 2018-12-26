@@ -28,7 +28,7 @@ $ docker run docsify
 $ docker run -ti -p 3000:3000 docsify /bin/bash
 ```
 ```bash 
-root@82a2b0056a16:# docsify serve .
+$ root@82a2b0056a16:# docsify serve .
 ```
 
 - Open the browser at http://localhost:3000
