@@ -6,9 +6,9 @@ Ionoid IoT User Documentation
 To test the doc locally just clone the repo and launch docsify.
 
 ```bash 
-$ git clone git clone git@github.com:opendevices/doc.ionoid.io.git
+$ git clone git clone git@github.com:opendevices/docs.ionoid.io.git
 
-$ cd doc.ionoid.io/
+$ cd docs.ionoid.io/
 
 $ docsify serve docs
 ```
