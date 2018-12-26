@@ -1,5 +1,4 @@
-
-# doc.ionoid.io
+# docs.ionoid.io
 Ionoid IoT User Documentation
 
 
