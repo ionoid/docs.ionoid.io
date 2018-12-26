@@ -14,5 +14,14 @@ $ cd doc.ionoid.io/
 $ docsify serve docs
 ```
 
-Open your browser at http://localhost:3000.
+Open your browser at http://localhost:3000
+
+## Testing the doc using Docker.
+
+
+```bash
+$ docker build -t docsify  .
+$ docker run docsify
+```
+
 
