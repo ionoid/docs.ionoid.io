@@ -1,6 +1,9 @@
-* [Create an Ionoid IoT Account](../Register/register.md)
-* [New Project](../NewProject/newProject.md)
-  * [Add New Device](../NewDevice/newDevice.md)
-* [Deploy Apps ](../DeployApp/deployApp.md)
-  * [Update Apps](../UpdateApp/updateApp.md)
-  * [Rollback Apps](../RollbackApp/rollbackApp.md)
+- Ionoid IoT Account 
+  * [Create an Ionoid IoT Account](../Register/register.md)
+- Ionoid IoT Project
+  * [New Project](../NewProject/newProject.md)
+   * [Add New Device](../NewDevice/newDevice.md)
+- Ionoid IoT Apps
+ * [Deploy Apps ](../DeployApp/deployApp.md)
+   * [Update Apps](../UpdateApp/updateApp.md)
+   * [Rollback Apps](../RollbackApp/rollbackApp.md)
