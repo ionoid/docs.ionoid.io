@@ -7,3 +7,9 @@
  - [Deploy Apps ](../DeployApp/deployApp.md)
  - [Update Apps](../UpdateApp/updateApp.md)
  - [Rollback Apps](../RollbackApp/rollbackApp.md)
+- Building Apps
+ - [Ionoid IoT Apps Format](../apps/README.md)
+ - [Build on Fedora](../apps/build/build_on_fedora_linux.md)
+ - [Build on Debian](../apps/build/build_on_debian_linux.rst)
+ - [Build nginx](../apps/build/nginx.md)
+
