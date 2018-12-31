@@ -1,4 +1,3 @@
-![Ionoid IoT](https://github.com/opendevices/iot.apps/blob/master/doc/img/IonoidIoTsmall.png)
 # Deploy IoT Applications using Ionoid Platform.
 
 One of the most interresting features in Ionoid Platform is the **very easy** way to deploy IoT Apps, just in few clicks.
