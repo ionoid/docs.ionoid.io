@@ -1,4 +1,3 @@
-![Ionoid IoT](https://github.com/opendevices/iot.apps/blob/master/doc/img/IonoidIoTsmall.png)
 # Add a new device to your
 
 Once you create a project on Ionoid IoT platform, you can now add devices to
