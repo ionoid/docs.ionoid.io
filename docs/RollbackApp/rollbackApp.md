@@ -1,4 +1,3 @@
-![Ionoid IoT](https://github.com/opendevices/iot.apps/blob/master/doc/img/IonoidIoTsmall.png)
 # Rollback your IoT App.
 
 Often when you do an App update , you may dislike the new version features or it maybe a buggy and                                                                          
