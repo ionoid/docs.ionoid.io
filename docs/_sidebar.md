@@ -1,5 +1,5 @@
 - Ionoid IoT Account 
-  - [Create an Ionoid IoT Account](../Register/register.md)
+  - [Create Ionoid IoT Account](../Register/register.md)
 - Ionoid IoT Project
   - [New Project](../NewProject/newProject.md)
   - [Add New Device](../NewDevice/newDevice.md)
