@@ -1,7 +1,7 @@
 # docs.ionoid.io
 Ionoid IoT User Documentation
 
-## 1. Clone the documentaiotn repo.
+## 1. Clone the documentation repo.
 
 ```bash 
 $ git clone git@github.com:opendevices/docs.ionoid.io.git
