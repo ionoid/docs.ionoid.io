@@ -1,6 +1,6 @@
 FROM node
 
-WORKDIR /home/nwd/docker/
+WORKDIR docsify-docker
 
 RUN npm i docsify-cli -g
 
