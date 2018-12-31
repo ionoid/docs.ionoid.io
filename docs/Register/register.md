@@ -1,4 +1,3 @@
-![Ionoid IoT](https://github.com/opendevices/iot.apps/blob/master/doc/img/IonoidIoTsmall.png)
 # Create an account on Ionoid IoT platform.
 
 To use Ionoid IoT platform, you will need to create an account.
