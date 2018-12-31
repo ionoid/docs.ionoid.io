@@ -1,4 +1,3 @@
-![Ionoid IoT](https://github.com/opendevices/iot.apps/blob/master/doc/img/IonoidIoTsmall.png)
 # Update your IoT App using Ionoid Platform.
 
 You can update IoT App  via Ionoid Platform.
