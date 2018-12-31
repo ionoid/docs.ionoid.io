@@ -1,4 +1,3 @@
-![Ionoid IoT](https://github.com/opendevices/iot.apps/blob/master/doc/img/IonoidIoTsmall.png)
 # Create a new project
 To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 
