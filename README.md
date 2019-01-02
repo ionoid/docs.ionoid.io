@@ -1,5 +1,6 @@
-# docs.ionoid.io
-Ionoid IoT User Documentation
+# Ionoid IoT Documentation.
+
+This is Ionoid IoT documentation repo, the source for http://docs.ionoid.io
 
 ## 1. Clone the documentation repo.
 
