@@ -1,7 +1,7 @@
 # Create a new project
 To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 
-## 1. New project
+## New project
 - Click on **Create new project** button.
 
 ![Create New Project](CreateNewProject.png)
@@ -17,7 +17,7 @@ To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 
 - Click on **Create Project** to confirm.
 
-## 2. Entering the Project.
+## Entering the Project.
 
 Once you finish to create a new project you will see the list of all the
 project you have created and you can access to any project by clicking on
@@ -28,7 +28,5 @@ project id.
 - You can now  **Add new device** to your IoT project.
 
 ![Project Actions](ProjectActions.png)
-
----
 
 
