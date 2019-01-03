@@ -21,14 +21,13 @@ Start your IoT Development Journey by first creating your Ionoid IoT Account, pl
 
 ## Connect to your Ionoid IoT account
 
-Once you registered and create account, you have to check your email to activate your account.
+Once you registered, you have to check your email to activate your Ionoid IoT account.
 
-- Connect to your email.
-- Notice an email **Ionoid IoT** from **support@ionoid.io**.
+- Check your email box, and notice an new message **Ionoid IoT** from **support@ionoid.io**.
 
 ![Mail link](VerifyEmail.png)
 - Click on **Verify Email** to activate your account.
-- The link will automatically logs you into your **ionoid** account.
+- The link will automatically logs you into your **Ionoid IoT** account.
 
 ![Account Confirmed](AccountConfirmed.png)
 
