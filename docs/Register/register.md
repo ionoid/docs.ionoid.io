@@ -5,7 +5,7 @@ features including :
 
 - Monitoring your IoT devices.
 - Manage your IoT Fleet.
-- Deploy IoT  Application easily.
+- Deploy IoT  Applications easily.
 - Scale your Deployments and more.
 
 You can create an account on Ionoid IoT platform in few easy steps, follow the instructions below.
@@ -38,7 +38,7 @@ Once you registered and create account, you have to check your email to activate
 
 ![Account Confirmed](AccountConfirmed.png)
 
-When you sign into your account , you can take advantage of many features.
+Now you can sign in to your account and take advantage of many features.
 
 ![Connected](Connected.png)
 
