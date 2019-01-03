@@ -1,14 +1,6 @@
 # Create an account on Ionoid IoT platform.
 
-To use Ionoid IoT platform, you will need to create an account, you can access many Ionoid IoT platform 
-features including :
-
-- Monitoring your IoT devices.
-- Manage your IoT Fleet.
-- Deploy IoT  Applications easily.
-- Scale your Deployments and more.
-
-You can create an account on Ionoid IoT platform in few easy steps, follow the instructions below.
+Start your IoT Development Journey by first creating your Ionoid IoT Account, please follow the instructions below.
 
 ##  Connect to the Ionoid  IoT dashboard.
 
