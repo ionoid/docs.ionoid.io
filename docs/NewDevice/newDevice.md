@@ -3,7 +3,7 @@
 Once you create a project on Ionoid IoT platform, you can now add devices to
 the project.
 
-## 1. Add new device
+## Add new device
 
   Click on **Add device** button to add a new device to the project.
  
@@ -13,7 +13,7 @@ the project.
  
  ![New Device](NewDevice.png)
 
-## 2. General settings
+## General settings
 
 You can set or modify  the configuration of your device system  easily using dashboard.
  - Set or modify  a hostname.
@@ -22,7 +22,7 @@ You can set or modify  the configuration of your device system  easily using das
 
 ![General Settings](GeneralSettings.png)
 
-## 3. Network settings
+## Network settings
 
   You can configure easily your  WiFi connection.
 
@@ -33,7 +33,7 @@ You can set or modify  the configuration of your device system  easily using das
 
 ![Network Settings](NetworkSettings.png)
 
-## 4. Download OS configuration file.
+## Download OS configuration file.
 
 Once you have finished setting your system, the dashboard will generate a file named **config.json** that contain the whole configuration of your device.
 
@@ -41,5 +41,4 @@ Once you have finished setting your system, the dashboard will generate a file n
 
 The **config.json** file sould be saved in a secure place and do not share it, because it contain sensitive information and you can compromise the security of your device.
 
----
 
