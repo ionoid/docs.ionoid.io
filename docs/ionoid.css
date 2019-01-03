@@ -2,13 +2,13 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local('fonts/ubuntu-regular.ttf'), local('Ubuntu-Regular'), url(fonts/ubuntu-regular.ttf) format('truetype');
+  src: local('fonts/ubuntu-regular.ttf'), local('Ubuntu-Regular') format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
-  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(fonts/ubuntu-bold.ttf) format('truetype');
+  src: local('fonts/ubuntu-bold.ttf'), local('Ubuntu-Bold') format('truetype');
 }
 
 body {
