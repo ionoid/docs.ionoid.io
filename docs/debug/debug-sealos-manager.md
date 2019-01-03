@@ -1,7 +1,14 @@
 # Debugging SealOS Manager 
 
-To debug Sealos Manager, connect your system device via ssh and use the following commands.
+To debug Sealos Manager.
 
+- Connect to your device via ssh.
+
+```bash 
+$ ssh -l pi 192.168.1.10
+```
+
+- Use the following command.
 
 ```bash
 $ sudo systemctl status
