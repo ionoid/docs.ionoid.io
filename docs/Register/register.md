@@ -34,7 +34,7 @@ You can create an account on Ionoid IoT platform in few easy steps, follow the i
 Once you registered and create account, you have to check your email to activate your account.
 
 - Connect to your email.
-- Notice an email **Open Devices IoT** from **support@opendevices.io**.
+- Notice an email **Ionoid IoT** from **support@ionoid.io**.
 
 ![Mail link](VerifyEmail.png)
 - Click on **Verify Email** to activate your account.
