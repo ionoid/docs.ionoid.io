@@ -2,14 +2,12 @@
 
 Start your IoT Development Journey by first creating your Ionoid IoT Account, please follow the instructions below.
 
-##  Connect to the Ionoid  IoT dashboard.
+##  Register your Ionoid IoT Account.
 
-- Go to  [Ionoid](https://dashboard.ionoid.io) web site.
+- Go to Ionoid IoT **Dashboard**  [https://dashboard.ionoid.io](https://dashboard.ionoid.io).
 - In right, Sing up click on **Register now**.
 
 ![Connect to dashboard](login.png)
-
-##  Register
 
 - Fill out the form.
 - Accept term of service.
