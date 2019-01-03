@@ -18,10 +18,14 @@ You can create an account on Ionoid IoT platform in few easy steps, follow the i
 ![Connect to dashboard](login.png)
 
 ##  Register
-![Register](register.png)
+
 - Fill out the form.
 - Accept term of service.
 - Click on **Create account**.
+
+![Register](register.png)
+
+- Click on **Ok**.
 
 ![Register Success](registerSuccess.png)
 
