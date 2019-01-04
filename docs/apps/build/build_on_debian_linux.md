@@ -19,7 +19,8 @@ Run the following command to create an armhf chroot:
   #  stretch       : What Debian release to use (stretch = stable, buster = testing, sid = unstable)
   #  armhf-chroot/ : Path to create the filesystem for the chroot in
   # http://ftp.de.debian.org : Debian mirror to install from       
-  sudo qemu-debootstrap --arch=armhf stretch armhf-chroot/  http://ftp.de.debian.org
+
+sudo qemu-debootstrap --arch=armhf stretch armhf-chroot/  http://ftp.de.debian.org
 ```
 
 When debootstrap successful returned "chroot" into the system::
