@@ -10,7 +10,7 @@
 - Building Apps
   - [Ionoid IoT Apps Format](../apps/README.md)
   - [Build on Fedora](../apps/build/build_on_fedora_linux.md)
-  - [Build on Debian](../apps/build/build_on_debian_linux.rst)
+  - [Build on Debian](../apps/build/build_on_debian_linux.md)
   - [Build nginx](../apps/build/nginx.md)
 - Debugging devices
   - [Debugging SealOS Manager](../debug/debug-sealos-manager.md)
