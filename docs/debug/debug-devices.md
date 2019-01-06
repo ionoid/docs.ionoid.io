@@ -43,7 +43,7 @@ Provide the `$USER` password and you should be in if everything was
 right and if the device is still up and able to handle `ssh`.
 
 
-## Troubleshooting Device
+## Troubleshooting IoT Device
 
 Information about Device services and Apps can be found using the `systemctl`
 utility.
@@ -77,7 +77,7 @@ $ sudo systemctl status sealos-manager-actions
 ```
 
 
-#### Troubleshooting Native Apps:
+#### Troubleshooting Native IoT Apps:
 
 If you have deployed Apps using the native format `tar`, `zip` or
 anything that is not a `Docker Container/App`, then just replace `$APP` with the name
@@ -90,7 +90,7 @@ $ sudo systemctl status $APP
 ```
 
 
-#### Troubleshooting Docker Apps:
+#### Troubleshooting Docker IoT Apps:
 
 If you have deployed Docker Containers or Apps then you can use the `Docker` tools.
 
