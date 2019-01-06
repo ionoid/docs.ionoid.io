@@ -3,23 +3,23 @@
 Welcome to Ionoid IoT! Get familiar with the Ionoid IoT Platform and explore
 its features:
 
-[Getting Started - Ionoid IoT Account](https://docs.ionoid.io/#/../Register/register)
+[Getting Started - Ionoid IoT Account](../Register/register)
 <br>
 <br>
 
-[Ionoid IoT Projects and Devices](https://docs.ionoid.io/#/../NewProject/newProject)
+[Ionoid IoT Projects and Devices](../NewProject/newProject)
 <br>
 <br>
 
-[IoT Apps Deployment](https://docs.ionoid.io/#/../DeployApp/deployApp)
+[IoT Apps Deployment](../DeployApp/deployApp)
 <br>
 <br>
 
-[Building IoT Apps](https://docs.ionoid.io/#/../apps/README)
+[Building IoT Apps](../apps/README)
 <br>
 <br>
 
-[Debugging and Troubleshooting IoT Devices](https://docs.ionoid.io/#/../debug/debug-devices)
+[Debugging and Troubleshooting IoT Devices](../debug/debug-devices)
 <br>
 <br>
 
