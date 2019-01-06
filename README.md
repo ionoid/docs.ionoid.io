@@ -2,13 +2,23 @@
 
 This is Ionoid IoT documentation repo, the source for http://docs.ionoid.io
 
-## 1. Clone the documentation repo.
+
+## 1. Editing Documentation
+
+- Clone the repo locally
 
 ```bash 
 $ git clone git@github.com:opendevices/docs.ionoid.io.git
 ```
 
-## 2. Testing the documentation using Docker.
+- Create your own local branch
+
+- Start editing documentation in [docs](./docs)
+
+- Commit then Push or open a Pull Request.
+
+
+## 2. Deploying documentation with Docker.
 
 - Build a docsify docker image and launch it.
 
@@ -45,7 +55,4 @@ $ cd docs.ionoid.io/
 $ docsify serve docs
 ```
 
-
-
 Open your browser at http://localhost:3000
-
