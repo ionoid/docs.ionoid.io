@@ -1,24 +1,151 @@
-# Debugging SealOS Manager 
+# Debug and Troubleshoot IoT Devices
 
-To debug Sealos Manager.
+To Debug your Device first login into your [Ionoid IoT Account](https://dashboard.ionoid.io/login)
+and locate your Device
 
-- Connect to your device via ssh.
 
-```bash 
-$ ssh -l pi 192.168.1.10
+## Device Information
+
+In the Device details page you will be able to find lot of information:
+
+* Device Operating System Versions
+
+* Device SealOS Manager Version
+
+* Device Systemd Version
+
+* Device Docker Version
+
+
+Try to see if you can `ssh` into Device from the [Ionoid IoT
+Dashboad](https://dashboard.ionoid.io/) or use the Public Device Url if
+available.
+
+Otherwise locate Device `Network Interfaces` and `IP Addresses`
+
+
+## Connect to Device
+
+Connect to your device via `ssh`.
+
+* Replace `$USER` with a valid user from your Device, usually either `root` or another user that you did create.
+
+* Replace `$IP_ADDRESS_OF_DEVICE` with the IP Address of your device
+
+
+```bash
+$ ssh $USER@$IP_ADDRESS_OF_DEVICE
 ```
 
-- Use the following command.
+Provide the `$USER` password and you should be in if everything was
+right and if the device is still up and able to handle `ssh`.
+
+
+## Troubleshooting Device
+
+Information about Device services and Apps can be found using the `systemctl`
+utility.
+
+* To get the overall status of the Device:
 
 ```bash
 $ sudo systemctl status
 ```
 
+### Troubleshooting Services and Apps
+
+* To get the list of failed Services on the Device:
+
 ```bash
-sudo journalctl -b -u sealos-manager
+$ sudo systemctl --failed
+```
+
+* To get the status of Services or Apps, use the `status` operation:
+
+```bash
+$ sudo systemctl status systemd-journald
 ```
 
 ```bash
-sudo journalctl -b -u sealos-manager-actions
+$ sudo systemctl status sealos-manager
 ```
 
+```bash
+$ sudo systemctl status sealos-manager-actions
+```
+
+
+* Troubleshooting `Native` Apps:
+
+If you have deployed Apps using the native format `tar`, `zip` or
+anything that is not a `Docker Container/App`, then just replace `$APP` with the name
+of your App:
+
+```bash
+$ sudo systemctl status $APP
+```
+
+
+* Troubleshooting `Docker` Apps:
+
+If you have deployed Docker Containers or Apps then you can use the `Docker` tools.
+
+
+**If the following commands do not work, run commands with sudo**
+
+
+List All running Containers:
+
+```bash
+$ docker ps
+```
+
+
+### Troubleshooting Logs
+
+Information about Device services and Apps logs be found using the `journalctl`
+utility.
+
+* To get the kernel logs use `dmesg`, the following asks for the last
+100 log entires:
+
+```bash
+$ sudo dmesg | tail -n 100
+```
+
+
+* To get the system logs of the current boot:
+
+```bash
+$ sudo journalctl -b
+```
+
+* To get the last 10 entries of system logs of the current boot:
+
+```bash
+$ sudo journalctl -b -n 10
+```
+
+* To Follow in realtime system logs of the current boot:
+
+```bash
+$ sudo journalctl -b -f
+```
+
+* To check the logs of a `sealos-manager` agent:
+
+```bash
+$ sudo journalctl -b -u sealos-manager
+```
+
+```bash
+$ sudo journalctl -b -u sealos-manager-actions
+```
+
+
+* To check the logs of your Service or App, replace `$APP` with the name
+of your App:
+
+```bash
+$ sudo journalctl -b -u $APP
+```
