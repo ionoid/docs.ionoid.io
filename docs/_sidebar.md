@@ -1,17 +1,17 @@
 - Ionoid IoT Account 
   - [Create Ionoid IoT Account](../Register/register.md)
-- Ionoid IoT Project
+- Ionoid IoT Projects and Devices
   - [New Project](../NewProject/newProject.md)
   - [Add New Device](../NewDevice/newDevice.md)
-- Ionoid IoT Apps
+- Deploy IoT Apps
   - [Deploy Apps ](../DeployApp/deployApp.md)
   - [Update Apps](../UpdateApp/updateApp.md)
   - [Rollback Apps](../RollbackApp/rollbackApp.md)
-- Building Apps
+- Build IoT Apps
   - [Ionoid IoT Apps Format](../apps/README.md)
   - [Build on Fedora](../apps/build/build_on_fedora_linux.md)
   - [Build on Debian](../apps/build/build_on_debian_linux.md)
   - [Build nginx](../apps/build/nginx.md)
-- Debugging devices
+- Debug IoT Devices
   - [Debugging and Troubleshooting IoT Devices](../debug/debug-devices)
 

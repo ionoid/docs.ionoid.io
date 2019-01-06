@@ -7,7 +7,7 @@ its features:
 <br>
 <br>
 
-[Projects and Devices](https://docs.ionoid.io/#/../NewProject/newProject)
+[Ionoid IoT Projects and Devices](https://docs.ionoid.io/#/../NewProject/newProject)
 <br>
 <br>
 
