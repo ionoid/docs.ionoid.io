@@ -13,5 +13,5 @@
   - [Build on Debian](../apps/build/build_on_debian_linux.md)
   - [Build nginx](../apps/build/nginx.md)
 - Debugging devices
-  - [Debugging SealOS Manager](../debug/debug-sealos-manager.md)
+  - [Debugging and Troubleshooting IoT Devices](../debug/debug-devices)
 
