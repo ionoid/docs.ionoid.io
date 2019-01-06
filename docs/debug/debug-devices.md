@@ -1,4 +1,4 @@
-# Debug and Troubleshoot IoT Devices
+# Debugging and Troubleshooting IoT Devices
 
 To Debug your Device first login into your [Ionoid IoT Account](https://dashboard.ionoid.io/login)
 and locate your Device
@@ -8,20 +8,22 @@ and locate your Device
 
 In the Device details page you will be able to find lot of information:
 
-* Device Operating System Versions
+* `Device Operating System Versions`
 
-* Device SealOS Manager Version
+* `Device SealOS Manager Version`
 
-* Device Systemd Version
+* `Device Systemd Version`
 
-* Device Docker Version
+* `Device Docker Version`
 
 
-Try to see if you can `ssh` into Device from the [Ionoid IoT
-Dashboad](https://dashboard.ionoid.io/) or use the Public Device Url if
-available.
+Try to see if you can `ssh` into the Device from the [Ionoid IoT
+Dashboad](https://dashboard.ionoid.io/) or use the `Public Device Url` if
+available and `ssh` into that `IP Address`
 
-Otherwise locate Device `Network Interfaces` and `IP Addresses`
+Otherwise locate Device `Network Interfaces` and `IP Addresses` section
+inside the Device Page on Dashboard and note the `IP ADDRESS` that you
+will use to `ssh` into Device.
 
 
 ## Connect to Device
@@ -75,39 +77,41 @@ $ sudo systemctl status sealos-manager-actions
 ```
 
 
-* Troubleshooting `Native` Apps:
+#### Troubleshooting Native Apps:
 
 If you have deployed Apps using the native format `tar`, `zip` or
 anything that is not a `Docker Container/App`, then just replace `$APP` with the name
 of your App:
+
+* Get Status of an App:
 
 ```bash
 $ sudo systemctl status $APP
 ```
 
 
-* Troubleshooting `Docker` Apps:
+#### Troubleshooting Docker Apps:
 
 If you have deployed Docker Containers or Apps then you can use the `Docker` tools.
 
 
-**If the following commands do not work, run commands with sudo**
+**If docker commands do not work, run them with sudo**
 
 
-List All running Containers:
+* List All running Apps and Containers:
 
 ```bash
 $ docker ps
 ```
 
 
-### Troubleshooting Logs
+### Troubleshooting with Logs
 
 Information about Device services and Apps logs be found using the `journalctl`
 utility.
 
 * To get the kernel logs use `dmesg`, the following asks for the last
-100 log entires:
+`100 log entires`:
 
 ```bash
 $ sudo dmesg | tail -n 100
