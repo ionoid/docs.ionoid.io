@@ -3,8 +3,8 @@
 Welcome to Ionoid IoT! Get familiar with the Ionoid IoT Platform and explore
 its features:
 
-Getting Started - Ionoid IoT Account    |
-
+| Getting Started - Ionoid IoT Account    |
+---
 
 
 - Manage your IoT Fleet.
