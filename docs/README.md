@@ -3,11 +3,11 @@
 Welcome to Ionoid IoT! Get familiar with the Ionoid IoT Platform and explore
 its features:
 
-[Getting Started - Ionoid IoT Account](../Register/register)
+<a href="https://docs.ionoid.io/#/../Register/register" target="_blank">Getting Started - Ionoid IoT Account</a>
 <br>
 <br>
 
-[Ionoid IoT Projects and Devices](../NewProject/newProject)
+<a href="https://docs.ionoid.io/#/../NewProject/newProject" target="_blank">Ionoid IoT Projects and Devices</a>
 <br>
 <br>
 
