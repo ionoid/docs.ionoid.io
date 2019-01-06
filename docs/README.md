@@ -7,11 +7,21 @@ its features:
 <br>
 <br>
 
-- Manage your IoT Fleet.
-- Deploy IoT  Applications easily.
-- Scale your Deployments and more.
+[Projects and Devices](https://docs.ionoid.io/#/../NewProject/newProject)
+<br>
+<br>
 
+[IoT Apps Deployment](https://docs.ionoid.io/#/../DeployApp/deployApp)
+<br>
+<br>
 
+[Building IoT Apps](https://docs.ionoid.io/#/../apps/README)
+<br>
+<br>
+
+[Debug and Troubleshoot Devices](https://docs.ionoid.io/#/../debug/debug-devices)
+<br>
+<br>
 
 
 ## Contact 
