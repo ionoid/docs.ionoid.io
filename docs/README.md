@@ -19,7 +19,7 @@ its features:
 <br>
 <br>
 
-[Debug and Troubleshoot Devices](https://docs.ionoid.io/#/../debug/debug-devices)
+[Debugging and Troubleshooting IoT Devices](https://docs.ionoid.io/#/../debug/debug-devices)
 <br>
 <br>
 
