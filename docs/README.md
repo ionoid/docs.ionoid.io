@@ -3,7 +3,10 @@
 Welcome to Ionoid IoT! Get familiar with the Ionoid IoT Platform and explore
 its features:
 
-- Monitoring your IoT devices.
+Getting Started - Ionoid IoT Account    |
+
+
+
 - Manage your IoT Fleet.
 - Deploy IoT  Applications easily.
 - Scale your Deployments and more.
