@@ -13,5 +13,5 @@
   - [Build on Debian](../apps/build/build_on_debian_linux.md)
   - [Build nginx](../apps/build/nginx.md)
 - Debug IoT Devices
-  - [Debugging and Troubleshooting IoT Devices](../debug/debug-devices)
+  - [Debugging and Troubleshooting IoT Devices](../debug/debug-devices.md)
 
