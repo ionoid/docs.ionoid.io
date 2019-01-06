@@ -11,15 +11,15 @@ its features:
 <br>
 <br>
 
-[IoT Apps Deployment](../DeployApp/deployApp)
+<a href="https://docs.ionoid.io/#/../DeployApp/deployApp" target="_blank">IoT Apps Deployment</a>
 <br>
 <br>
 
-[Building IoT Apps](../apps/README)
+<a href="https://docs.ionoid.io/#/../apps/README" target="_blank">Building IoT Apps</a>
 <br>
 <br>
 
-[Debugging and Troubleshooting IoT Devices](../debug/debug-devices)
+<a href="https://docs.ionoid.io/#/../debug/debug-devices" target="_blank">Debugging and Troubleshooting IoT Devices</a>
 <br>
 <br>
 
