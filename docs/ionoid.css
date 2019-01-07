@@ -15,3 +15,22 @@ body {
     font-family: Ubuntu;
     
 }
+
+my-button {
+  background-color: #581845;
+  border: none;  
+  color: white;
+  padding: 08px 18px;
+  border-radius: 4px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+my-button:hover {
+  background-color: #86415b;
+  color: white;
+  padding: 08px 18px;
+  border: 2px solid #86415b;
+}
