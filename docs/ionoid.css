@@ -17,7 +17,7 @@ body {
 }
 
 .my-button {
-  background-color: #581845;
+  background-color: #5dade2; 
   border: none;  
   color: white;
   padding: 08px 18px;
@@ -42,4 +42,8 @@ body {
   text-align: center;
   text-decoration: none;
    display: inline-block;
+}
+
+.my-a:hover, a:active {
+  background-color: #aed6f1;
 }
