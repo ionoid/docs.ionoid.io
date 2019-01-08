@@ -36,7 +36,7 @@ body {
 }
 
 .my-a:link, my-a:visited {
-  background-color: white;
+  background-color: #5dade2;
   color: white; 
   padding: 08px 18px;
   text-align: center;
