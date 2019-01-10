@@ -1,4 +1,4 @@
-# Deploy IoT Applications using Ionoid Platform.
+# Deploy IoT Applications using Ionoid IoT Platform.
 
 One of the most interresting features in Ionoid Platform is the **very easy** way to deploy IoT Apps, just in few clicks.
 
