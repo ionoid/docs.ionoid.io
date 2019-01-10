@@ -175,9 +175,9 @@ We support several platform, please follow the appropriate platform
 guide.
 
 
-* [Build IoT Apps on Debian/Ubuntu Linux](../apps/build/build_on_debian_linux.rst)
+* [Build IoT Apps on Debian/Ubuntu Linux](../apps/build/build_on_debian_linux.md)
 
-* [Build IoT Apps on Fedora Linux](../apps/build/build_on_fedora_linux.rst)
+* [Build IoT Apps on Fedora Linux](../apps/build/build_on_fedora_linux.md)
 
 
 * [Build IoT Apps on Windows]
