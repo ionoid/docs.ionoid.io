@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Ionoid IoT Apps Format
 
 Ionoid IoT Platform supports simple IoT Apps that can run on any Linux and
