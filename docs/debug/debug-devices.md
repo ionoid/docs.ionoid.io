@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Debugging and Troubleshooting IoT Devices
 
 To Debug your Device first login into your [Ionoid IoT Account](https://dashboard.ionoid.io/login)
