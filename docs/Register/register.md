@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Create an account on Ionoid IoT platform
 
 Start your IoT Development Journey by first creating your Ionoid IoT Account, please follow the instructions below.
