@@ -42,3 +42,10 @@ Once you have finished setting your system, the dashboard will generate a file n
 The **config.json** file sould be saved in a secure place and do not share it, because it contain sensitive information and you can compromise the security of your device.
 
 
+
+
+---
+
+
+### Questions?
+We're always happy to help with code or other questions you might have! [Search](https://docs.ionoid.io/#/) our documentation, [contact support](support@ionoid.io), or [connect with our sales team](support@opendevices.io). You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/messages).
