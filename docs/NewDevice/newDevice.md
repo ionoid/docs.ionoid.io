@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Add a new device to your
 
 Once you create a project on Ionoid IoT platform, you can now add devices to
