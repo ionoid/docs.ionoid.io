@@ -41,3 +41,34 @@ body {
 .my-a:hover, a:active {
   background-color: #aed6f1;
 }
+
+nav[role="navigation"] {
+  text-align: center;
+}
+
+.cd-pagination {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto 4em;
+  text-align: center;
+}
+.pagination li {
+  /* hide numbers on small devices */
+  display: none;
+  margin: 0 .2em;
+}
+.pagination li.button {
+  /* make sure prev next buttons are visible */
+  display: inline-block;
+}
+.pagination a, .cd-pagination span {
+  display: inline-block;
+
+  padding: .6em .8em;
+  font-size: 1.6rem;
+}
+.pagination a {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25em;
+}
+
