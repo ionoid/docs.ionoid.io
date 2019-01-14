@@ -28,16 +28,10 @@ body {
   font-size: 16px;
 }
 
-.my-button:hover {
-  background-color: #86415b;
-  color: white;
-  padding: 08px 18px;
-  border: 2px solid #5dade2;
-}
 
 .my-a:link, my-a:visited {
   background-color: #5dade2;
-  color: white; 
+//  color: white; 
   padding: 08px 18px;
   text-align: center;
   text-decoration: none;
