@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Create armhf chroot on x86_64 using Fedora.
 
 Since there is no **qemu-debootstrap** package on Fedora, and debootstrap behave differently,
