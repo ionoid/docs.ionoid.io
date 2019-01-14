@@ -72,3 +72,32 @@ nav[role="navigation"] {
   border-radius: 0.25em;
 }
 
+ul.doclink {                                                                                                                                                                                     
+  border: solid 1px  #aed6f1;                                                                                                                                                                    
+background-color:  #aed6f1;                                                                                                                                                                      
+border-radius: 5px;                                                                                                                                                                              
+  padding: 0.5em 1em 0.5em 2.3em;                                                                                                                                                                
+  position: relative;                                                                                                                                                                            
+}                                                                                                                                                                                                
+                                                                                                                                                                                                 
+ul.doclink li {                                                                                                                                                                                  
+  line-height: 1.5;                                                                                                                                                                              
+  padding: 0.5em 0;                                                                                                                                                                              
+  list-style-type: none!important;                                                                                                                                                               
+}                                                                                                                                                                                                
+                                                                                                                                                                                                 
+ul.doclink li:before {                                                                                                                                                                           
+  font-family: FontAwesome;                                                                                                                                                                        
+  content: "\f138";                                                                                                                                                                                
+  position: absolute;                                                                                                                                                                            
+  left : 1em;                                                                                                                                                                                    
+  color:  #21618c;                                                                                                                                                                               
+}                                                                                                                                                                                                
+                                                                                                                                                                                                 
+.doclink a{                                                                                                                                                                                     \
+                                                                                                                                                                                          
+  color:  #21618c;                                                                                                                                                                                 
+  text-decoration: none; 
+}
+                                                                                                                                                                                        
+                                                                                                                                                                                                                      
