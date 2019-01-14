@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Building nginx app for Ionoid IoT Platform.
 
 ![nginx](https://github.com/opendevices/iot.doc/blob/master/apps/build/img/nginx.svg)
