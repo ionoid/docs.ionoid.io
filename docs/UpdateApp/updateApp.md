@@ -1,3 +1,10 @@
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
+
 # Update your IoT App using Ionoid Platform.
 
 You can update IoT App  via Ionoid Platform.
