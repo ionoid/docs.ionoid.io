@@ -24,10 +24,9 @@ its features:
 <br>
 
 
-## Contact 
-support@ionoid.io
 
-## Community
-Users and the development team are usually in the [Slack channel](https://ionoidcommunity.slack.com/), Join [here Invitation](https://ionoidcommunity.slack.com/join/shared_invite/enQtNTAzMTEwMTc5NDc2LTM2ODgxY2VmYTljNjM2NTNmZmVjYTEzY2Q4NTgyZTljYzI3MzhiZGRlODkzNTE3NTE3ODk5ZmFjNjYzOGRjZTM)
+---
 
-<a href="https://twitter.com/ionoidiot?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ionoidiot</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Questions?
+We're always happy to help with code or other questions you might have! [Search](https://docs.ionoid.io/#/) our documentation, [contact support](support@ionoid.io), or [connect with our sales team](support@opendevices.io). You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/messages).
