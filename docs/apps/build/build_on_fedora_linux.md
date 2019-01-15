@@ -92,7 +92,7 @@ Password:
 ---
 
 <ul class="doclink">
-  <li><a href="">Build on Debian / Ubuntu</a></li>
+  <li><a href="">Build IoT Apps on Debian / Ubuntu</a></li>
   <li><a href="">Build nginx</a></li>
 </ul>
 
