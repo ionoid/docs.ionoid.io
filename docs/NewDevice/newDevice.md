@@ -50,6 +50,13 @@ The **config.json** file sould be saved in a secure place and do not share it, b
 
 
 
+---
+
+<ul class="doclink">                                                                                                                                                                             
+  <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
+  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
+</ul>   
+
 
 ---
 
