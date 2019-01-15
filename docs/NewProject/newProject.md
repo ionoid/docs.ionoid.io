@@ -39,14 +39,13 @@ project id.
 
 ---
 
-<ul class="doclink">                                                                                                                                                                             
-  <li> <a href="">Add New Device </a> </li> 
-  <li> <a href=""> Update Apps </a></li>
-  <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
-  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
-</ul>   
-
-
+                                                                                                                                                                            
+ <ul class="doclink">                                                                                                                                                          
+  <li> <a href="https://docs.ionoid.io/#/../NewDevice/newDevice.md">Add New Device </a> </li> 
+  <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
+  <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
+  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
+</ul>
 
 ---
 
