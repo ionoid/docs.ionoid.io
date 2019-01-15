@@ -57,6 +57,12 @@ Log out from the chroot using ``exit`` and create a tarball from the directory::
   sudo tar -cvf armhf-chroot.tar armhf-chroot/
 ```
 
+---
+
+<ul class="doclink">
+  <li><a href="">Build on Fedora</a></li>
+  <li><a href="">Build nginx</a></li>
+</ul>
 
 
 ---
