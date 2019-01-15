@@ -36,10 +36,12 @@ You can update IoT App  via Ionoid Platform.
 ---
 
 <ul class="doclink">                                                                                                                                                                             
-  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
-</ul>   
+  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
+  <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
+</ul>
 
 ---
+
 
 
 ### Questions?
