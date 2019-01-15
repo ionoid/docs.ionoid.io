@@ -48,11 +48,12 @@ Now you can sign in to your account and take advantage of many features.
 
 <ul class="doclink">                                                                                                                                                                             
   <li> <a href="https://docs.ionoid.io/#/../NewProject/newProject">New project </a> </li>                                                                                                                                                         
-  <li> <a href="">Add New Device </a> </li> 
-  <li> <a href="">Update Apps </a> </li>
-  <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
-  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
-</ul>      
+  <li> <a href="https://docs.ionoid.io/#/../NewDevice/newDevice.md">Add New Device </a> </li> 
+  <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
+  <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
+  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
+</ul>                                                                                                                                                         
+        
 
 ---
 
