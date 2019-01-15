@@ -33,6 +33,11 @@ You can update IoT App  via Ionoid Platform.
 - Click on the **UPDATE** button.
 
 
+---
+
+<ul class="doclink">                                                                                                                                                                             
+  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
+</ul>   
 
 ---
 
