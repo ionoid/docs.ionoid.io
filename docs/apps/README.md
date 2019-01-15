@@ -204,6 +204,13 @@ TODO: document.
 TODO: document.
 
 
+---
+
+<ul class="doclink">
+  <li><a href="">Build on Fedora</a></li>
+  <li><a href="">Build on Debian</a></li>
+  <li><a href="">Build nginx</a></li>
+</ul>
 
 ---
 
