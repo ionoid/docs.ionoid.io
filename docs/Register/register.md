@@ -48,7 +48,8 @@ Now you can sign in to your account and take advantage of many features.
 
 <ul class="doclink">                                                                                                                                                                             
   <li> <a href="">New project </a> </li>                                                                                                                                                         
-  <li> <a href="">Add New Device </a> </li>                                                                                                                                                      
+  <li> <a href="">Add New Device </a> </li> 
+  <li> <a href="">Update Apps </a> </li>
   <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
   <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
 </ul>      
