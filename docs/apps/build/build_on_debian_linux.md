@@ -60,10 +60,9 @@ Log out from the chroot using ``exit`` and create a tarball from the directory::
 ---
 
 <ul class="doclink">
-  <li><a href="">Build IoT Apps on Fedora</a></li>
-  <li><a href="">Build nginx</a></li>
+  <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux.md">Build IoT Apps on Fedora</a></li>
+  <li><a href="https://docs.ionoid.io/#/../apps/build/nginx.md">Build nginx</a></li>
 </ul>
-
 
 ---
 
