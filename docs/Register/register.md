@@ -47,7 +47,7 @@ Now you can sign in to your account and take advantage of many features.
 ---
 
 <ul class="doclink">                                                                                                                                                                             
-  <li> <a href="../NewProject/newProject.md">New project </a> </li>                                                                                                                                                         
+  <li> <a href="https://docs.ionoid.io/#/../NewProject/newProject">New project </a> </li>                                                                                                                                                         
   <li> <a href="">Add New Device </a> </li> 
   <li> <a href="">Update Apps </a> </li>
   <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
