@@ -92,10 +92,9 @@ Password:
 ---
 
 <ul class="doclink">
-  <li><a href="">Build IoT Apps on Debian / Ubuntu</a></li>
-  <li><a href="">Build nginx</a></li>
+  <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_debian_linux.md">Build IoT Apps on Debian/Ubuntu</a></li>
+  <li><a href="https://docs.ionoid.io/#/../apps/build/nginx.md">Build nginx</a></li>
 </ul>
-
 
 ---
 
