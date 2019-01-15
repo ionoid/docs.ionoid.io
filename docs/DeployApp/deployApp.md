@@ -44,10 +44,9 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 ---
 
 <ul class="doclink">                                                                                                                                                                             
-  <li><a href=""> Update Apps </a></li>                                                                                                                                                          
-  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
-</ul>   
-
+  <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
+  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
+</ul>
 
 
 ---
