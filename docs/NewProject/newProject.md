@@ -37,6 +37,15 @@ project id.
 ![Project Actions](ProjectActions.png)
 
 
+---
+
+<ul class="doclink">                                                                                                                                                                             
+  <li> <a href="">Add New Device </a> </li>                                                                                                                                                      
+  <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
+  <li><a href=""> Rolback app </a></li>                                                                                                                                                          
+</ul>   
+
+
 
 ---
 
