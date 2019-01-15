@@ -11,7 +11,7 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 
 - Connect to your Ionoid account.
 
-- In Project List, click on the project that you want to deploy app on it.
+- In Project List, select the project that you want to deploy app on it.
 
 ![Project List](ProjectsList.png)
 
