@@ -42,7 +42,7 @@ project id.
 <ul class="doclink">                                                                                                                                                                             
   <li> <a href="">Add New Device </a> </li>                                                                                                                                                      
   <li><a href=""> Deploy Apps </a></li>                                                                                                                                                          
-  <li><a href=""> Rolback app </a></li>                                                                                                                                                          
+  <li><a href=""> Rollback Apps </a></li>                                                                                                                                                          
 </ul>   
 
 
