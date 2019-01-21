@@ -1,9 +1,4 @@
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+
 
 # Ionoid IoT Apps Format
 
@@ -203,6 +198,12 @@ TODO: document.
 
 TODO: document.
 
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
 
 ---
 
