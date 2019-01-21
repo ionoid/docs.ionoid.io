@@ -1,9 +1,4 @@
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+
 
 # Build IoT Apps on Debian/Ubuntu Linux Systems
 
@@ -56,6 +51,13 @@ Log out from the chroot using ``exit`` and create a tarball from the directory::
 ```bash
   sudo tar -cvf armhf-chroot.tar armhf-chroot/
 ```
+
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
 
 ---
 
