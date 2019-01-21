@@ -1,9 +1,3 @@
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
 
 # Create a new project
 To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
@@ -35,6 +29,14 @@ project id.
 - You can now  **Add new device** to your IoT project.
 
 ![Project Actions](ProjectActions.png)
+
+
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
 
 
 ---
