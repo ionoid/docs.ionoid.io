@@ -1,9 +1,4 @@
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+
 
 # Create an account on Ionoid IoT platform
 
@@ -43,6 +38,12 @@ Now you can sign in to your account and take advantage of many features.
 ![Connected](Connected.png)
 
 
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
 
 ---
 
