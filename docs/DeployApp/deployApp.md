@@ -1,9 +1,4 @@
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+
 
 # Deploy IoT Applications using Ionoid IoT Platform.
 
@@ -39,7 +34,12 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 
 ![App Actions](AppActions.png)
 
-
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
 
 ---
 
