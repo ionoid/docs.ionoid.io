@@ -1,9 +1,4 @@
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+
 
 # Add a new device to your
 
@@ -48,7 +43,12 @@ Once you have finished setting your system, the dashboard will generate a file n
 
 The **config.json** file sould be saved in a secure place and do not share it, because it contain sensitive information and you can compromise the security of your device.
 
-
+<nav role="navigation">
+                <ul class="pagination">
+                        <li class="button"><a href="#0">Prev</a></li>
+                        <li class="button"><a href="#0">Next</a></li>
+                </ul>
+</nav>
 
 ---
 
