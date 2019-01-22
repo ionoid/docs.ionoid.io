@@ -31,12 +31,17 @@ project id.
 ![Project Actions](ProjectActions.png)
 
 
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+<ul class="pagination">
+	<li class="button ">
+	  <a class="disabled" href="#0">Prev</a>
+	</li>
+
+<div class="divider" />
+
+ <li class="button">
+	  <a href="#0">Next</a>
+ </li>
+</ul> 
 
 
 ---
