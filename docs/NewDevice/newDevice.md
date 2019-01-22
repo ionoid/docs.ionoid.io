@@ -1,6 +1,6 @@
 
 
-# Add a new device to your
+# Add a new device to your IoT Project.
 
 Once you create a project on Ionoid IoT platform, you can now add devices to
 the project.
@@ -45,13 +45,13 @@ The **config.json** file sould be saved in a secure place and do not share it, b
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="#0">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../NewProject/newProject">Prev</a>
 	</li>
 
 <div class="divider" />
 
  <li class="button">
-	  <a href="#0">Next</a>
+	  <a href="https://docs.ionoid.io/#/../DeployApp/deployApp">Next</a>
  </li>
 </ul> 
 
