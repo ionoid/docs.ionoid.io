@@ -16,7 +16,7 @@ you prefer to go back to the previous App version, Inoid Platoform offre you ver
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="#0">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../UpdateApp/updateApp">Prev</a>
 	</li>
 
 <div class="divider" />
