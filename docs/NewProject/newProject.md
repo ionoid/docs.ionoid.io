@@ -33,13 +33,13 @@ project id.
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="#0">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../Register/register">Prev</a>
 	</li>
 
 <div class="divider" />
 
  <li class="button">
-	  <a href="#0">Next</a>
+	  <a href="https://docs.ionoid.io/#/../NewDevice/newDevice">Next</a>
  </li>
 </ul> 
 
