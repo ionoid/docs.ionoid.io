@@ -27,13 +27,18 @@ You can update IoT App  via Ionoid Platform.
 
 - Click on the **UPDATE** button.
 
+<ul class="pagination">
+	<li class="button ">
+	  <a class="disabled" href="#0">Prev</a>
+	</li>
 
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+<div class="divider" />
+
+ <li class="button">
+	  <a href="#0">Next</a>
+ </li>
+</ul> 
+
 
 ---
 
