@@ -37,13 +37,13 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="#0">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../NewDevice/newDevice">Prev</a>
 	</li>
 
 <div class="divider" />
 
  <li class="button">
-	  <a href="#0">Next</a>
+	  <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp">Next</a>
  </li>
 </ul> 
 
