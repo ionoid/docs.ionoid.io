@@ -73,7 +73,7 @@ body {
 }
 
 .pagination a:hover{
-    background-color: #0099E5;
+    background-color: #aed6f1; //#0099E5;
 }
 
 .divider{
