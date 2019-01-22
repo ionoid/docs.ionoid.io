@@ -40,7 +40,7 @@ Now you can sign in to your account and take advantage of many features.
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="#0">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../NewProject/newProject">Prev</a>
 	</li>
 
 <div class="divider" />
