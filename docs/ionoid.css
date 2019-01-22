@@ -46,7 +46,7 @@ body {
 .pagination {
     width: 90%;
     
-    max-width: 100%;
+    max-width: 800px;
     margin: 2em auto 4em;
     text-align: center;
 }
