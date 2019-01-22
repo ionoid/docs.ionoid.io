@@ -29,13 +29,13 @@ You can update IoT App  via Ionoid Platform.
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="#0">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../DeployApp/deployApp">Prev</a>
 	</li>
 
 <div class="divider" />
 
  <li class="button">
-	  <a href="#0">Next</a>
+	  <a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp">Next</a>
  </li>
 </ul> 
 
