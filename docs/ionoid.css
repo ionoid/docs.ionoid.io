@@ -42,35 +42,45 @@ body {
   background-color: #aed6f1;
 }
 
-nav[role="navigation"] {
-  text-align: center;
+
+.pagination {
+    width: 90%;
+    
+    max-width:768px;
+    margin: 2em auto 4em;
+    text-align: center;
 }
 
-.cd-pagination {
-  width: 90%;
-  max-width: 768px;
-  margin: 2em auto 4em;
-  text-align: center;
-}
 .pagination li {
-  /* hide numbers on small devices */
-  display: none;
-  margin: 0 .2em;
+    display:none;
+    margin: 0.2 em;
 }
-.pagination li.button {
-  /* make sure prev next buttons are visible */
-  display: inline-block;
-}
-.pagination a, .cd-pagination span {
-  display: inline-block;
 
-  padding: .6em .8em;
-  font-size: 1.6rem;
+.pagination li.button {
+    display: inline-block;
+    font-size:1.2rem;
+    
 }
+
 .pagination a {
-  border: 1px solid #e6e6e6;
-  border-radius: 0.25em;
+    display: inline-block;
+    border-radius: 0.25em;
+    /* change button size */
+    padding: .6em .8em;
+    border: 1px solid #0d2b3e; //#0099e5; //#e6e6e6;
+    
 }
+
+.pagination a:hover{
+    background-color: #0099E5;
+}
+
+.divider{
+    width:80%;
+    height:auto;
+    display:inline-block;
+}
+
 
 ul.doclink {                                                                                                                                                                                     
   border: solid 1px  #aed6f1;                                                                                                                                                                    
