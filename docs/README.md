@@ -3,7 +3,7 @@
 Welcome to Ionoid IoT! Get familiar with the Ionoid IoT Platform and explore
 its features:
 
-<a href="https://docs.ionoid.io/#/../Register/register" target="_blank">Getting Started - Ionoid IoT Account</a>
+<a href="https://docs.ionoid.io/#/../Register/register">Getting Started - Ionoid IoT Account</a>
 <br>
 <br>
 
