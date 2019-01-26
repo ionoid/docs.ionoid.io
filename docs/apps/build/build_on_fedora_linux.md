@@ -84,12 +84,17 @@ Password:
 # tar -cvvlf armhf-chroot.tar -C armhf-chroot/ .
 ```
 
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+<ul class="pagination">
+	<li class="button ">
+	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/README">Prev</a>
+	</li>
+
+<div class="divider" />
+
+ <li class="button">
+	  <a href="https://docs.ionoid.io/#/../apps/build/build_on_debian_linux">Next</a>
+ </li>
+</ul> 
 
 ---
 
