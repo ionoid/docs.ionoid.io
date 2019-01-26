@@ -82,13 +82,13 @@ apps:
 
 <ul class="pagination">
 	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#/../Register/register">Prev</a>
+	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/build/build_on_debian_linux">Prev</a>
 	</li>
 
 <div class="divider" />
 
  <li class="button">
-	  <a href="https://docs.ionoid.io/#/../NewDevice/newDevice">Next</a>
+	  <a href="https://docs.ionoid.io/#/../debug/debug-devices">Next</a>
  </li>
 </ul> 
 
