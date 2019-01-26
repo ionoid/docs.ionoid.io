@@ -52,12 +52,17 @@ Log out from the chroot using ``exit`` and create a tarball from the directory::
   sudo tar -cvf armhf-chroot.tar armhf-chroot/
 ```
 
-<nav role="navigation">
-                <ul class="pagination">
-                        <li class="button"><a href="#0">Prev</a></li>
-                        <li class="button"><a href="#0">Next</a></li>
-                </ul>
-</nav>
+<ul class="pagination">
+	<li class="button ">
+	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux">Prev</a>
+	</li>
+
+<div class="divider" />
+
+ <li class="button">
+	  <a href="https://docs.ionoid.io/#/../apps/build/nginx">Next</a>
+ </li>
+</ul> 
 
 ---
 
