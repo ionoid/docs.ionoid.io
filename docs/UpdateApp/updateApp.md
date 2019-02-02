@@ -26,7 +26,7 @@ You can update IoT App  via Ionoid Platform.
 
 - Click on the **UPDATE** button.
 
-<ul class="pagination">
+<!-- <ul class="pagination">
 	<li class="button ">
 	  <a class="disabled" href="https://docs.ionoid.io/#/../DeployApp/deployApp">Prev</a>
 	</li>
@@ -44,7 +44,7 @@ You can update IoT App  via Ionoid Platform.
 <ul class="doclink">                                                                                                                                                                             
   <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
   <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
-</ul>
+</ul> -->
 
 ---
 

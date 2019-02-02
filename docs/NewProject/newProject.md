@@ -31,7 +31,7 @@ project id.
 ![Project Actions](ProjectActions.png)
 
 
-<ul class="pagination">
+<!-- <ul class="pagination">
 	<li class="button ">
 	  <a class="disabled" href="https://docs.ionoid.io/#/../Register/register">Prev</a>
 	</li>
@@ -52,7 +52,7 @@ project id.
   <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
   <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
   <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
-</ul>
+</ul> -->
 
 ---
 

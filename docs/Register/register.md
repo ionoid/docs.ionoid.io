@@ -37,7 +37,7 @@ Now you can sign in to your account and take advantage of many features.
 
 ![Connected](Connected.png)
 
-
+<!-- 
 <ul class="pagination">
 	<li class="button ">
 	  <a class="disabled" href="">Prev</a>
@@ -48,17 +48,17 @@ Now you can sign in to your account and take advantage of many features.
  <li class="button">
 	  <a href="https://docs.ionoid.io/#/../NewProject/newProject">Next</a>
  </li>
-</ul> 
+</ul>  -->
       
----
+<!-- --- -->
 
-<ul class="doclink">                                                                                                                                                                             
+<!-- <ul class="doclink">                                                                                                                                                                             
   <li> <a href="https://docs.ionoid.io/#/../NewProject/newProject">New project </a> </li>                                                                                                                                                         
   <li> <a href="https://docs.ionoid.io/#/../NewDevice/newDevice.md">Add New Device </a> </li> 
   <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
   <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
   <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
-</ul>                                                                                                                                                         
+</ul>                                                                                                                                                          -->
         
 
 ---

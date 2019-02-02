@@ -80,7 +80,7 @@ apps:
 # tar -cvf nginx-armhf.tar armhf-chroot/
 ```
 
-<ul class="pagination">
+<!-- <ul class="pagination">
 	<li class="button ">
 	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/build/build_on_debian_linux">Prev</a>
 	</li>
@@ -98,7 +98,7 @@ apps:
 <ul class="doclink">
   <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux.md">Build IoT Apps on Fedora</a></li>
   <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_debian_linux.md">Build IoT Apps on Debian/Ubuntu</a></li>
-</ul>
+</ul> -->
 
 ---
 

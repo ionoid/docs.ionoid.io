@@ -35,7 +35,7 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 ![App Actions](AppActions.png)
 
 
-<ul class="pagination">
+<!-- <ul class="pagination">
 	<li class="button ">
 	  <a class="disabled" href="https://docs.ionoid.io/#/../NewDevice/newDevice">Prev</a>
 	</li>
@@ -53,7 +53,7 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 <ul class="doclink">                                                                                                                                                                             
   <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
   <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
-</ul>
+</ul> -->
 
 
 ---

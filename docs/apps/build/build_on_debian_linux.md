@@ -52,7 +52,7 @@ Log out from the chroot using ``exit`` and create a tarball from the directory::
   sudo tar -cvf armhf-chroot.tar armhf-chroot/
 ```
 
-<ul class="pagination">
+<!-- <ul class="pagination">
 	<li class="button ">
 	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux">Prev</a>
 	</li>
@@ -69,7 +69,7 @@ Log out from the chroot using ``exit`` and create a tarball from the directory::
 <ul class="doclink">
   <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux.md">Build IoT Apps on Fedora</a></li>
   <li><a href="https://docs.ionoid.io/#/../apps/build/nginx.md">Build nginx</a></li>
-</ul>
+</ul> -->
 
 ---
 
