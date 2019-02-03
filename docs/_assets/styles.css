@@ -344,3 +344,9 @@ body .sidebar-toggle span:nth-child(3) {
   border-bottom-style: solid;
   padding-bottom: 3px;
 }
+
+@media (max-width: 768px) {
+  .app-nav a{
+    display: none;
+  } 
+}
