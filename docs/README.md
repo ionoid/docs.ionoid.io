@@ -1,27 +1,46 @@
-# Ionoid IoT User Documentation
 
-Welcome to Ionoid IoT! Get familiar with the Ionoid IoT Platform and explore
-its features:
-   
-<br>
-<a href="https://docs.ionoid.io/#/../Register/register">Getting Started - Ionoid IoT Account</a>
-<br>
+<p align="center">
+  <img alt="Polly.JS" width="400px" src="https://docs.ionoid.io/_media/logo-big.png" />
+</p>
+<h2 align="center">Manage your IoT Fleet and scale to the Moon</h2>
 
-<a href="https://docs.ionoid.io/#/../NewProject/newProject">Ionoid IoT Projects and Devices</a>
-<br>
+Secure Light IoT Solution, build and deploy Software for IoT and Hardware. From Automotive, Industrials to Startups, All Ionoid IoT solutions are based on Open Source technologies.
 
-<a href="https://docs.ionoid.io/#/../DeployApp/deployApp">IoT Apps Deployment</a>
-<br>
+> Interested in becoming a beta tester? Head over to [Create new account](https://dashboard.ionoid.io/en/register) to learn how you can scale your iot infrastructure!
 
-<a href="https://docs.ionoid.io/#/../apps/README">Building IoT Apps</a>
-<br>
+## Why Ionoid?
 
-<a href="https://docs.ionoid.io/#/../debug/debug-devices">Debugging and Troubleshooting IoT Devices</a>
-<br>
+Secure Light IoT Solution, build and deploy Software for IoT and Hardware. 
+From Automotive, Industrials to Startups, 
+All Ionoid IoT solutions are based on Open Source technologies.
+Polly alleviates this by recording and maintaining actual server responses without foregoing flexibility.
 
 
+## Features
 
----
+- 🚀 Light Secure Linux-IoT
+- ⚡️️  Simple, Powerful, & Intuitive API
+- 💎 IoT Apps on Embedded Linux
+- 🔥 Linux-IoT Hardware Support
+- 📼 Rollback app in realtime
+- ⏱ Realtime monitoring 
+
+## Getting Started
+
+Check out the [Quick Start](/Register/register.md) documentation to get started.
+
+## Credits
+
+_In alphabetical order:_
+
+- [Badreddine ubugnu](https://github.com/ubugnu) - Creator / Maintainer
+- [Djalel tixxdz](https://github.com/tixxdz) - Creator / Maintainer
+- [John Brannigan](https://github.com/nostalgia-for-infinity) - Creator / Maintainer
+- [Nazim nwd0](https://github.com/nwd0) - Creator / Maintainer
+
+
+## License
+
 
 
 ### Questions?

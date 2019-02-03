@@ -14,25 +14,6 @@ you prefer to go back to the previous App version, Inoid Platoform offre you ver
 
 ![Rollback App](RollbackApp.png)
 
-<!-- <ul class="pagination">
-	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#/../UpdateApp/updateApp">Prev</a>
-	</li>
-
-<div class="divider" />
-
- <li class="button">
-	  <a href="#0">Next</a>
- </li>
-</ul> 
-
-
----
-
-<ul class="doclink">                                                                                                                                                                                                      
-  <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
-  <li><a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md"> Update Apps </a></li>
-</ul> -->
 
 ---
 

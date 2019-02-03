@@ -43,26 +43,6 @@ Once you have finished setting your system, the dashboard will generate a file n
 
 The **config.json** file sould be saved in a secure place and do not share it, because it contain sensitive information and you can compromise the security of your device.
 
-<!-- <ul class="pagination">
-	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#/../NewProject/newProject">Prev</a>
-	</li>
-
-<div class="divider" />
-
- <li class="button">
-	  <a href="https://docs.ionoid.io/#/../DeployApp/deployApp">Next</a>
- </li>
-</ul> 
-
-
----
-
-<ul class="doclink">                                                                                                                                                                             
-  <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
-  <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
-  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
-</ul> -->
 
 ---
 

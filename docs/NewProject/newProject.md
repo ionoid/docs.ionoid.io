@@ -31,29 +31,6 @@ project id.
 ![Project Actions](ProjectActions.png)
 
 
-<!-- <ul class="pagination">
-	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#/../Register/register">Prev</a>
-	</li>
-
-<div class="divider" />
-
- <li class="button">
-	  <a href="https://docs.ionoid.io/#/../NewDevice/newDevice">Next</a>
- </li>
-</ul> 
-
-
----
-
-                                                                                                                                                                            
- <ul class="doclink">                                                                                                                                                          
-  <li> <a href="https://docs.ionoid.io/#/../NewDevice/newDevice.md">Add New Device </a> </li> 
-  <li><a href="https://docs.ionoid.io/#/../DeployApp/deployApp.md"> Deploy Apps </a></li>
-  <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
-  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
-</ul> -->
-
 ---
 
 

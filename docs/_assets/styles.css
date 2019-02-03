@@ -27,7 +27,7 @@ a {
 
 /****** Cover Page ******/
 section.cover {
-  padding-bottom: 112px; /* fixed footer (Netflix) height */
+  padding-bottom: 112px;
   height: auto;
   min-height: 100vh;
   /**
@@ -79,27 +79,6 @@ section.cover ul li {
 section.cover.show ~ .sidebar,
 section.cover.show ~ .sidebar-toggle {
   display: none;
-}
-
-.cover-main .netflix-logo {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px;
-  z-index: 5;
-}
-
-.cover-main .netflix-logo .logo {
-  width: 125px;
-  height: 32px;
-  background: url('images/Netflix_Logo.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .cover-main .buttons {
@@ -353,4 +332,15 @@ body .sidebar-toggle span:nth-child(3) {
 .lang-bash .token.function,
 .lang-json .token.property {
   color: #e96900;
+}
+
+.app-nav a{
+  display: flax;
+  flex-direction: row;
+}
+
+.app-nav a:hover{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 3px;
 }
