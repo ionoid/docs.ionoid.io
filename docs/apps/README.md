@@ -7,10 +7,7 @@ integrated with Ionoid.
 Ionoid IoT Apps take [Snapcraft](https://docs.snapcraft.io/) the universal
 app store for Linux as a reference, and build on top of it.
 
-
-## Chapters
-
-### 1. Getting Started
+## 1. Getting Started
 
 This section provides basic view on IoT Apps and how to deploy them.
 
@@ -29,7 +26,7 @@ For every application, a directory will be created like this:
 ```
 
 
-### 2. IoT Apps Format
+## 2. IoT Apps Format
 
 Ionoid IoT Apps format is really simple it contains some metadata that
 defines the application and how it is run. Apps are tarball files in
@@ -57,7 +54,7 @@ If you are using another supported format, then the `app.yaml` will be
 automatically created.
 
 
-#### 2.1 App.yaml Format
+### 2.1 App.yaml Format
 
 Every App has an **app.yaml** file that contains the basic following
 information:
@@ -145,7 +142,7 @@ apps:
 ```
 
 
-### 3. Building IoT Apps
+## 3. Building IoT Apps
 
 If you are using the native and simple format of ionoid IoT Apps, then
 you can follow the following guide, otherwise skip to the one that
@@ -170,7 +167,7 @@ The `hello-world-armv7-v0.2.tar` is our final App that can be deployed
 to our IoT Devices.
 
 
-#### 3.1 Building Simple Ionoid IoT Apps
+### 3.1 Building Simple Ionoid IoT Apps
 
 We support several platform, please follow the appropriate platform
 guide.
@@ -188,37 +185,16 @@ guide.
 
 
 
-#### 3.2 Build Snapcraft Snaps
+### 3.2 Build Snapcraft Snaps
 
 TODO: document.
 
 
-#### 3.3 Build Docker IoT Apps
+### 3.3 Build Docker IoT Apps
 
 TODO: document.
 
-<!-- <ul class="pagination">
-	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#">Prev</a>
-	</li>
-
-<div class="divider" />
-
- <li class="button">
-	  <a href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux">Next</a>
- </li>
-</ul> 
-
 ---
-
-<ul class="doclink">
-  <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_fedora_linux.md">Build IoT Apps on Fedora</a></li>
-  <li><a href="https://docs.ionoid.io/#/../apps/build/build_on_debian_linux.md">Build IoT Apps on Debian/Ubuntu</a></li>
-  <li><a href="https://docs.ionoid.io/#/../apps/build/nginx.md">Build nginx</a></li>
-</ul> -->
-
----
-
 
 ### Questions?
 We're always happy to help with IoT Projects or other questions you might have! Check our [documentation](https://docs.ionoid.io/#/), contact support: support@ionoid.io, or connect with our sales team: sales@opendevices.io. You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtNTAzMTEwMTc5NDc2LTM2ODgxY2VmYTljNjM2NTNmZmVjYTEzY2Q4NTgyZTljYzI3MzhiZGRlODkzNTE3NTE3ODk5ZmFjNjYzOGRjZTM).

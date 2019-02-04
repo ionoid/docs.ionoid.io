@@ -35,27 +35,6 @@ One of the most interresting features in Ionoid Platform is the **very easy** wa
 ![App Actions](AppActions.png)
 
 
-<!-- <ul class="pagination">
-	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#/../NewDevice/newDevice">Prev</a>
-	</li>
-
-<div class="divider" />
-
- <li class="button">
-	  <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp">Next</a>
- </li>
-</ul> 
-
-
----
-
-<ul class="doclink">                                                                                                                                                                             
-  <li> <a href="https://docs.ionoid.io/#/../UpdateApp/updateApp.md">Update Apps </a> </li>
-  <li><a href="https://docs.ionoid.io/#/../RollbackApp/rollbackApp.md"> Rollback Apps </a></li>                                                                                                                                                          
-</ul> -->
-
-
 ---
 
 
