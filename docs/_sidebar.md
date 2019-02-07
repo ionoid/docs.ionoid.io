@@ -12,9 +12,10 @@
   - [Build on Fedora](../apps/build/build_on_fedora_linux.md)
   - [Build on Debian](../apps/build/build_on_debian_linux.md)
   - [Build nginx](../apps/build/nginx.md)
-- Build Linux Alpine Runtime
-  - [Python Alpine Runtime](../apps/buid/python_alpine.md)
-  - [Node-js Alpine Runtime](../apps/build/nodejs_alpine.md)
+- Linux Alpine Runtime
+  - [Build Linux Alpine Runtime](../apps/build/build-runtime.md)
+  - [Python Alpine Runtime](../apps/buid/python-runtime.md)
+  - [Node-js Alpine Runtime](../apps/build/nodejs-runtime.md)
 - Debug IoT Devices
   - [Troubleshooting IoT Devices](../debug/debug-devices.md)
 
