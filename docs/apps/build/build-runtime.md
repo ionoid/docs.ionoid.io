@@ -68,8 +68,11 @@ localhost:/# setup-apkrepos
 localhost:/# apk add --no-cacche nodejs
 ```
 
-ctrl + d to exit .
+  - exit to leave the runtime.
 
+```bash 
+localhost:/# exit 
+```
 
 ## Build a tarball.
 
