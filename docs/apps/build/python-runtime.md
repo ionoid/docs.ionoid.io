@@ -24,31 +24,28 @@ python-runtime
 ```
 
 
-## 2. Add packages to chroot runtime
+## 2. Add packages to runtime
 
 
 ```bash
-
 [user@pieman]$ cd build
 [user@build]$ sudo chroot python-runtime/chroot/ /bin/sh -l
-
 ```
 
    - Setup alpine packages repository.
 
 ```bash
-
 localhost:/# setup-apkrepos
-
 ```
-   - Install **python** and **pip** packages.
+   - Install **python** package.
 
 ```bash
-
 localhost:/# apk add --no-cache python3
+```
+   - Install **pip**, the python package manager.
 
+```bash   
 localhost:/# apk add --no-cache py-pip
-
 ```
 
 
