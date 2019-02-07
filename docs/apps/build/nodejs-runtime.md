@@ -55,6 +55,12 @@ localhost:/# apk add --no-cache npm
 ```bash
 [user@build ]$ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C nodejs-runtime/chroot/ .
 ```
+  
+  - exit to leave the runtime.
+
+```bash 
+localhost:/# exit 
+```
 
 ## 4. Add nodejs modules.
 
