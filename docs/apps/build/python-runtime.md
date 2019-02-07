@@ -64,7 +64,7 @@ localhost:/# apk add --no-cache py-pip
 
 ## 4. Add python modules
 
-   - You can add additional python module to your runtime before building the tarball using python package manager
+   - You can add additional python module to your runtime before building the tarball using python package manager.
    - Here as **example** we are going to install module to control Raspberry Pi GPIO channels. 
 
 
