@@ -14,7 +14,7 @@
   - [Build nginx](../apps/build/nginx.md)
 - Linux Alpine Runtime
   - [Build Linux Alpine Runtime](../apps/build/build-runtime.md)
-  - [Python Alpine Runtime](../apps/buid/python-runtime.md)
+  - [Python Alpine Runtime](../apps/build/python-runtime.md)
   - [Node-js Alpine Runtime](../apps/build/nodejs-runtime.md)
 - Debug IoT Devices
   - [Troubleshooting IoT Devices](../debug/debug-devices.md)
