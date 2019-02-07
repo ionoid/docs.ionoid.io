@@ -31,7 +31,7 @@ $ git clone https://github.com/tolstoyevsky/pieman.git
 
 ```bash
 $ cd pieman
-[user@pieman]$ sudo env PROJECT_NAME="MyDistro" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
+[user@pieman]$ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 ```
 
 You will find the result at pieman/build directory.
@@ -77,6 +77,6 @@ localhost:/# exit
 ## Build a tarball.
 
 ```bash
-[user@build ]$ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C MyDistro/chroot/ .
+[user@build ]$ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C MyRuntime/chroot/ .
 ```
 
