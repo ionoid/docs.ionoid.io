@@ -62,6 +62,12 @@ localhost:/# apk add --no-cache py-pip
 [user@build ]$ sudo tar cvvf alpine-3.9-armhf-python3.tar -C python-runtime/chroot/ .
 ```
 
+  - type exit to leave the runtime.
+
+```bash 
+localhost:/# exit 
+```
+
 ## 4. Add python modules
 
    - You can add additional python module to your runtime before building the tarball using python package manager.
