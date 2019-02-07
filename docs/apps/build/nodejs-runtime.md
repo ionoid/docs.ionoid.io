@@ -36,7 +36,7 @@ nodejs-runtime
 localhost:/# setup-apkrepos
 ```
 
-   - Install **nodejs** package. 
+   - Install **Node.js** package. 
 
 ```bash
 localhost:/# apk add --no-cache nodejs 
@@ -50,18 +50,19 @@ localhost:/# apk add --no-cache npm
 
 ## 3. Build Node.js runtime tarball.
 
-   - Once you finish to add all the nodejs modules you need for your runtime, build the tarball.
+   - Once you finish to add all the Node.js modules you need for your runtime, build the tarball.
 
 ```bash
 [user@build ]$ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C nodejs-runtime/chroot/ .
 ```
 
-## 4. Add nodejs modules
+## 4. Add nodejs modules.
 
-   - Add nodejs module using nodejs package manager, here we install **express** framework.
+   - You can add additional python module to your runtime before building the tarball using Node.js package manager.
+   - Here as example we are going to install module . 
 
 ```bash
-localhost:/# npm install express --save 
+localhost:/# npm install  
 ```
 
 
