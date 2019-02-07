@@ -47,26 +47,29 @@ localhost:/# apk add --no-cache python3
 ```bash   
 localhost:/# apk add --no-cache py-pip
 ```
-
-
-## 3. Add python modules
-
-   - Add python module using python package manager, here we install **flask** framework.
-
-```bash 
-
-localhost:/# pip3 install --upgrade pip
-localhost:/# pip3 install flask
-
-```
-
-
-## 4. Build runtime tarball
+   - Update the python package manger 
+ 
+ ```bash
+ localhost:/# pip3 install --upgrade pip
+ ```
+  
+  
+## 3. Build runtime tarball
 
    - Once you finish to add all the python modules you need for your runtime, build the tarball.
 
 ```bash
-
 [user@build ]$ sudo tar cvvf alpine-3.9-armhf-python3.tar -C python-runtime/chroot/ .
-
 ```
+
+## 4. Add python modules
+
+   - You can add additional python module to your runtime before building the tarball using python package manager
+   - Here as **example** we are going to install module to control Raspberry Pi GPIO channels. 
+
+
+```bash 
+localhost:/# pip3 install RPi.GPIO
+```
+
+
