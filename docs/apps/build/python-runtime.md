@@ -6,7 +6,7 @@ and python modules using .
 
 ## 1. Create runtime app based on Alpine Linux
 
-To build the runtime we are going to use [pieman tool](https://github.com/tolstoyevsky/pieman), see here [how to install it](../apps/build/build-runtime#installing--pieman-tool).
+To build the runtime we are going to use [pieman tool](https://github.com/tolstoyevsky/pieman), see here [how to install it](../apps/build/install-pieman).
 
    - go to pieman directory and run.
 
