@@ -6,7 +6,7 @@ and nodejs modules.
 
 ## 1. Create runtime app based on Alpine Linux.
 
-To build the runtime we are going to use [pieman tool](https://github.com/tolstoyevsky/pieman), see here [how to install it](../apps/build/install-pieman).
+To build the runtime we are going to use <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a> tool, see here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to install pieman</a>.
 
    - Go to pieman directory and run.
 
