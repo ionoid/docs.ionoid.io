@@ -7,14 +7,17 @@
   - [Deploy Apps ](../DeployApp/deployApp.md)
   - [Update Apps](../UpdateApp/updateApp.md)
   - [Rollback Apps](../RollbackApp/rollbackApp.md)
-- Build IoT Apps
-  - [Build IoT Apps](../apps/README.md)
+- IoT Apps
+  - [Ionoid IoT Apps Format](../apps/README.md)
   - [Build on Fedora](../apps/build/build_on_fedora_linux.md)
   - [Build on Debian](../apps/build/build_on_debian_linux.md)
   - [Build nginx](../apps/build/nginx.md)
-  - [Linux Alpine Runtime](../apps/build/build-runtime.md)
-  - [Python Runtime](../apps/build/python-runtime.md)
-  - [Node.js Runtime](../apps/build/nodejs-runtime.md)
+- Build Basic IoT Apps
+  - [Static IoT Apps]()
+  - [Build App Environment Preparation]()
+  - [Build Alpine Linux Runtime](../apps/build/build-runtime.md)
+  - [Build Alpine Linux Python Runtime](../apps/build/python-runtime.md)
+  - [Build Alpine Linux Node.js Runtime](../apps/build/nodejs-runtime.md)
 - Debug IoT Devices
   - [Troubleshooting IoT Devices](../debug/debug-devices.md)
 
