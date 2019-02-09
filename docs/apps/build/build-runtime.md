@@ -38,13 +38,7 @@ localhost:/# setup-apkrepos
 ```
  - Choose a number , 8 for example.
 
- - Add a package , Node.js for example.
-
-```
-localhost:/# apk add --no-cacche nodejs
-```
-
-  - exit to leave the runtime.
+ - Type exit to leave the runtime environment.
 
 ```bash 
 localhost:/# exit 
@@ -53,6 +47,6 @@ localhost:/# exit
 ## Build a tarball.
 
 ```bash
-[user@build ]$ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C MyRuntime/chroot/ .
+[user@build ]$ sudo tar cvvf alpine-3.9-armhf.tar -C MyRuntime/chroot/ .
 ```
 
