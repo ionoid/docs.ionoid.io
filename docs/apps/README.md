@@ -167,32 +167,6 @@ The `hello-world-armv7-v0.2.tar` is our final App that can be deployed
 to our IoT Devices.
 
 
-### 3.1 Building Simple Ionoid IoT Apps
-
-We support several platform, please follow the appropriate platform
-guide.
-
-
-* [Build IoT Apps on Debian/Ubuntu Linux](../apps/build/build_on_debian_linux.md)
-
-* [Build IoT Apps on Fedora Linux](../apps/build/build_on_fedora_linux.md)
-
-
-* [Build IoT Apps on Windows]
-
-
-* [Build IoT Apps on OSX]
-
-
-
-### 3.2 Build Snapcraft Snaps
-
-TODO: document.
-
-
-### 3.3 Build Docker IoT Apps
-
-TODO: document.
 
 ---
 
