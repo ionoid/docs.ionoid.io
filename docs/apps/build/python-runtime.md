@@ -26,17 +26,34 @@ python-runtime
 
 ## 2. Add packages to runtime
 
+ - To add packages to your runtime, go to build directory.
 
 ```bash
 cd build
+```
+
+ - To enter the runtime. Type the following command.
+
+```bash
 sudo chroot python-runtime/chroot/ /bin/sh -l
 ```
+
+> Every command in the runtime is executed as **root**.
+
 
    - Setup alpine packages repository.
 
 ```bash
 setup-apkrepos
 ```
+Sample output:
+
+```
+output of the cmd
+```
+
+
+
    - Install **python** package.
 
 ```bash
@@ -62,7 +79,7 @@ pip3 install --upgrade pip
 sudo tar cvvf alpine-3.9-armhf-python3.tar -C python-runtime/chroot/ .
 ```
 
-  - type exit to leave the runtime.
+  - To exit from the runtime type **exit**.
 
 ```bash 
 exit 
