@@ -8,8 +8,7 @@ The procedure to build Alpine Linux runtime is as follows:
  
  1. Build the runtime using pieman tool.
  2. Configure Alpine package manager.
- 3. Update Alpine Linux.
- 4. Build runtime tarball.
+ 3. Build runtime tarball.
 
 ## 1. Building a basic runtime.
 
@@ -27,9 +26,6 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
  - The runtime is created for a specific device, use **DEVICE** environnment variable to adapt the runtime to your device,  see the table bellow.
 
 
-> DEVICE: **rpi-3-b** is the short name for *Raspberry Pi 3 Model B*.
-
-
 | Device Full name            | Device Short name |
 | :-------------              | :----------:      |
 | Raspberry Pi Model B and B+ | rpi-b             |
@@ -38,41 +34,55 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
 | Raspberry Pi Zero           | rpi-zero          |
 
 
-You will find the result at pieman/build directory.
+ - Change the name of the runtime using **PROJECT_NAME** variable.
+
+
+
+ - You will find the built runtime  at **build** directory.
 
 ```bash
 ls build/
 MyDistro
 ```
 
-## Add packages to your runtime.
+## 2. Configure Alpine Linux package manager.
 
-pieman support an option that let us build chroot and include packages.
-normaly you can add packages while you are building your chroot runtimes, but seem to not working well.
-see the pieman doc for more information.
+ To be able to add packges to our runtime, we have to configure package manager.
 
-Here 2nd method.
+ - Enter the runtime , using the following command.
 
-```
-cd build/
-sudo chroot MyDistro/chroot/ /bin/sh -l
-localhost:/#
-```
-
-Configure package repo
+```bash
+sudo chroot build/MyDistro/chroot/ /bin/sh -l
 
 ```
+
+>  Every command inside the runtime is executed as root.
+
+
+ - To configure the pakages repository type the following command.
+
+
+```bash 
 setup-apkrepos
+
 ```
+
+Sample output :
+
+```bash
+output
+```
+
+
  - Choose a number , 8 for example.
 
- - Type exit to leave the runtime environment.
+ - To exit from the runtime environement type **exit**.
 
 ```bash 
 exit 
 ```
 
-## Build a tarball.
+## 3. Build a tarball.
 
 ```bash
 sudo tar cvvf alpine-3.9-armhf.tar -C MyRuntime/chroot/ .
