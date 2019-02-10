@@ -17,7 +17,7 @@ The procedure to build Alpine Linux runtime is as follows:
 ```bash
 cd pieman
 ```
- - Type the following commmand .
+ - To build the runtime type the following commmand .
 
 ```bash 
 sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
@@ -34,7 +34,7 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
 | Raspberry Pi Zero           | rpi-zero          |
 
 
- - Change the name of the runtime using **PROJECT_NAME** variable.
+> To change the name of the runtime use **PROJECT_NAME** variable.
 
 
 
