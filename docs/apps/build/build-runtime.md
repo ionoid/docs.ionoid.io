@@ -70,7 +70,37 @@ setup-apkrepos
 Sample output :
 
 ```bash
-output
+
+Available mirrors:
+1) dl-cdn.alpinelinux.org
+2) nl.alpinelinux.org
+3) uk.alpinelinux.org
+4) dl-2.alpinelinux.org
+5) dl-3.alpinelinux.org
+6) dl-4.alpinelinux.org
+7) dl-5.alpinelinux.org
+8) dl-8.alpinelinux.org
+9) mirror.yandex.ru
+10) mirrors.gigenet.com
+11) mirror1.hs-esslingen.de
+12) mirror.leaseweb.com
+13) mirror.fit.cvut.cz
+14) alpine.mirror.far.fi
+15) alpine.mirror.wearetriple.com
+16) mirror.clarkson.edu
+17) linorg.usp.br
+18) ftp.yzu.edu.tw
+19) mirror.aarnet.edu.au
+20) speglar.siminn.is
+21) mirrors.dotsrc.org
+22) ftp.halifax.rwth-aachen.de
+...
+
+r) Add random from the above list
+f) Detect and add fastest mirror from above list
+e) Edit /etc/apk/repositories with text editor
+
+Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
 ```
 
 
