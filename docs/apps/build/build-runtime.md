@@ -1,9 +1,13 @@
 # Building a runtime based on Alpine Linux quickly.
 
-To create a runtime based on Alpine Linux ditribution, you can use  a pieman tool, it automate and quick the creation process runtime.
+To create a runtime based on Alpine Linux ditribution, we are going to use [pieman]() tool, it automate the process.
+See here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to install pieman</a>.
+
 
 
 ## Building a basic runtime.
+
+
 
 ```bash
 cd pieman
