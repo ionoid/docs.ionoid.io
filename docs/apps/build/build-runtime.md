@@ -42,7 +42,7 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
 
 ```bash
 ls build/
-MyDistro
+MyRuntime
 ```
 
 ## 2. Configure Alpine Linux package manager.
@@ -53,7 +53,6 @@ MyDistro
 
 ```bash
 sudo chroot build/MyDistro/chroot/ /bin/sh -l
-
 ```
 
 >  Every command inside the runtime is executed as root.
@@ -64,13 +63,11 @@ sudo chroot build/MyDistro/chroot/ /bin/sh -l
 
 ```bash 
 setup-apkrepos
-
 ```
 
 Sample output :
 
 ```bash
-
 Available mirrors:
 1) dl-cdn.alpinelinux.org
 2) nl.alpinelinux.org
@@ -87,13 +84,6 @@ Available mirrors:
 13) mirror.fit.cvut.cz
 14) alpine.mirror.far.fi
 15) alpine.mirror.wearetriple.com
-16) mirror.clarkson.edu
-17) linorg.usp.br
-18) ftp.yzu.edu.tw
-19) mirror.aarnet.edu.au
-20) speglar.siminn.is
-21) mirrors.dotsrc.org
-22) ftp.halifax.rwth-aachen.de
 ...
 
 r) Add random from the above list
@@ -113,6 +103,8 @@ exit
 ```
 
 ## 3. Build a tarball.
+
+ - To create a tar ball named **alpine-3.9-armhf.tar** for the runtime  **MyRuntime/chroot/**, type.
 
 ```bash
 sudo tar cvvf alpine-3.9-armhf.tar -C MyRuntime/chroot/ .
