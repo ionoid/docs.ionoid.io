@@ -24,6 +24,18 @@ cd pieman
 sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 ```
 
+ - The runtime is created for a specific device, use **DEVICE** environnment variable to adapt the building runtime process to your device,  see the table bellow.
+
+> DEVICE: **rpi-3-b** is the short name for *Raspberry Pi 3 Model B*.
+
+| Device Full name            | Device Short name |
+| :-------------              | :----------:      |
+| Raspberry Pi Model B and B+ | rpi-b             |
+| Raspberry Pi 2 Model B      | rpi-2-b           |
+| Raspberry Pi 3 Model B      | rpi-3-b           |
+| Raspberry Pi Zero           | rpi-zero          |
+
+
 You will find the result at pieman/build directory.
 
 ```bash
