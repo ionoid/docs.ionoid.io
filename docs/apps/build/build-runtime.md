@@ -1,4 +1,4 @@
-# Building a runtime based on Alpine Linux quickly.
+# Building a basic runtime based on Alpine Linux quickly.
 
 To create a runtime based on Alpine Linux ditribution, we are going to use [pieman]() tool, it will automate the process.
 
@@ -104,9 +104,9 @@ exit
 
 ## 3. Build a tarball.
 
- - To create a tar ball named **alpine-3.9-armhf.tar** for the runtime  **MyRuntime/chroot/**, type.
+ - To create a tar ball named **alpine-3.9-armhf.tar** for the runtime  **MyRuntime/chroot/** type.
 
 ```bash
-sudo tar cvvf alpine-3.9-armhf.tar -C MyRuntime/chroot/ .
+sudo tar cvvf alpine-3.9-armhf.tar -C build/MyRuntime/chroot/ .
 ```
 
