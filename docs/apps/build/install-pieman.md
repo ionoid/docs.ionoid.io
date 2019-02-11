@@ -1,6 +1,10 @@
 
 # Prepare a Build Environment.
 
+This section describes how to set up your work environment to build the runtime for your IoT apps. You must use Linux. 
+For building under MacOS or Windows see Docker section. 
+
+
 Before creating runtime, we have install tools and prepare environment that make it easy.
 
 ## Preparing your build environment on GNU/Linux 
