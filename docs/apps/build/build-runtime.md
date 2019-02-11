@@ -1,8 +1,9 @@
 # Building a basic runtime based on Alpine Linux quickly.
 
-To create a runtime based on Alpine Linux ditribution, we are going to use [pieman]() tool, it will automate the process.
+We are going to build a runtime based on Alpine Linux distro, to be able to run IoT apps the Ionoid IoT way.
 
-See here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to Prepare Build Environment</a>.
+> To make easy runtime building we need to install tools and prepare build environement to automate the process.
+> See here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to Prepare Build Environment</a>.
 
 The procedure to build Alpine Linux runtime is as follows:
  
