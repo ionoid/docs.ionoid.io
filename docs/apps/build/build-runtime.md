@@ -1,6 +1,6 @@
 # Building a basic runtime based on Alpine Linux quickly.
 
-We are going to build a runtime based on Alpine Linux distro, to be able to run IoT apps the Ionoid IoT way.
+This section describes how to build a runtime based on Alpine Linux distro, to be able to run IoT apps the Ionoid IoT way.
 
 > To make easy runtime building we need to install tools and prepare build environement to automate the process.
 > See here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to Prepare Build Environment</a>.
