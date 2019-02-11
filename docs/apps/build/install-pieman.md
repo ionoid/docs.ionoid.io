@@ -44,4 +44,5 @@ git clone https://github.com/tolstoyevsky/pieman.git
 
 # Conclusion 
 
-Now we have a build environment for runtime creation , in the next section we will see how to build runtime.
+Now we have a build environment for runtime creation , in the next section we will see how to build a basic runtime
+based on Linux Alpine distro.
