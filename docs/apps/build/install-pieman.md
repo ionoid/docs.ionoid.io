@@ -1,5 +1,5 @@
 
-# Prepare Build Environment
+# Prepare a Build Environment.
 
 Before creating runtime, we have install tools and prepare environment that make it easy.
 
@@ -33,7 +33,7 @@ sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-Py
 git clone https://github.com/tolstoyevsky/pieman.git
 ```
 
- ### 3. install the required utilities and modules written in Python.
+ ### 3. Install the required utilities and modules written in Python.
 
 ```bash 
  sudo pip3 install pieman 
