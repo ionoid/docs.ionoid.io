@@ -6,13 +6,13 @@ See here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target=
 
 The procedure to build Alpine Linux runtime is as follows:
  
- 1. Build the runtime using pieman tool.
+ 1. Build a runtime.
  2. Configure Alpine package manager.
  3. Build runtime tarball.
 
 ## 1. Building a basic runtime.
 
- - Go to pieman directory. 
+ - Change directory into **pieman** directory. 
 
 ```bash
 cd pieman
