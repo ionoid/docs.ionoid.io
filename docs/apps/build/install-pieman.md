@@ -12,7 +12,7 @@ To prepare your build environment for creating runtimes, obtain the following to
 
 ### 1. Installing dependencies 
 
-	- on Debian/Ubuntu distro. 
+ - on Debian/Ubuntu distro. 
 
 
 ```bash 
@@ -20,7 +20,7 @@ sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptoo
 ```
 
 
- 	- on Fedora distro.
+ - on Fedora distro.
 
 
 ```bash 
