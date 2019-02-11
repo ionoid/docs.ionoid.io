@@ -24,6 +24,22 @@ tar -xvf alpine-3.9-armhf.tar -C python-runtime/
 ```bash 
 sudo chroot python-runtime/chroot/ /bin/sh -l
 ```
+  - Add python package to the runtime.
+ 
+```bash 
+apk add --no-cache python3
+```
+  - Install pip, the python package manager.
+
+```
+apk add --no-cache py-pip
+```
+
+  - Build the tarball.
+
+```bash 
+sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
+```
 
 ## 2. Build python runtime from scratch.
 
