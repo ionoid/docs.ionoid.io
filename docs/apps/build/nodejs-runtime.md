@@ -1,12 +1,15 @@
 # Building a Node.js runtime based on Alpine Linux
 
-To create a nodejs runtime , we are going to build a basic runitme based on Alpine Linux  then add nodejs package
-and nodejs modules.
+This section describes how to create a Node.js runtime app, using one the following method.
+
+1. Add Node.js package a prepared runtime.
+2. Build Node.js runtime from scratch.
+
+> if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the methode 1, otherwise use  method 2.
 
 
-## 1. Create runtime app based on Alpine Linux.
+### a. Create runtime app based on Alpine Linux.
 
-To build the runtime we are going to use <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a> tool, see here <a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to install pieman</a>.
 
    - Go to pieman directory and run.
 
@@ -22,7 +25,7 @@ ls build
 nodejs-runtime
 ```
 
-## 2. Add packages to Node.js runtime.
+### b. Add packages to Node.js runtime.
 
 
 ```bash
@@ -48,7 +51,7 @@ apk add --no-cache nodejs
 apk add --no-cache npm  
 ```
 
-## 3. Build Node.js runtime tarball.
+### c. Build Node.js runtime tarball.
 
    - Once you finish to add all the Node.js modules you need for your runtime, build the tarball.
 
@@ -62,7 +65,7 @@ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C nodejs-runtime/chroot/ .
 exit 
 ```
 
-## 4. Add nodejs modules.
+### d. Add nodejs modules.
 
    - You can add additional python module to your runtime before building the tarball using Node.js package manager.
    - Here as example we are going to install module . 
