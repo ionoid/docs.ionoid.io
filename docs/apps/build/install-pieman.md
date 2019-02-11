@@ -1,27 +1,45 @@
 
+# Prepare Build Environment
 
-You can find more information about **pieman** here [pieman](https://github.com/tolstoyevsky/pieman)
+Before creating runtime, we have install tools and prepare environment that make it easy.
 
-## Installing  pieman tool.
+## Preparing your build environment on GNU/Linux 
 
-  - Clone the git repo
+To prepare your build environment for creating runtimes, obtain the following tools if you haven't done so already.
+
+
+## GNU/Linux system.
+
+ ### 1. Installing dependencies 
+
+	- on Debian/Ubuntu distro. 
+
+```bash 
+sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptools python3-yaml qemu-user-static rsync uuid-runtime wget whois
+```
+
+
+ 	- on Fedora distro.
+
+```bash 
+sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-PyYAML python3-setuptools qemu-user-static rsync wget
+```
+
+ ### 2. Clone Pieman git repository.
 
 ```bash
 git clone https://github.com/tolstoyevsky/pieman.git
 ```
 
- - Install dependencies.
+ ### 3. install the required utilities and modules written in Python.
 
-   * On Debian / Ubuntu
-
-```bash
-sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptools python3-yaml qemu-user-static rsync uuid-runtime wget whois
+```bash 
+ sudo pip3 install pieman 
 ```
 
+## Docker 
+ - todo   
 
-   * On Fedora
+# Conclusion 
 
-```bash
-sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-PyYAML python3-setuptools qemu-user-static rsync wget
-```
-
+Now we have a build environment for runtime creation , in the next section we will see how to build runtime.
