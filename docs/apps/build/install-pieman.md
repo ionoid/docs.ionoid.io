@@ -10,9 +10,10 @@ To prepare your build environment for creating runtimes, obtain the following to
 
 ## GNU/Linux system.
 
- ### 1. Installing dependencies 
+### 1. Installing dependencies 
 
 	- on Debian/Ubuntu distro. 
+
 
 ```bash 
 sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptools python3-yaml qemu-user-static rsync uuid-runtime wget whois
@@ -21,11 +22,12 @@ sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptoo
 
  	- on Fedora distro.
 
+
 ```bash 
 sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-PyYAML python3-setuptools qemu-user-static rsync wget
 ```
 
- ### 2. Clone Pieman git repository.
+### 2. Clone Pieman git repository.
 
 ```bash
 git clone https://github.com/tolstoyevsky/pieman.git
