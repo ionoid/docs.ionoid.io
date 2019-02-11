@@ -9,6 +9,21 @@ This section describes how to create a python runtime app, using one the followi
 
 ## 1.  Add python package and modules to a prepared runtime.
 
+  - Create a directory for python runtime.
+
+```bash 
+mkdir python-runtime
+```
+  - Type the following command to extract  **alpine-3.9-armhf.tar** in a directory called **python-runtime**.
+
+```bash 
+tar -xvf alpine-3.9-armhf.tar -C python-runtime/
+```
+  - Type the following command to enter the runtime.
+
+```bash 
+sudo chroot python-runtime/chroot/ /bin/sh -l
+```
 
 ## 2. Build python runtime from scratch.
 
