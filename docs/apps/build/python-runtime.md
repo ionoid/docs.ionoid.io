@@ -1,12 +1,14 @@
 # Building a python runtime based on Alpine Linux
 
-To create a python runtime app, we are going to build a basic runtime based on Alpine Linux  then add python package
-and python modules using .
+This section describes how to create a python runtime app, using one the following method.
+
+1. Add python package and modules to a prepared runtime. 
+2. Build a basic runtime and add pyhton package et modules.
+
+> if you have built a basic runtime following the previous section Build Basic Alpine Linux Runtime, use the methode 1, otherwise use  method 2.
 
 
 ## 1. Create runtime app based on Alpine Linux
-
-To build the runtime we are going to use <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a> tool, see here .<a href="https://docs.ionoid.io/#/../apps/build/install-pieman" target="_blank"> How to install pieman</a>.
 
    - go to pieman directory and run.
 
