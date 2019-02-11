@@ -5,7 +5,7 @@ This section describes how to create a python runtime app, using one the followi
 1. Add python package and modules to a prepared runtime. 
 2. Build a basic runtime and add pyhton package et modules.
 
-> if you have built a basic runtime following the previous section Build Basic Alpine Linux Runtime, use the methode 1, otherwise use  method 2.
+> if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the methode 1, otherwise use  method 2.
 
 
 ## 1. Create runtime app based on Alpine Linux
