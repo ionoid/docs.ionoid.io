@@ -3,12 +3,16 @@
 This section describes how to create a python runtime app, using one the following method.
 
 1. Add python package and modules to a prepared runtime. 
-2. Build a basic runtime and add pyhton package et modules.
+2. Build python runtime from scratch.
 
 > if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the methode 1, otherwise use  method 2.
 
+## 1.  Add python package and modules to a prepared runtime.
 
-## 1. Create runtime app based on Alpine Linux
+
+## 2. Build python runtime from scratch.
+
+### a. Create runtime app based on Alpine Linux
 
    - go to pieman directory and run.
 
@@ -26,7 +30,7 @@ python-runtime
 ```
 
 
-## 2. Add packages to runtime
+## b. Add packages to runtime
 
  - To add packages to your runtime, go to build directory.
 
@@ -73,7 +77,7 @@ pip3 install --upgrade pip
  ```
   
   
-## 3. Build runtime tarball
+## c. Build runtime tarball
 
    - Once you finish to add all the python modules you need for your runtime, build the tarball.
 
@@ -87,7 +91,7 @@ sudo tar cvvf alpine-3.9-armhf-python3.tar -C python-runtime/chroot/ .
 exit 
 ```
 
-## 4. Add python modules
+## d. Add python modules
 
    - You can add additional python module to your runtime before building the tarball using python package manager.
    - Here as **example** we are going to install module to control Raspberry Pi GPIO channels. 
