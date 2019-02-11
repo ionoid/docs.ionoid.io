@@ -4,7 +4,7 @@
 This section describes how to set up your work environment to build the runtime for your IoT apps. You must use Linux. 
 For building under MacOS or Windows see Docker section. 
 
-> We are using piemean, a script for creating OS images for single-board computers such as Raspberry Pi.
+> We are using <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a>, a script for creating OS images for single-board computers such as Raspberry Pi.
 
 The procedure to prepare a build environment is as follow: 
 
