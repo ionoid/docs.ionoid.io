@@ -17,7 +17,7 @@ mkdir python-runtime
   - Type the following command to extract  **alpine-3.9-armhf.tar** in a directory called **python-runtime**.
 
 ```bash 
-tar -xvf alpine-3.9-armhf.tar -C python-runtime/
+sudo tar -xvf alpine-3.9-armhf.tar -C python-runtime/
 ```
   - Type the following command to enter the runtime.
 
@@ -33,6 +33,12 @@ apk add --no-cache python3
 
 ```
 apk add --no-cache py-pip
+```
+
+ - To exit from the runtime type **exit**.
+
+```bash
+exit
 ```
 
   - Build the tarball.
@@ -106,6 +112,12 @@ apk add --no-cache py-pip
  ```bash
 pip3 install --upgrade pip
  ```
+
+ - To exit from the runtime type **exit**.
+
+```bash
+exit
+```
   
   
 ## c. Build runtime tarball
@@ -113,14 +125,9 @@ pip3 install --upgrade pip
    - Once you finish to add all the python modules you need for your runtime, build the tarball.
 
 ```bash
-sudo tar cvvf alpine-3.9-armhf-python3.tar -C python-runtime/chroot/ .
+sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
 ```
 
-  - To exit from the runtime type **exit**.
-
-```bash 
-exit 
-```
 
 ## d. Add python modules
 
