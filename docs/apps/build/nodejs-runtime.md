@@ -2,7 +2,7 @@
 
 This section describes how to create a Node.js runtime app, using one the following method.
 
-1. Add Node.js package a prepared runtime.
+1. Add Node.js package to a prepared runtime.
 2. Build Node.js runtime from scratch.
 
 > if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the methode 1, otherwise use  method 2.
@@ -32,7 +32,7 @@ apk add --no-cache nodejs
   - Install npm, the Node.js package manager.
 
 ```
-apk add --no-cache nmp
+apk add --no-cache npm
 ```
 
  - To exit from the runtime type **exit**.
@@ -79,6 +79,33 @@ sudo chroot nodejs-runtime/chroot/ /bin/sh -l
 
 ```bash
 setup-apkrepos
+```
+Sample output:
+
+```bash
+Available mirrors:
+1) dl-cdn.alpinelinux.org
+2) nl.alpinelinux.org
+3) uk.alpinelinux.org
+4) dl-2.alpinelinux.org
+5) dl-3.alpinelinux.org
+6) dl-4.alpinelinux.org
+7) dl-5.alpinelinux.org
+8) dl-8.alpinelinux.org
+9) mirror.yandex.ru
+10) mirrors.gigenet.com
+11) mirror1.hs-esslingen.de
+12) mirror.leaseweb.com
+13) mirror.fit.cvut.cz
+14) alpine.mirror.far.fi
+15) alpine.mirror.wearetriple.com
+...
+
+r) Add random from the above list
+f) Detect and add fastest mirror from above list
+e) Edit /etc/apk/repositories with text editor
+
+Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
 ```
 
    - Install **Node.js** package. 
