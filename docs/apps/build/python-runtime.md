@@ -60,7 +60,13 @@ sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
 
 ### a. Create basic runtime based on Alpine Linux
 
-   - go to pieman directory and run.
+   - Open a terminal and change directory into pieman directory. 
+
+```bash 
+cd pieman
+```
+   
+   - Run the following commmand to build the runtime.
 
 ```bash
 
