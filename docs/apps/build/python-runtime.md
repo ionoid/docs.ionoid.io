@@ -31,9 +31,9 @@ sudo chroot python-runtime/chroot/ /bin/sh -l
 >apk add package-name
 >```
 
-> Every command in the runtime is executed as **root**.
-
   - Add python package to the runtime.
+
+> Every command in the runtime is executed as **root**.
  
 ```bash 
 apk add --no-cache python3
