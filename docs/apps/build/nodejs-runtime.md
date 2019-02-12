@@ -24,6 +24,13 @@ sudo tar -xvf alpine-3.9-armhf.tar -C nodejs-runtime/
 ```bash
 sudo chroot nodejs-runtime/chroot/ /bin/sh -l
 ```
+
+> We use **apk** command to add packages to the runtime, APK stands for Alpine Linux package manager.
+> - To install a package the syntax is :
+>```bash
+>apk add package-name
+>```
+
   - Add python package to the runtime.
 
 ```bash
