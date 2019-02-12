@@ -154,9 +154,9 @@ exit
 ```
   
   
-### c. Build runtime tarball
+### c. Build python runtime tarball.
 
-   - Once you finish to add all the python modules you need for your runtime, build the tarball.
+   - Once you finish to add all the python modules you need for your runtime, build the python runtime tarball using the following command.
 
 ```bash
 sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
