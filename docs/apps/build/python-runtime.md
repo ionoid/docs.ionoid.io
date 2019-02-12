@@ -1,6 +1,6 @@
 # Building a python runtime based on Alpine Linux
 
-This section describes how to create a python runtime app, using one the following method.
+This section describes how to create a python runtime, using one of the following method:
 
 1. Add python package and modules to a prepared runtime. 
 2. Build python runtime from scratch.
