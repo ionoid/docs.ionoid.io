@@ -15,7 +15,7 @@ The procedure to prepare a build environment is as follow:
 
 ## Preparing your build environment on GNU/Linux 
 
-To prepare your build environment for creating runtimes, obtain the following tools if you haven't done so already.
+To prepare your build environment several prerequisites for working with pieman must be installed, obtain the following tools if you haven't done so already.
 
 
 ## 1. Installing dependencies 
