@@ -24,6 +24,15 @@ sudo tar -xvf alpine-3.9-armhf.tar -C python-runtime/
 ```bash 
 sudo chroot python-runtime/chroot/ /bin/sh -l
 ```
+
+> We use **apk** command to add packages to the runtime, APK stands for Alpine Linux package manager.
+
+> - to install a package the syntax is :
+
+```bash 
+apk add package-name
+```
+
   - Add python package to the runtime.
  
 ```bash 
