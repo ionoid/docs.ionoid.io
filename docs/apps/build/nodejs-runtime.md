@@ -59,11 +59,10 @@ sudo tar cvvf nodejs-alpine-armhf.tar -C nodejs-runtime/chroot/ .
 
 ## 2. Build Node.js runtime from scratch.
 
-### a. Create runtime app based on Alpine Linux.
+### a. Create basic runtime  based on Alpine Linux.
 
-
-   - Go to pieman directory and run.
-
+   - Open a terminal and change directory into pieman directory. 
+   
 
 ```bash
 sudo env PROJECT_NAME=nodejs-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
