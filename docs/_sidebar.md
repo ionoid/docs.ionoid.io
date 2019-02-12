@@ -14,7 +14,7 @@
   - [Build nginx](../apps/build/nginx.md)
 - Build Basic IoT Apps
   - [Static IoT Apps](../apps/build/static-binary.md)
-  - [Build App Environment Preparation](../apps/build/install-pieman.md)
+  - [Prepare Runtime Build Environment](../apps/build/install-pieman.md)
   - [Build Basic Alpine Linux Runtime](../apps/build/build-runtime.md)
   - [Build Alpine Linux Python Runtime](../apps/build/python-runtime.md)
   - [Build Alpine Linux Node.js Runtime](../apps/build/nodejs-runtime.md)
