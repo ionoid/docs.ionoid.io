@@ -68,7 +68,11 @@ sudo env PROJECT_NAME=python-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_O
    - The built runtime will be located at **build** directory.
 
 ```bash
-ls build
+ls build/
+```
+
+Sample output:
+```bash 
 python-runtime
 
 ```
