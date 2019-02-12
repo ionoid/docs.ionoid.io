@@ -49,8 +49,7 @@ apk add --no-cache py-pip
 ```bash
 exit
 ```
-
-  - Build the tarball.
+  - Build the python runtime tarball using the following command.
 
 ```bash 
 sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
