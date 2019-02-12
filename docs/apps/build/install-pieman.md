@@ -10,7 +10,7 @@ The procedure to prepare a build environment is as follow:
 
 1. Installing dependencies.
 2. Clone Pieman git repository.
-3. Installing the required utilities and modules.
+3. Installing pieman required python modules.
 
 
 ## Preparing your build environment on GNU/Linux 
@@ -43,7 +43,9 @@ sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-Py
 git clone https://github.com/tolstoyevsky/pieman.git
 ```
 
-## 3. Install the required utilities and modules written in Python.
+## 3. Install the pieman required python modules.
+ 
+ - To install pieman required python modules run the following command.
 
 ```bash 
  sudo pip3 install pieman 
@@ -54,4 +56,4 @@ git clone https://github.com/tolstoyevsky/pieman.git
 
 # Conclusion 
 
-Now we have a build environment to create runtimes , in the next section we will see how to build a basic runtime based on Linux Alpine distro.
+Now we have a **build environment** to create runtimes , in the next section we will see how to build a basic runtime based on Linux Alpine distro.
