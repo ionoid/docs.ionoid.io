@@ -31,7 +31,9 @@ sudo chroot nodejs-runtime/chroot/ /bin/sh -l
 >apk add package-name
 >```
 
-  - Add python package to the runtime.
+  - Add Node.js package to the runtime.
+
+> Every command in the runtime is executed as **root**.
 
 ```bash
 apk add --no-cache nodejs
