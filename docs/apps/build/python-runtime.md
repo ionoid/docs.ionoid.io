@@ -31,6 +31,8 @@ sudo chroot python-runtime/chroot/ /bin/sh -l
 >apk add package-name
 >```
 
+> Every command in the runtime is executed as **root**.
+
   - Add python package to the runtime.
  
 ```bash 
@@ -56,7 +58,7 @@ sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
 
 ## 2. Build python runtime from scratch.
 
-### a. Create runtime app based on Alpine Linux
+### a. Create basic runtime based on Alpine Linux
 
    - go to pieman directory and run.
 
