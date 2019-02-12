@@ -10,7 +10,7 @@ The procedure to prepare a build environment is as follow:
 
 1. Installing dependencies.
 2. Clone Pieman git repository.
-3. Installing pieman required python modules.
+3. Installing Pieman required python modules.
 
 
 ## Preparing your build environment on GNU/Linux 
@@ -28,7 +28,7 @@ sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptoo
 ```
 
 
- - To install dependencies on Fedora distro open a terminal run the following command.
+ - To install dependencies on Fedora distro open a terminal run and the following command.
 
 
 ```bash 
@@ -45,7 +45,7 @@ git clone https://github.com/tolstoyevsky/pieman.git
 
 ## 3. Install the pieman required python modules.
  
- - To install pieman required python modules run the following command.
+ - To install Pieman required python modules run the following command.
 
 ```bash 
  sudo pip3 install pieman 
