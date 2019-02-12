@@ -1,6 +1,6 @@
 # Building a Node.js runtime based on Alpine Linux
 
-This section describes how to create a Node.js runtime app, using one the following method.
+This section describes how to create a Node.js runtime , using one of the following method:
 
 1. Add Node.js package to a prepared runtime.
 2. Build Node.js runtime from scratch.
@@ -9,17 +9,17 @@ This section describes how to create a Node.js runtime app, using one the follow
 
 ## 1. Add Node.js package and modules to a prepared runtime.
 
- - Create a directory for Node.js runtime.
+ - Open a terminal and create a directory for Node.js runtime here named nodejs-runtime.
 
 ```bash
 mkdir nodejs-runtime
 ```
-  - Type the following command to extract  **alpine-3.9-armhf.tar** in a directory called **python-runtime**.
+  - Extract the built runtime prepared in the previous section **alpine-3.9-armhf.tar** in a directory called **nodejs-runtime** using the following command. 
 
 ```bash
 sudo tar -xvf alpine-3.9-armhf.tar -C nodejs-runtime/
 ```
-  - Type the following command to enter the runtime.
+  - Run the following command to enter the runtime.
 
 ```bash
 sudo chroot nodejs-runtime/chroot/ /bin/sh -l
