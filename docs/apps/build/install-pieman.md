@@ -1,16 +1,16 @@
 
 # Prepare a Build Environment.
 
-This section describes how to set up your work environment to build the runtime for your IoT apps. You must use Linux. 
+This section describes how to set up your work environment to build runtime for your IoT apps. You must use Linux. 
 For building under MacOS or Windows see Docker section. 
 
 > We are using <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a>, a script for creating OS images for single-board computers such as Raspberry Pi.
 
 The procedure to prepare a build environment is as follow: 
 
-1. Installing dependencies
+1. Installing dependencies.
 2. Clone Pieman git repository.
-3. Installing the required utilities and modules written in Python.
+3. Installing the required utilities and modules.
 
 
 ## Preparing your build environment on GNU/Linux 
@@ -20,7 +20,7 @@ To prepare your build environment for creating runtimes, obtain the following to
 
 ## 1. Installing dependencies 
 
- - on Debian/Ubuntu distro. 
+ - On Debian/Ubuntu distro. 
 
 
 ```bash 
@@ -28,7 +28,7 @@ sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptoo
 ```
 
 
- - on Fedora distro.
+ - On Fedora distro.
 
 
 ```bash 
@@ -52,5 +52,4 @@ git clone https://github.com/tolstoyevsky/pieman.git
 
 # Conclusion 
 
-Now we have a build environment for runtime creation , in the next section we will see how to build a basic runtime
-based on Linux Alpine distro.
+Now we have a build environment to create runtimes , in the next section we will see how to build a basic runtime based on Linux Alpine distro.
