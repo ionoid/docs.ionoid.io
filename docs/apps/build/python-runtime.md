@@ -26,12 +26,11 @@ sudo chroot python-runtime/chroot/ /bin/sh -l
 ```
 
 > We use **apk** command to add packages to the runtime, APK stands for Alpine Linux package manager.
-
 > - to install a package the syntax is :
 
-```bash 
-apk add package-name
-```
+>```bash 
+>apk add package-name
+>```
 
   - Add python package to the runtime.
  
@@ -76,7 +75,7 @@ python-runtime
 ```
 
 
-## b. Add packages to runtime
+### b. Add packages to runtime
 
  - To add packages to your runtime, go to build directory.
 
@@ -150,7 +149,7 @@ exit
 ```
   
   
-## c. Build runtime tarball
+### c. Build runtime tarball
 
    - Once you finish to add all the python modules you need for your runtime, build the tarball.
 
@@ -159,7 +158,7 @@ sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
 ```
 
 
-## d. Add python modules
+##  Add python modules
 
    - You can add additional python module to your runtime before building the tarball using python package manager.
    - Here as **example** we are going to install module to control Raspberry Pi GPIO channels. 
