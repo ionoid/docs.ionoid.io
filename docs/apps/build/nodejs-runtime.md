@@ -63,24 +63,36 @@ sudo tar cvvf nodejs-alpine-armhf.tar -C nodejs-runtime/chroot/ .
 
    - Open a terminal and change directory into pieman directory. 
    
+```bash 
+cd pieman
+```
+   
+   - Run the following commmand to build the runtime.
 
 ```bash
 sudo env PROJECT_NAME=nodejs-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 ```
 
-   - The built chroot will be located at **build** directory.
+   - The built runtime will be located at **build** directory.
 
 ```bash
 ls build
+```
+
+Sample output:
+
+```
 nodejs-runtime
 ```
 
 ### b. Add packages to Node.js runtime.
 
+   - To enter the runtime, run the following command.
+
+> Every command in the runtime is executed as **root**. 
 
 ```bash
-cd build
-sudo chroot nodejs-runtime/chroot/ /bin/sh -l
+sudo chroot build/nodejs-runtime/chroot/ /bin/sh -l
 ```
 
    - Setup alpine packages repository.
