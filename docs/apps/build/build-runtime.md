@@ -59,7 +59,7 @@ sudo chroot build/MyDistro/chroot/ /bin/sh -l
 >  Every command inside the runtime is executed as root.
 
 
- - To configure the pakages repository type the following command.
+ - Run the following command to setup the Alpine Linux pakages repository.
 
 
 ```bash 
