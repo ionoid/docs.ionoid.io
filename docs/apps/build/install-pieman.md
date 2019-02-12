@@ -20,7 +20,7 @@ To prepare your build environment several prerequisites for working with pieman 
 
 ## 1. Installing dependencies 
 
- - On Debian/Ubuntu distro. 
+ - To install dependencies on Debian/Ubuntu distro open a terminal and  run the following commmand. 
 
 
 ```bash 
@@ -28,7 +28,7 @@ sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptoo
 ```
 
 
- - On Fedora distro.
+ - To install dependencies on Fedora distro open a terminal run the following command.
 
 
 ```bash 
@@ -36,6 +36,8 @@ sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-Py
 ```
 
 ## 2. Clone Pieman git repository.
+
+ - To get Pieman run the following command.
 
 ```bash
 git clone https://github.com/tolstoyevsky/pieman.git
