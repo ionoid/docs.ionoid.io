@@ -154,13 +154,13 @@ sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C nodejs-runtime/chroot/ .
 exit 
 ```
 
-### d. Add nodejs modules.
+## Add Node.js modules.
 
    - You can add additional python module to your runtime before building the tarball using Node.js package manager.
-   - Here as example we are going to install module . 
+   - Here as example we are going to install **bootstrap** framework. 
 
 ```bash
-npm install  
+npm install   bootstrap
 ```
 
 
