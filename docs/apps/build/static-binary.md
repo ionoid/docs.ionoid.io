@@ -153,13 +153,20 @@ To generate our [Hello World IoT App](https://storage.googleapis.com/public.open
 
 ```bash
 cd hello-world
-ls -a ./*
-        ./app.yaml
+```
 
+Inside hello-world execute
+
+```bash
+ls -a ./*
+```
+Result:
+        
+        ./app.yaml
         ./bin:
         .  ..  hello-world
 
-
+```bash
 tar -cvf ../hello-world-armv7-v0.2.tar *
 ```
 

@@ -43,8 +43,10 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
 
 ```bash
 ls build/
-MyRuntime
 ```
+Sample output will be:
+
+    MyRuntime
 
 ## 2. Configure Alpine Linux package manager.
 
