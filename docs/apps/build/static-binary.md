@@ -152,15 +152,15 @@ targets the format that you want.
 To generate our [Hello World IoT App](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
 
 ```bash
-$ cd hello-world
-$ ls -a ./*
+cd hello-world
+ls -a ./*
         ./app.yaml
 
         ./bin:
         .  ..  hello-world
 
 
-$ tar -cvf ../hello-world-armv7-v0.2.tar *
+tar -cvf ../hello-world-armv7-v0.2.tar *
 ```
 
 The `hello-world-armv7-v0.2.tar` is our final App that can be deployed

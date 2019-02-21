@@ -37,7 +37,7 @@ Connect to your device via `ssh`.
 
 
 ```bash
-$ ssh $USER@$IP_ADDRESS_OF_DEVICE
+ssh $USER@$IP_ADDRESS_OF_DEVICE
 ```
 
 Provide the `$USER` password and you should be in if everything was
@@ -52,7 +52,7 @@ utility.
 * To get the overall status of the Device:
 
 ```bash
-$ sudo systemctl status
+sudo systemctl status
 ```
 
 ### Troubleshooting Services and Apps
@@ -60,21 +60,21 @@ $ sudo systemctl status
 * To get the list of failed Services on the Device:
 
 ```bash
-$ sudo systemctl --failed
+sudo systemctl --failed
 ```
 
 * To get the status of Services or Apps, use the `status` operation:
 
 ```bash
-$ sudo systemctl status systemd-journald
+sudo systemctl status systemd-journald
 ```
 
 ```bash
-$ sudo systemctl status sealos-manager
+sudo systemctl status sealos-manager
 ```
 
 ```bash
-$ sudo systemctl status sealos-manager-actions
+sudo systemctl status sealos-manager-actions
 ```
 
 
@@ -87,7 +87,7 @@ of your App:
 * Get Status of an App:
 
 ```bash
-$ sudo systemctl status $APP
+sudo systemctl status $APP
 ```
 
 
@@ -102,7 +102,7 @@ If you have deployed Docker Containers or Apps then you can use the `Docker` too
 * List All running Apps and Containers:
 
 ```bash
-$ docker ps
+docker ps
 ```
 
 
@@ -115,36 +115,36 @@ utility.
 `100 log entires`:
 
 ```bash
-$ sudo dmesg | tail -n 100
+sudo dmesg | tail -n 100
 ```
 
 
 * To get the system logs of the current boot:
 
 ```bash
-$ sudo journalctl -b
+sudo journalctl -b
 ```
 
 * To get the last 10 entries of system logs of the current boot:
 
 ```bash
-$ sudo journalctl -b -n 10
+sudo journalctl -b -n 10
 ```
 
 * To Follow in realtime system logs of the current boot:
 
 ```bash
-$ sudo journalctl -b -f
+sudo journalctl -b -f
 ```
 
 * To check the logs of a `sealos-manager` agent:
 
 ```bash
-$ sudo journalctl -b -u sealos-manager
+sudo journalctl -b -u sealos-manager
 ```
 
 ```bash
-$ sudo journalctl -b -u sealos-manager-actions
+sudo journalctl -b -u sealos-manager-actions
 ```
 
 
@@ -152,7 +152,7 @@ $ sudo journalctl -b -u sealos-manager-actions
 of your App:
 
 ```bash
-$ sudo journalctl -b -u $APP
+sudo journalctl -b -u $APP
 ```
 
 

@@ -10,35 +10,35 @@ we need to proceed in an other way.
 - debootstrap
 
 ```bash
-$ su -
+su -
 Password:
-# dnf install debootstrap qemu-user-static
+dnf install debootstrap qemu-user-static
 ```
 
 ## 2. Create armhf chroot
 
 ```bash
-# mkdir armhf-chroot
-# debootstrap  --foreign --no-check-gpg --arch=armhf stretch armhf-chroot  http://ftp.debian.org/debian
+mkdir armhf-chroot
+debootstrap  --foreign --no-check-gpg --arch=armhf stretch armhf-chroot  http://ftp.debian.org/debian
 ```
 - Once debootstrap finish, we need to copy  **qemu-arm-static** to chroot directory.
 
 ```bash
-# cp /usr/bin/qemu-arm-static armhf-chroot/usr/bin/
+cp /usr/bin/qemu-arm-static armhf-chroot/usr/bin/
 ```
 
 - Now chroot into the system.
 
 ```bash
-# chroot armhf-chroot/
+chroot armhf-chroot/
 ```
 
 - Define PATH variable.
 
 ```bash 
 
-#  echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" >> /root/.bashrc
-# source /root/.bashrc
+echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" >> /root/.bashrc
+source /root/.bashrc
 
 ```
 
@@ -46,14 +46,14 @@ Password:
 - Launch debootstrap second stage.
 
 ```bash
-# ./debootstrap/debootstrap --second-stage
+./debootstrap/debootstrap --second-stage
 ```
 
 - Do a system update
 
 ```bash
 
-# apt-get update
+apt-get update
 
 ````
 
@@ -61,7 +61,7 @@ Password:
 
 ```bash 
 
-# apt-get install mosquitto mosquitto-clients python3 python3-pip
+apt-get install mosquitto mosquitto-clients python3 python3-pip
 
 ```
 
@@ -69,8 +69,8 @@ Password:
 
 ```bash 
 
-# apt-get clean
-# rm /var/lib/apt/lists/*
+apt-get clean
+rm /var/lib/apt/lists/*
 
 ```
 
@@ -81,7 +81,7 @@ Password:
 - Create a tarball using **tar** 
 
 ```bash
-# tar -cvvlf armhf-chroot.tar -C armhf-chroot/ .
+tar -cvvlf armhf-chroot.tar -C armhf-chroot/ .
 ```
 
 <!-- <ul class="pagination">
