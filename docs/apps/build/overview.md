@@ -14,7 +14,7 @@ This section provides a basic view of IoT Apps and how to deploy them.
 Ionoid IoT Apps are apps that are self-contained with all their metadata
 included.
 
-## 2. Steps to generate an app
+## 2. Tools/Steps to generate an app
 
 1- To be able to create a compatible app you will need pieman to generate the 
 the environment of the app, for example, alpine os updated and ready to serve.
