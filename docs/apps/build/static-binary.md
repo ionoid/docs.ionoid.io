@@ -1,12 +1,4 @@
 
-# Ionoid IoT Apps Format
-
-Ionoid IoT Platform supports simple IoT Apps that can run on any Linux and
-integrated with Ionoid.
-
-Ionoid IoT Apps take [Snapcraft](https://docs.snapcraft.io/) the universal
-app store for Linux as a reference, and build on top of it.
-
 ## 1. Getting Started
 
 This section provides basic view on IoT Apps and how to deploy them.

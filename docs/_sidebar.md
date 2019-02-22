@@ -8,6 +8,7 @@
   - [Update Apps](../UpdateApp/updateApp.md)
   - [Rollback Apps](../RollbackApp/rollbackApp.md)
 - Build Basic IoT Apps
+  - [Overview](apps/build/overview.md)
   - [Static IoT Apps](../apps/build/static-binary.md)
   - [Prepare Runtime Build Environment](../apps/build/install-pieman.md)
   - [Build Basic Alpine Linux Runtime](../apps/build/build-runtime.md)
