@@ -22,7 +22,7 @@ apk add --no-cache python3
 apk add --no-cache py-pip
 ```
 
-## Create Python file of our app
+## Create the Python file of our app
 
 For convention we will save our python source code on /usr/local/bin,
 And reference it on it's YAML file.
@@ -63,7 +63,7 @@ and a YAML file named app.yaml on /
 To finish our app we need to package it by compressing it with a simple tar command as following
 
 ```bash
-sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
+sudo tar cvvf python3-alpine-armhf.tar -C build/BasicPythonApp/chroot/ .
 ```
 
 Congratulation for your effort, now all you need is a to host your tar file to give it to your ionoid dashboard
