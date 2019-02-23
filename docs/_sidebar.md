@@ -9,11 +9,15 @@
   - [Rollback Apps](../RollbackApp/rollbackApp.md)
 - Build Basic IoT Apps
   - [Overview](apps/build/overview.md)
+  - [Basic Environnement](apps/build/step-by-step-basic-environnement.md)
+  - [Basic Hello World Python App](apps/build/step-by-step-basic-python-app.md)
+  - [Basic Hello World Nodejs App](apps/build/step-by-step-basic-nodejs-app.md)
+  - [Basic Hello World Golang App](apps/build/step-by-step-basic-golang-app.md)
+
   - [Static IoT Apps](../apps/build/static-binary.md)
-  - [Prepare Runtime Build Environment](../apps/build/install-pieman.md)
-  - [Build Basic Alpine Linux Runtime](../apps/build/build-runtime.md)
   - [Build Alpine Linux Python Runtime](../apps/build/python-runtime.md)
   - [Build Alpine Linux Node.js Runtime](../apps/build/nodejs-runtime.md)
+
 - Debug IoT Devices
   - [Troubleshooting IoT Devices](../debug/debug-devices.md)
 

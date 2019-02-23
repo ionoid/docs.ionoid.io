@@ -16,8 +16,8 @@ included.
 
 ## 2. Tools/Steps to generate an app
 
-1- To be able to create a compatible app you will need pieman to generate the 
-the environment of the app, for example, alpine os updated and ready to serve.
+1- To be able to create a compatible app you will need pieman to generate 
+the environment of the app, for example, Linux Alpine updated and ready to serve.
 
 2- Chroot command to be able to work on the generated environment, basically 
 being able to execute the command inside env to install dependency like python
@@ -31,5 +31,5 @@ filesystem  (/)
 
 
 
-### Follow the next section to understand how to generate your yaml file.
+### Follow the next section to understand Step by step how to generate your first app.
 
