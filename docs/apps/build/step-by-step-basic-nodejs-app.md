@@ -1,6 +1,6 @@
-## Building a basic nodejs hello world app
+## Building a basic nodejs hello world app base on Alpine linux
 
-After [building your basic environnement](http://localhost:3000/#/apps/build/step-by-step-basic-environnement?id=building-a-basic-runtime-based-on-alpine-linux-quickly) with PROJECT_NAME="BasicNodejsApp" 
+After [Preparation of an Alpine Linux Environment](/apps/build/step-by-step-basic-environnement?id=building-a-basic-runtime-based-on-alpine-linux-quickly) with PROJECT_NAME="BasicNodejsApp" 
 execute a chroot as following:
 
 ```bash

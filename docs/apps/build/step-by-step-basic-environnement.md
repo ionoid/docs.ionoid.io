@@ -1,12 +1,14 @@
 
-# Prepare a Build Environment.
+# Prepare Alpine Linux Environment.
 
 This section describes how to set up your work environment to build runtime for your IoT apps. You must use Linux. 
 For building under MacOS or Windows see Docker section. 
 
 > We are using <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a>, a script for creating OS images for single-board computers such as Raspberry Pi.
 
-The procedure to prepare a build environment is as follow: 
+The procedure to Prepare Alpine Linux Environment is as follow: 
+
+> Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
 
 1. Installing dependencies.
 2. Clone Pieman git repository.

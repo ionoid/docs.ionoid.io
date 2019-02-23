@@ -1,6 +1,6 @@
 ## Building a basic python hello world app
 
-After [building your basic environnement](http://localhost:3000/#/apps/build/step-by-step-basic-environnement?id=building-a-basic-runtime-based-on-alpine-linux-quickly) with PROJECT_NAME="BasicPythonApp" 
+After [[Preparation of an Alpine Linux Environment](/apps/build/step-by-step-basic-environnement?id=building-a-basic-runtime-based-on-alpine-linux-quickly) with PROJECT_NAME="BasicPythonApp" 
 execute a chroot as following:
 
 ```bash
