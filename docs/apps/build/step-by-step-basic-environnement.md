@@ -8,7 +8,7 @@ For building under MacOS or Windows see Docker section.
 
 The procedure to Prepare Alpine Linux Environment is as follow: 
 
-> Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
+> [Alpine Linux](https://alpinelinux.org/) is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
 
 1. Installing dependencies.
 2. Clone Pieman git repository.
