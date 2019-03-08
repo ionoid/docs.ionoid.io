@@ -92,7 +92,7 @@ Now burn the generated `zip image` into your MicroSD card. You can use
 [Etcher](https://etcher.io/) to copy the `zip image`.
 
 
-After that, boot your device and go to your project in [Ionoid Dashboard](https://ionoid.io), it should take some minutes before the device auto shows up there.
+After that, boot your device and go to your project in [Ionoid Dashboard](https://dashboard.ionoid.io), it should take some minutes before the device auto shows up there.
 
 
 ![Device Booting](DeviceBoot.png)
