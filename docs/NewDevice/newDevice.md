@@ -18,7 +18,7 @@ Click on **Advanced System Configuration** to customize system device configurat
 ## General settings
 
 You can set or modify  the configuration of your device system  easily using dashboard.
- - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example hostname: `device-\*` will be **device-2153**.
+ - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example hostname: `device-*` will be `device-2153`.
  - Set or modify DNS servers.
  - Set or modify NTP servers.
 
@@ -39,9 +39,9 @@ You can configure easily your WiFi settings by:
 
 ## Generate Linux-IoT OS
 
-Once you have finished setting your system, follow up my preparing your Linux-IoT system.
+Once you have finished configuration settings, follow up by preparing your Linux-IoT system.
 
-Currently this tutorial only supports [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/). More OSs will be added soon.
+Currently Ionoid IoT supports only [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/). More OSs will be added soon.
 
 
 ### Beginners - Generate your Linux-IoT OS
@@ -51,11 +51,11 @@ To be added soon.
 
 ### Advanced Linux Users - Generate Linux-IoT OS
 
-After finishing settings configuration, click on `Download OS Configuration`, the dashboard will generate a file named **config.json** that contain the whole configuration of your device.
+After finishing configuration settings, click on `Download OS Configuration` button, the dashboard will generate a **config.json** file that contain your device settings.
 
 ![OS configuration file](OSconfig.png)
 
-The **config.json** file sould be saved in your home directory or in a secure place, do **not share it**. It contains sensitive information about your device's security.
+The **config.json** file must be saved in your home directory or in a secure place, do **not share it**. It contains sensitive information about your device's security.
 
 
 After that, go ahead and download your Rasbpian image, you can find the latest version [here Raspbian image](https://www.raspberrypi.org/downloads/raspbian/)
@@ -74,8 +74,8 @@ prompted for `root` password, enter it, it will allow to mount the image
 patch it and unmount it.
 
 If your target board is an ARMv7 like the Raspberry PI 3, then set
-**MACHINE** environment variable to **arm7** like this:
-**MACHINE=arm7**. For a Raspberry PI Zero use **MACHINE=arm6**.
+`MACHINE` environment variable to `arm7` like this:
+`MACHINE=arm7`. For a Raspberry PI Zero use `MACHINE=arm6`.
 
 
 ```bash
@@ -83,9 +83,21 @@ curl https://manager.services.ionoid.net/install-tools.bash | MACHINE=arm7 IMAGE
 
 ```
 
-Once finished your should find the new patched image into the **output**
-directory.
+Once finished your should find the new patched image into the `output`
+directory:
+`./output/2018-06-27-raspbian-stretch-lite.zip`
 
+
+Now burn the generated `zip image` into your MicroSD card. You can use
+[Etcher](https://etcher.io/) to copy the `zip image`.
+
+
+After that, boot your device and go to your project in [Ionoid Dashboard](https://ionoid.io), it should take some minutes before the device auto shows up there.
+
+
+![Device Booting](DeviceBoot.png)
+
+Congratulations!
 
 
 
