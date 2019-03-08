@@ -1,28 +1,29 @@
+# Add a new device to your IoT Project
 
+Once you create a project, you can start adding devices by following the
+this tutorial.
 
-# Add a new device to your IoT Project.
-
-Once you create a project on Ionoid IoT platform, you can now add devices to
-the project.
 
 ## Add new device
 
-  Click on **Add device** button to add a new device to the project.
+Click on **Add device** button to add a new device to the project.
  
- ![Add Device](AddDevice.png)
+![Add Device](AddDevice.png)
  
- Click on **Advanced System Configuration** to customize system device configuration.
+Click on **Advanced System Configuration** to customize system device configuration.
  
- ![New Device](NewDevice.png)
+![New Device](NewDevice.png)
+
 
 ## General settings
 
 You can set or modify  the configuration of your device system  easily using dashboard.
- - Set or modify  a hostname.
+ - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example: **device-\*\** will be **device-2153**.
  - Set or modify a DNS server.
  - Set or modify a NTP server.
 
 ![General Settings](GeneralSettings.png)
+
 
 ## Network settings
 
@@ -34,6 +35,7 @@ You can set or modify  the configuration of your device system  easily using das
  - Select a security option.
 
 ![Network Settings](NetworkSettings.png)
+
 
 ## Download OS configuration file.
 
