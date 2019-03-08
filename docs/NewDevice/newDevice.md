@@ -18,7 +18,7 @@ Click on **Advanced System Configuration** to customize system device configurat
 ## General settings
 
 You can set or modify  the configuration of your device system  easily using dashboard.
- - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example: **device-\*\** will be **device-2153**.
+ - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example hostname: `device-\*` will be **device-2153**.
  - Set or modify DNS servers.
  - Set or modify NTP servers.
 
@@ -27,7 +27,7 @@ You can set or modify  the configuration of your device system  easily using das
 
 ## Network settings
 
-  You can configure easily your  WiFi connection.
+You can configure easily your WiFi settings by:
 
  - Go to  **Network Settings** section.
  - Enable WiFi by clicking on **On** button.
@@ -37,13 +37,56 @@ You can set or modify  the configuration of your device system  easily using das
 ![Network Settings](NetworkSettings.png)
 
 
-## Download OS configuration file.
+## Generate Linux-IoT OS
 
-Once you have finished setting your system, the dashboard will generate a file named **config.json** that contain the whole configuration of your device.
+Once you have finished setting your system, follow up my preparing your Linux-IoT system.
+
+Currently this tutorial only supports [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/). More OSs will be added soon.
+
+
+### Beginners - Generate your Linux-IoT OS
+
+To be added soon.
+
+
+### Advanced Linux Users - Generate Linux-IoT OS
+
+After finishing settings configuration, click on `Download OS Configuration`, the dashboard will generate a file named **config.json** that contain the whole configuration of your device.
 
 ![OS configuration file](OSconfig.png)
 
-The **config.json** file sould be saved in a secure place and do not share it, because it contain sensitive information and you can compromise the security of your device.
+The **config.json** file sould be saved in your home directory or in a secure place, do **not share it**. It contains sensitive information about your device's security.
+
+
+After that, go ahead and download your Rasbpian image, you can find the latest version [here Raspbian image](https://www.raspberrypi.org/downloads/raspbian/)
+
+
+Assuming that all goes well which should be the case, in the current
+directory we will have the following files:
+
+`2018-06-27-raspbian-stretch-lite.zip`
+
+`config.json`
+
+
+To generate your Linux-IoT system run the following command, and when
+prompted for `root` password, enter it, it will allow to mount the image
+patch it and unmount it.
+
+If your target board is an ARMv7 like the Raspberry PI 3, then set
+**MACHINE** environment variable to **arm7** like this:
+**MACHINE=arm7**. For a Raspberry PI Zero use **MACHINE=arm6**.
+
+
+```bash
+curl https://manager.services.ionoid.net/install-tools.bash | MACHINE=arm7 IMAGE=2018-06-27-raspbian-stretch-lite.zip CONFIG=config.json bash
+
+```
+
+Once finished your should find the new patched image into the **output**
+directory.
+
+
 
 
 ---
