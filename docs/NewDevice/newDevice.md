@@ -19,8 +19,8 @@ Click on **Advanced System Configuration** to customize system device configurat
 
 You can set or modify  the configuration of your device system  easily using dashboard.
  - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example: **device-\*\** will be **device-2153**.
- - Set or modify a DNS server.
- - Set or modify a NTP server.
+ - Set or modify DNS servers.
+ - Set or modify NTP servers.
 
 ![General Settings](GeneralSettings.png)
 
