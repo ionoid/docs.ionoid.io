@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img alt="Polly.JS" width="400px" src="https://docs.ionoid.io/_media/logo-big.png" />
+  <img alt="Iot Ionoid" width="400px" src="/_media/logo-big.png" />
 </p>
 <h2 align="center">Manage your IoT Fleet and scale to the Moon</h2>
 

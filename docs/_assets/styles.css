@@ -345,6 +345,19 @@ body .sidebar-toggle span:nth-child(3) {
   padding-bottom: 3px;
 }
 
+.app-nav ul > li:first-child > a, 
+.app-nav > a:first-child {
+  color: #fff;
+  /* background-color: #EDE7F3; */
+  background-color: var(--theme-color);
+  
+  border-color: #d9cce5;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(59,35,83,.075);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .app-nav a{
     display: none;
