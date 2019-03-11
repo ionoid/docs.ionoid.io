@@ -3,15 +3,15 @@
 Because in golang we can create a self contained binary we dont need an environment,
 so it will be enought to create the binary file accompagned with it's yaml file as following
 
-1- Create a directory for the project and bin folder to contain our binary file
+## Create a directory for the project and bin folder to contain our binary file
 
 ```bash
 mkdir -p golang-hello-world/bin
 ```
 
-2- Copy your hello world binary file to golang-hello-world/bin
+## Copy your hello world binary file to golang-hello-world/bin
 
-3- Create yaml file that represent the project
+## Create yaml file that represent the project
 
 The content of the `app.yaml` file would be:
 ```
@@ -32,7 +32,7 @@ Result:
         ./bin:
         .  ..  hello-world
 
-4- Compress the result as tar file 
+## Compress the result as tar file 
 
 ```bash
 tar -cvf ../hello-world-golan-armv7-v0.2.tar ./golang-hello-world/*
