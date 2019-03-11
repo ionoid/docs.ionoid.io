@@ -1,4 +1,4 @@
-# Prepare a Build Environment.
+# Basic Hello world app in golang.
 
 Because in golang we can create a self contained binary we dont need an environment,
 so it will be enought to create the binary file accompagned with it's yaml file as following
