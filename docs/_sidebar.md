@@ -13,7 +13,7 @@
   - [Build Alpine Linux Node.js Runtime](../apps/build/nodejs-runtime.md)
 - Example Basic IoT Apps
   - [Overview](apps/build/overview.md)
-  - [Basic Environnement](apps/build/step-by-step-basic-environnement.md)
+  - [Basic Environnement](apps/build/step-by-step-basic-environment.md)
   - [Basic Hello World Python App](apps/build/step-by-step-basic-python-app.md)
   - [Basic Hello World Nodejs App](apps/build/step-by-step-basic-nodejs-app.md)
   - [Basic Hello World Golang App](apps/build/step-by-step-basic-golang-app.md)

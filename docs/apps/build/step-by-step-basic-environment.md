@@ -22,7 +22,7 @@ To prepare your build environment several prerequisites for working with pieman 
 
 ## 1. Installing dependencies 
 
- - To install dependencies on Debian/Ubuntu distro open a terminal and  run the following commmand. 
+ - To install dependencies on Debian/Ubuntu distro open a terminal and  run the following command. 
 
 
 ```bash 
@@ -70,13 +70,13 @@ The procedure to build Alpine Linux runtime is as follows:
 ```bash
 cd pieman
 ```
- - To build the runtime run the following commmand .
+ - To build the runtime run the following command .
 
 ```bash 
 sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 ```
 
- - The runtime is created for a specific device, use **DEVICE** environnment variable to adapt the runtime to your device,  see the table bellow.
+ - The runtime is created for a specific device, use **DEVICE** environment variable to adapt the runtime to your device,  see the table below.
 
 
 | Device Full name            | Device Short name |
@@ -96,15 +96,15 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
 ```bash
 ls build/
 ```
-Sample output will be as we setted on pieman command PROJECT_NAME="MyRuntime":
+Sample output will be as we set on pieman command PROJECT_NAME="MyRuntime":
 
     MyRuntime
 
 ## 2. Configure Alpine Linux package manager.
 
- To be able to add packges to our runtime, we have to configure package manager.
+ To be able to add packages to our runtime, we have to configure the package manager.
 
- - Enter the runtime , using the following command.
+ - Enter the runtime, using the following command.
 
 ```bash
 sudo chroot build/MyDistro/chroot/ /bin/sh -l
@@ -142,8 +142,8 @@ Available mirrors:
 ...
 
 r) Add random from the above list
-f) Detect and add fastest mirror from above list
-e) Edit /etc/apk/repositories with text editor
+f) Detect and add fastest mirror from the above list
+e) Edit /etc/apk/repositories with a text editor
 
 Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
 ```
@@ -151,7 +151,7 @@ Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
 
  - Choose a number , 8 for example.
 
- - To exit from the runtime environement type **exit**.
+ - To exit from the runtime environment type **exit**.
 
 ```bash 
 exit 
@@ -159,5 +159,5 @@ exit
 
 # Conclution
 
-Congratulation, now you have an exploitable environnement, in the next section
+Congratulation, now you have an exploitable environment, in the next section,
 we will create our first basic python app.

@@ -11,7 +11,7 @@ mkdir -p golang-hello-world/bin
 
 ## Copy your hello world binary file to golang-hello-world/bin
 
-## Create yaml file that represent the project
+## Creating YAML file
 
 The content of the `app.yaml` file would be:
 ```

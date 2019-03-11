@@ -1,13 +1,13 @@
 ## Building a basic python hello world app
 
-After [[Preparation of an Alpine Linux Environment](/apps/build/step-by-step-basic-environnement?id=building-a-basic-runtime-based-on-alpine-linux-quickly) with PROJECT_NAME="BasicPythonApp" 
+After [[Preparation of an Alpine Linux Environment](/apps/build/step-by-step-basic-environment?id=building-a-basic-runtime-based-on-alpine-linux-quickly) with PROJECT_NAME="BasicPythonApp" 
 execute a chroot as following:
 
 ```bash
 sudo chroot build/BasicPythonApp/chroot/ /bin/sh -l
 ```
 
-To find yourself inside your new environnement where we can now install Python
+To find yourself inside your new environment where we can now install Python
 
 ## Install Python
 
@@ -24,7 +24,7 @@ apk add --no-cache py-pip
 
 ## Create the Python file of our app
 
-For convention we will save our python source code on /usr/local/bin,
+For convention, we will save our python source code on /usr/local/bin,
 And reference it on it's YAML file.
 
 So we start by creating our hello python app with hello-world as file name
@@ -43,7 +43,7 @@ while True:
 ## Creating YAML file
 
 After creating source code of our app it's time to create the YAML file 
-corresponding to it and saving it in the root filesystem of our environnement 
+corresponding to it and saving it in the root filesystem of our environment 
 with app.yaml as file name
 
 ```yaml
@@ -57,7 +57,7 @@ apps:
 ```
 ## Conclution
 
-You have now your environnement and inside it you just created a python file on /usr/local/bin
+You have now your environment and inside it you just created a python file on /usr/local/bin
 and a YAML file named app.yaml on / 
 
 To finish our app we need to package it by compressing it with a simple tar command as following
