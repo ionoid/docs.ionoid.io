@@ -85,12 +85,15 @@ If your target board is an ARMv7 like the Raspberry PI 3, then set
 `MACHINE=arm7`. For a Raspberry PI Zero use `MACHINE=arm6`.
 
 
+
+
 ```bash
+cd ionoid-build
 curl https://manager.services.ionoid.net/install-tools.bash | MACHINE=arm7 IMAGE=2018-06-27-raspbian-stretch-lite.zip CONFIG=config.json bash
 
 ```
 
-Once finished your should find the new patched image into the `output`
+Once finished you should find the new patched image inside the `output`
 directory:
 `./output/2018-06-27-raspbian-stretch-lite.zip`
 
