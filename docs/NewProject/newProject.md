@@ -3,6 +3,7 @@
 To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 
 ## New project
+
 - Click on **Create new project** button.
 
 ![Create New Project](CreateNewProject.png)
@@ -20,6 +21,9 @@ table details supported boards:
 
 | Boards             | Architecture  | Machine Variable  |
 | ------------------ |:-------------:| -----------------:|
+#| BeagleBone Black   | ARMv7         | arm7              |
+#| BeagleBone Green   | ARMv7         | arm7              |
+#| BeagleBone Green W | ARMv7         | arm7              |
 | Raspberry PI 1     | ARMv6         | arm6              |
 | Raspberry PI 2 B   | ARMv7         | arm7              |
 | Raspberry PI Zero  | ARMv6         | arm6              |
@@ -28,6 +32,7 @@ table details supported boards:
 | Raspberry PI 3 B+  | ARMv7 (32-bit)| arm7              |
 | Raspberry PI 3 B+  | ARMv8 (64-bit)| arm8              |
 | Raspberry PI 3 A+  | ARMv8 (64-bit)| arm8              |
+| Qemu x86-64        | x86   (64-bit)| amd64             |
 
 
 
@@ -35,6 +40,7 @@ table details supported boards:
 ![Project Form](ProjectForm2.png)
 
 - Click on **Create Project** to confirm.
+
 
 ## Entering the Project.
 
