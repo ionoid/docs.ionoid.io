@@ -16,6 +16,8 @@ To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 - Complete the form with the information related to your project.
 
 
+## Supported Boards
+
 Ionoid Supports multiple boards and device architectures. The following
 table details supported boards:
 
