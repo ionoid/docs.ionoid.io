@@ -51,7 +51,7 @@ To be added soon.
 
 ### Advanced Linux Users - Generate Linux-IoT OS
 
-After finishing configuration settings, click on `Download OS Configuration` button, the dashboard will generate a **config.json** file that contain your device settings.
+After finishing configuration settings, click on `Download OS Configuration` button, the dashboard will generate a **config.json** file that contains your device settings.
 
 ![OS configuration file](OSconfig.png)
 
@@ -61,15 +61,22 @@ The **config.json** file must be saved in your home directory or in a secure pla
 After that, go ahead and download your Rasbpian image, you can find the latest version [here Raspbian image](https://www.raspberrypi.org/downloads/raspbian/)
 
 
-Assuming that all goes well which should be the case, in the current
-directory we will have the following files:
+Assuming that all goes well which should be the case, create a working
+direcotry.
+
+```bash
+mkdir -p ionoid-build
+```
+
+Copy `raspbian` zipped image and `config.json` files into `ionoid-build`
+directory.
 
 `2018-06-27-raspbian-stretch-lite.zip`
 
 `config.json`
 
 
-To generate your Linux-IoT system run the following command, and when
+To generate your Linux-IoT system run the following commands, and when
 prompted for `root` password, enter it, it will allow to mount the image
 patch it and unmount it.
 
