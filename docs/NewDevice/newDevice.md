@@ -1,7 +1,6 @@
 # Add a new device to your IoT Project
 
-Once you create a project, you can start adding devices by following the
-this tutorial.
+Once you create a project, you can start adding devices by following this tutorial.
 
 
 ## Add new device
@@ -18,7 +17,7 @@ Click on **Advanced System Configuration** to customize system device configurat
 ## General settings
 
 You can set or modify  the configuration of your device system  easily using dashboard.
- - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example hostname: `device-*` will be `device-2153`.
+ - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example hostname: `device-*` will be `device-2153`. This is useful in case you want to use the same configuration on a fleet of devices.
  - Set or modify DNS servers.
  - Set or modify NTP servers.
 
@@ -33,6 +32,9 @@ You can configure easily your WiFi settings by:
  - Enable WiFi by clicking on **On** button.
  - Enter your WiFi SSID and password.
  - Select a security option.
+ - For development: it is strongly recommended that you set a second Wifi as a fallback,
+ in case there are some errors. Maybe use your `phone wireless` a second
+ Wifi.
 
 ![Network Settings](NetworkSettings.png)
 
