@@ -14,8 +14,10 @@ To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 
 ![Project Form](ProjectForm.png)
 
-- Choose the board your are working on, for exemple **Raspberry Pi Zero** by clicking on the board icon.
+- Choose the board your are working on, for exemple **Raspberry Pi Zero** by clicking on the board icon. This will set the `CPU Board Architecture` of your project. Devices registered into same project must have same architecture. You can mix different boards but they must share the same `CPU Archetecture`.
+
 - Complete the form with the information related to your project.
+
 
 Ionoid Supports multiple boards and device architectures. The following
 table details supported boards:
@@ -23,6 +25,9 @@ table details supported boards:
 
 | Boards             | Architecture  | Machine Variable  |
 | ------------------ |:-------------:| -----------------:|
+| BeagleBone Black   | ARMv7         | arm7              |
+| BeagleBone Green   | ARMv7         | arm7              |
+| BeagleBone Green W | ARMv7         | arm7              |
 | Raspberry PI 1     | ARMv6         | arm6              |
 | Raspberry PI 2 B   | ARMv7         | arm7              |
 | Raspberry PI Zero  | ARMv6         | arm6              |
