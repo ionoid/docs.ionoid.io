@@ -33,7 +33,7 @@ You can configure easily your WiFi settings by:
  - Enter your WiFi SSID and password.
  - Select a security option.
  - For development: it is strongly recommended that you set a second Wifi as a fallback,
- in case there are some errors. Maybe use your `phone wireless` a second
+ in case there are some errors. Maybe use your `phone wireless` as a second
  Wifi.
 
 ![Network Settings](NetworkSettings.png)
