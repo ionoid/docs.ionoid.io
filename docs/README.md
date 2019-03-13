@@ -33,11 +33,11 @@ Check out the [Quick Start](/Register/register.md) documentation to get started.
 
 _In alphabetical order:_
 
-- [Badreddine ubugnu](https://github.com/ubugnu) - Creator / Maintainer
-- [Djalel tixxdz](https://github.com/tixxdz) - Creator / Maintainer
-- [John Brannigan](https://github.com/nostalgia-for-infinity) - Creator / Maintainer
+- [Badreddine Bouzid](https://github.com/ubugnu) - Creator / Maintainer
+- [Djalel Harouni](https://github.com/tixxdz) - Creator / Maintainer
+- [Matthias Schmitz](https://github.com/mattthias) - Creator / Maintainer
 - [Nazim Djafar](https://github.com/nwd0) - Creator / Maintainer
-- [Zendyani](https://github.com/zendyani) - Creator / Maintainer
+- [Belakhder Abdeldjalil](https://github.com/zendyani) - Creator / Maintainer
 
 
 ## License
