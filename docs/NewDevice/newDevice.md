@@ -84,6 +84,9 @@ If your target board is an ARMv7 like the Raspberry PI 3, then set
 `MACHINE` environment variable to `arm7` like this:
 `MACHINE=arm7`. For a Raspberry PI Zero use `MACHINE=arm6`.
 
+For a complete list of supported devices and machine variables please
+refer to [Supported
+Boards](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards)
 
 
 
