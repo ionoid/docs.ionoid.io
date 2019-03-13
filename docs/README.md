@@ -36,6 +36,7 @@ _In alphabetical order:_
 - [Badreddine ubugnu](https://github.com/ubugnu) - Creator / Maintainer
 - [Djalel tixxdz](https://github.com/tixxdz) - Creator / Maintainer
 - [John Brannigan](https://github.com/nostalgia-for-infinity) - Creator / Maintainer
+- [Nazim Djafar](https://github.com/nwd0) - Creator / Maintainer
 - [Zendyani](https://github.com/zendyani) - Creator / Maintainer
 
 
