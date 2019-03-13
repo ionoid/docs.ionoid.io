@@ -87,20 +87,26 @@ sudo systemctl status sealos-manager-actions
 ```
 
 
-#### Troubleshooting Native IoT Apps:
+## Troubleshooting Native IoT Apps:
 
 If you have deployed Apps using the native format `tar`, `zip` or
-anything that is not a `Docker Container/App`, then just replace `$APP` with the name
+anything that is not a `Docker Container/App`, then just replace `$MYAPP` with the name
 of your App:
 
 * Get Status of an App:
 
 ```bash
-$ sudo systemctl status $APP
+sudo systemctl status $MYAPP
+```
+
+* Get log entries of an App:
+
+```bash
+sudo journalctl -b -u $MYAPP
 ```
 
 
-#### Troubleshooting Docker IoT Apps:
+## Troubleshooting Docker IoT Apps:
 
 If you have deployed Docker Containers or Apps then you can use the `Docker` tools.
 
@@ -108,14 +114,20 @@ If you have deployed Docker Containers or Apps then you can use the `Docker` too
 **If docker commands do not work, run them with sudo**
 
 
-* List All running Apps and Containers:
+* List All running docker Apps and containers:
 
 ```bash
-$ docker ps
+docker ps
+```
+
+or if you need permissions:
+
+```bash
+sudo docker ps
 ```
 
 
-### Troubleshooting with Logs
+## Troubleshooting Device Logs
 
 Information about Device services and Apps logs be found using the `journalctl`
 utility.
@@ -124,44 +136,44 @@ utility.
 `100 log entires`:
 
 ```bash
-$ sudo dmesg | tail -n 100
+sudo dmesg | tail -n 100
 ```
 
 
 * To get the system logs of the current boot:
 
 ```bash
-$ sudo journalctl -b
+sudo journalctl -b
 ```
 
 * To get the last 10 entries of system logs of the current boot:
 
 ```bash
-$ sudo journalctl -b -n 10
+sudo journalctl -b -n 10
 ```
 
 * To Follow in realtime system logs of the current boot:
 
 ```bash
-$ sudo journalctl -b -f
+sudo journalctl -b -f
 ```
 
-* To check the logs of a `sealos-manager` agent:
+* To check the logs of a Ionoid manager `sealos-manager` agent:
 
 ```bash
-$ sudo journalctl -b -u sealos-manager
+sudo journalctl -b -u sealos-manager
 ```
 
 ```bash
-$ sudo journalctl -b -u sealos-manager-actions
+sudo journalctl -b -u sealos-manager-actions
 ```
 
 
-* To check the logs of your Service or App, replace `$APP` with the name
+* To check the logs of your Service or App, replace `$MYAPP` with the name
 of your App:
 
 ```bash
-$ sudo journalctl -b -u $APP
+sudo journalctl -b -u $MYAPP
 ```
 
 <ul class="pagination">
