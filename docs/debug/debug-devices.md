@@ -176,18 +176,6 @@ of your App:
 sudo journalctl -b -u $MYAPP
 ```
 
-<ul class="pagination">
-	<li class="button ">
-	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/build/nginx">Prev</a>
-	</li>
-
-<div class="divider" />
-
- <li class="button">
-	  <a href="https://docs.ionoid.io/#/">Next</a>
- </li>
-</ul> 
-
 
 ---
 
