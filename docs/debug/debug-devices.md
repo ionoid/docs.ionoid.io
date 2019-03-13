@@ -1,13 +1,14 @@
-
 # Debugging and Troubleshooting IoT Devices
 
 To Debug your Device first login into your [Ionoid IoT Account](https://dashboard.ionoid.io/login)
-and locate your Device
+and locate your Device.
 
 
 ## Device Information
 
-In the Device details page you will be able to find lot of information:
+Go to your Device details page and lookup for the following information:
+
+* `Status and Last Time Seen`
 
 * `Device Operating System Versions`
 
@@ -20,7 +21,7 @@ In the Device details page you will be able to find lot of information:
 
 Try to see if you can `ssh` into the Device from the [Ionoid IoT
 Dashboad](https://dashboard.ionoid.io/) or use the `Public Device Url` if
-available and `ssh` into that `IP Address`
+available and `ssh` into that `IP Address`.
 
 Otherwise locate Device `Network Interfaces` and `IP Addresses` section
 inside the Device Page on Dashboard and note the `IP ADDRESS` that you
@@ -46,8 +47,8 @@ right and if the device is still up and able to handle `ssh`.
 
 ## Troubleshooting IoT Device
 
-Information about Device services and Apps can be found using the `systemctl`
-utility.
+Assuming you succefully `ssh-ed` into your device, nformation about services and Apps can be found using the `systemctl` utility.
+
 
 * To get the overall status of the Device:
 
@@ -65,13 +66,21 @@ sudo systemctl --failed
 
 * To get the status of Services or Apps, use the `status` operation:
 
+Example get status of `systemd-journald` service:
 ```bash
 sudo systemctl status systemd-journald
 ```
 
+
+* To get the status of Ionoid sealos managers, check the following services:
+
+Status of Main manager:
+
 ```bash
 sudo systemctl status sealos-manager
 ```
+
+Status of manager that executes and performs actions:
 
 ```bash
 sudo systemctl status sealos-manager-actions
@@ -87,7 +96,7 @@ of your App:
 * Get Status of an App:
 
 ```bash
-sudo systemctl status $APP
+$ sudo systemctl status $APP
 ```
 
 
@@ -102,7 +111,7 @@ If you have deployed Docker Containers or Apps then you can use the `Docker` too
 * List All running Apps and Containers:
 
 ```bash
-docker ps
+$ docker ps
 ```
 
 
@@ -115,36 +124,36 @@ utility.
 `100 log entires`:
 
 ```bash
-sudo dmesg | tail -n 100
+$ sudo dmesg | tail -n 100
 ```
 
 
 * To get the system logs of the current boot:
 
 ```bash
-sudo journalctl -b
+$ sudo journalctl -b
 ```
 
 * To get the last 10 entries of system logs of the current boot:
 
 ```bash
-sudo journalctl -b -n 10
+$ sudo journalctl -b -n 10
 ```
 
 * To Follow in realtime system logs of the current boot:
 
 ```bash
-sudo journalctl -b -f
+$ sudo journalctl -b -f
 ```
 
 * To check the logs of a `sealos-manager` agent:
 
 ```bash
-sudo journalctl -b -u sealos-manager
+$ sudo journalctl -b -u sealos-manager
 ```
 
 ```bash
-sudo journalctl -b -u sealos-manager-actions
+$ sudo journalctl -b -u sealos-manager-actions
 ```
 
 
@@ -152,8 +161,20 @@ sudo journalctl -b -u sealos-manager-actions
 of your App:
 
 ```bash
-sudo journalctl -b -u $APP
+$ sudo journalctl -b -u $APP
 ```
+
+<ul class="pagination">
+	<li class="button ">
+	  <a class="disabled" href="https://docs.ionoid.io/#/../apps/build/nginx">Prev</a>
+	</li>
+
+<div class="divider" />
+
+ <li class="button">
+	  <a href="https://docs.ionoid.io/#/">Next</a>
+ </li>
+</ul> 
 
 
 ---
