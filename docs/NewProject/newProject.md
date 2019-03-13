@@ -23,9 +23,6 @@ table details supported boards:
 
 | Boards             | Architecture  | Machine Variable  |
 | ------------------ |:-------------:| -----------------:|
-| BeagleBone Black   | ARMv7         | arm7              |
-| BeagleBone Green   | ARMv7         | arm7              |
-| BeagleBone Green W | ARMv7         | arm7              |
 | Raspberry PI 1     | ARMv6         | arm6              |
 | Raspberry PI 2 B   | ARMv7         | arm7              |
 | Raspberry PI Zero  | ARMv6         | arm6              |
