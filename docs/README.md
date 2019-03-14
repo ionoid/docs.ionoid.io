@@ -34,7 +34,7 @@ Check out the [Quick Start](/Register/register.md) documentation to get started.
 _In alphabetical order:_
 
 - [Badreddine Bouzid](https://github.com/ubugnu) - Creator / Maintainer
-- [Djalel Harouni](https://github.com/tixxdz) - Creator / Maintainer
+- [Djalal Harouni](https://github.com/tixxdz) - Creator / Maintainer
 - [Matthias Schmitz](https://github.com/mattthias) - Creator / Maintainer
 - [Nazim Djafar](https://github.com/nwd0) - Creator / Maintainer
 - [Belakhder Abdeldjalil](https://github.com/zendyani) - Creator / Maintainer
