@@ -66,7 +66,7 @@ information:
 # Name of APP must be Alphanumeric and can contain the following
 # special characters "_", "." and "-".
 # Minimum 2 charactes, up to 64 characters.
-name: appname
+name: hello-world
 
 # Version of App
 version: 1.0
@@ -76,7 +76,7 @@ description: My App
 
 # List of Applications inside the same IoT App, the final IoT
 # App can include one app entry or several apps.
-apps:
+cmds:
         hello-world:
                 # Environment Vars for Hello World Optional
                 environment:
@@ -87,16 +87,21 @@ apps:
                         - "/etc/hello-world-environment1"
                         - "/etc/hello-world-environment2"
 
-                # Path to executable App with its arguments
+                # Path to Optional start command to be executed before
+                # main executable App
+                start-command:   /bin/echo "hello-world stopped"
+
+                # Path to main executable App with its arguments
                 # relative to the App filesystem
                 command:        /bin/hello-world
 
-                # Path to Optional command to stop a daemon.
+                # Path to Optional stop command to be executed after
+                # main executable App is being stopped or has finished
                 stop-command:   /bin/echo "hello-world stopped"
 
-                # Daemon Command type takes one of these values:
+                # App Command type takes one of these values:
                 # * simple:     the process configured with command
-                #               is the main process of the service.
+                #               is the main process of the App.
                 #               This is the default value if daemon is
                 #               not set.
                 # * forking:    it is expected that the process configured
