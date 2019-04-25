@@ -36,7 +36,7 @@ You can configure easily your WiFi settings by:
  in case there are some errors. Maybe use your `phone wireless` as a second
  Wifi.
 
-![Network Settings](NetworkSettings.png)
+![Network Settings](wifi-config.gif)
 
 
 ## Generate Linux-IoT OS
