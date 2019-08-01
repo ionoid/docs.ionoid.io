@@ -19,4 +19,5 @@
   - [Basic Hello World Golang App](apps/build/step-by-step-basic-golang-app.md)
 - Debug IoT Devices
   - [Troubleshooting IoT Devices](../debug/debug-devices.md)
-
+- FAQ
+  - [FAQ](Faq/faq.md)
