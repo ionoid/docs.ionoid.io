@@ -7,7 +7,7 @@
 > IOT infrastructure made easy.
 
 - 🚀 Light Secure Linux-IoT
-- ⚡️️ Simple, Powerful, & Intuitive API
+- ⚡️️ Simple, Powerful & Intuitive API
 - 💎 IoT Apps on Embedded Linux
 - 🔥 Linux-IoT Hardware Support
 - 📼 Rollback app in realtime
