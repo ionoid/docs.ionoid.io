@@ -94,7 +94,7 @@ Boards](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards)
 
 ```bash
 cd ionoid-build
-curl https://manager.services.ionoid.net/install-tools.bash | MACHINE=arm7 IMAGE=2018-06-27-raspbian-stretch-lite.zip CONFIG=config.json bash
+curl https://manager.services.ionoid.net/install-tools.bash | MACHINE=arm7 IMAGE=2018-11-13-raspbian-stretch-lite.zip CONFIG=config.json bash
 
 ```
 
