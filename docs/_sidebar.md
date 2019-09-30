@@ -3,6 +3,7 @@
 - Ionoid IoT Projects and Devices
   - [New Project](../NewProject/newProject.md)
   - [Add New Device](../NewDevice/newDevice.md)
+  - [Monitoring Devices](../Monitoring/monitoring.md)
 - Deploy IoT Apps
   - [Deploy Apps ](../DeployApp/deployApp.md)
   - [Update Apps](../UpdateApp/updateApp.md)
