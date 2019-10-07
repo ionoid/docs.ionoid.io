@@ -46,12 +46,32 @@ Once you have finished configuration settings, follow up by preparing your Linux
 Currently Ionoid IoT supports only [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/). More OSs will be added soon.
 
 
-### Beginners - Generate your Linux-IoT OS
+### Beginners - Generate your Linux-IoT OS (Method 1)
 
-To be added soon.
+After finishing the configuration step of your device you will need to apply the newly generated configure to your device,
 
+To do so we will use ionoid build os generator that will make sure everything is well installed, in the end of operation it will
 
-### Advanced Linux Users - Generate Linux-IoT OS
+ask you to download the generated os to be burned and setup in your raspberry pi.
+
+#### Step 1: 
+Click on "download os" to run build os, if you are a little thursty after all those effort it's time to take coffee, build os will take some time to finish it work so dont worry a drink your coffee.
+
+![How to download os](./DownloadOsAnim.gif)
+
+After a little time the building tools will informe you that your newly generated OS including the configuration you just made is ready to download.
+
+![Generating os finished successfully](./DownloadOsEndAnim.png)
+
+#### Step 2:
+Click on the big blue friendly link smartly named "Download Image" to start downloading you new
+OS
+
+![Start Download](./DownloadOsDownloadButton.png)
+
+Congratulation, your os is now ready to be burned inside your flash drive.
+
+### Advanced Linux Users - Generate Linux-IoT OS (Method 2)
 
 After finishing configuration settings, click on `Download OS Configuration` button, the dashboard will generate a **config.json** file that contains your device settings.
 
