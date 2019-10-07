@@ -1,9 +1,11 @@
-# Flash your sd card with your Image
+# Flash OS Image to storage
 
-If you successfully generated your image os you are ready for the next step which is burning
+If you have successfully generated your image os you are ready for the next step which is burning
 your sd card with the new image, to do so we will use Etcher that you can download if it's not already done from https://etcher.io/
 
 After downloading -> installing Etcher we can start using it for building our os.
+
+We are going to flash the Micro SDCard that are used for raspberry pi but same should work if you have another type of SDCards or storage.
 
 ## Step 1
 First step first, insert your ds card inside the card reader that is connected to the pc (where Etcher is installed) 
