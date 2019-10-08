@@ -1,5 +1,8 @@
 # Flash OS Image to storage
 
+**Supported Operating Systems**:
+Raspbian
+
 If you have successfully generated your image os you are ready for the next step which is burning
 your sd card with the new image, to do so we will use Etcher that you can download if it's not already done from https://etcher.io/
 
