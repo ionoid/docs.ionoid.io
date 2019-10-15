@@ -55,7 +55,7 @@ Boot your device now and go to your project in [Ionoid Dashboard](https://dashbo
 
 **Note: due to different Raspbian versions, it may take some time before
 the device shows up due to Raspbian auto resizing storage. If it does
-not show up just un-plug the Raspberry and plug and boot again.**
+not show up just un-plug the Raspberry, then plug and boot again.**
 
 
 ---
