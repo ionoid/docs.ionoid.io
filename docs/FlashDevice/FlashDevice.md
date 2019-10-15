@@ -24,14 +24,13 @@ We are going to flash the Raspberry PI Micro SDCard but any other good Micro SDC
 
 ### Flash Raspbian OS Step 1
 
-First step first, insert your ds card inside the card reader that is connected to the pc (where Etcher is installed) 
+First step first, connect your Micro SD card inside the card reader that is connected to the pc (where Etcher is installed) 
 
 ![insert card](./SDcardReader.jpg)
 
 ### Flash Raspbian OS Step 2 
 
-Start Etcher.
-Once Etcher open, browse and select your generated image.
+Start Etcher, browse and select your generated image.
 
 ![Select os](EtcherSelectWindows.png)
 
