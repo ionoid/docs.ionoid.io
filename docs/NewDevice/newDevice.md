@@ -95,9 +95,13 @@ Click on **Download OS Image** to start downloading you new OS
 
 ![Start Download](./DownloadOsDownloadButton.png)
 
-Congratulation, your OS is now ready to be burned to your device storage.
+Congratulation, your OS is now ready to be burned to your device storage. Please follow next section
+[Flash OS Image to
+Device](https://docs.ionoid.io/#/../FlashDevice/FlashDevice).
 
 **Security: do not share your generated OS Image with untrusted parties.**
+
+
 
 ## Build OS: Advanced Linux Users - Linux-IoT (Method 2)
 
