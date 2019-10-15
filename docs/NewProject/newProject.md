@@ -23,7 +23,7 @@ Ionoid Supports multiple boards and device architectures. The following
 table details supported boards:
 
 
-### Supported Boards Table
+### Supported Boards and Operating Systems Table
 
 | Boards             | Architecture  | Machine Variable  | Supported Operating Systems  |
 | ------------------ |:-------------:| -----------------:| ----------------------------:|
