@@ -162,17 +162,9 @@ directory:
 `./output/2018-06-27-raspbian-stretch-lite-ionoid.zip`
 
 
-Now burn the generated `zip image` into your MicroSD card. You can use
-[Etcher](https://etcher.io/) to copy the `zip image`.
-
-
-After that, boot your device and go to your project in [Ionoid Dashboard](https://dashboard.ionoid.io), it should take some minutes before the device auto shows up there.
-
-
-![Device Booting](DeviceBoot.png)
-
-Congratulations!
-
+Now you have to burn the generated `OS image` to your device storage. Please follow next section
+[Flash OS Image to
+Device](https://docs.ionoid.io/#/../FlashDevice/FlashDevice).
 
 
 ---

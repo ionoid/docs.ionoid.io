@@ -39,7 +39,22 @@ Click on the flash button.
 
 ![Select sd card](EtcherFlashWindows.png)
 
-Congratulation, it's time to connect your sd card in your raspberry pi and start blinking LED's
+It is time to connect your Micro SD card to your raspberry pi and start blinking LED's !
+
+
+## Boot Device
+
+Boot your device now and go to your project in [Ionoid Dashboard](https://dashboard.ionoid.io), it should take some minutes before the device auto shows up there.
+
+![Device Booting](DeviceBoot.png)
+
+**Congratulations!**
+
+
+**Note: due to different Raspbian versions, it may take some time before
+the device shows up due to Raspbian auto resizing storage. If it does
+not show up just un-plug the Raspberry and plug and boot again.**
+
 
 ---
 
