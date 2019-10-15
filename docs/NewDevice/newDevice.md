@@ -1,22 +1,33 @@
 # Add a new device to your IoT Project
 
-Once you create a project, you can start adding devices by following this tutorial.
+To add devices to your project please follow this tutorial.
+
+## Supported Operating Systems
+
+Ionoid uses Linux-IoT Operating Systems and supports multiple
+flavors. For each new registered device you can chose or set its
+Operating System. The [Supported Boards Table](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table)
+
+More OSs will be added soon.
 
 
 ## Add new device
 
-Click on **Add device** button to add a new device to the project.
+Click on **Add device**.
  
 ![Add Device](AddDevice.png)
- 
-Click on **Advanced System Configuration** to customize system device configuration.
- 
+
+
 ![New Device](NewDevice.png)
+
+The displayed fields are part of your Project configuration and they are
+**Private do not share them with untrusted parties.**
 
 
 ## General settings
 
-You can set or modify  the configuration of your device system  easily using dashboard.
+To customize your project or device configuation, click on **Advanced System Configuration**.
+
  - Set or modify device hostname. Here it is possible to append an asterisk as a suffix to the name (e.g. device-\*) if you want a random id at the end. Example hostname: `device-*` will be `device-2153`. This is useful in case you want to use the same configuration on a fleet of devices.
  - Set or modify DNS servers.
  - Set or modify NTP servers.
@@ -39,88 +50,114 @@ You can configure easily your WiFi settings by:
 ![Network Settings](wifi-config.gif)
 
 
-## Generate Linux-IoT OS
+## Build Linux-IoT OS
 
-Once you have finished configuration settings, follow up by preparing your Linux-IoT system.
+Once you finish settings configuration, you can make them the default settings for this Project, click on **SAVE AS DEFAULT SETTINGS** button.
 
-Currently Ionoid IoT supports only [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/). More OSs will be added soon.
+To Generate your Custome Linux-IoT OS there are two methodes:
+
+   1) Beginners: build your Linux-IoT OS
+   2) Advanced Linux Users and IoT Developers
 
 
-### Beginners - Generate your Linux-IoT OS (Method 1)
+### Build OS: Beginners - Linux-IoT (Method 1)
 
-After finishing the configuration step of your device you will need to apply the newly generated configure to your device,
+This is the easiest method, especially if you do not have Linux skills
+or if you are deploying to a new fresh device.
 
-To do so we will use ionoid build os generator that will make sure everything is well installed, in the end of operation it will
+We will use `Ionoid Build OS` Service to build and prepare our Operating
+System. At the end of the operation a link to download the produced
+Operating System will be provided to you.
 
-ask you to download the generated os to be burned and setup in your raspberry pi.
+**Security: please keep in mind that the generated OS contains your
+Project credentials and secrets, do not share your OS with untrusted
+parties.**
 
-#### Step 1: 
-Click on "download os" to run build os, if you are a little thursty after all those effort it's time to take coffee, build os will take some time to finish it work so dont worry a drink your coffee.
+
+#### Build OS: Beginners Step 1
+
+After finishing system configration, click on **DOWNLOAD OS** to start `Ionoid Build OS` Service. If you are a little thursty after all those effort it is time to take coffee, `Build OS` will take some time between 40secs to 2mins to finish.
 
 ![How to download os](./DownloadOsAnim.gif)
 
-After a little time the building tools will informe you that your newly generated OS including the configuration you just made is ready to download.
+The build progress will update you on the operation, your newly
+generated and **PRIVATE** OS includes your configuration, project
+secrets, keys, and the necessary tools to manager your device from
+Ionoid Dashboard.
 
 ![Generating os finished successfully](./DownloadOsEndAnim.png)
 
-#### Step 2:
-Click on the big blue friendly link smartly named "Download Image" to start downloading you new
-OS
+
+#### Build OS: Beginners Step 2
+
+Click on **Download OS Image** to start downloading you new OS
 
 ![Start Download](./DownloadOsDownloadButton.png)
 
-Congratulation, your os is now ready to be burned inside your flash drive.
+Congratulation, your OS is now ready to be burned to your device storage.
 
-### Advanced Linux Users - Generate Linux-IoT OS (Method 2)
 
-After finishing configuration settings, click on `Download OS Configuration` button, the dashboard will generate a **config.json** file that contains your device settings.
+### Build OS: Advanced Linux Users - Linux-IoT (Method 2)
+
+This is the advanced method for Linux users that want to build their own OS.
+
+
+#### Build OS: Advanced Linux Users Step 1
+
+![General Settings](GeneralSettings.png)
+
+After finishing configuration settings, click on **Download OS Configuration**, the dashboard will generate a private **config.json** file that contains your device settings.
 
 ![OS configuration file](OSconfig.png)
 
-The **config.json** file must be saved in your home directory or in a secure place, do **not share it**. It contains sensitive information about your device's security.
+**Security: please keep in mind that the config.json file contains your Project credentials and secrets, do not share your OS with untrusted parties.**
 
 
-After that, go ahead and download your Rasbpian image, you can find the latest version [here Raspbian image](https://www.raspberrypi.org/downloads/raspbian/)
+#### Build OS: Advanced Linux Users Step 2
+
+Now download your Operating System image, check the following to find the links:
+
+- [Raspbian OS Images](https://www.raspberrypi.org/downloads/raspbian/)
+- More OSs will be added soon.
 
 
-Assuming that all goes well which should be the case, create a working
-direcotry.
+#### Build OS: Advanced Linux Users Step 3
+
+Assuming that all goes well which should be the case, create a working direcotry.
 
 ```bash
 mkdir -p ionoid-build
 ```
 
-Copy `raspbian` zipped image and `config.json` files into `ionoid-build`
+Copy your downloaded Operating System image and `config.json` files into `ionoid-build`
 directory.
 
+Example:
 `2018-06-27-raspbian-stretch-lite.zip`
 
 `config.json`
 
 
 To generate your Linux-IoT system run the following commands, and when
-prompted for `root` password, enter it, it will allow to mount the image
-patch it and unmount it.
+prompted for `root` password, enter it, it will allow to mount the OS image
+configure it and install the necessary software.
 
-If your target board is an ARMv7 like the Raspberry PI 3, then set
-`MACHINE` environment variable to `arm7` like this:
-`MACHINE=arm7`. For a Raspberry PI Zero use `MACHINE=arm6`.
+The build process needs at least extra packages, make sure to install
+them:
 
-For a complete list of supported devices and machine variables please
-refer to [Supported
-Boards](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards)
-
+- jq: (Command-line JSON processor)
+- kpartx: (Create device maps from partition tables)
 
 
 ```bash
 cd ionoid-build
-curl https://manager.services.ionoid.net/install-tools.bash | MACHINE=arm7 IMAGE=2018-11-13-raspbian-stretch-lite.zip CONFIG=config.json bash
+curl https://manager.services.ionoid.net/install-tools.bash | IMAGE=2018-11-13-raspbian-stretch-lite.zip CONFIG=config.json bash
 
 ```
 
-Once finished you should find the new patched image inside the `output`
+Once the build process finished you should find the new patched image inside the `output`
 directory:
-`./output/2018-06-27-raspbian-stretch-lite.zip`
+`./output/2018-06-27-raspbian-stretch-lite-ionoid.zip`
 
 
 Now burn the generated `zip image` into your MicroSD card. You can use
