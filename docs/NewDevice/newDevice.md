@@ -20,8 +20,8 @@ Click on **Add device**.
 
 ![New Device](NewDevice.png)
 
-The displayed fields are part of your Project configuration and they are
-**Private do not share them with untrusted parties.**
+**Security: The displayed fields are part of your Project configuration and they are
+private, do not share them with untrusted parties.**
 
 
 ## General settings
@@ -50,17 +50,19 @@ You can configure easily your WiFi settings by:
 ![Network Settings](wifi-config.gif)
 
 
-## Build Linux-IoT OS
+## Build OS Linux-IoT
 
 Once you finish settings configuration, you can make them the default settings for this Project, click on **SAVE AS DEFAULT SETTINGS** button.
 
 To Generate your Custome Linux-IoT OS there are two methodes:
 
-   1) Beginners: build your Linux-IoT OS
-   2) Advanced Linux Users and IoT Developers
+ 1) [Beginners: build your Linux-IoT
+ OS](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-beginners-linux-iot-method-1)
+ 2) [Advanced Linux Users and IoT
+ Developers](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-advanced-linux-users-linux-iot-method-2)
 
 
-### Build OS: Beginners - Linux-IoT (Method 1)
+## Build OS: Beginners - Linux-IoT (Method 1)
 
 This is the easiest method, especially if you do not have Linux skills
 or if you are deploying to a new fresh device.
@@ -69,12 +71,10 @@ We will use `Ionoid Build OS` Service to build and prepare our Operating
 System. At the end of the operation a link to download the produced
 Operating System will be provided to you.
 
-**Security: please keep in mind that the generated OS contains your
-Project credentials and secrets, do not share your OS with untrusted
-parties.**
+**Security: please keep in mind that the generated OS contains your Project credentials and secrets, do not share your generated OS Image with untrusted parties.**
 
 
-#### Build OS: Beginners Step 1
+### Build OS: Beginners Step 1
 
 After finishing system configration, click on **DOWNLOAD OS** to start `Ionoid Build OS` Service. If you are a little thursty after all those effort it is time to take coffee, `Build OS` will take some time between 40secs to 2mins to finish.
 
@@ -88,7 +88,7 @@ Ionoid Dashboard.
 ![Generating os finished successfully](./DownloadOsEndAnim.png)
 
 
-#### Build OS: Beginners Step 2
+### Build OS: Beginners Step 2
 
 Click on **Download OS Image** to start downloading you new OS
 
@@ -97,12 +97,12 @@ Click on **Download OS Image** to start downloading you new OS
 Congratulation, your OS is now ready to be burned to your device storage.
 
 
-### Build OS: Advanced Linux Users - Linux-IoT (Method 2)
+## Build OS: Advanced Linux Users - Linux-IoT (Method 2)
 
 This is the advanced method for Linux users that want to build their own OS.
 
 
-#### Build OS: Advanced Linux Users Step 1
+### Build OS: Advanced Linux Users Step 1
 
 ![General Settings](GeneralSettings.png)
 
@@ -113,7 +113,7 @@ After finishing configuration settings, click on **Download OS Configuration**, 
 **Security: please keep in mind that the config.json file contains your Project credentials and secrets, do not share your OS with untrusted parties.**
 
 
-#### Build OS: Advanced Linux Users Step 2
+### Build OS: Advanced Linux Users Step 2
 
 Now download your Operating System image, check the following to find the links:
 
@@ -121,7 +121,7 @@ Now download your Operating System image, check the following to find the links:
 - More OSs will be added soon.
 
 
-#### Build OS: Advanced Linux Users Step 3
+### Build OS: Advanced Linux Users Step 3
 
 Assuming that all goes well which should be the case, create a working direcotry.
 
