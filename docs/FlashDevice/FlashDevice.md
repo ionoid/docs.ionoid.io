@@ -8,7 +8,9 @@ follow this tutorial.
 If in doubt if Ionoid supports your Operating System, Then please check the following [Supported Boards and Operating Systems table](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table).
 
 Current list of supported Operating Systems:
- - Flash Raspbian
+ - [Flash
+ Raspbian](https://docs.ionoid.io/#/../FlashDevice/FlashDevice?id=flash-raspbian-os-to-raspberry-pi-micro-sdcards)
+ - More soon.
 
 
 ## Flash Raspbian OS to Raspberry PI Micro SDCards
