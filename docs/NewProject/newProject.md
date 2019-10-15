@@ -23,20 +23,22 @@ Ionoid Supports multiple boards and device architectures. The following
 table details supported boards:
 
 
-| Boards             | Architecture  | Machine Variable  |
-| ------------------ |:-------------:| -----------------:|
-| BeagleBone Black   | ARMv7         | arm7              |
-| BeagleBone Green   | ARMv7         | arm7              |
-| BeagleBone Green W | ARMv7         | arm7              |
-| Raspberry PI 1     | ARMv6         | arm6              |
-| Raspberry PI 2 B   | ARMv7         | arm7              |
-| Raspberry PI Zero  | ARMv6         | arm6              |
-| Raspberry PI 3 B   | ARMv7 (32-bit)| arm7              |
-| Raspberry PI 3 B   | ARMv8 (64-bit)| arm64             |
-| Raspberry PI 3 B+  | ARMv7 (32-bit)| arm7              |
-| Raspberry PI 3 B+  | ARMv8 (64-bit)| arm64             |
-| Raspberry PI 3 A+  | ARMv8 (64-bit)| arm64             |
-| Qemu x86-64        | x86-64        | amd64             |
+### Supported Boards Table
+
+| Boards             | Architecture  | Machine Variable  | Supported Operating Systems  |
+| ------------------ |:-------------:| -----------------:| ----------------------------:|
+| BeagleBone Black   | ARMv7         | arm7              | To be Announced.             |
+| BeagleBone Green   | ARMv7         | arm7              | To be Announced.             |
+| BeagleBone Green W | ARMv7         | arm7              | To be Announced.             |
+| Raspberry PI 1     | ARMv6         | arm6              | Raspbian.                    |
+| Raspberry PI 2 B   | ARMv7         | arm7              | Raspbian.                    |
+| Raspberry PI Zero  | ARMv6         | arm6              | Raspbian.                    |
+| Raspberry PI 3 B   | ARMv7 (32-bit)| arm7              | Raspbian.                    |
+| Raspberry PI 3 B   | ARMv8 (64-bit)| arm64             | Raspbian.                    |
+| Raspberry PI 3 B+  | ARMv7 (32-bit)| arm7              | Raspbian.                    |
+| Raspberry PI 3 B+  | ARMv8 (64-bit)| arm64             | Raspbian.                    |
+| Raspberry PI 3 A+  | ARMv8 (64-bit)| arm64             | Raspbian.                    |
+| Qemu x86-64        | x86-64        | amd64             | To be Announced.             |
 
 
 
@@ -46,15 +48,14 @@ table details supported boards:
 - Click on **Create Project** to confirm.
 
 
-## Entering the Project.
+## Working with Projects
 
-Once you finish to create a new project you will see the list of all the
-project you have created and you can access to any project by clicking on
-project id.
+Once you finish creating a new project you will see the list of all the
+projects you have created and you can access them by clicking on them.
 
 ![list of projects](ProjectList.png)
 
-- You can now  **Add new device** to your IoT project.
+- After all this you are ready to **Add new devices** to your IoT project. Please follow next section.
 
 ![Project Actions](ProjectActions.png)
 
