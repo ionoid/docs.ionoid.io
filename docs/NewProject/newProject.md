@@ -32,10 +32,10 @@ table details supported boards:
 | Raspberry PI 2 B   | ARMv7         | arm7              |
 | Raspberry PI Zero  | ARMv6         | arm6              |
 | Raspberry PI 3 B   | ARMv7 (32-bit)| arm7              |
-| Raspberry PI 3 B   | ARMv8 (64-bit)| arm8              |
+| Raspberry PI 3 B   | ARMv8 (64-bit)| arm64             |
 | Raspberry PI 3 B+  | ARMv7 (32-bit)| arm7              |
-| Raspberry PI 3 B+  | ARMv8 (64-bit)| arm8              |
-| Raspberry PI 3 A+  | ARMv8 (64-bit)| arm8              |
+| Raspberry PI 3 B+  | ARMv8 (64-bit)| arm64             |
+| Raspberry PI 3 A+  | ARMv8 (64-bit)| arm64             |
 | Qemu x86-64        | x86-64        | amd64             |
 
 
