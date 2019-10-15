@@ -6,9 +6,9 @@ To add devices to your project please follow this tutorial.
 
 Ionoid uses Linux-IoT Operating Systems and supports multiple
 flavors. For each new registered device you can chose or set its
-Operating System. The [Supported Boards Table](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table)
+Operating System. The [Supported Boards and Operating Systems table](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table).
 
-More OSs will be added soon.
+More Operating Systems will be added soon.
 
 
 ## Add new device
@@ -56,10 +56,11 @@ Once you finish settings configuration, you can make them the default settings f
 
 To Generate your Custome Linux-IoT OS there are two methodes:
 
- 1) [Beginners: build your Linux-IoT
- OS](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-beginners-linux-iot-method-1)
+ 1) [Beginners build your Linux-IoT
+ OS](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-beginners-linux-iot-method-1): uses online `Ionoid Build OS` Service to build and generate your Operating System.
+
  2) [Advanced Linux Users and IoT
- Developers](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-advanced-linux-users-linux-iot-method-2)
+ Developers](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-advanced-linux-users-linux-iot-method-2): for advanced Linux users to build their own OS.
 
 
 ## Build OS: Beginners - Linux-IoT (Method 1)
@@ -96,6 +97,7 @@ Click on **Download OS Image** to start downloading you new OS
 
 Congratulation, your OS is now ready to be burned to your device storage.
 
+**Security: do not share your generated OS Image with untrusted parties.**
 
 ## Build OS: Advanced Linux Users - Linux-IoT (Method 2)
 

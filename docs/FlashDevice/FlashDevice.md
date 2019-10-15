@@ -1,23 +1,36 @@
-# Flash OS Image to storage
+# Flash OS Image to Storage
 
-**Supported Operating Systems**:
-Raspbian
+To flash your Operating System image to your device storage, please
+follow this tutorial.
 
-If you have successfully generated your image os you are ready for the next step which is burning
-your sd card with the new image, to do so we will use Etcher that you can download if it's not already done from https://etcher.io/
+## Supported Operating Systems and Boards
 
-After downloading -> installing Etcher we can start using it for building our os.
+If in doubt if Ionoid supports your Operating System, Then please check the following [Supported Boards and Operating Systems table](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table).
 
-We are going to flash the Micro SDCard that are used for raspberry pi but same should work if you have another type of SDCards or storage.
+Current list of supported Operating Systems:
+ - Flash Raspbian
 
-## Step 1
+
+## Flash Raspbian OS to Raspberry PI Micro SDCards
+
+Continuing from previous [Build OS Linux-IoT Doc](https://docs.ionoid.io/#/../NewDevice/newDevice?id=build-os-linux-iot),
+the generated OS image should be ready for the this step which is burning your sd card with that new image.
+
+To do so we will use the awesome [Etcher tool](https://etcher.io/) that we recommend.
+
+After `downloading -> installing Etcher` we can start using it for building our OS Image.
+
+We are going to flash the Raspberry PI Micro SDCard but any other good Micro SDCard should work.
+
+### Flash Raspbian OS Step 1
+
 First step first, insert your ds card inside the card reader that is connected to the pc (where Etcher is installed) 
 
 ![insert card](./SDcardReader.jpg)
 
-## Step 2 
+### Flash Raspbian OS Step 2 
 
-Execute Etcher.
+Start Etcher.
 Once Etcher open, browse and select your generated image.
 
 ![Select os](EtcherSelectWindows.png)
