@@ -157,7 +157,7 @@ them:
 
 ```bash
 cd ionoid-build
-curl https://manager.services.ionoid.net/install-tools.bash | IMAGE=2018-11-13-raspbian-stretch-lite.zip CONFIG=config.json bash
+curl https://github.install-ionoid.sdk.ionoid.net/install-tools.bash | IMAGE=2018-11-13-raspbian-stretch-lite.zip CONFIG=config.json bash
 
 ```
 
