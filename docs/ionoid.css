@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(fonts/ubuntu-regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local('fonts/ubuntu-bold.ttf'), local('Ubuntu-Bold'), url(fonts/ubuntu-bold.ttf) format('truetype');
+}
+
+body {
+    font-family: Ubuntu;
+    
+}
+
+.my-button {
+  background-color: #5dade2; 
+  border: none;  
+  color: white;
+  padding: 08px 18px;
+  border-radius: 4px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.my-a:link, my-a:visited {
+  background-color: #5dade2;
+//  color: white; 
+  padding: 08px 18px;
+  text-align: center;
+  text-decoration: none;
+   display: inline-block;
+}
+
+.my-a:hover, a:active {
+  background-color: #aed6f1;
+}
+
+
+.pagination {
+    width: 100%;
+    
+    max-width: 910px;
+    margin: 2em auto 4em;
+    text-align: center;
+}
+
+.pagination li {
+    display:none;
+    margin: 0.2 em;
+}
+
+.pagination li.button {
+    display: inline-block;
+    font-size:1.2rem;
+    
+}
+
+.pagination a {
+    display: inline-block;
+    border-radius: 0.25em;
+    /* change button size */
+    padding: .6em .8em;
+    border: 1px solid #0d2b3e;
+    text-decoration: none;
+    
+}
+
+.pagination a:hover{
+    background-color: #aed6f1; //#0099E5;
+}
+
+.divider{
+    width:30%;
+    height:auto;
+    display:inline-block;
+}
+
+
+ul.doclink {                                                                                                                                                                                     
+  border: solid 1px  #aed6f1;                                                                                                                                                                    
+background-color:  #aed6f1;                                                                                                                                                                      
+border-radius: 5px;                                                                                                                                                                              
+  padding: 0.5em 1em 0.5em 2.3em;                                                                                                                                                                
+  position: relative;                                                                                                                                                                            
+}                                                                                                                                                                                                
+                                                                                                                                                                                                 
+ul.doclink li {                                                                                                                                                                                  
+  line-height: 1.5;                                                                                                                                                                              
+  padding: 0.5em 0;                                                                                                                                                                              
+  list-style-type: none!important;                                                                                                                                                               
+}                                                                                                                                                                                                
+                                                                                                                                                                                                 
+ul.doclink li:before {                                                                                                                                                                           
+  font-family: FontAwesome;                                                                                                                                                                        
+  content: "\f138";                                                                                                                                                                                
+  position: absolute;                                                                                                                                                                            
+  left : 1em;                                                                                                                                                                                    
+  color:  #21618c;                                                                                                                                                                               
+}                                                                                                                                                                                                
+                                                                                                                                                                                                 
+.doclink a{                                                                                                                                                                                     \
+                                                                                                                                                                                          
+  color:  #21618c;                                                                                                                                                                                 
+  text-decoration: none; 
+}
+                                                                                                                                                                                        
+                                                                                                                                                                                                                      
