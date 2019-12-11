@@ -24,8 +24,7 @@ Go to your Device details page and lookup for the following information:
 ### 2.1. Via Dashboard
 
 If you want to troubleshoot your device with `ssh`, then continue
-reading this section, otherwise skip to `Connect to Device Via Other
-ways` section.
+reading this section, otherwise skip to `Connect to Device Via Other ways` section.
 
 If you are on Windows, please install first [Putty
 Client](https://www.putty.org/)
@@ -108,15 +107,14 @@ sudo systemctl --failed
 ```
 
 * To get the status of Services or Apps, use the `status` operation:
-
 Example get status of `systemd-journald` service:
+
 ```bash
 sudo systemctl status systemd-journald
 ```
 
 
 * To get the status of Ionoid sealos managers, check the following services:
-
 Status of Main manager:
 
 ```bash
@@ -130,6 +128,7 @@ sudo systemctl status sealos-manager-actions
 ```
 
 * To see if Ionoid sealos manager boot setup succeeded:
+
 ```bash
 sudo systemctl status sealos-boot-setup
 ```
