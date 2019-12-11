@@ -232,6 +232,10 @@ sudo journalctl -b -u $MYAPP
 ```
 
 
+When you are in linux terminal you may find your self in file reading
+mode, just type `q` to quit the reading mode. It should work :-p !
+
+
 ---
 
 
