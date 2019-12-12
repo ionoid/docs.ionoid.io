@@ -14,7 +14,7 @@ To create a new IoT project using Ionoid plaform, sign into your Ionoid account.
 
 ![Project Form](ProjectForm.png)
 
-- Choose the board your are working on, for exemple **Raspberry Pi Zero** by clicking on the board icon. This will set the `CPU Board Architecture` of your project. Devices registered into same project must have same architecture. You can mix different boards but they must share the same `CPU Archetecture`.
+- Choose the board your are working on, for exemple **Raspberry Pi 3** by clicking on the board. You can mix different boards and architectures, but you have to make sure to not break your fleet by deploying apps built for other architectures. Otherwise you can lock your project to the selected archtiture, devices registered into the project must have same architecture, otherwise they will be blocked and will not show up in the project, unless you unlock the project architecture.
 
 - Complete the form with the information related to your project.
 
