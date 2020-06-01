@@ -168,10 +168,11 @@ Sometimes it bugs, you get a blank page, just restart the dev live server.
 
 ## Deploy
 
-To deploy new documentation changes, simply run the deploy script:
+After committing new changes to `master` branch, then they should be deployed to the branch `gh-pages` where they are
+served by [GitHub.com](https://github.com/).
+
+To deploy new documentation, simply run the deploy script:
 
 ```bash
 ./deploy.bash
 ```
-
-The documentation will be pushed to the `gh-pages` branch where it is served by [GitHub.com](https://github.com) pages.
