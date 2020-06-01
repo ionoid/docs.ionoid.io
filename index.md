@@ -2,11 +2,9 @@
 sidebar: false
 ---
 <figure align='center'>
-  <img src='/logo.png' id="big-logo">
+  <img src='/logo-big.png' id="big-logo">
   <h1 id='main-title'>
     Ionoid.io
-    <br>
-    <span>By Open Devices GmbH</span>
   </h1>
   <p id='secondary-title'>
     IoT Next Generation Deployment
