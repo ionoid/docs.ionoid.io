@@ -1,14 +1,9 @@
 # Ionoid.io Docs Working Repo
 
-## Install VuePress
+## Install dependecices
 
-Better install VuePress globally
+Install `Node.js` and `npm` for your Linux distribution as they are need to build the documentation.
 
-```sh
-yarn global add vuepress
-# or
-npm install -g vuepress
-```
 
 ## Directory Structure
 
@@ -46,12 +41,17 @@ The current (May 23, 2020) directory structure is:
 
 The important files here are:
 
-### `./index.md` File: The Main Docs Website Page
 
-I've already created a simple minimalistic home page, you can change it if you
-want.
+### Index
 
-### `./docs/` Folder: One File for each Section
+The `./index.md` file is the Main Docs Website Page
+
+It is already populated, and it can be updated in case.
+
+
+### Docs
+
+The `./docs/` folder contains the documentation, one file for each section.
 
 Files that you add here must be listed in the `./.vuepress/config.js` file, for
 example:
@@ -86,7 +86,10 @@ You can change the title of each section if you wish. If you change a file name
 in the `./docs/` folder, do not forget to update it also in
 `./.vuepress/config.js`
 
-### `./.vuepress/config.js` File: The Website Configuration File
+
+### VuePress configuration
+
+The `./.vuepress/config.js` file is The website configuration file.
 
 Usually you will not have to edit this file very often, except if:
 
@@ -97,7 +100,10 @@ Usually you will not have to edit this file very often, except if:
 - You want to change the title that appears in the left sidebar, for this edit
   the `module.exports.themeConfig.sidebar[0].title`
 
-### `./.vuepress/public/` Folder: The Public Assets
+
+### Documentation public assets
+
+The `./.vuepress/public/` folder contains the public assets.
 
 Here you put any asset you need to be public, the main assets we need in our
 docs website are the animated GIFs of different steps described in the docs.
@@ -107,7 +113,8 @@ places/pages. If we duplicate GIFs more bandwidth will be consumed, and user
 experience impacted. This is my choice, if you want to categorize with folders,
 up to you.
 
-# How to Generate the Perfect GIF image
+
+## Generate GIF image
 
 I've tested dozens of tools, used many services, and finally I ended with this
 solution:
@@ -138,13 +145,13 @@ solution:
   have a big impact on the GIF size, we can end up with GIFs of 2Mo with 256
   colors, and 0.7Mo with 100 colors)
 
-# Test locally
 
-Simply run the following command to start the dev live server:
+## Testing
+
+To test locally simply run the following command to install dependencies then start the development live server:
 
 ```bash
-yarn dev
-# or
+npm install
 npm run dev
 ```
 
@@ -154,12 +161,13 @@ the `config.js` file, you need to restart the dev live server.
 
 Sometimes it bugs, you get a blank page, just restart the dev live server.
 
-# Deploy
 
-Once you've done all changes, simply run the deploy script:
+## Deploy
 
-```sh
-./deploy.sh
+To deploy new documentation changes, simply run the deploy script:
+
+```bash
+./deploy.bash
 ```
 
-And don't forget to push your local changes with a `git push`
+The documentation will be pushed to the `gh-pages` branch where it is served by [GitHub.com](https://github.com) pages.
