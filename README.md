@@ -4,6 +4,10 @@
 
 Install `Node.js` and `npm` for your Linux distribution as they are need to build the documentation.
 
+Then the package dependencies:
+```bash
+npm install
+```
 
 ## Directory Structure
 
