@@ -12,10 +12,10 @@ npm run build
 # navigate into the build output directory
 cd .vuepress/dist
 
-if [ ! -f CNAME ]; then
+#if [ ! -f CNAME ]; then
         # if you are deploying to a custom domain
         echo 'docs-dev.ionoid.io' > CNAME
-fi
+#fi
 
 git init
 git add -A
