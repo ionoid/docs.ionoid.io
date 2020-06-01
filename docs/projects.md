@@ -159,6 +159,7 @@ Anyway, a reminder will be displayed each time you save the project settings:
 
 See the [next section](./devices.md).
 
+
 ## Consult the Actions History
 
 You can check the last actions that have been performed on the project by
