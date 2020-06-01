@@ -14,7 +14,7 @@ cd .vuepress/dist
 
 if [ ! -f CNAME ]; then
         # if you are deploying to a custom domain
-        echo 'docs.ionoid.io' > CNAME
+        echo 'docs-dev.ionoid.io' > CNAME
 fi
 
 git init
