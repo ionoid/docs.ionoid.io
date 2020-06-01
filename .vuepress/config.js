@@ -45,8 +45,8 @@ module.exports = {
             path: '/docs/projects.md'
           },
           {
-            title: 'Register a Device',
-            path: '/docs/register-a-device.md'
+            title: 'Devices',
+            path: '/docs/devices.md'
           },
           {
             title: 'Deploy IoT Apps',
