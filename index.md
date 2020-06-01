@@ -4,11 +4,8 @@ sidebar: false
 <figure align='center'>
   <img src='/logo-big.png' id="big-logo">
   <h1 id='main-title'>
-    Ionoid.io
+    Ionoid.io - IoT Next Generation Deployment
   </h1>
-  <p id='secondary-title'>
-    IoT Next Generation Deployment
-  </p>
   <button id="get-started-button" onclick="window.location='/docs/introduction.html'">Get Started</button>
 </figure>
 <div id="features">
