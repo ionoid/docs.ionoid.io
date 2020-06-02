@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "vuepress dev",
     "build": "vuepress build"
   },
@@ -8,5 +9,8 @@
   },
   "dependencies": {
     "vuepress": "^1.5.0"
+  },
+  "resolutions": {
+    "watchpack": "1.6.1"
   }
 }
