@@ -2,33 +2,32 @@
 dashboardUrl: https://dashboard-dev.ionoid.io
 ---
 
-# Register a Device
+# Devices
 
-Devices are the main driving forces of IoT, and this is why Ionoid.io dashboard
-gives you the supperpower of managing a fleet of devices, which can be counted in
-thousends, from a single place, in realtime, and just by clicking on buttons
-around.
+Ionoid.io dashboard offers the possibility to manage an entire fleet of devices.
+By just clicking on buttons from one single page, you will be able to control and
+remotely deploy applications to hundreds or thousands of devices.
 
 Ionoid.io uses [Linux-IoT](https://www.linux.org/) operating systems
 and supports multiple flavors that run [systemd](https://systemd.io/), the system and
 service manager for Linux operating system. You can check the [supported
 boards and operating systems](/docs/supported-boards-and-os.md).
 
-But first you need to register your device(s) on Ionoid.io. In the simplest
-case, registering a device on Ionoid.io is as simple as clicking on a button,
-downloading an image, then flashing the device using that image.
+First you have to register your device(s) on Ionoid.io. It is as simple as clicking on
+a button, downloading an OS image, flashing the device storage then booting the device.
 
-Sometimes, however, you need to put some configuration in the image, such as
-the WiFi network(s) password(s), a name for the device, or informations about
-cellular network(s). Good news! This is also possible from dashboard. Please
-follow with the next section to learn how to add devices to [a
-project](/docs/projects.md).
+There is also the possibility to configure your image by chaning
+the WiFi network(s) password(s), the device name, or informations about
+cellular network(s). Please follow with the next section that explains it
+in more details.
 
-## Configure the OS Image
+
+## Add a device
 
 On Ionoid.io, devices belong to projects. If you didn't yet create a project,
 please follow [these guidlines](/docs/projects.md). Once you've created a
 project, open the **ADD A DEVICE** tab, you will notice 5 sections:
+
 
 ### Project General Informations
 
@@ -120,7 +119,7 @@ will need to do is to change the environment variable without touching the app.
 
 Once all configuration done, you can now follow with OS image generation.
 
-## Generate the OS Image
+## Generate OS Image
 
 To generate the OS image, you have three options:
 
@@ -129,7 +128,8 @@ To generate the OS image, you have three options:
 - Advanced users: Use the [Ionoid.io build scripts](#using-the-ionoid-io-build-scripts) on a downloaded image
 - Advanced users: [Install on an already running Linux system](#installing-on-an-already-running-linux-system) - to be added soon
 
-### Using the Ionoid.io Build OS Tool
+
+### Download OS Image
 
 All you have to do is to click on the **Download OS** to download a
 ready-to-flash image:
@@ -154,7 +154,7 @@ image (not mandatory):
 Once the OS image downloaded, you can [flash the device](#flash-the-os-image)
 using this image.
 
-### Using the Ionoid.io Build Scripts
+### Using Ionoid.io Build Scripts
 
 ::: tip PREREQUISITE
 In order to use the build scripts, you will have to install the following tools
@@ -234,9 +234,11 @@ Once the build process finishes, you will find the new patched image in the
 this image.
 
 ### Installing on an Already Running Linux System
+
 To be added soon
 
 ## Flash the OS Image
+
 
 ## Boot the device
 

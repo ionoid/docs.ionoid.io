@@ -49,6 +49,10 @@ module.exports = {
             path: '/docs/devices.md'
           },
           {
+            title: 'Monitoring devices',
+            path: '/docs/monitoring-devices.md'
+          },
+          {
             title: 'Deploy IoT Apps',
             path: '/docs/deploy-iot-apps.md'
           },
