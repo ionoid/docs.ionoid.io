@@ -80,7 +80,7 @@ trusted collaborators as viewers.
 | Create projects           |  X              |  X              |                 |
 | Delete projects           |  X              |  X              |                 |
 | Control devices           |  X              |  X              |                 |
-| View organization            |  X              |  X                |                 |
+| View organization            |  X              |  X                |  X               |
 | Invite users to organization            |  X              |                 |                 |
 | Change users permissions            |  X              |                 |                 |
 | Change organization billing            |  X              |                 |                 |
