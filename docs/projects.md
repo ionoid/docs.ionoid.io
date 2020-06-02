@@ -143,9 +143,9 @@ configuration to all devices of the project.
 ::: warning
 Please note that after editing the project settings, only newly added devices
 will inherite of these settings. To make the already deployed devices also
-inherite of these settings, you have to _deploy the project settings_ by
-clicking on the **Deploy settings** button that is present on the project details
-main page:
+inherite of these settings, you have to _redeploy the project settings_ by
+clicking on the **Redeploy project settings on all devices** button that is
+present on the project details main page:
 
 ![Redeploy Project Settings](/steps/redeploy_project_settings.png)
 
