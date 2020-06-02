@@ -55,20 +55,22 @@ progress of the app deployment on the device.
 
 ![Paste the App Public URL](/steps/deploy-iot-apps/on_device_details_page_paste_app_url_and_wait_realtime_messages.gif)
 
-Once the app deployed on this device, you can see it listed on *the project app
-list page* or on the *device app list page*:
+Once the app deployed on this device, you can see it listed:
 
-![Paste the App Public URL](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
--- GIF WHERE WE NAVIGATE TO THE DEVICE APP LIST PAGE --
+- Either on *the project app list page*:
+
+![Go to Project Apps Page](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
+
+- Or on the *device app list page*:
+
+![Go to Device Apps Page](/steps/deploy-iot-apps/from_device_details_page_go_to_device_apps_page.gif)
 
 ### Deploy on all devices of a project
 
 - On the *project details page* make sure that no device is selected. Click on
 **&#xFE19;** button and choose **Deploy app on all devices** action:
 
--- GIF WHERE WE CLICK ON SELECT NONE TO MAKE SURE ALL DEVICES ARE UNSELECTED,
-THEN WE CLICK ON MORE ACTIONS BUTTON, THEN WE CLICK ON DEPLOY APP ON ALL
-DEVICES --
+![Click on Deploy App on All Devices](/steps/deploy-iot-apps/on_project_details_page_unselect_all_devices_and_click_on_deploy_on_all_devices.gif)
 
 - On the window that appears, you can optionally add/remove environment variables
 for this app.
@@ -83,17 +85,16 @@ for that, use [this public URL](https://storage.googleapis.com/public.opendevice
 After few seconds, you will receive realtime messages about the status and
 progress of the app deployment on each device.
 
--- GIF WHERE WE PASTE A URL ON THE DEPLOY APP IN THE PROJECT DETAILS PAGE, AND
-WAIT TO SEE REALTIME MESSAGES --
+![Deploy App on All Devices of a Project](/steps/deploy-iot-apps/deploy_app_on_all_devices_of_project.gif)
 
 Once the app deployed on at least one device of the project, you can see it
-listed on the project app list page.
+listed on the *project app list page*.
 
--- GIF WHERE WE NAVIGATE TO THE PROJECT APP LIST PAGE --
+![Go to Project Apps Page](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
 
 ### Deploy on a subset of devices of a project
 
-- On the *project details page*, select the device(s) you want to deploy to:
+- On the *project details page*, select the device(s) you want to deploy to
 
 ::: warning
 If you don't select any device, the deployment will concern all the devices of the
@@ -111,8 +112,7 @@ If you have not yet an app on hand, you can test our **Hello World** test app,
 for that, use [this public URL](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar) to deploy the version `v0.1`.
 :::
 
--- GIF WHERE WE SELECT SOME DEVICES IN THE PROJECT DETAILS PAGE, THEN WE CLICK
-ON DEPLOY ACTION, THEN WE PASTE A URL, THEN WE CLICK ON DEPLOY BUTTON --
+![Deploy App on Selected Devices](/steps/deploy-iot-apps/deploy_app_on_some_devices_of_project.gif)
 
 After few seconds, you will receive realtime messages about the status and
 progress of the app deployment on each device.
@@ -120,7 +120,7 @@ progress of the app deployment on each device.
 Once the app deployed on at least one device of the project, you can see it
 listed on the project app list page.
 
--- GIF WHERE WE NAVIGATE TO THE PROJECT APP LIST PAGE --
+![Go to Project Apps Page](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
 
 ## Update IoT Apps
 
@@ -136,23 +136,23 @@ have three options:
 
 - First, navigate to the *app on the device details* page, for that, you can:
 
--- Either navigate to the *project app list* page, click on the target app to go to the
-  *app on the project details* page, then click on the target device to go to the
-  *app on device details* page:
+  - Either navigate to the *project app list page*, click on the target app to go to the
+    *app on the project details page*, then click on the target device to go to the
+    *app on device details page*:
 
--- GIF WHERE WE GO TO THE PROJECT APP LIST, THEN TO A PROJECT APP DETAILS PAGE,
-THEN TO THE DEVICE APP DETAILS PAGE --
+![Go to Device App Details Page Method 1](/steps/deploy-iot-apps/go_to_project_apps_then_project_app_details_then_device_app_details.gif)
 
--- Or navigate to the *project device list* page, click on the target device to
-  go to the *device details* page, then click on *Apps* on the left sidebar under
-  the *Current device* menu to go to the *device app list* page, then click on
-  the target app to go to the *app on device details* page:
+  - Or click on the target device to go to the *device details page*, then
+    click on *Apps* to go to the *device app list page*, then click on
+    the target app to go to the *app on device details* page:
 
--- GIF WHERE WE GO TO THE PROJECT DEVICE LIST, THEN TO A DEVICE, THEN TO ITS
-APP LIST, THEN TO THE DEVICE APP DETAILS PAGE --
+![Go to Device App Details Page Method
+2](/steps/deploy-iot-apps/go_to_device_details_then_device_apps_then_device_app_details.gif)
 
 - Click on the **&#xFE19;** button, and choose **Update app on this
 device**
+
+![Click on Update App on this Device](/steps/deploy-iot-apps/click_on_update_app_on_this_device.png)
 
 - You will get the same window as in the first deploy step, however
 with the previous public URL pasted. Follow the same steps as in the first
@@ -173,8 +173,7 @@ deployment field.
 - Click on the **&#xFE19;** button, then  click on the **Update app on all
   devices** button:
 
--- GIF WHERE WE GO TO THE PROJECT APPS LIST, THEN WE CLICK ON THE UPDATE APP ON
-ALL DEVICES BUTTON --
+![Click on Update App on all Devices](/steps/deploy-iot-apps/click_on_update_app_on_all_devices.gif)
 
 - You will get the same window as in the first deploy step, however
 with the previous public URL pasted. Follow the same steps as in the first
@@ -190,8 +189,7 @@ the status and progress of the app deployment on devices of the project.
 - Click on the **&#xFE19;** button, then click on the **Update app on selected
 devices** button:
 
--- GIF WHERE WE GO TO THE PROJECT APPS LIST, THEN WE SELECT DEVICES,
-THEN WE CLICK ON THE UPDATE APP BUTTON --
+![Click on Update App on Selected Devices](/steps/deploy-iot-apps/update_app_on_selected_devices.gif)
 
 - You will get the same window as in the first deploy step, however
 with the previous public URL pasted. Follow the same steps as in the first
