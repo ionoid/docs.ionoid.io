@@ -211,20 +211,18 @@ have three options:
 
 - First, navigate to the *app on the device details* page, for that, you can:
 
--- Either navigate to the *project app list* page, click on the target app to go to the
-  *app on the project details* page, then click on the target device to go to the
-  *app on device details* page:
+  - Either navigate to the *project app list page*, click on the target app to go to the
+    *app on the project details page*, then click on the target device to go to the
+    *app on device details page*:
 
--- GIF WHERE WE GO TO THE PROJECT APP LIST, THEN TO A PROJECT APP DETAILS PAGE,
-THEN TO THE DEVICE APP DETAILS PAGE --
+![Go to Device App Details Page Method 1](/steps/deploy-iot-apps/go_to_project_apps_then_project_app_details_then_device_app_details.gif)
 
--- Or navigate to the *project device list* page, click on the target device to
-  go to the *device details* page, then click on *Apps* on the left sidebar under
-  the *Current device* menu to go to the *device app list* page, then click on
-  the target app to go to the *app on device details* page:
+  - Or click on the target device to go to the *device details page*, then
+    click on *Apps* to go to the *device app list page*, then click on
+    the target app to go to the *app on device details* page:
 
--- GIF WHERE WE GO TO THE PROJECT DEVICE LIST, THEN TO A DEVICE, THEN TO ITS
-APP LIST, THEN TO THE DEVICE APP DETAILS PAGE --
+![Go to Device App Details Page Method
+2](/steps/deploy-iot-apps/go_to_device_details_then_device_apps_then_device_app_details.gif)
 
 - On the top you can check what is the current version, and what is the
   previous version
@@ -232,13 +230,12 @@ APP LIST, THEN TO THE DEVICE APP DETAILS PAGE --
 - Click on the **&#xFE19;** button, and choose **Rollback app on this
 device**
 
+![Click on Rollback Device App](/steps/deploy-iot-apps/click_on_rollback_app_on_single_device.png)
+
 - Confirm by clicking on the **Rollback** button on the confirmation window
 
 - After few seconds, you will receive realtime messages about the rollback
   process on the device
-
--- GIF WHERE WE CLICK ON THE ROLLBACK ACTION ON THE APP PER DEVICE DETAILS
-PAGE, THEN WE SEE REALTIME MESSAGES --
 
 ### Rollback on all devices of a project
 
@@ -250,16 +247,12 @@ PAGE, THEN WE SEE REALTIME MESSAGES --
 - Click on the **&#xFE19;** button, then  click on the **Rollback app on all
   devices** button:
 
--- GIF WHERE WE GO TO THE PROJECT APPS LIST, WE UNSELECT ALL DEVICES,
-THEN WE CLICK ON THE ROLLBACK APP ON ALL DEVICES BUTTON --
+![Click on Rollback Project App](/steps/deploy-iot-apps/click_on_rollback_app_on_all_devices_of_project.png)
 
 - Confirm by clicking on the **Rollback** button on the confirmation window
 
 - After few seconds, you will receive realtime messages about the rollback
   process on the device
-
--- GIF WHERE WE CLICK ON THE ROLLBACK ACTION ON THE APP PER DEVICE DETAILS
-PAGE, THEN WE SEE REALTIME MESSAGES --
 
 ### Rollback on a subset of devices of a project
 
@@ -270,16 +263,12 @@ PAGE, THEN WE SEE REALTIME MESSAGES --
 - Click on the **&#xFE19;** button, then click on the **Rollback app on
   selected devices** button:
 
--- GIF WHERE WE GO TO THE PROJECT APPS LIST, THEN WE SELECT DEVICES,
-THEN WE CLICK ON THE ROLLBACK APP BUTTON --
+![Click on Rollback Selected Devices App](/steps/deploy-iot-apps/click_on_rollback_app_on_selected_devices.png)
 
 - Confirm by clicking on the **Rollback** button on the confirmation window
 
 - After few seconds, you will receive realtime messages about the rollback
   process on the selected devices
-
--- GIF WHERE WE CLICK ON THE ROLLBACK ACTION ON THE APP PER PROJECT DETAILS
-PAGE, THEN WE SEE REALTIME MESSAGES --
 
 ## Delete IoT Apps
 
