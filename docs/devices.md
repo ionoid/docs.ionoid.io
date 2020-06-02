@@ -230,15 +230,16 @@ curl https://github.install-ionoid.sdk.ionoid.net/install-tools.bash | IMAGE=ima
 ```
 
 Once the build process finishes, you will find the new patched image in the
-`output` directory. You can now [flash the device](#flash-the-os-image) using
-this image.
+`output` directory. You can now [flash the
+device](#flash-os-image-to-storage) using this image.
 
 ### Installing on an Already Running Linux System
 
 To be added soon
 
-## Flash the OS Image
+## Flash OS Image to Storage
 
+Please follow [these guidlines](/docs/flash-os-image-to-storage.md) to flash the generated OS image to the storage of your device.
 
 ## Boot the device
 
