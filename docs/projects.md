@@ -4,8 +4,10 @@ dashboardUrl: https://dashboard-dev.ionoid.io
 
 # Projects
 
-Ionoid.io is structured as projects and devices belonging to these projects. To
-add a device and be able to manage it, you first need to create a project.
+Ionoid.io is structured as organizations where each organization includes a set
+of projects. Registered devices at Ionoid.io always belong to only one project and
+are unique across the whole organization.
+
 
 ## Create a Project
 
@@ -124,36 +126,41 @@ Selecting an incorrect plan may result in billing issues for your account or
 prevent connectivity.
 :::
 
+
 #### Boot Configuration
 
 Here you can specify the kernel boot options.
 
+
 ### Project Environment Variables
 
-Deployed apps on devices can access these environment variables, so that you
-can deploy apps without hardcoding some values that can subject to
-modifications in the future.
+Environment variables are dynamic variables that can affect how applications will run
+on the devices. Each project can have its own specific envrionment variables that
+are eployed to all devices part of that project.
 
-This can be very handy when it comes to modify a
-variable, for example an endpoint url, used in 10 apps deployed across 200
-devices. Using environment variables, it is as simple as editing a single
-variable on dashboard, saving it, then clicking on a button to deploy new
-configuration to all devices of the project.
+Deployed applications can access these environment variables, and update their behaviour accordingly.
+This is very useful when it comes to update applications whithout redeploying, take an example
+of an endpoint url used in 10 apps deployed across 200 devices. Using environment variables, it is as
+simple as editing a single variable on dashboard, saving it, then redeploy the project settings including
+envrionment variables to the concerned devices.
+
+
+**PHOTO PROJECT ENVIRONMENT VARIABLE**
+
+
+## Save Project settings
+
+After finishing the project configuration, you have to save the settings so they are not lost.
+
 
 ::: warning
-Please note that after editing the project settings, only newly added devices
-will inherite of these settings. To make the already deployed devices also
-inherite of these settings, you have to _deploy the project settings_ by
-clicking on the **Deploy settings** button that is present on the project details
-main page:
-
-![Redeploy Project Settings](/steps/redeploy_project_settings.png)
-
-Anyway, a reminder will be displayed each time you save the project settings:
+Please note that this will not redeploy the project settings to devices. A reminder will
+be displayed to note it.
 
 ![Redeploy Project Settings Reminder](/steps/redeploy_project_settings_reminder.gif)
 
-::::
+:::
+
 
 ## Add a Device to the Project
 
@@ -166,6 +173,23 @@ You can check the last actions that have been performed on the project by
 clicking on the **ACTIONS HISTORY** tab:
 
 ![Actions History](/steps/actions_history.png)
+
+
+## Redeploy Project settings
+
+It is possible to redeploy the project settings to devices anytime. To do so
+click on the **Redeploy project settings** button that is part of the actions in
+the project main page:
+
+![Redeploy Project Settings](/steps/redeploy_project_settings.png)
+
+
+::: warning
+Please note this may overwrite the settings of already running devices.
+
+This may overwrite your WiFi configuration if it was changed and make your device
+inaccessible in case of errors.
+:::
 
 
 ## Delete a Project
