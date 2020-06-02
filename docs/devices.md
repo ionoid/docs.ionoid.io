@@ -1,5 +1,5 @@
 ---
-dashboardUrl: https://dashboard-dev.ionoid.io
+dashboardUrl: https://dashboard.ionoid.io
 ---
 
 # Devices
