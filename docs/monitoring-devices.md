@@ -1,106 +1,140 @@
-# Monitoring devices
+# Monitor and Manage Devices
 
-Now you should be able to monitor your devices, execute actions and operations directly on your fleet of devices.
-
-
-## Devices information
-
-Each device can be accessed through its dedicated information page. The
-page shows up the device `Hostname`, `IP Address`, `Operating System version`
-and other system information.
-
-![device page](/steps/deviceDetails.png)
+The Ionoid.io dashboard offers the possiblity to monitor and manage devices
+from a single place. No matter how many devices your fleet has, once [registered on
+Ionoid.io platform](/docs/devices.md#add-a-device), you will be able to ping
+them, get their status, deploy apps on them, reboot them, ... etc
 
 
-## Realtime Activity log
+## Devices Information
 
-Executed actions on your device are displayed on the right bloc of the device page or project page.
+Each device can be accessed through its dedicated information page: *the device
+details page*. Among the information that are displayed on this page, we have:
 
-![Device command](/steps/deviceCommand.png)
+- Device model and hostname
+- Device network information (IP addresses, connected networks, ... etc)
+- Device system information (Linux, SealOS, Systemd, Docker versions, ... etc)
+- Device activity: last seen time, uptime, ... etc
+- Device errors (if any)
+- Device operating system version
 
-
-## Actions log
-
-A history of all executed commands can be found on the `project page` of the device, `Action/Deployment` link in left-side panel of your page
-
-![history log](/steps/deviceHistoryLog.png)
-
-
-## Device system logs
-
-The platform offer a way to see exactly what is happening inside your device in realtime with the device logs (system logs) feature
-on the device page.
-
-The option can be activated on the bottom page of device detail page `Device Logs`, you can instruct the device
-to start sending system logs or stop sending them.
-
-When you do `START LOGS` action, logs will automatically show up, and will continue to be forwarded to the corresponding `MQTT channels` until the device is `OFFLINE` or is instructed to stop forwarding logs by `STOP LOGS`.
-
-![Device system log](/steps/deviceSyslog.png)
+![Device Details Page](/steps/monitoring-devices/device-details-page.gif)
 
 
-## Disable device management
+## Realtime Activity Logs
 
-To disable the device and put it in the `Unregistered mode` you can
-either do it through the `Disable Device` operation in `Device Settings` section,
-or add the file `disable` into the `/data` directory of the device storage.
+Status and result of executed actions on your device are displayed on the right
+bloc of the device page or project page:
 
-Make sure to read the **important notices below** as in this mode
-the device will never communicate with `dashboard.ionoid.io` services
-and backends, and the related ionoid agents will start, check if the
-file exists, if so they immediately exit with success.
+![Device Details Page](/steps/monitoring-devices/device-realtime-messages.png)
 
-Example on the device storage, add the `disable` file to the data
-directory:
+
+## Actions History
+
+A history of all executed commands can be found on the *project details page*
+to which the device belongs, by clicking on the **ACTIONS HISTORY** tab:
+
+![Project History Page](/steps/monitoring-devices/project-actions-history.png)
+
+
+## Device System Logs
+
+The platform offers a way to see exactly what is happening inside your device in
+realtime with the device logs (system logs) feature on the *device details page*.
+
+For that, click on the **DEVICE LOGS** tab on the bottom of the *device details
+page*, then click on the **Start logs** button. Logs will automatically show up,
+and will continue to be forwarded to the corresponding *MQTT channels* until the
+device becomes offline, or is instructed to stop forwarding logs by clicking on
+the *Stop logs* button.
+
+::: tip
+Device logs are sent for 10 minutes only, click on the *Start logs* button again
+to get more logs.
+:::
+
+![Device Logs](/steps/monitoring-devices/device-logs.png)
+
+## Disable Device Management
+
+To disable a device, click on the **&#xFE19;** button on the *device details
+page*, then click on the **Disable device** action. Confirm by clicking again
+on the **Disable device** button:
+
+![Disable Device](/steps/monitoring-devices/disable-device.png)
+
+Disabling a device will put it in the `Unregistered` mode. This operation can
+also be done manually by creating a file named `disable` in the `/data`
+directory of the device storage, for example, using the command:
+
 ```bash
-# touch /data/ionoid/disable
+touch /data/ionoid/disable
 ```
 
-**Important:**
+::: danger
+- Disabling a device will put it in an `unregistered` mode, it will add a file named
+`disable` into the data folder.
 
-**1) After disable device, and if the device is rebooted or online again it will still stay in the
-Unregistered mode and will not communicate with ionoid.io unless the
-file disable is removed manually, use this at your own risk.**
+- A disabled device will never communicate with the Ionoid.io dashboard. To
+re-enable it, you will have to manually delete the `disable` file from the
+device storage.
 
-**2) Deployed and running applications will continue to work as
-expected, however any new status updates will not show up on dashboard.**
+```bash
+rm /data/ionoid/disable
+```
 
-**3) The device will continue to fetch system updates from ionoid.io URLs, if
-the installed Operating system is supported by ionoid.io System updates. No
-operation is logged or communicated with ionoid.io dashboard. This is a free
+- After disabling a device, and if the device is rebooted or online again, it
+will still stay in the `unregistered` mode. It will not communicate with the
+Ionoid.io dashboard unless the file `disable` is removed manually, <ins>use this at
+your own risk!</ins>.
+
+- Deployed and running applications will continue to work as expected, however
+any new status updates will not show up on dashboard.
+
+- The device will continue to fetch system updates from Ionoid.io URLs, if
+the installed operating system is supported by Ionoid.io System updates. No
+operation is logged or communicated to Ionoid.io dashboard. This is a free
 system update service to keep your devices secure. If you do not want
-any system updates, please install another fresh Operating System that
-does not support ionoid.io system updates.**
+any system updates, please install another fresh operating system that
+does not support Ionoid.io system updates.
+
+:::
+
+## Delete Device
+
+To delete a device, go to the *device settings page*. On the left sidebar,
+click on **Settings** under the **Current device** menu. Then, scroll to the
+bottom of the page and click on the **Delete this device** button:
+
+![Click on Delete Device](/steps/monitoring-devices/delete-device-part-1.png)
+
+Then enter the first 5 characters of the device UUID, and click on **Delete
+this device** button:
+
+![Confirm Delete Device](/steps/monitoring-devices/delete-device-part-2.png)
+
+Please be aware that the device will show up again in the next reboot (or when
+it is online again) if you do not disable it. To delete the device completely from
+Ionoid.io, make sure to check the **Disable** checkbox. Disabling a device will
+prevent its registering on the next reboot (or when it is online again), then deletes
+it from the Ionoid.io backends.
 
 
-## Delete device
+::: warning
+- Deployed and running applications will continue to work as expected, however
+any new status updates will not show up on dashboard.
 
-To delete the device from the platform just execute the
-`Delete Device` operation in `Device Settings` section.
-Please be aware that the next reboot or when the device is online,
-it will show up again in dashboard, this is **a temporarily delete operation.**
-
-To delete the device completely from ionoid.io, make sure to disable it
-first, check the `Disable` checkbox first, which will disable the device,
-see previous `Disable device management` operation; then deletes it from ionoid.io
-backends.
-
-
-**Important:**
-
-**1) Deployed and running applications on the device will continue to work as
-expected, however any new status updates will not show up on dashboard.**
-
-**2) The device will continue to fetch system updates from ionoid.io URLs, if
-the installed Operating system is supported by ionoid.io System updates. No
-operation is logged or communicated with ionoid.io dashboard. This is a free
+- The device will continue to fetch system updates from Ionoid.io URLs, if
+the installed operating system is supported by Ionoid.io System updates. No
+operation is logged or communicated to Ionoid.io dashboard. This is a free
 system update service to keep your devices secure. If you do not want
-any system updates, please install another fresh Operating System that
-does not support ionoid.io system updates.**
+any system updates, please install another fresh operating system that
+does not support Ionoid.io system updates.
+:::
 
-
----
-
-
-### Questions?
-We're always happy to help with IoT Projects or other questions you might have! Check our [documentation](https://docs.ionoid.io/#/), contact support: support@ionoid.io, or connect with our sales team: sales@opendevices.io. You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI).
+::: tip Have Questions?
+We're always happy to help with IoT projects or other questions you might have!
+Check our [documentation](https://docs.ionoid.io/#/), contact
+support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+:::
