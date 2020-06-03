@@ -1,5 +1,7 @@
 # Ionoid.io Docs Working Repo
 
+![](https://github.com/ionoid/docs.ionoid.io/.github/workflows/build-and-test.yaml/badge.svg)
+
 ## Install dependecices
 
 Install `Node.js` and `npm` for your Linux distribution as they are need to build the documentation.

@@ -1,0 +1,4 @@
+name: 'Build and test docs.ionoid.io'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
