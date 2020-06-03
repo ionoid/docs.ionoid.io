@@ -47,7 +47,11 @@ for this app
 
 ::: tip
 If you have not yet an app on hand, you can test our **Hello World** test app,
-for that, use [this public URL](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar) to deploy the version `v0.1`.
+for that, use [this public URL for ARMv6 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.1.tar
+), and [this public URL for ARMv7 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar
+) to deploy the version `v0.1`.
 :::
 
 After few seconds, you will receive realtime messages about the status and
@@ -79,7 +83,11 @@ for this app.
 
 ::: tip
 If you have not yet an app on hand, you can test our **Hello World** test app,
-for that, use [this public URL](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar) to deploy the version `v0.1`.
+for that, use [this public URL for ARMv6 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.1.tar
+), and [this public URL for ARMv7 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar
+) to deploy the version `v0.1`.
 :::
 
 After few seconds, you will receive realtime messages about the status and
@@ -109,7 +117,11 @@ current project.
 
 ::: tip
 If you have not yet an app on hand, you can test our **Hello World** test app,
-for that, use [this public URL](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar) to deploy the version `v0.1`.
+for that, use [this public URL for ARMv6 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.1.tar
+), and [this public URL for ARMv7 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar
+) to deploy the version `v0.1`.
 :::
 
 ![Deploy App on Selected Devices](/steps/deploy-iot-apps/deploy_app_on_some_devices_of_project.gif)
@@ -165,6 +177,15 @@ This is why for convenience, the previous public URL has been pasted to
 deployment field.
 :::
 
+::: tip
+If you used our **Hello World** `v0.1` test app on the first deploy, you can
+now use its `v0.2` version to test update. Here is the [public URL for ARMv6 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.2.tar
+), and [the public URL for ARMv7 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar
+) to deploy the version `v0.1`.
+:::
+
 ### Update on all devices of a project
 
 - Navigate to the *project app list* then click on the target app to go to the
@@ -179,6 +200,21 @@ deployment field.
 with the previous public URL pasted. Follow the same steps as in the first
 deploy process, and after few seconds, you will receive realtime messages about
 the status and progress of the app deployment on devices of the project.
+
+::: tip
+You can use the same public URL to deploy multiple versions of the same app.
+This is why for convenience, the previous public URL has been pasted to
+deployment field.
+:::
+
+::: tip
+If you used our **Hello World** `v0.1` test app on the first deploy, you can
+now use its `v0.2` version to test update. Here is the [public URL for ARMv6 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.2.tar
+), and [the public URL for ARMv7 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar
+) to deploy the version `v0.1`.
+:::
 
 ### Update on a subset of devices of a project
 
@@ -195,6 +231,21 @@ devices** button:
 with the previous public URL pasted. Follow the same steps as in the first
 deploy process, and after few seconds, you will receive realtime messages about
 the status and progress of the app deployment on devices of the project.
+
+::: tip
+You can use the same public URL to deploy multiple versions of the same app.
+This is why for convenience, the previous public URL has been pasted to
+deployment field.
+:::
+
+::: tip
+If you used our **Hello World** `v0.1` test app on the first deploy, you can
+now use its `v0.2` version to test update. Here is the [public URL for ARMv6 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.2.tar
+), and [the public URL for ARMv7 devices](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar
+) to deploy the version `v0.1`.
+:::
 
 ## Rollback IoT Apps
 
