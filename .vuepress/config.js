@@ -8,7 +8,7 @@ module.exports = {
         options: {
           bgColor: 'black',
           zIndex: 10000,
-          customSize: { width: 1000, height: 563 }
+          customSize: '100%',
         },
       },
     ],
