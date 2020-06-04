@@ -1,6 +1,7 @@
 # Ionoid.io Docs Working Repo
 
-![](https://github.com/ionoid/docs.ionoid.io/.github/workflows/build-and-test.yaml/badge.svg)
+![](https://github.com/ionoid/docs.ionoid.io/workflows/Build%20and%20test%20the%20site%20with%20node:lts/badge.svg)
+
 
 ## Install dependecices
 
