@@ -2,7 +2,7 @@
 dashboardUrl: https://dashboard.ionoid.io
 ---
 
-# Projects
+# Create Projects
 
 Ionoid.io is structured as organizations where each organization includes a set
 of projects. Registered devices at Ionoid.io always belong to only one project and
@@ -144,7 +144,7 @@ of an endpoint url used in 10 apps deployed across 200 devices. Using environmen
 simple as editing a single variable on dashboard, saving it, then redeploy the project settings including
 envrionment variables to the concerned devices.
 
--- PHOTO PROJECT ENVIRONMENT VARIABLE --
+![Add Environment Variable](/steps/add_env_var.gif)
 
 
 ## Save Project settings
@@ -180,7 +180,7 @@ clicking on the **ACTIONS HISTORY** tab:
 ![Actions History](/steps/actions_history.png)
 
 
-## Redeploy Project settings
+## Redeploy Project Settings
 
 It is possible to redeploy the project settings to devices anytime. To do so
 click on the **Redeploy project settings** button that is part of the actions in
@@ -213,7 +213,7 @@ project configuration will be permanently deleted from the Ionoid.io dashboard.
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/#/), contact
-support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
 You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
 :::

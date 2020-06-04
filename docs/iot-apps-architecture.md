@@ -22,31 +22,30 @@ it easy to stop, **disable** then to completely remove applications.
 
 [Ionoid.io](https://ionoid.io/) supports multiple IoT App formats:
 
-1) Static binaries without library or other filesystem dependencies.
+- Static binaries without library or other filesystem dependencies.
 If you are deploying [Static
 Binaries](https://en.wikipedia.org/wiki/Static_build) then please keep
 reading this document.
 
 
-2) Archive
+- Archive
 [tarball](https://en.wikipedia.org/wiki/Tar_(computing) or
-[Zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps.
+[zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps.
 If you are deplying Archive apps then please keep reading this document.
 
 
-3) Modern [docker](https://docker.com) containers **in progress - still
+- Modern [docker](https://docker.com) containers **in progress - still
 under development**.
 If you are deploying [docker container](https://docker.com) apps then
 please go directly to this link [docker Apps](../apps/dockerApps.md)
 
 
-4) Universal Linux Apps [Ubuntu Snaps](https://snapcraft.io/) **in progress - still under development**.
+- Universal Linux Apps [Ubuntu Snaps](https://snapcraft.io/) **in progress - still under development**.
 If you are deploying Universal Linux Apps that are [Ubuntu
 Snaps](https://snapcraft.io) then please do directly to this link [Snap
 Apps](../apps/snapApps.md)
 
 ### App YAML Format
-
 
 Each App is described using The App yaml format. The App yaml is
 a simple manifest to describe how the app should work, it is fully
@@ -66,9 +65,7 @@ For static binaries with no dependencies, an `app.yaml` file will be
 auto-generated and used to define how the App should run.
 
 
-The `app.yaml` content:
-
-(lines starting with `#` are comments and have no futher semantics)
+The `app.yaml` content is (lines starting with `#` are comments and have no futher semantics):
 
 
 ```yaml
@@ -86,83 +83,80 @@ description: My App
 # List of Applications inside the same IoT App, the final IoT
 # App can include one app entry or several apps.
 apps:
-        hello-world:
-                # Environment Vars for Hello World Optional
-                environment:
-                        A:      "ABC"
+  hello-world:
+    # Environment Vars for Hello World Optional
+    environment:
+      A: "ABC"
 
-                # Environment Files that contains Vars for App Optional
-                environmentfiles:
-                        - "/etc/hello-world-environment1"
-                        - "/etc/hello-world-environment2"
+    # Environment Files that contains Vars for App Optional
+    environmentfiles:
+      - "/etc/hello-world-environment1"
+      - "/etc/hello-world-environment2"
 
-                # Optional command to be executed before the main app.
-                # Can be used to setup environment.
-                start-command:   /bin/echo "starting hello-world"
+    # Optional command to be executed before the main app.
+    # Can be used to setup environment.
+    start-command: /bin/echo "starting hello-world"
 
-                # Main executable app
-                command:        /bin/hello-world
+    # Main executable app
+    command: /bin/hello-world
 
-                # Optional command to be executed after the main app finishes
-                # Can be used to clean up state.
-                stop-command:   /bin/echo "hello-world stopped"
+    # Optional command to be executed after the main app finishes
+    # Can be used to clean up state.
+    stop-command: /bin/echo "hello-world stopped"
 
-                # Daemon Command type takes one of these values:
-                # * simple:     the process configured with command
-                #               is the main process of the service.
-                #               This is the default value if daemon is
-                #               not set.
-                # * forking:    it is expected that the process configured
-                #               with command will call fork() as part
-                #               of its start-up
-                # * oneshot:    it is expected that the process configured
-                #               with command will exit or terminate
-                #
-                # For more details check systemd service documentation.
-                daemon: simple | forking | oneshot
+    # Daemon Command type takes one of these values:
+    # * simple:     the process configured with command
+    #               is the main process of the service.
+    #               This is the default value if daemon is
+    #               not set.
+    # * forking:    it is expected that the process configured
+    #               with command will call fork() as part
+    #               of its start-up
+    # * oneshot:    it is expected that the process configured
+    #               with command will exit or terminate
+    #
+    # For more details check systemd service documentation.
+    daemon: simple | forking | oneshot
 
-                # Starting from newer versions, to have the app run with
-                # root privileges you have set it to true
-                privileged: true
+    # Starting from newer versions, to have the app run with
+    # root privileges you have set it to true
+    privileged: true
 
 volumes:
-        # Volumes and mounts to be made accessible inside the application.
-        #
-        # Volumes support two types of mount 'rbind' and 'norbind':
-        #   * rbind: perform a recursive bind mount of the volume.
-        #   * norbind: perform a non-recusive bind mount.
-        #
-        # Volumes support different options:
-        #   * rw: perform a regular writable bind mount (unless source is read-only).
-        #   * ro: perform a read-only bind mount.
-        #
-        - src=filesystem_path:dst=app_path:type=rbind:options=rw
-        - src=filesystem_path:dst=app_path:type=norbind:options=ro
+  # Volumes and mounts to be made accessible inside the application.
+  #
+  # Volumes support two types of mount 'rbind' and 'norbind':
+  #   * rbind: perform a recursive bind mount of the volume.
+  #   * norbind: perform a non-recusive bind mount.
+  #
+  # Volumes support different options:
+  #   * rw: perform a regular writable bind mount (unless source is read-only).
+  #   * ro: perform a read-only bind mount.
+  #
+  - src=filesystem_path:dst=app_path:type=rbind:options=rw
+  - src=filesystem_path:dst=app_path:type=norbind:options=ro
 
-        # /dev, /proc and /sys are already mounted inside the app
-        # no need to mount them again.
+  # /dev, /proc and /sys are already mounted inside the app
+  # no need to mount them again.
 
-        # Mounting etc configuration inside the app:
-        - src=/etc:dst=/etc,type=rbind,options=ro
+  # Mounting etc configuration inside the app:
+  - src=/etc:dst=/etc,type=rbind,options=ro
 
-        # If you want to make the root-filesystem available then the
-        # following volume mount is the safest instruction.
-        - src=/:dst=/:type=norbind,options=ro
-
+  # If you want to make the root-filesystem available then the
+  # following volume mount is the safest instruction.
+  - src=/:dst=/:type=norbind,options=ro
 
 # Health check is a special command to do health checking on
 # your one or multiple apps
 # still under development
 health-check:
-                command:        /bin/health-check
+  command:        /bin/health-check
 ```
-
 
 The `apps` field may contain several entries if you want to launch several IoT
 Apps together, distribute them together, or share the running
 environment. However we would recommend to always have one command per
 App.
-
 
 The `health-check` field is a special directive that may allow you to do
 health checks on your running apps. Right now it is **in progress - still under
@@ -175,8 +169,8 @@ The content of the `app.yaml` file would be:
 name: hello-world
 version: 1.0
 apps:
-        hello-world:
-                command:        /bin/hello-world
+  hello-world:
+    command: /bin/hello-world
 ```
 
 ### App Persist Data
@@ -227,48 +221,47 @@ The target OS here is of course `Linux`.
 ### Golang Static Binaries
 
 Before we start with our steps on how to produce static binaries from
-Golang sources, lets see some variables and environments that we have to
-set, this will allows us to really produce statically linked binaries.
+Golang sources, let's see some variables and environments that we have to
+set, this will allows us to really produce statically linked binaries:
 
-`CGO_ENABLED=0` Instruct compiler to disable CGO and statically link C
+- `CGO_ENABLED=0` Instruct compiler to disable CGO and statically link C
 bindings.
 
-`GOOS=linux` Our target Operating System is Linux.
+- `GOOS=linux` Our target Operating System is Linux.
 
-`GOARCH=$arch` Our target board architecure. If in doubts please visit
+- `GOARCH=$arch` Our target board architecure. If in doubts please visit
 our [Supported boards
 Table](https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table).
 Current supported values for `$arch` are `amd64`, `arm` or `arm64`.
 
-`GOARM=$version` If the target board architecture is `arm` then you have
+- `GOARM=$version` If the target board architecture is `arm` then you have
 to set the `GOARM` or the `machine variable`. Current supported values
 are `6` or `7`. For a detailed explanation please visit the official
 [Golang ARM Wiki](https://github.com/golang/go/wiki/GoArm).
 
+Now to build Golang static binaries; let's use one of these build methods:
 
-Now to build Golang static binaries; lets use one of these build methods:
-
-1) ARMv6
+- ARMv6
 
 ```bash
 env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=6 \
-        go build -tags 'osusergo netgo' -ldflags '-extldflags "-static"' main.go
+  go build -tags 'osusergo netgo' -ldflags '-extldflags "-static"' main.go
 ```
 
 
-2) ARMv7
+- ARMv7
 
 ```bash
 env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 \
-        go build -tags 'osusergo netgo' -ldflags '-extldflags "-static"' main.go
+  go build -tags 'osusergo netgo' -ldflags '-extldflags "-static"' main.go
 ```
 
 
-3) amd64
+- amd64
 
 ```bash
 env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
-        go build -tags 'osusergo netgo' -ldflags '-extldflags "-static"' main.go
+  go build -tags 'osusergo netgo' -ldflags '-extldflags "-static"' main.go
 ```
 
 ### More Static Binaries
@@ -290,8 +283,8 @@ level using the following format:
 name: $myappname
 version: $unixtimestamp
 apps:
-        $myappname:
-                command:        /bin/$myappname
+  $myappname:
+    command: /bin/$myappname
 ```
 
 Example of a generated `app.yaml` of a `hello-world ARMv6` version.
@@ -305,8 +298,8 @@ Auto-generated `app.yaml` of the hello-world example:
 name: hello-world
 version: 1583693787
 apps:
-        hello-world:
-                command:        /bin/hello-world
+  hello-world:
+    command:  /bin/hello-world
 ```
 
 ```
@@ -336,17 +329,14 @@ Sample Apps](https://github.apps.ionoid.net/)
 
 Archive Apps are apps compressed files in
 [tar](https://en.wikipedia.org/wiki/Tar_(computing)) or
-[Zip](https://en.wikipedia.org/wiki/Zip_(file_format)) formats.
+[zip](https://en.wikipedia.org/wiki/Zip_(file_format)) formats.
 
 
 Archive Apps are composed of the following files:
 ```
 * app.yaml      : App Basic information encoded in a Yaml file
-
 * meta/         : Meta directory that contains extra App metadata (Optional).
-
 * bin/          : Binary directory where the App may reside.
-
 * ...           : Rest of the App file system and other dependencies files.
 ```
 
@@ -358,37 +348,36 @@ The content of the `app.yaml` file would be:
 name: hello-world
 version: 1.0
 apps:
-        hello-world:
-                command:        /bin/hello-world
+  hello-world:
+    command: /bin/hello-world
 ```
 
 ### Build Archive Apps
 
 These steps describe how we built our previous example [Hello World IoT App](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
 
-- 1) Create and enter the App directory `hello-world`:
+- Create and enter the App directory `hello-world`:
 
 ```bash
 mkdir hello-world
 cd hello-world
 ```
 
-- 2) Populate the App directory with `app.yaml` and executable files
+- Populate the App directory with `app.yaml` and executable files
 
 Content of hello-world directory should be:
 ```
 hello-world:/
-        ./app.yaml
-        ./bin/
-                hello-world
+  ./app.yaml
+  ./bin/
+    hello-world
 
 ```
 
 In the above example the app hello-world filesystem contains the
 `app.yaml` file
 
-
-- 3) Tar archive file:
+- Tar archive file:
 
 To generate the App tar archive follow the example.
 
@@ -407,7 +396,7 @@ The `hello-world-armv7-v0.2.tar` is our final App that can be deployed
 to our IoT Devices.
 
 
-- 4) Or to generate the App zip archive
+- Or to generate the App zip archive
 
 **Under development, will be supported soon.**
 
@@ -432,8 +421,8 @@ System.
 
 This section describes how to create a python runtime, using one of the following method:
 
-1. Add python package and modules to a prepared runtime.
-2. Build python runtime from scratch.
+- [Add-python-package-and-modules-to-a-prepared-runtime](#add-python-package-and-modules-to-a-prepared-runtime)
+- [Build-python-runtime-from-scratch](#build-python-runtime-from-scratch)
 
 > if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the method 1, otherwise use  method 2.
 
@@ -485,24 +474,24 @@ exit
 sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
 ```
 
-### Build Python Runtime from Scratch
+### Build Python Runtime From Scratch
 
-### a. Create basic runtime based on Alpine Linux
+#### Create basic runtime based on Alpine Linux
 
-   - Open a terminal and change directory into pieman directory.
+- Open a terminal and change directory into pieman directory.
 
 ```bash
 cd pieman
 ```
 
-   - Run the following command to build the runtime.
+- Run the following command to build the runtime.
 
 ```bash
 
 sudo env PROJECT_NAME=python-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 
 ```
-   - The built runtime will be located at **build** directory.
+- The built runtime will be located at **build** directory.
 
 ```bash
 ls build/
@@ -513,17 +502,15 @@ Sample output:
 python-runtime
 
 ```
+#### Add packages to runtime
 
-
-### b. Add packages to runtime
-
- - To add packages to your runtime, go to build directory.
+- To add packages to your runtime, go to build directory.
 
 ```bash
 cd build
 ```
 
- - To enter the runtime. Type the following command.
+- To enter the runtime. Type the following command.
 
 ```bash
 sudo chroot python-runtime/chroot/ /bin/sh -l
@@ -532,7 +519,7 @@ sudo chroot python-runtime/chroot/ /bin/sh -l
 > Every command in the runtime is executed as **root**.
 
 
-   - Setup alpine packages repository.
+- Setup alpine packages repository.
 
 ```bash
 setup-apkrepos
@@ -589,9 +576,9 @@ exit
 ```
 
 
-### c. Build python runtime tarball.
+#### Build python runtime tarball.
 
-   - Once you finish to add all the python modules you need for your runtime, build the python runtime tarball using the following command.
+- Once you finish to add all the python modules you need for your runtime, build the python runtime tarball using the following command.
 
 ```bash
 sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
@@ -612,24 +599,24 @@ pip3 install RPi.GPIO
 
 This section describes how to create a Node.js runtime , using one of the following method:
 
-1. Add Node.js package to a prepared runtime.
-2. Build Node.js runtime from scratch.
+- [Add-Node.js-package-to-a-prepared-runtime](#add-node-js-package-and-modules-to-a-prepared-runtime)
+- [Build Node.js runtime from scratch](#build-node-js-runtime-from-scratch)
 
 > if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the method 1, otherwise use  method 2.
 
 ### Add Node.js Package and Modules to a Prepared Runtime
 
- - Open a terminal and create a directory for Node.js runtime here named nodejs-runtime.
+- Open a terminal and create a directory for Node.js runtime here named nodejs-runtime.
 
 ```bash
 mkdir nodejs-runtime
 ```
-  - Extract the built runtime prepared in the previous section **alpine-3.9-armhf.tar** in a directory called **nodejs-runtime** using the following command.
+- Extract the built runtime prepared in the previous section **alpine-3.9-armhf.tar** in a directory called **nodejs-runtime** using the following command.
 
 ```bash
 sudo tar -xvf alpine-3.9-armhf.tar -C nodejs-runtime/
 ```
-  - Run the following command to enter the runtime.
+- Run the following command to enter the runtime.
 
 ```bash
 sudo chroot nodejs-runtime/chroot/ /bin/sh -l
@@ -641,26 +628,26 @@ sudo chroot nodejs-runtime/chroot/ /bin/sh -l
 >apk add package-name
 >```
 
-  - Add Node.js package to the runtime.
+- Add Node.js package to the runtime.
 
 > Every command in the runtime is executed as **root**.
 
 ```bash
 apk add --no-cache nodejs
 ```
-  - Install npm, the Node.js package manager.
+- Install npm, the Node.js package manager.
 
 ```
 apk add --no-cache npm
 ```
 
- - To exit from the runtime type **exit**.
+- To exit from the runtime type **exit**.
 
 ```bash
 exit
 ```
 
-  - Build the tarball.
+- Build the tarball.
 
 ```bash
 sudo tar cvvf nodejs-alpine-armhf.tar -C nodejs-runtime/chroot/ .
@@ -668,21 +655,21 @@ sudo tar cvvf nodejs-alpine-armhf.tar -C nodejs-runtime/chroot/ .
 
 ### Build Node.js Runtime From Scratch
 
-### a. Create basic runtime  based on Alpine Linux.
+#### Create basic runtime  based on Alpine Linux
 
-   - Open a terminal and change directory into pieman directory.
+- Open a terminal and change directory into pieman directory.
 
 ```bash
 cd pieman
 ```
 
-   - Run the following command to build the runtime.
+- Run the following command to build the runtime.
 
 ```bash
 sudo env PROJECT_NAME=nodejs-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 ```
 
-   - The built runtime will be located at **build** directory.
+- The built runtime will be located at **build** directory.
 
 ```bash
 ls build
@@ -694,9 +681,9 @@ Sample output:
 nodejs-runtime
 ```
 
-### b. Add packages to Node.js runtime.
+#### Add packages to Node.js runtime
 
-   - To enter the runtime, run the following command.
+- To enter the runtime, run the following command.
 
 > Every command in the runtime is executed as **root**.
 
@@ -704,7 +691,7 @@ nodejs-runtime
 sudo chroot build/nodejs-runtime/chroot/ /bin/sh -l
 ```
 
-   - Setup alpine packages repository.
+- Setup alpine packages repository.
 
 ```bash
 setup-apkrepos
@@ -737,27 +724,27 @@ e) Edit /etc/apk/repositories with text editor
 Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
 ```
 
-   - Install **Node.js** package.
+- Install **Node.js** package.
 
 ```bash
 apk add --no-cache nodejs
 ```
 
- - Install **npm** the Node.js package manager.
+- Install **npm** the Node.js package manager.
 
 ```bash
 apk add --no-cache npm
 ```
 
-### c. Build Node.js runtime tarball.
+#### Build Node.js runtime tarball
 
-   - Once you finish to add all the Node.js modules you need for your runtime, build the tarball.
+- Once you finish to add all the Node.js modules you need for your runtime, build the tarball.
 
 ```bash
 sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C nodejs-runtime/chroot/ .
 ```
 
-  - exit to leave the runtime.
+- exit to leave the runtime.
 
 ```bash
 exit
@@ -765,10 +752,16 @@ exit
 
 ### Add Node.js Modules
 
-   - You can add additional python module to your runtime before building the tarball using Node.js package manager.
-   - Here as example we are going to install **bootstrap** framework.
+- You can add additional python module to your runtime before building the tarball using Node.js package manager.
+- Here as example we are going to install **bootstrap** framework.
 
 ```bash
 npm install   bootstrap
 ```
 
+::: tip Have Questions?
+We're always happy to help with IoT projects or other questions you might have!
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
+You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+:::

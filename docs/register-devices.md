@@ -2,7 +2,7 @@
 dashboardUrl: https://dashboard.ionoid.io
 ---
 
-# Devices
+# Register Devices
 
 Ionoid.io dashboard offers the possibility to manage an entire fleet of devices.
 By just clicking on buttons from one single page, you will be able to control and
@@ -22,7 +22,7 @@ cellular network(s). Please follow with the next section that explains it
 in more details.
 
 
-## Add a device
+## Prepare Registering
 
 On Ionoid.io, devices belong to projects. If you didn't yet create a project,
 please follow [these guidlines](/docs/projects.md). Once you've created a
@@ -254,7 +254,7 @@ is above the device list.
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/#/), contact
-support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
 You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
 :::

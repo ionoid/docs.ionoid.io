@@ -30,7 +30,7 @@ To deploy an IoT app you have three options:
 - [Deploy on a subset of devices of a
   project](#deploy-on-a-subset-of-devices-of-a-project)
 
-### Deploy on a single device
+### Deploy on a single Device
 
 - On the *project details page* containing the target device, click on the device
 to go to the *device details page*.
@@ -328,3 +328,10 @@ Coming soon
 ## More Actions on IoT Apps
 
 Coming soon
+
+::: tip Have Questions?
+We're always happy to help with IoT projects or other questions you might have!
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
+You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+:::

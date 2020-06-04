@@ -1,15 +1,12 @@
 # Organizations and Collaboration
 
-## Overview
-
 Ionoid.io allows you to invite users to your organization and collaborate across IoT projects.
 Each user has its own organization which are private by default, and each project belongs to one organization.
 
 Organizations are managed by the owners, they are the administrators of the organization and have full access on
 everything.
 
-
-## Accessing your organizations
+## Accessing Your Organizations
 
 A user you can view his organizations and switch between them from the left menu.
 
@@ -35,18 +32,14 @@ they access the organization resources.
 
 A user can be:
 
-1. Privileged administrator known as an `owner`
+- Privileged administrator known as an [owner](#owners)
+- Developer known as a [member](#members)
+- Viewer or external user known as a [viewer](#viewers)
 
-2. Developer known as a `member`
-
-3. Viewer or external user known as a `viewer`
-
-
-### Permission roles
+### Permission Roles
 
 Permission roles define the access level of users to an organization. Ionoid.io supports three different access roles or
 permission roles, and owners should make sure to assign the right one for each user of their organization.
-
 
 #### Owners
 
@@ -71,8 +64,7 @@ denied.
 A viewer can gather sensitve data about your organization and all the devices, hence it is recommended to only add
 trusted collaborators as viewers.
 
-
-#### Summary of Permission roles
+### Summary of Permission Roles
 
 | Organization Operation    |  Owner          |  Member         | Viewer          |
 | ------------------------- |:---------------:|:---------------:|:---------------:|
@@ -85,25 +77,20 @@ trusted collaborators as viewers.
 | Change users permissions            |  X              |                 |                 |
 | Change organization billing            |  X              |                 |                 |
 
-
-
-### Inviting Users
+### Invite Users
 
 To invite or add a user to your organization:
 
-1. Go to your organization settings `Account -> Organization`
-
-2. In `Invite users` section, enter the `user email` and click `Add`
+- Go to your organization settings `Account -> Organization`
+- In `Invite users` section, enter the `user email` and click `Add`
 
 
 The user will be automatically added, in future versions there will be an invitation system, where the user has to first
 confirm the invitation before he is added to the organization.
 
-
 ![Invite users to an organization](/steps/Ionoid.io-add-users-to-organization.png)
 
-
-### Creating users for an organization
+### Create Users For an Organization
 
 You can not create personal user accounts on behalf of another person.
 
@@ -113,7 +100,7 @@ can add or invite the user by entering his email address.
 We recommend to share this documentation and how users can create personal accounts with your collaborators.
 
 
-### Removing Users
+### Remove Users
 
 Organization `owner` can remove other users from an organization if they no longer require access.
 
@@ -122,15 +109,18 @@ and make sure everything is fine within your organization and its projects.
 
 To revoke a user's membership from your organization:
 
-1. Go to your organization settings `Account -> Organization`
-
-2. In `Team members` section, remove the user
-
-3. Click `Save organization settings`
-
+- Go to your organization settings `Account -> Organization`
+- In `Team members` section, remove the user
+- Click `Save organization settings`
 
 If a user is a member of only one organization and he is removed from it, then a new fresh organization
 will be automatically created for that user, and he will be assigned to it.
 
-
 ![Remove users from an organization](/steps/Ionoid.io-remove-users-from-organization.png)
+
+::: tip Have Questions?
+We're always happy to help with IoT projects or other questions you might have!
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
+You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+:::
