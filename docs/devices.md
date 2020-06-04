@@ -71,7 +71,7 @@ network you can set:
 - The network priority: networks with higher priority will be preferred. Default
 is 0. The higher number means higher priority
 
-![Add a WiFi Network](/steps/add_wifi_network.gif)
+![Add a WiFi Network](/steps/add_wifi_network.png)
 
 You can also add a fallback WiFi network by clicking on **Add a fallback WiFi
 NETWORK**, this network will be used in case all other networks are unavailable.

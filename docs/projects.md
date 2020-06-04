@@ -101,7 +101,7 @@ network you can set:
 - The network priority: networks with higher priority will be preferred. Default
 is 0. The higher number means higher priority
 
-![Add a WiFi Network](/steps/add_wifi_network.gif)
+![Add a WiFi Network](/steps/add_wifi_network.png)
 
 You can also add a fallback WiFi network by clicking on **Add a fallback WiFi
 network**, this network will be used in case all other networks are unavailable.
@@ -152,11 +152,11 @@ envrionment variables to the concerned devices.
 After finishing the project configuration, you have to save the settings so they are not lost.
 
 ::: warning
-Please note that after editing the project settings, only newly added devices
-will inherite of these settings. To make the already deployed devices also
-inherite of these settings, you have to _redeploy the project settings_ by
-clicking on the **Redeploy project settings on all devices** button that is
-present on the project details main page:
+Please note that after editing the project settings, only newly registered devices
+will inherite of these settings. To make the already registered devices (see [how
+to register a device]()) also inherite of these settings, you have to _redeploy
+the project settings_ by clicking on the **Redeploy project settings on all
+devices** button that is present on the project details main page:
 
 ![Redeploy Project Settings](/steps/redeploy_project_settings.png)
 
