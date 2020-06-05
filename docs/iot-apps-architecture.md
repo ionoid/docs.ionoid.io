@@ -318,7 +318,7 @@ deployment URL to the right one.
 For more examples please visit our hosted sample Apps here: [Ionoid.io
 Sample Apps](https://github.apps.ionoid.net/)
 
-![Deploy Static Binary](/steps/app-deployment.png)
+![Deploy Static Binary](/steps/projects-and-devices/app-deployment.png)
 
 **Notes: More robust deployment methods are being developped, they will be added soon.**
 

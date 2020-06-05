@@ -58,7 +58,7 @@ go to the *project details page* that you used to generate the OS image
   page* of the Ionoid.io dashboard (process can take from few seconds to few
   minutes, depending on the internet connection)
 
-![Boot the Device](/steps/boot_device.gif)
+![Boot the Device](/steps/projects-and-devices/boot_device.gif)
 
 - Congratulations! your device is now registered on Ionoid.io and ready to be
   managed from the dashboard.
@@ -183,7 +183,7 @@ go to the *project details page* that you used to generate the OS image
   page* of the Ionoid.io dashboard (process can take from few seconds to few
   minutes, depending on the internet connection)
 
-![Boot the Device](/steps/boot_device.gif)
+![Boot the Device](/steps/projects-and-devices/boot_device.gif)
 
 - Congratulations! your device is now registered on Ionoid.io and ready to be
   managed from the dashboard.

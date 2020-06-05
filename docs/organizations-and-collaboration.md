@@ -10,12 +10,12 @@ everything.
 
 A user you can view his organizations and switch between them from the left menu.
 
-![View and siwtch Organizations](/steps/Ionoid.io-switch-organizations.png)
+![View and siwtch Organizations](/steps/projects-and-devices/switch_org.png)
 
 
 To access the organization settings from the left menu: `Account -> Organization`.
 
-![Organization settings](/steps/Ionoid.io-organization-settings.png)
+![Organization settings](/steps/projects-and-devices/org_settings.png)
 
 
 [Ionoid.io](https://ionoid.io/) organization workflow is inspired from [GitHub.com](https://github.com) workflow.
@@ -88,7 +88,7 @@ To invite or add a user to your organization:
 The user will be automatically added, in future versions there will be an invitation system, where the user has to first
 confirm the invitation before he is added to the organization.
 
-![Invite users to an organization](/steps/Ionoid.io-add-users-to-organization.png)
+![Invite users to an organization](/steps/projects-and-devices/add_user_to_org.png)
 
 ### Create Users For an Organization
 
@@ -116,7 +116,7 @@ To revoke a user's membership from your organization:
 If a user is a member of only one organization and he is removed from it, then a new fresh organization
 will be automatically created for that user, and he will be assigned to it.
 
-![Remove users from an organization](/steps/Ionoid.io-remove-users-from-organization.png)
+![Remove users from an organization](/steps/projects-and-devices/remove_user_from_org.png)
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!
