@@ -31,7 +31,7 @@ For that, follow the following instructions:
 ![Connect microSD to Slot](/steps/flash-os-image/microsd-card-reader.jpg)
 
 - Make sure you have [generated an OS image for your
-  device](/docs/devices.md#add-a-device)
+  device](/docs/register-devices.md)
 
 - Open the Etcher tool
 
@@ -58,7 +58,7 @@ go to the *project details page* that you used to generate the OS image
   page* of the Ionoid.io dashboard (process can take from few seconds to few
   minutes, depending on the internet connection)
 
-![Boot the Device](/steps/boot_device.gif)
+![Boot the Device](/steps/projects-and-devices/boot_device.gif)
 
 - Congratulations! your device is now registered on Ionoid.io and ready to be
   managed from the dashboard.
@@ -183,7 +183,7 @@ go to the *project details page* that you used to generate the OS image
   page* of the Ionoid.io dashboard (process can take from few seconds to few
   minutes, depending on the internet connection)
 
-![Boot the Device](/steps/boot_device.gif)
+![Boot the Device](/steps/projects-and-devices/boot_device.gif)
 
 - Congratulations! your device is now registered on Ionoid.io and ready to be
   managed from the dashboard.
@@ -207,4 +207,9 @@ dd bs=4M if=/dev/sdc of=dirty-image.img count=$COUNT
 ```
 :::
 
-
+::: tip Have Questions?
+We're always happy to help with IoT projects or other questions you might have!
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
+You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+:::

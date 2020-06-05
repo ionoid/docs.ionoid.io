@@ -15,9 +15,9 @@ version if any problem appears.
 
 In the next sections, we consider that you have:
 
-- [Created](docs/getting-started.md) an account on Ionoid.io
-- [Created](docs/projects.md) at least one project
-- [Registered](docs/register-a-device.md) at least one device on this project
+- [Created](/docs/getting-started.md) an account on Ionoid.io
+- [Created](/docs/create-projects.md) at least one project
+- [Registered](/docs/register-devices.md) at least one device on this project
 
 If not, please follow the guidelines on the links above then return to this page.
 
@@ -30,7 +30,7 @@ To deploy an IoT app you have three options:
 - [Deploy on a subset of devices of a
   project](#deploy-on-a-subset-of-devices-of-a-project)
 
-### Deploy on a single device
+### Deploy on a single Device
 
 - On the *project details page* containing the target device, click on the device
 to go to the *device details page*.
@@ -328,3 +328,10 @@ Coming soon
 ## More Actions on IoT Apps
 
 Coming soon
+
+::: tip Have Questions?
+We're always happy to help with IoT projects or other questions you might have!
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
+You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+:::

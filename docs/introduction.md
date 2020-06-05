@@ -9,7 +9,7 @@ from deploying your solutions at hyperscale.
 Interested? [Create an account](https://dashboard.ionoid.io/en/register) and
 start your IoT deployment!
 
-## Why ionoid.io?
+## Why [Ionoid.io](https://ionoid.io/)?
 
 - IoT Management and realtime monitoring
 - IoT Apps deployment on embedded Linux
@@ -20,7 +20,7 @@ start your IoT deployment!
 
 ## FAQ
 
-Check out our [Frequently asked questions section](/Faq/faq.md)
+Check out our [Frequently asked questions section](/docs/faq.md)
 
 ## Credits
 
@@ -33,9 +33,9 @@ _In alphabetical order:_
 - [Matthias Schmitz](https://github.com/mattthias) - Creator / Maintainer
 - [Nazim Djafar](https://github.com/nwd0) - Creator
 
-## Have questions?
+## Have Questions?
 
 We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/#/), contact
-support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
 You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)

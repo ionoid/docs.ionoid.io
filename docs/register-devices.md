@@ -2,7 +2,7 @@
 dashboardUrl: https://dashboard.ionoid.io
 ---
 
-# Devices
+# Register Devices
 
 Ionoid.io dashboard offers the possibility to manage an entire fleet of devices.
 By just clicking on buttons from one single page, you will be able to control and
@@ -22,10 +22,10 @@ cellular network(s). Please follow with the next section that explains it
 in more details.
 
 
-## Add a device
+## Prepare Registering
 
 On Ionoid.io, devices belong to projects. If you didn't yet create a project,
-please follow [these guidlines](/docs/projects.md). Once you've created a
+please follow [these guidlines](/docs/create-projects.md). Once you've created a
 project, open the **ADD A DEVICE** tab, you will notice 5 sections:
 
 
@@ -41,7 +41,7 @@ temp-sensor-5699, temp-sensor-8445, ... etc).
 You can also choose the image that will be flashed into the device. Click on
 the device model to see images that are available for this model.
 
-![Project General Informations Section](/steps/project_general_informations.gif)
+![Project General Informations Section](/steps/projects-and-devices/add_device_choose_board.png)
 
 ### Project Parameters
 
@@ -53,8 +53,6 @@ used by the device.
 You can change the default
 [Google DNS](https://developers.google.com/speed/public-dns) and
 [NTP](https://developers.google.com/time) servers that will be used by devices.
-
-![General Settings Section](/steps/general_settings.gif)
 
 ### Advanced Settings
 
@@ -71,7 +69,7 @@ network you can set:
 - The network priority: networks with higher priority will be preferred. Default
 is 0. The higher number means higher priority
 
-![Add a WiFi Network](/steps/add_wifi_network.gif)
+![Add a WiFi Network](/steps/projects-and-devices/add_wifi_network.png)
 
 You can also add a fallback WiFi network by clicking on **Add a fallback WiFi
 NETWORK**, this network will be used in case all other networks are unavailable.
@@ -95,7 +93,7 @@ Once you choosed the APN, fields 'Plan' and 'Usage' will be filled with the
 corresponding data. Use this data to confirm that APN you choosed is really the
 one you are aiming to use.
 
-![Add a Cellular Network](/steps/add_cellular_network.gif)
+![Add a Cellular Network](/steps/projects-and-devices/add_cellular_network.gif)
 
 ::: warning
 Selecting an incorrect plan may result in billing issues for your account or
@@ -115,7 +113,7 @@ grab some data from the internet. If this URL changes in the future, or if you
 want to use a different service that offers the same data, the only thing you
 will need to do is to change the environment variable without touching the app.
 
-![Add a Cellular Network](/steps/add_env_var.gif)
+![Add a Cellular Network](/steps/projects-and-devices/add_env_var.gif)
 
 Once all configuration done, you can now follow with OS image generation.
 
@@ -134,12 +132,12 @@ To generate the OS image, you have three options:
 All you have to do is to click on the **Download OS** to download a
 ready-to-flash image:
 
-![Generate OS Image](/steps/download_os.gif)
+![Generate OS Image](/steps/projects-and-devices/download_os.png)
 
 Wait a few seconds until the image has been fully generated, then click on the
 image link to start download:
 
-![Download OS](/steps/image_ready_download_os.gif)
+![OS Image Ready](/steps/projects-and-devices/image_ready_download_os.png)
 
 ::: tip
 You can save the current project configuration as the default one by clicking
@@ -149,7 +147,7 @@ on **Save as default project settings**.
 You can also download the `config.json` file that has been used to generate the
 image (not mandatory):
 
-![Download OS](/steps/image_ready_download_config.gif)
+![Download OS Config](/steps/projects-and-devices/image_ready_download_config.png)
 
 Once the OS image downloaded, you can [flash the device](#flash-the-os-image)
 using this image.
@@ -247,14 +245,14 @@ Once the device flashed with the new OS image, boot your device and observe the
 project details page on the dashboard, you will notice that the device appeared
 in the list of devices:
 
-![Boot the Device](/steps/boot_device.gif)
+![Boot the Device](/steps/projects-and-devices/boot_device.gif)
 
 Now you can control you device from the dashboard using the control menu that
 is above the device list.
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/#/), contact
-support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
 You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
 :::

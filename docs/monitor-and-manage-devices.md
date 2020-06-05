@@ -2,11 +2,11 @@
 
 The Ionoid.io dashboard offers the possiblity to monitor and manage devices
 from a single place. No matter how many devices your fleet has, once [registered on
-Ionoid.io platform](/docs/devices.md#add-a-device), you will be able to ping
+Ionoid.io platform](/docs/register-devices.md), you will be able to ping
 them, get their status, deploy apps on them, reboot them, ... etc
 
 
-## Devices Information
+## Device Information
 
 Each device can be accessed through its dedicated information page: *the device
 details page*. Among the information that are displayed on this page, we have:
@@ -134,7 +134,7 @@ does not support Ionoid.io system updates.
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/#/), contact
-support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
 You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
 :::

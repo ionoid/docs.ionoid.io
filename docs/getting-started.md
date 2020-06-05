@@ -11,21 +11,18 @@ please follow the instructions below.
 
 - Visit the <a :href="$frontmatter.dashboardUrl" target="_blank">Ionoid.io dashboard</a>
 - Click on <a :href="$frontmatter.dashboardUrl+'/register'" target="_blank">Register now</a>
-
-![Go to register page](/steps/go_to_register_page.gif)
-
 - Fill in the required informations
 - Accept our [Terms of Service](https://ionoid.io/terms/)
 - Click on the **Create account** button
 
-![Fill out personal informations](/steps/enter_register_informations.gif)
+![Fill out personal informations](/steps/create-account/enter_register_informations.gif)
 
 ## Verify Email Address
 
 - Check your inbox for an email from **support@ionoid.io** to verify your email
 address
 
-![Verify email address](/steps/verify_your_email_message.gif)
+![Verify email address](/steps/create-account/verify_your_email_message.gif)
 
 - Click on the **Verify Email** link to activate your account
 - You will be redirected to the [Ionoid.io dashboard](https://dashboard.ionoid.io)
@@ -35,7 +32,7 @@ dashboard to automatically activate your account
 - Once activated, you will be redirected to the login page, enter your
   credentials then click on <a :href="$frontmatter.dashboardUrl+'/login'" target="_blank">Login</a>
 
-![Login to account](/steps/login.gif)
+![Login to account](/steps/create-account/login.gif)
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!

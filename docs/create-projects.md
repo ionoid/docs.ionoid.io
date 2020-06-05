@@ -2,7 +2,7 @@
 dashboardUrl: https://dashboard.ionoid.io
 ---
 
-# Projects
+# Create Projects
 
 Ionoid.io is structured as organizations where each organization includes a set
 of projects. Registered devices at Ionoid.io always belong to only one project and
@@ -12,13 +12,10 @@ are unique across the whole organization.
 ## Create a Project
 
 - After signin in, click on <a :href="$frontmatter.dashboardUrl+'/projects/new'" target="_blank">Create new project</a>
-
-![Click on Create Project Button](/steps/click_on_create_project_button.gif)
-
 - Choose your target board by clicking on it (see [Supported Boards and
   OS](/docs/supported-boards-and-os.md))
 
-![Choose Board](/steps/choose_board.gif)
+![Choose Board](/steps/projects-and-devices/choose_board.gif)
 
 ::: warning
   You can mix different boards and architectures, but you have to make sure to
@@ -32,10 +29,10 @@ unless you unlock the project architecture.
 - Finish the project creation with informations related to your project, then
   click on the **Create** button
 
-![Create Project](/steps/finish_create_project.gif)
+![Create Project](/steps/projects-and-devices/finish_create_project.gif)
 
 Now that the project has been created, you can start
-<a href="/docs/register-a-device.html" target="_blank">adding devices</a> to this
+<a href="/docs/register-devices.html" target="_blank">adding devices</a> to this
 project. Each device will have a configuration data consisting of:
 
 - Name of the device (optional)
@@ -67,7 +64,7 @@ project. You can also reorder the supported operating systems for the selected
 board, the first operating system will be the default one that will be
 installed on devices when adding them to the project.
 
-![Reorder Supported OS](/steps/reorder_supported_os.png)
+![Reorder Supported OS](/steps/projects-and-devices/reorder_supported_os.png)
 
 ### Monitoring and Notifications
 
@@ -101,7 +98,7 @@ network you can set:
 - The network priority: networks with higher priority will be preferred. Default
 is 0. The higher number means higher priority
 
-![Add a WiFi Network](/steps/add_wifi_network.gif)
+![Add a WiFi Network](/steps/projects-and-devices/add_wifi_network.png)
 
 You can also add a fallback WiFi network by clicking on **Add a fallback WiFi
 network**, this network will be used in case all other networks are unavailable.
@@ -119,7 +116,7 @@ Once you choosed the APN, fields 'Plan' and 'Usage' will be filled with the
 corresponding data. Use this data to confirm that APN you choosed is really the
 one you are aiming to use.
 
-![Add a Cellular Network](/steps/add_cellular_network.gif)
+![Add a Cellular Network](/steps/projects-and-devices/add_cellular_network.gif)
 
 ::: warning
 Selecting an incorrect plan may result in billing issues for your account or
@@ -144,7 +141,7 @@ of an endpoint url used in 10 apps deployed across 200 devices. Using environmen
 simple as editing a single variable on dashboard, saving it, then redeploy the project settings including
 envrionment variables to the concerned devices.
 
--- PHOTO PROJECT ENVIRONMENT VARIABLE --
+![Add Environment Variable](/steps/projects-and-devices/add_env_var.gif)
 
 
 ## Save Project settings
@@ -152,24 +149,24 @@ envrionment variables to the concerned devices.
 After finishing the project configuration, you have to save the settings so they are not lost.
 
 ::: warning
-Please note that after editing the project settings, only newly added devices
-will inherite of these settings. To make the already deployed devices also
-inherite of these settings, you have to _redeploy the project settings_ by
-clicking on the **Redeploy project settings on all devices** button that is
-present on the project details main page:
+Please note that after editing the project settings, only newly registered devices
+will inherite of these settings. To make the already registered devices (see [how
+to register a device]()) also inherite of these settings, you have to _redeploy
+the project settings_ by clicking on the **Redeploy project settings on all
+devices** button that is present on the project details main page:
 
-![Redeploy Project Settings](/steps/redeploy_project_settings.png)
+![Redeploy Project Settings](/steps/projects-and-devices/redeploy_project_settings.png)
 
 Anyway, a reminder will be displayed each time you save the project settings:
 
-![Redeploy Project Settings Reminder](/steps/redeploy_project_settings_reminder.gif)
+![Redeploy Project Settings Reminder](/steps/projects-and-devices/redeploy_project_settings_reminder.gif)
 
 :::
 
 
 ## Add a Device to the Project
 
-See the [next section](./devices.md).
+See the [next section](./register-devices.md).
 
 
 ## Consult the Actions History
@@ -177,16 +174,16 @@ See the [next section](./devices.md).
 You can check the last actions that have been performed on the project by
 clicking on the **ACTIONS HISTORY** tab:
 
-![Actions History](/steps/actions_history.png)
+![Actions History](/steps/projects-and-devices/actions_history.png)
 
 
-## Redeploy Project settings
+## Redeploy Project Settings
 
 It is possible to redeploy the project settings to devices anytime. To do so
 click on the **Redeploy project settings** button that is part of the actions in
 the project main page:
 
-![Redeploy Project Settings](/steps/redeploy_project_settings.png)
+![Redeploy Project Settings](/steps/projects-and-devices/redeploy_project_settings.png)
 
 
 ::: warning
@@ -203,7 +200,7 @@ You can delete a project by opening the **SETTINGS** tab on the project details
 main page, then by clicking on the **Delete this project** button, and confirming
 by typing the project name:
 
-![Delete a Project](/steps/delete_a_project.gif)
+![Delete a Project](/steps/projects-and-devices/delete_a_project.gif)
 
 ::: danger
 Please note thay by deleting a project, you understand that all devices
@@ -213,7 +210,7 @@ project configuration will be permanently deleted from the Ionoid.io dashboard.
 
 ::: tip Have Questions?
 We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/#/), contact
-support <support@ionoid.io>, or connect with our sales team: sales@opendevices.io.
+Check our [documentation](https://docs.ionoid.io/), contact our
+support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
 You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
 :::

@@ -8,7 +8,7 @@ module.exports = {
         options: {
           bgColor: 'black',
           zIndex: 10000,
-          customSize: { width: 1000, height: 563 }
+          customSize: '100%',
         },
       },
     ],
@@ -41,16 +41,16 @@ module.exports = {
             path: '/docs/getting-started.md'
           },
           {
-            title: 'Projects',
-            path: '/docs/projects.md'
+            title: 'Create Projects',
+            path: '/docs/create-projects.md'
           },
           {
-            title: 'Devices',
-            path: '/docs/devices.md'
+            title: 'Register Devices',
+            path: '/docs/register-devices.md'
           },
           {
-            title: 'Monitoring devices',
-            path: '/docs/monitoring-devices.md'
+            title: 'Monitor and Manage Devices',
+            path: '/docs/monitor-and-manage-devices.md'
           },
           {
             title: 'Deploy IoT Apps',
