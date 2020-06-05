@@ -139,7 +139,7 @@ sudo systemctl status systemd-journald
 ```
 
 
-- To get the status of ionoid.io SealOS managers, check the following services:
+- To get the status of Ionoid.io SealOS managers, check the following services:
 Status of Main manager:
 
 ```bash
@@ -152,7 +152,7 @@ Status of manager that executes and performs actions:
 sudo systemctl status sealos-manager-actions
 ```
 
-- To see if ionoid.io sealos manager boot setup succeeded:
+- To see if Ionoid.io sealos manager boot setup succeeded:
 
 ```bash
 sudo systemctl status sealos-boot-setup
@@ -163,7 +163,7 @@ You should be able to read in the output:
 Main PID: 52 (code=exited, status=0/SUCCESS)
 ```
 
-If no then something went wrong during initial ionoid.io sealos manager
+If no then something went wrong during initial Ionoid.io sealos manager
 boot setup.
 
 
@@ -258,7 +258,7 @@ sudo journalctl -b -n 10
 sudo journalctl -b -f
 ```
 
-- To check the logs of a ionoid.io manager `sealos-manager` agent:
+- To check the logs of a Ionoid.io manager `sealos-manager` agent:
 
 ```bash
 sudo journalctl -b -u sealos-manager

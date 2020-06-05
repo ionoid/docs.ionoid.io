@@ -9,7 +9,7 @@ questions.
 ## 1. Ionoid.io FAQ
 
 <details>
-<summary> What is ionoid.io ?</summary>
+<summary> What is Ionoid.io ?</summary>
 
 Ionoid.io is an IoT device management platform. It supports devices, gateways,
 allows IoT Apps deployment, IoT data gathering, sensors connectivity, and
@@ -20,7 +20,7 @@ OTA secure software updates to protect your cyber physical world.
 <br>
 
 <details>
-<summary> What kind of IoT devices ionoid.io support ?</summary>
+<summary> What kind of IoT devices Ionoid.io support ?</summary>
 
 Ionoid.io supports any device and gateway that can run the [Linux Operating
 System](https://kernel.org). From the [Raspberry Pi family boards](https://www.raspberrypi.org/) to the more complex industrial boards.
@@ -45,7 +45,7 @@ are here to help you.
 <br>
 
 <details>
-<summary> How many devices ionoid.io can support ?</summary>
+<summary> How many devices Ionoid.io can support ?</summary>
 
 We are able to scale to `100000 devices/gateways` per single account.
 
@@ -54,7 +54,7 @@ We are able to scale to `100000 devices/gateways` per single account.
 <br>
 
 <details>
-<summary> How many devices ionoid.io can manage at same time ?</summary>
+<summary> How many devices Ionoid.io can manage at same time ?</summary>
 
 It depends on your organization plan. The right number of managed
 devices is displayed in your current organization plan, if you want to

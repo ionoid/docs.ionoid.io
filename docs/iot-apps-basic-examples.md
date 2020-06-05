@@ -2,10 +2,10 @@
 
 ## Overview
 
-Ionoid IoT Platform supports simple IoT Apps that can run on any Linux and
-integrated with ionoid.io.
+Ionoid.io IoT Platform supports simple IoT Apps that can run on any Linux and
+integrated with Ionoid.io.
 
-Ionoid IoT Apps take [Snapcraft](https://docs.snapcraft.io/) the universal
+Ionoid.io IoT Apps take [Snapcraft](https://docs.snapcraft.io/) the universal
 app store for Linux as a reference, and build on top of it.
 
 ### General Concept
@@ -88,7 +88,7 @@ git clone https://github.com/tolstoyevsky/pieman.git
 
 ## Building a Basic Runtime Based on Alpine Linux Quickly
 
-This section describes how to build a runtime based on Alpine Linux distribution, to be able to run IoT apps the ionoid.io IoT way.
+This section describes how to build a runtime based on Alpine Linux distribution, to be able to run IoT apps the Ionoid.io IoT way.
 
 The procedure to build Alpine Linux runtime is as follows:
 

@@ -1,6 +1,6 @@
 # IoT App Architecture
 
-Ionoid IoT Apps are apps that are self contained with all their metadata
+Ionoid.io IoT Apps are apps that are self contained with all their metadata
 included and dependencies.
 
 Installed apps are located on device storage at:
@@ -274,7 +274,7 @@ development.
 When deploying static binaries with [Ionoid.io](https://ionoid.io/), there is no need
 to put it inside docker or write an `app.yaml` file for it. If your
 application has no external dependencies on either files or other
-applications, just upload it to the internet and point ionoid.io
+applications, just upload it to the internet and point Ionoid.io
 to its deployment URL.
 
 An `app.yaml` file will be auto-generated on the fly at the devices
