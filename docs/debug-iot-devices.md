@@ -1,42 +1,42 @@
 # Debug IoT Devices
 
-To Debug your Device first login into your [Ionoid IoT Account](https://dashboard.ionoid.io/login)
-and locate your Device.
+To debug your device first login into your [Ionoid.io IoT account](https://dashboard.ionoid.io/login)
+and locate your device.
 
 
 ## 1. Device Information
 
-Go to your Device details page and lookup for the following information:
+Go to your device details page and lookup for the following information:
 
-- Status and Last Time Seen
-- Device Operating System Versions
-- Device SealOS Manager Version
-- Device Systemd Version
-- Device Docker Version
+- Status and last time seen
+- Device operating system versions
+- Device SealOS Manager version
+- Device Systemd version
+- Device Docker version
 
 ## Locate a Device
 
 ### Using the Dashboard
 
 If you want to troubleshoot your device with `ssh`, then continue
-reading this section, otherwise skip to `Connect to Device Via Other ways` section.
+reading this section, otherwise skip to `connect to device via other ways` section.
 
 If you are on Windows, please install first [Putty
-Client](https://www.putty.org/)
+client](https://www.putty.org/)
 
-Locate Device `Network Interfaces` and `IP Addresses` section
-inside the Device Page on Dashboard and note the `IP ADDRESS` that you
-will use to `ssh` into Device. Make sure you are on the same network as
+Locate device `Network Interfaces` and `IP Addresses` section
+inside the device page on dashboard and note the `IP ADDRESS` that you
+will use to `ssh` into device. Make sure you are on the same network as
 the device. You may also try to see the Wi-Fi networks that this device
 is connected to, in the `Connected Network Section`.
 
 **The follow is a beta feature not available to all accounts:**
-Try to see if you can `ssh` into the Device from the [Ionoid IoT
-Dashboard](https://dashboard.ionoid.io/) or use the `Public Device URL` if
+Try to see if you can `ssh` into the device from the [Ionoid.io IoT
+dashboard](https://dashboard.ionoid.io/) or use the `Public Device URL` if
 available and `ssh` into that `IP Address`.
 
 If you were able to find the device local `IP Address` go to the next
-section. Otherwise continue reading next section locate `Via Network Scan`.
+section. Otherwise continue reading next section locate `via network scan`.
 
 ### Using a Network Scan
 
@@ -51,7 +51,7 @@ Connect to your device via `ssh`.
 First locate last known available users to the system. In your device
 page
 
-- Replace `$USER` with a valid user from your Device, usually either `root` or another user that you did create.
+- Replace `$USER` with a valid user from your device, usually either `root` or another user that you did create.
 - Replace `$IP_ADDRESS_OF_DEVICE` with the IP Address of your device
 
 ```bash
@@ -74,17 +74,17 @@ If you are using Raspbian as an operating system, please follow these instructio
 $ sudo usermod -a -G dialout $USER
 ```
 
-- On the Micro SD card where you have flushed Raspbian, update the Linux `/boot/cmdline.txt` file on the `boot` partition, add the following:
+- On the microSD card where you have flushed Raspbian, update the Linux `/boot/cmdline.txt` file on the `boot` partition, add the following:
 ```
 console=serial0,115200 console=tty1
 ```
 
-- On same `boot` partition of the Micro SD card partition, enable UART console during boot, add the following to the end of `/boot/config.txt` file:
+- On same `boot` partition of the microSD card partition, enable UART console during boot, add the following to the end of `/boot/config.txt` file:
 ```
 enable_uart=1
 ```
 
-- On the `root` partition of your Micro SD card, enable getty on serial line by adding the following to the `/root/etc/inittab` file:
+- On the `root` partition of your microSD card, enable getty on serial line by adding the following to the `/root/etc/inittab` file:
 ```
 T0:23:respawn:/sbin/getty -L ttyS0 115200 vt100
 ```
@@ -108,12 +108,12 @@ References:
 
 ### Troubleshooting IoT Device
 
-Assuming you successfully `logged-in` into your device, information about status, services and Apps can be found using the `systemctl` utility.
+Assuming you successfully `logged-in` into your device, information about status, services and apps can be found using the `systemctl` utility.
 
 
 #### Troubleshooting System status
 
-- To get the overall status of the Device:
+- To get the overall status of the device:
 
 ```bash
 sudo systemctl status
@@ -125,13 +125,13 @@ with sudo**
 
 #### Troubleshooting Services and Apps
 
-- To get the list of failed Services on the Device:
+- To get the list of failed services on the device:
 
 ```bash
 sudo systemctl --failed
 ```
 
-- To get the status of Services or Apps, use the `status` operation:
+- To get the status of services or apps, use the `status` operation:
 Example get status of `systemd-journald` service:
 
 ```bash
@@ -140,7 +140,7 @@ sudo systemctl status systemd-journald
 
 
 - To get the status of Ionoid.io SealOS managers, check the following services:
-Status of Main manager:
+Status of main manager:
 
 ```bash
 sudo systemctl status sealos-manager
@@ -169,11 +169,11 @@ boot setup.
 
 #### Troubleshooting IoT Apps:
 
-If you have deployed Apps using the native format `tar`, `zip` or
+If you have deployed apps using the native format `tar`, `zip` or
 anything that is not a `Docker Container/App`, then just replace `$MYAPP` with the name
-of your App:
+of your app:
 
-- Get Status of an App:
+- Get status of an app:
 
 ```bash
 sudo systemctl status $MYAPP
@@ -188,13 +188,13 @@ sudo journalctl -b -u $MYAPP
 
 #### Troubleshooting Docker IoT Apps:
 
-If you have deployed Docker Containers or Apps then you can use the `Docker` tools.
+If you have deployed Docker containers or apps then you can use the `Docker` tools.
 
 
 **If docker commands do not work, run them with sudo**
 
 
-- List All running docker Apps and containers:
+- List all running docker apps and containers:
 
 ```bash
 docker ps
@@ -209,7 +209,7 @@ sudo docker ps
 
 #### Inspecting Device Logs
 
-Information about Device services and Apps logs can be found using the `journalctl`
+Information about device services and apps logs can be found using the `journalctl`
 which is part of
 [systemd-journald](https://www.freedesktop.org/software/systemd/man/systemd-journald.service.html), it only handles current boot logs as they are stored in a volatile way below `/run/log/journal/` ; and they are cleaned at reboot.
 
@@ -252,7 +252,7 @@ sudo journalctl -b
 sudo journalctl -b -n 10
 ```
 
-- To Follow in realtime system logs of the current boot:
+- To follow in realtime system logs of the current boot:
 
 ```bash
 sudo journalctl -b -f
@@ -269,8 +269,8 @@ sudo journalctl -b -u sealos-manager-actions
 ```
 
 
-- To check the logs of your Service or App, replace `$MYAPP` with the name
-of your App:
+- To check the logs of your service or app, replace `$MYAPP` with the name
+of your app:
 
 ```bash
 sudo journalctl -b -u $MYAPP
