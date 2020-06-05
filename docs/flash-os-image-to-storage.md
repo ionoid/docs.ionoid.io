@@ -6,8 +6,8 @@ dashboardUrl: https://dashboard.ionoid.io
 
 To flash an OS image to the storage of your device you have two options:
 
- - Beginner users: [Use the Etcher tool](#begginers-using-the-etcher-tool)
- - Experienced users: [Use the `dd` tool](#experienced-use-the-dd-tool-on-linux)
+ - Beginner users: [Use the Etcher tool](#beginner-users-using-the-etcher-tool-windows-linux-macos)
+ - Experienced users: [Use the `dd` tool](#experienced-users-use-the-dd-tool-on-linux)
 
 
 ## Beginner users: Using the [Etcher Tool](https://etcher.io/) (Windows / Linux / MacOS)
