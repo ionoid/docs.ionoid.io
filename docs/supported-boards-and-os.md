@@ -1,7 +1,7 @@
 # Supported Boards and OS
 
 Currently we support the following boards and operating systems. This list is
-subject to continuous updating:
+subject to continuous updating.
 
 ## Supported Boards
 
