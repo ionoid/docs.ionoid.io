@@ -31,7 +31,7 @@ For that, follow the following instructions:
 ![Connect microSD to Slot](/steps/flash-os-image/microsd-card-reader.jpg)
 
 - Make sure you have [generated an OS image for your
-  device](/docs/devices.md#add-a-device)
+  device](/docs/register-devices.md)
 
 - Open the Etcher tool
 

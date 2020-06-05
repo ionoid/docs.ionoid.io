@@ -35,7 +35,7 @@ unless you unlock the project architecture.
 ![Create Project](/steps/finish_create_project.gif)
 
 Now that the project has been created, you can start
-<a href="/docs/register-a-device.html" target="_blank">adding devices</a> to this
+<a href="/docs/register-devices.html" target="_blank">adding devices</a> to this
 project. Each device will have a configuration data consisting of:
 
 - Name of the device (optional)
@@ -169,7 +169,7 @@ Anyway, a reminder will be displayed each time you save the project settings:
 
 ## Add a Device to the Project
 
-See the [next section](./devices.md).
+See the [next section](./register-devicess.md).
 
 
 ## Consult the Actions History

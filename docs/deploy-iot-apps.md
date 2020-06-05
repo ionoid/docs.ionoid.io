@@ -15,9 +15,9 @@ version if any problem appears.
 
 In the next sections, we consider that you have:
 
-- [Created](docs/getting-started.md) an account on Ionoid.io
-- [Created](docs/projects.md) at least one project
-- [Registered](docs/register-a-device.md) at least one device on this project
+- [Created](/docs/getting-started.md) an account on Ionoid.io
+- [Created](/docs/create-projects.md) at least one project
+- [Registered](/docs/register-devices.md) at least one device on this project
 
 If not, please follow the guidelines on the links above then return to this page.
 

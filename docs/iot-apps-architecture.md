@@ -37,13 +37,13 @@ If you are deplying Archive apps then please keep reading this document.
 - Modern [docker](https://docker.com) containers **in progress - still
 under development**.
 If you are deploying [docker container](https://docker.com) apps then
-please go directly to this link [docker Apps](../apps/dockerApps.md)
+please go directly to this link [docker Apps](#docker-apps)
 
 
 - Universal Linux Apps [Ubuntu Snaps](https://snapcraft.io/) **in progress - still under development**.
 If you are deploying Universal Linux Apps that are [Ubuntu
 Snaps](https://snapcraft.io) then please do directly to this link [Snap
-Apps](../apps/snapApps.md)
+Apps](#snap-apps)
 
 ### App YAML Format
 
@@ -55,8 +55,8 @@ are static binaries or archive apps.
 Docker apps and Snaps do not need the `app.yaml` file, they already
 contain their own app manifest and are auto handled withing their
 appropriate agents.
-Visit this link for [docker Apps](../apps/dockerApps.md) or this one for
-[Snap Apps](../apps/snapApps.md).
+Visit this link for [docker Apps](#docker-apps) or this one for
+[Snap Apps](#snap-apps).
 
 
 The `app.yaml` file should be present in the root directory of an
@@ -318,10 +318,7 @@ deployment URL to the right one.
 For more examples please visit our hosted sample Apps here: [Ionoid.io
 Sample Apps](https://github.apps.ionoid.net/)
 
-
-![Deploy Static Binary](Ionoid-deploy-static-binary.png)
-
-
+![Deploy Static Binary](/steps/app-deployment.png)
 
 **Notes: More robust deployment methods are being developped, they will be added soon.**
 

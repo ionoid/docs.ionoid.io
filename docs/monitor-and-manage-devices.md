@@ -2,7 +2,7 @@
 
 The Ionoid.io dashboard offers the possiblity to monitor and manage devices
 from a single place. No matter how many devices your fleet has, once [registered on
-Ionoid.io platform](/docs/devices.md#add-a-device), you will be able to ping
+Ionoid.io platform](/docs/register-devices.md), you will be able to ping
 them, get their status, deploy apps on them, reboot them, ... etc
 
 
