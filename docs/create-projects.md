@@ -169,7 +169,7 @@ Anyway, a reminder will be displayed each time you save the project settings:
 
 ## Add a Device to the Project
 
-See the [next section](./register-devicess.md).
+See the [next section](./register-devices.md).
 
 
 ## Consult the Actions History
