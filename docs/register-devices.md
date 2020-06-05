@@ -54,8 +54,6 @@ You can change the default
 [Google DNS](https://developers.google.com/speed/public-dns) and
 [NTP](https://developers.google.com/time) servers that will be used by devices.
 
-![General Settings Section](/steps/projects-and-devices/general_settings.gif)
-
 ### Advanced Settings
 
 #### WiFi Configuration
@@ -134,12 +132,12 @@ To generate the OS image, you have three options:
 All you have to do is to click on the **Download OS** to download a
 ready-to-flash image:
 
-![Generate OS Image](/steps/projects-and-devices/download_os.gif)
+![Generate OS Image](/steps/projects-and-devices/download_os.png)
 
 Wait a few seconds until the image has been fully generated, then click on the
 image link to start download:
 
-![Download OS](/steps/projects-and-devices/image_ready_download_os.gif)
+![OS Image Ready](/steps/projects-and-devices/image_ready_download_os.png)
 
 ::: tip
 You can save the current project configuration as the default one by clicking
@@ -149,7 +147,7 @@ on **Save as default project settings**.
 You can also download the `config.json` file that has been used to generate the
 image (not mandatory):
 
-![Download OS](/steps/projects-and-devices/image_ready_download_config.gif)
+![Download OS Config](/steps/projects-and-devices/image_ready_download_config.png)
 
 Once the OS image downloaded, you can [flash the device](#flash-the-os-image)
 using this image.

@@ -12,9 +12,6 @@ are unique across the whole organization.
 ## Create a Project
 
 - After signin in, click on <a :href="$frontmatter.dashboardUrl+'/projects/new'" target="_blank">Create new project</a>
-
-![Click on Create Project Button](/steps/projects-and-devices/click_on_create_project_button.gif)
-
 - Choose your target board by clicking on it (see [Supported Boards and
   OS](/docs/supported-boards-and-os.md))
 

@@ -11,9 +11,6 @@ please follow the instructions below.
 
 - Visit the <a :href="$frontmatter.dashboardUrl" target="_blank">Ionoid.io dashboard</a>
 - Click on <a :href="$frontmatter.dashboardUrl+'/register'" target="_blank">Register now</a>
-
-![Go to register page](/steps/create-account/go_to_register_page.gif)
-
 - Fill in the required informations
 - Accept our [Terms of Service](https://ionoid.io/terms/)
 - Click on the **Create account** button
