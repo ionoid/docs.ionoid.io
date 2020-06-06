@@ -30,7 +30,7 @@ To deploy an IoT app you have three options:
 - [Deploy on a subset of devices of a
   project](#deploy-on-a-subset-of-devices-of-a-project)
 
-### Deploy on a single Device
+### Deploy on a single device
 
 - On the *project details page* containing the target device, click on the device
 to go to the *device details page*.
