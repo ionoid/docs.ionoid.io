@@ -33,9 +33,4 @@ _In alphabetical order:_
 - [Matthias Schmitz](https://github.com/mattthias) - Creator / Maintainer
 - [Nazim Djafar](https://github.com/nwd0) - Creator
 
-## Have Questions?
-
-We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/), contact our
-support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
-You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
+<Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />

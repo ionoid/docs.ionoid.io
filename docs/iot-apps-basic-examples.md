@@ -1,78 +1,86 @@
 #  IoT Apps Basic Examples
 
-## Overview
-
 Ionoid.io IoT Platform supports simple IoT Apps that can run on any Linux and
 integrated with Ionoid.io.
 
 Ionoid.io IoT Apps take [Snapcraft](https://docs.snapcraft.io/) the universal
 app store for Linux as a reference, and build on top of it.
 
-### General Concept
+## General Concept
 
-This section provides a basic view of IoT Apps and how to deploy them.
+In this page you will find a basic view of IoT Apps and how to deploy them.
 
 Ionoid IoT Apps are apps that are self-contained with all their metadata
 included.
 
-### Tools/Steps to Generate an App
+## Tools/Steps to Generate an App
 
-1- To be able to create a compatible App you will need pieman to generate
+- To be able to create a compatible App you will need pieman to generate
 the environment for the App, e.g. Alpine Linux.
 
-2- Change root (chroot) into the generated environment, this basically ables you
+- Change root (chroot) into the generated environment, this basically ables you
  to execute commands inside the environment to install dependency like Python
 or Node.js packages.
 
-3- Copy your App into the chroot environment.
+- Copy your App into the chroot environment.
 
-4- Create a YAML file that contains your app's configuration needed by our OS manager
-to execute your app, YAML file needs to be copied into the chroot environment at the root
-level (/).
+- Create a YAML file that contains your app's configuration needed by our OS
+manager to execute your app, YAML file needs to be copied into the chroot
+environment at the root level (/).
 
 Follow the next section for a step-by-step tutorial to generate your first app.
 
 ## Prepare Alpine Linux Environment
 
-This section describes how to set up your work environment to build runtime for your IoT apps. You must use Linux.
+This section describes how to set up your work environment to build runtime for
+your IoT apps. You must use Linux.
+
 For building under macOS or Windows see Docker section.
 
-> We are using <a href="https://github.com/tolstoyevsky/pieman" target="_blank"> Pieman </a>, a script for creating OS images for single-board computers such as Raspberry Pi.
+::: tip
+We are using [Pieman](https://github.com/tolstoyevsky/pieman), a script for
+creating OS images for single-board computers such as Raspberry Pi.
+:::
 
 The procedure to Prepare Alpine Linux Environment is as follow:
-
-> [Alpine Linux](https://alpinelinux.org/) is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
 
 - [Installing dependencies](#installing-dependencies)
 - [Clone Pieman git repository](#clone-pieman-git-repository)
 - [Installing Pieman required python modules](#install-the-pieman-required-python-modules)
 
+::: tip
+[Alpine Linux](https://alpinelinux.org/) is a security-oriented, lightweight
+Linux distribution based on [musl libc](https://www.musl-libc.org/) and
+[busybox](https://www.busybox.net/).
+:::
 
 ### Preparing Your Build Environment on GNU/Linux
 
-To prepare your build environment several prerequisites for working with pieman must be installed, obtain the following tools if you haven't done so already.
+To prepare your build environment several prerequisites for working with pieman
+must be installed, obtain the following tools if you haven't done so already.
 
 
 #### Installing dependencies
 
-- To install dependencies on Debian/Ubuntu distribution open a terminal and  run the following command.
-
+- To install dependencies on Debian/Ubuntu distribution open a terminal and run
+the following command:
 
 ```bash
-sudo apt-get install dosfstools gnupg pandoc parted python3-pip python3-setuptools python3-yaml qemu-user-static rsync uuid-runtime wget whois
+sudo apt-get install dosfstools gnupg pandoc parted python3-pip \
+  python3-setuptools python3-yaml qemu-user-static rsync uuid-runtime wget whois
 ```
 
-
-- To install dependencies on Fedora distribution open a terminal run and the following command.
-
+- To install dependencies on Fedora distribution open a terminal run and the
+following command:
 
 ```bash
-sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip python3-PyYAML python3-setuptools qemu-user-static rsync wget
+sudo dnf install dosfstools dpkg expect gpg pandoc parted python3-pip \
+  python3-PyYAML python3-setuptools qemu-user-static rsync wget
 ```
 
 #### Clone Pieman git repository
 
-- To get Pieman run the following command.
+- To get Pieman run the following command:
 
 ```bash
 git clone https://github.com/tolstoyevsky/pieman.git
@@ -80,15 +88,16 @@ git clone https://github.com/tolstoyevsky/pieman.git
 
 #### Install the Pieman required python modules
 
- - To install Pieman required python modules run the following command.
+- To install Pieman required python modules run the following command:
 
 ```bash
- sudo pip3 install pieman
+sudo pip3 install pieman
 ```
 
 ## Building a Basic Runtime Based on Alpine Linux Quickly
 
-This section describes how to build a runtime based on Alpine Linux distribution, to be able to run IoT apps the Ionoid.io IoT way.
+This section describes how to build a runtime based on Alpine Linux distribution,
+to be able to run IoT apps the Ionoid.io IoT way.
 
 The procedure to build Alpine Linux runtime is as follows:
 
@@ -96,20 +105,21 @@ The procedure to build Alpine Linux runtime is as follows:
 - [Configure Alpine package manager](#configure_alpine_linux_package_manager)
 - Build runtime tarball
 
-#### Building a basic runtime
+### Build a Basic Runtime
 
-- Open a terminal and change directory into **pieman** directory.
+- Open a terminal and change directory into **pieman** directory:
 
 ```bash
 cd pieman
 ```
-- To build the runtime run the following command .
+- To build the runtime run the following command:
 
 ```bash
 sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
 ```
 
-- The runtime is created for a specific device, use **DEVICE** environment variable to adapt the runtime to your device,  see the table below.
+- The runtime is created for a specific device, use **DEVICE** environment
+variable to adapt the runtime to your device, see the table below:
 
 | Device Full name            | Device Short name |
 | :-------------------------: | :---------------: |
@@ -118,33 +128,43 @@ sudo env PROJECT_NAME="MyRuntime" DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY
 | Raspberry Pi 3 Model B      | rpi-3-b           |
 | Raspberry Pi Zero           | rpi-zero          |
 
-> To change the name of the runtime use **PROJECT_NAME** variable.
+::: tip
+To change the name of the runtime use **PROJECT_NAME** variable.
+:::
 
-- You will find the built runtime  at **build** directory.
+- You will find the built runtime  at **build** directory:
 
 ```bash
 ls build/
 ```
-Sample output will be as we set on pieman command PROJECT_NAME="MyRuntime":
 
-    MyRuntime
+Sample output will be as we set on pieman command `PROJECT_NAME="MyRuntime"`:
 
-#### Configure Alpine Linux package manager
+```
+MyRuntime
+```
 
-To be able to add packages to our runtime, we have to configure the package manager.
+### Configure Alpine Linux package manager
 
-- Enter the runtime, using the following command.
+To be able to add packages to our runtime, we have to configure the package
+manager.
+
+- Enter the runtime, using the following command:
 
 ```bash
 sudo chroot build/MyDistro/chroot/ /bin/sh -l
 ```
->  Every command inside the runtime is executed as root.
 
-- Run the following command to setup the Alpine Linux packages repository.
+::: tip
+Every command inside the runtime is executed as root.
+:::
+
+- Run the following command to setup the Alpine Linux packages repository:
 
 ```bash
 setup-apkrepos
 ```
+
 Sample output:
 
 ```bash
@@ -172,9 +192,10 @@ e) Edit /etc/apk/repositories with a text editor
 
 Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
 ```
-- Choose a number , 8 for example.
 
-- To exit from the runtime environment type **exit**.
+- Choose a number, say, 8 for example.
+
+- To exit from the runtime environment type:
 
 ```bash
 exit
@@ -185,9 +206,4 @@ exit
 Congratulation, now you have an exploitable environment, in the next section,
 we will create our first basic python app.
 
-::: tip Have Questions?
-We're always happy to help with IoT projects or other questions you might have!
-Check our [documentation](https://docs.ionoid.io/), contact our
-support desk at <support@ionoid.io>, or our sales team at <sales@opendevices.io>.
-You can also chat live with other developers in  [#slack](https://ionoidcommunity.slack.com/join/shared_invite/enQtODAzODgwOTIyMDY4LWExNWVmMDJhMDE2YWYyMjE3N2FlOGNlZjM4NDlmYmM5MmNhYWY1ZTZmOWMwYTYxYTMxNTQzODYzYmRmODMzOWI)
-:::
+<Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />
