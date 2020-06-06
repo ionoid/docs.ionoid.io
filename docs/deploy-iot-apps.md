@@ -295,7 +295,7 @@ device**
 
 - Make sure that no device is selected:
 
-- Click on the **&#xFE19;** button, then  click on the **Rollback app on all
+- Click on the **&#xFE19;** button, then click on the **Rollback app on all
   devices** button:
 
 ![Click on Rollback Project App](/steps/deploy-iot-apps/click_on_rollback_app_on_all_devices_of_project.png)
@@ -321,11 +321,60 @@ device**
 - After few seconds, you will receive realtime messages about the rollback
   process on the selected devices
 
+## Start/Stop IoT Apps
+
+You can either stop an (already running) app on the whole devices of a project,
+or on a single device:
+
+- To stop a running app on the whole project, navigate to the *project app list*
+then click on the target app to go to the *app on the project details page*.
+Click on the **&#xFE19;** button, then click on the **Stop app on all devices**:
+
+![Click on Stop App on all
+Devices](/steps/deploy-iot-apps/stop-app-on-all-devices.png)
+
+- To start the app again, use the same menu, and click on **Start app on all
+  devices**
+
+- To stop a running app on a single device, navigate to the *app on the device
+details* page, for that, you can:
+
+  - Either navigate to the *project app list page*, click on the target app to go to the
+    *app on the project details page*, then click on the target device to go to the
+    *app on device details page*:
+
+![Go to Device App Details Page Method 1](/steps/deploy-iot-apps/go_to_project_apps_then_project_app_details_then_device_app_details.gif)
+
+  - Or click on the target device to go to the *device details page*, then
+    click on *Apps* to go to the *device app list page*, then click on
+    the target app to go to the *app on device details* page:
+
+![Go to Device App Details Page Method
+2](/steps/deploy-iot-apps/go_to_device_details_then_device_apps_then_device_app_details.gif)
+
+  Click on the **&#xFE19;** button, then click on **Stop app on this device**:
+
+- To start the app again, use the same menu, and click on **Start app on this
+  device**
+
+![Click on Stop App on this
+Device](/steps/deploy-iot-apps/stop-app-on-this-device.png)
+
+::: tip
+- Starting an already running app will have the effect of restarting this app
+- When an app has been started, you don't need to start it again on the next
+  reboot of the device, it will auto-start
+:::
+
+## Disable IoT Apps
+
+Coming soon
+
 ## Delete IoT Apps
 
 Coming soon
 
-## More Actions on IoT Apps
+## More on IoT Apps
 
 Coming soon
 
