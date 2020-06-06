@@ -81,6 +81,10 @@ module.exports = {
             path: '/docs/supported-boards-and-os.md'
           },
           {
+            title: 'Dashboard Structure',
+            path: '/docs/dashboard-structure.md'
+          },
+          {
             title: 'FAQ',
             path: '/docs/faq.md'
           },
