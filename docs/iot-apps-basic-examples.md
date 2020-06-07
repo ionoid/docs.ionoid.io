@@ -101,8 +101,8 @@ to be able to run IoT apps the Ionoid.io IoT way.
 
 The procedure to build Alpine Linux runtime is as follows:
 
-- [Build a runtime](#building_a_basic_runtime)
-- [Configure Alpine package manager](#configure_alpine_linux_package_manager)
+- [Build a runtime](#build-a-basic-runtime)
+- [Configure Alpine package manager](#configure-alpine-linux-package-manager)
 - Build runtime tarball
 
 ### Build a Basic Runtime
