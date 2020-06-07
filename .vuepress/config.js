@@ -1,4 +1,9 @@
 module.exports = {
+  markdown: {
+    toc: {
+      includeLevel: [2, 3, 4]
+    }
+  },
   plugins: [
     [
       'vuepress-plugin-zooming',
