@@ -241,8 +241,8 @@ Please follow [these guidlines](/docs/flash-os-image-to-storage.md) to flash the
 
 ## Boot the device
 
-Once the device flashed with the new OS image, boot your device and observe the
-project details page on the dashboard, you will notice that the device appeared
+Once the device flashed with the new OS image, boot your device and observe
+<the-project-details-page/> on the dashboard, you will notice that the device appeared
 in the list of devices:
 
 ![Boot the Device](/steps/projects-and-devices/boot_device.gif)
