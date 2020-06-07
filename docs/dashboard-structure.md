@@ -3,9 +3,7 @@
 In this page you will find information about the different pages of the
 [Ionoid.io dashboard](https://dashboard.ionoid.io/). There are three main categories:
 
-- [Pages related to projects, devices and apps](#projects-devices-and-apps-pages)
-- [Pages related to account and organization(s)](#account-and-organization-s-pages)
-- [Miscellaneous pages](#miscellaneous-pages)
+[[toc]]
 
 ## Projects, Devices and Apps Pages
 
