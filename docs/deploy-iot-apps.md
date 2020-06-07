@@ -339,8 +339,4 @@ Project](/steps/deploy-iot-apps/delete-app-on-this-project.png)
 ![Click on Delete App on this
 Device](/steps/deploy-iot-apps/delete-app-on-this-device.png)
 
-## More on IoT Apps
-
-Coming soon
-
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />
