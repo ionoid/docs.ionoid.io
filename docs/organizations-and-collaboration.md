@@ -90,7 +90,7 @@ hence it is recommended to only add trusted collaborators as viewers.
 
 To invite or add a user to your organization:
 
-- Go to your organization settings page
+- Go to <the-organization-settings-page/>
 - In the *Invite users* section, enter the user email and click the **Add** button
 
 ![Invite users to an organization](/steps/projects-and-devices/add_user_to_org.png)
@@ -123,7 +123,7 @@ within your organization and its projects.
 
 To revoke a user's membership from your organization:
 
-- Go to your organization settings page
+- Go to <the-organization-settings-page/>
 - In the *Team members* section, remove the user
 - Click on the **Save organization settings** button
 

@@ -9,7 +9,7 @@ ssh](#connect-to-the-device-via-ssh).
 
 ## Use the Dashboard Device Information
 
-Go to your device details page and lookup for the following information:
+Go to <the-device-details-page/> and lookup for the following information:
 
 - Status and last time seen
 - Device operating system versions
@@ -39,7 +39,7 @@ If you are on Windows, you need first to download a SSH client like [Putty
 
 #### Using the dashboard
 
-Go to the *device details page* and scroll to the bottom, then click on the
+Go to <the-device-details-page/> and scroll to the bottom, then click on the
 **NETWORKS** tab. You will see the local IP address of the device in the
 **Network Interfaces, IP Addresses** section:
 
@@ -58,7 +58,7 @@ device by looking at the **Conncted Networks** section:
 
 ### 2. Get the Public URL
 
-Go to the *devices details page* and scroll to the bottom, then click on the
+Go to <the-device-details-page/> and scroll to the bottom, then click on the
 *DETAILS* tab. On the *Device Public URL* section, check the checkbox to turn
 the public URL of the device on. Then, copy the displayed public URL.
 

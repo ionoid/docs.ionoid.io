@@ -52,10 +52,10 @@ Raspberry Pi device
 ![Insert microSD card](/steps/flash-os-image/raspberry-pi-microsd-slot.png)
 
 - On the <a :href="$frontmatter.dashboardUrl" target="_blank">Ionoid.io dashboard</a>,
-go to the *project details page* that you used to generate the OS image
+  go to <the-project-details-page/> that you used to generate the OS image
 
-- Power your Raspberry Pi device and see it appear on the *project details
-  page* of the Ionoid.io dashboard (process can take from few seconds to few
+- Power your Raspberry Pi device and see it appear on <the-project-details-page/>
+  of the Ionoid.io dashboard (process can take from few seconds to few
   minutes, depending on the internet connection)
 
 ![Boot the Device](/steps/projects-and-devices/boot_device.gif)
@@ -177,10 +177,10 @@ unzip -p \
 Raspberry Pi device
 
 - On the <a :href="$frontmatter.dashboardUrl" target="_blank">Ionoid.io dashboard</a>,
-go to the *project details page* that you used to generate the OS image
+go to <the-project-details-page/> that you used to generate the OS image
 
-- Power your Raspberry Pi device and see it appear on the *project details
-  page* of the Ionoid.io dashboard (process can take from few seconds to few
+- Power your Raspberry Pi device and see it appear on <the-project-details-page/>
+  of the Ionoid.io dashboard (process can take from few seconds to few
   minutes, depending on the internet connection)
 
 ![Boot the Device](/steps/projects-and-devices/boot_device.gif)
