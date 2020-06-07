@@ -3,6 +3,6 @@
     href="/docs/dashboard-structure.html#the-project-app-details-page"
     target="_blank"
     class="page-name-simple">
-    the project app details page
+    the project app details page <i class="fad fa-map-marker-question"></i>
   </a>
 </template>

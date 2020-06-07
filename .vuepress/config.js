@@ -1,4 +1,7 @@
+const path = require('path')
+
 module.exports = {
+  clientRootMixin: path.resolve(__dirname, 'mixin.js'),
   markdown: {
     toc: {
       includeLevel: [2, 3, 4]
