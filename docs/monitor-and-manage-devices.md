@@ -9,7 +9,7 @@ them, get their status, deploy apps on them, reboot them, ... etc
 ## Device Information
 
 Each device can be accessed through its dedicated information page:
-<url-device-details-page/>. Among the information that are displayed on this page, we have:
+<the-device-details-page/>. Among the information that are displayed on this page, we have:
 
 - Device model and hostname
 - Device network information (IP addresses, connected networks, ... etc)
@@ -24,14 +24,14 @@ Each device can be accessed through its dedicated information page:
 ## Realtime Activity Logs
 
 Status and result of executed actions on your device are displayed on the right
-bloc of <url-device-details-page/> or <url-project-details-page/>:
+bloc of <the-device-details-page/> or <the-project-details-page/>:
 
 ![Device Details Page](/steps/monitoring-devices/device-realtime-messages.png)
 
 
 ## Actions History
 
-A history of all executed commands can be found on the <url-project-details-page/>
+A history of all executed commands can be found on the <the-project-details-page/>
 to which the device belongs, by clicking on the **ACTIONS HISTORY** tab:
 
 ![Project History Page](/steps/monitoring-devices/project-actions-history.png)
@@ -40,10 +40,10 @@ to which the device belongs, by clicking on the **ACTIONS HISTORY** tab:
 ## Device System Logs
 
 The platform offers a way to see exactly what is happening inside your device in
-realtime with the device logs (system logs) feature on the <url-device-details-page/>.
+realtime with the device logs (system logs) feature on the <the-device-details-page/>.
 
 For that, click on the **DEVICE LOGS** tab on the bottom of the
-<url-device-details-page/>, then click on the **Start logs** button. Logs will
+<the-device-details-page/>, then click on the **Start logs** button. Logs will
 automatically show up, and will continue to be forwarded to the corresponding
 *MQTT channels* until the device becomes offline, or is instructed to stop
 forwarding logs by clicking on the *Stop logs* button.
@@ -58,7 +58,7 @@ to get more logs.
 ## Disable Device Management
 
 To disable a device, click on the **&#xFE19;** button on the
-<url-device-details-page/>, then click on the **Disable device** action.
+<the-device-details-page/>, then click on the **Disable device** action.
 Confirm by clicking again on the **Disable device** button:
 
 ![Disable Device](/steps/monitoring-devices/disable-device.png)
@@ -102,7 +102,7 @@ does not support Ionoid.io system updates.
 
 ## Delete Device
 
-To delete a device, go to the <url-device-settings-page/>. On the left sidebar,
+To delete a device, go to the <the-device-settings-page/>. On the left sidebar,
 click on **Settings** under the **Current device** menu. Then, scroll to the
 bottom of the page and click on the **Delete this device** button:
 
