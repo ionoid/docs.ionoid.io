@@ -32,10 +32,7 @@ To deploy an IoT app you have three options:
 
 ### Deploy on a single device
 
-- On the *project details page* containing the target device, click on the device
-to go to the *device details page*.
-
-- Click on the **&#xFE19;** button and choose
+- On <the-device-details-page/>, click on the **&#xFE19;** button and choose
 **Deploy app on this device** action:
 
 ![Click on Deploy App Button](/steps/deploy-iot-apps/go_to_device_details_page_click_on_deploy_app.gif)
@@ -59,19 +56,12 @@ progress of the app deployment on the device.
 
 ![Paste the App Public URL](/steps/deploy-iot-apps/on_device_details_page_paste_app_url_and_wait_realtime_messages.gif)
 
-Once the app deployed on this device, you can see it listed:
-
-- Either on *the project app list page*:
-
-![Go to Project Apps Page](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
-
-- Or on the *device app list page*:
-
-![Go to Device Apps Page](/steps/deploy-iot-apps/from_device_details_page_go_to_device_apps_page.gif)
+Once the app deployed on this device, you can see it listed on
+<the-project-app-list-page/> or on <the-device-app-list-page/>.
 
 ### Deploy on all devices of a project
 
-- On the *project details page* make sure that no device is selected. Click on
+- On <the-project-details-page/> make sure that no device is selected. Click on
 **&#xFE19;** button and choose **Deploy app on all devices** action:
 
 ![Click on Deploy App on All Devices](/steps/deploy-iot-apps/on_project_details_page_unselect_all_devices_and_click_on_deploy_on_all_devices.gif)
@@ -96,13 +86,11 @@ progress of the app deployment on each device.
 ![Deploy App on All Devices of a Project](/steps/deploy-iot-apps/deploy_app_on_all_devices_of_project.gif)
 
 Once the app deployed on at least one device of the project, you can see it
-listed on the *project app list page*.
-
-![Go to Project Apps Page](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
+listed on <the-project-app-list-page/>.
 
 ### Deploy on a subset of devices of a project
 
-- On the *project details page*, select the device(s) you want to deploy to
+- On <the-project-details-page/>, select the device(s) you want to deploy to
 
 ::: warning
 If you don't select any device, the deployment will concern all the devices of the
@@ -130,9 +118,7 @@ After few seconds, you will receive realtime messages about the status and
 progress of the app deployment on each device.
 
 Once the app deployed on at least one device of the project, you can see it
-listed on the project app list page.
-
-![Go to Project Apps Page](/steps/deploy-iot-apps/from_project_details_page_go_to_project_apps_page.gif)
+listed on <the-project-app-list-page/>.
 
 ## Update IoT Apps
 
@@ -146,23 +132,8 @@ have three options:
 
 ### Update on a single device
 
-- First, navigate to the *app on the device details* page, for that, you can:
-
-  - Either navigate to the *project app list page*, click on the target app to go to the
-    *app on the project details page*, then click on the target device to go to the
-    *app on device details page*:
-
-![Go to Device App Details Page Method 1](/steps/deploy-iot-apps/go_to_project_apps_then_project_app_details_then_device_app_details.gif)
-
-  - Or click on the target device to go to the *device details page*, then
-    click on *Apps* to go to the *device app list page*, then click on
-    the target app to go to the *app on device details* page:
-
-![Go to Device App Details Page Method
-2](/steps/deploy-iot-apps/go_to_device_details_then_device_apps_then_device_app_details.gif)
-
-- Click on the **&#xFE19;** button, and choose **Update app on this
-device**
+- On <the-device-app-details-page/>, click on the **&#xFE19;** button, and
+choose **Update app on this device**
 
 ![Click on Update App on this Device](/steps/deploy-iot-apps/click_on_update_app_on_this_device.png)
 
@@ -188,11 +159,8 @@ https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world
 
 ### Update on all devices of a project
 
-- Navigate to the *project app list* then click on the target app to go to the
-  *app on the project details page*
-
-- Click on the **&#xFE19;** button, then  click on the **Update app on all
-  devices** button:
+- On <the-project-app-details-page/>, click on the **&#xFE19;** button, then
+click on the **Update app on all devices** button:
 
 ![Click on Update App on all Devices](/steps/deploy-iot-apps/click_on_update_app_on_all_devices.gif)
 
@@ -218,7 +186,7 @@ https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world
 
 ### Update on a subset of devices of a project
 
-- Navigate to the *project app list* then click on the target app
+- Navigate to <the-project-app-list-page/> then click on the target app
 
 - Select the devices you want to update app on
 
@@ -260,23 +228,8 @@ have three options:
 
 ### Rollback on a single device
 
-- First, navigate to the *app on the device details* page, for that, you can:
-
-  - Either navigate to the *project app list page*, click on the target app to go to the
-    *app on the project details page*, then click on the target device to go to the
-    *app on device details page*:
-
-![Go to Device App Details Page Method 1](/steps/deploy-iot-apps/go_to_project_apps_then_project_app_details_then_device_app_details.gif)
-
-  - Or click on the target device to go to the *device details page*, then
-    click on *Apps* to go to the *device app list page*, then click on
-    the target app to go to the *app on device details* page:
-
-![Go to Device App Details Page Method
-2](/steps/deploy-iot-apps/go_to_device_details_then_device_apps_then_device_app_details.gif)
-
-- On the top you can check what is the current version, and what is the
-  previous version
+- On the top of <the-device-app-details-page/>, you can check what is the current
+version, and what is the previous version
 
 - Click on the **&#xFE19;** button, and choose **Rollback app on this
 device**
@@ -290,10 +243,7 @@ device**
 
 ### Rollback on all devices of a project
 
-- Navigate to the *project app list* then click on the target app to go to the
-  *app on the project details page*
-
-- Make sure that no device is selected:
+- On <the-project-app-details-page/>, make sure that no device is selected
 
 - Click on the **&#xFE19;** button, then click on the **Rollback app on all
   devices** button:
@@ -307,9 +257,7 @@ device**
 
 ### Rollback on a subset of devices of a project
 
-- Navigate to the *project app list* then click on the target app
-
-- Select the devices you want to update app on
+- On <the-project-app-details-page/>, select the devices you want to update app on
 
 - Click on the **&#xFE19;** button, then click on the **Rollback app on
   selected devices** button:
@@ -326,8 +274,7 @@ device**
 You can either stop an (already running) app on the whole devices of a project,
 or on a single device:
 
-- To stop a running app on the whole project, navigate to the *project app list*
-then click on the target app to go to the *app on the project details page*.
+- To stop a running app on the whole project, navigate to <the-project-app-details-page/>.
 Click on the **&#xFE19;** button, then click on the **Stop app on all devices**:
 
 ![Click on Stop App on all
@@ -336,23 +283,10 @@ Devices](/steps/deploy-iot-apps/stop-app-on-all-devices.png)
 - To start the app again, use the same menu, and click on **Start app on all
   devices**
 
-- To stop a running app on a single device, navigate to the *app on the device
-details* page, for that, you can:
+- To stop a running app on a single device, navigate to
+  <the-device-app-details-page/>
 
-  - Either navigate to the *project app list page*, click on the target app to go to the
-    *app on the project details page*, then click on the target device to go to the
-    *app on device details page*:
-
-![Go to Device App Details Page Method 1](/steps/deploy-iot-apps/go_to_project_apps_then_project_app_details_then_device_app_details.gif)
-
-  - Or click on the target device to go to the *device details page*, then
-    click on *Apps* to go to the *device app list page*, then click on
-    the target app to go to the *app on device details* page:
-
-![Go to Device App Details Page Method
-2](/steps/deploy-iot-apps/go_to_device_details_then_device_apps_then_device_app_details.gif)
-
-  Click on the **&#xFE19;** button, then click on **Stop app on this device**:
+- Click on the **&#xFE19;** button, then click on **Stop app on this device**:
 
 - To start the app again, use the same menu, and click on **Start app on this
   device**
