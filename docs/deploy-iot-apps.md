@@ -302,14 +302,41 @@ Device](/steps/deploy-iot-apps/stop-app-on-this-device.png)
 
 ## Disable IoT Apps
 
-Coming soon
+Disaling an IoT app is like [stopping it](#start-stop-iot-apps), except that it
+will not restart the next time the device reboots. You can either disable an
+app on the whole devices of a project, or on a single device:
+
+- To disable an app on the whole project, navigate to
+  <the-project-app-details-page/> and click on **Disable app on this project**
+  button:
+
+![Click on Disable App on this
+Project](/steps/deploy-iot-apps/disable-app-on-this-project.png)
+
+- To disable an app on a single device, navigate to
+  <the-device-app-details-page/>. Click on the **&#xFE19;** button, then click
+  on **Disable app on this device**:
+
+![Click on Disable App on this
+Device](/steps/deploy-iot-apps/disable-app-on-this-device.png)
 
 ## Delete IoT Apps
 
-Coming soon
+You can either delete an app on the whole devices of a project, or on a single
+device:
 
-## More on IoT Apps
+- To delete an app on the whole project, navigate to
+  <the-project-app-details-page/> and click on **Delete app on this project**
+  button:
 
-Coming soon
+![Click on Delete App on this
+Project](/steps/deploy-iot-apps/delete-app-on-this-project.png)
+
+- To delete an app on a single device, navigate to
+  <the-device-app-details-page/>. Click on the **&#xFE19;** button, then click
+  on **Delete app on this device**:
+
+![Click on Delete App on this
+Device](/steps/deploy-iot-apps/delete-app-on-this-device.png)
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />
