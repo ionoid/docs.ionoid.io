@@ -153,7 +153,7 @@ Please note that after editing the project settings, only newly registered devic
 will inherite of these settings. To make the already registered devices (see [how
 to register a device]()) also inherite of these settings, you have to _redeploy
 the project settings_ by clicking on the **Redeploy project settings on all
-devices** button that is present on the project details main page:
+devices** button that is present on <the-project-details-page/>:
 
 ![Redeploy Project Settings](/steps/projects-and-devices/redeploy_project_settings.png)
 
@@ -181,7 +181,7 @@ clicking on the **ACTIONS HISTORY** tab:
 
 It is possible to redeploy the project settings to devices anytime. To do so
 click on the **Redeploy project settings** button that is part of the actions in
-the project main page:
+<the-project-details-page/>:
 
 ![Redeploy Project Settings](/steps/projects-and-devices/redeploy_project_settings.png)
 
@@ -196,9 +196,9 @@ inaccessible in case of errors.
 
 ## Delete a Project
 
-You can delete a project by opening the **SETTINGS** tab on the project details
-main page, then by clicking on the **Delete this project** button, and confirming
-by typing the project name:
+You can delete a project by opening the **SETTINGS** tab on
+<the-project-details-page/>, then by clicking on the **Delete this project**
+button, and confirming by typing the project name:
 
 ![Delete a Project](/steps/projects-and-devices/delete_a_project.gif)
 
