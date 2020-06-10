@@ -1,4 +1,4 @@
-# IoT App Architecture
+# IoT and Edge Linux Apps
 
 Ionoid.io IoT Apps are apps that are self contained with all their metadata
 included and dependencies.
@@ -25,7 +25,7 @@ it easy to stop, **disable** then to completely remove applications.
 - Static binaries without library or other filesystem dependencies.
 If you are deploying [Static
 Binaries](https://en.wikipedia.org/wiki/Static_build) then please keep
-reading this document.
+reading this document. 
 
 
 - Archive
@@ -40,29 +40,23 @@ If you are deploying [docker container](https://docker.com) apps then
 please go directly to this link [docker Apps](#docker-apps)
 
 
-- Universal Linux Apps [Ubuntu Snaps](https://snapcraft.io/) **in progress - still under development**.
-If you are deploying Universal Linux Apps that are [Ubuntu
-Snaps](https://snapcraft.io) then please do directly to this link [Snap
-Apps](#snap-apps)
-
 ### App YAML Format
 
 Each App is described using The App yaml format. The App yaml is
 a simple manifest to describe how the app should work, it is fully
-described in the `app.yaml` file, and only works with apps that
-are static binaries or archive apps.
+described in the `app.yaml` file, next section, and only works with
+apps that are static binaries or archive apps.
 
-Docker apps and Snaps do not need the `app.yaml` file, they already
+Docker apps do not need the `app.yaml` file, they already
 contain their own app manifest and are auto handled withing their
 appropriate agents.
-Visit this link for [docker Apps](#docker-apps) or this one for
-[Snap Apps](#snap-apps).
+Visit this link for [docker Apps](#docker-apps) for more information.
 
 
 The `app.yaml` file should be present in the root directory of an
 archive file. Every App must have its corresponding `app.yaml` file.
 For static binaries with no dependencies, an `app.yaml` file will be
-auto-generated and used to define how the App should run.
+auto-generated on the fly to define how the App should run.
 
 
 The `app.yaml` content is (lines starting with `#` are comments and have no futher semantics):
@@ -80,20 +74,26 @@ version: 1.0
 # Description of App
 description: My App
 
-# List of Applications inside the same IoT App, the final IoT
-# App can include one app entry or several apps.
+# List of Applications inside the same IoT App archive, for now we only
+# support one single app. Support of multiple apps inside will be added in
+# the future.
 apps:
+
+  # App hello-world entry
   hello-world:
+
     # Environment Vars for Hello World Optional
     environment:
       A: "ABC"
 
-    # Environment Files that contains Vars for App Optional
+    # Semilar to environment but reads the environment variables
+    # from a text file. The text file should contain new-line-separated
+    # variable assignments.
     environmentfiles:
       - "/etc/hello-world-environment1"
       - "/etc/hello-world-environment2"
 
-    # Optional command to be executed before the main app.
+    # Optional command to be executed before the main executable app.
     # Can be used to setup environment.
     start-command: /bin/echo "starting hello-world"
 
@@ -111,15 +111,16 @@ apps:
     #               not set.
     # * forking:    it is expected that the process configured
     #               with command will call fork() as part
-    #               of its start-up
+    #               of its start-up.
     # * oneshot:    it is expected that the process configured
-    #               with command will exit or terminate
+    #               with command will exit or terminate.
     #
     # For more details check systemd service documentation.
     daemon: simple | forking | oneshot
 
     # Starting from newer versions, to have the app run with
-    # root privileges you have set it to true
+    # root privileges you have set it to true. By default the
+    # app will run as a normal `ionoid-app` user.
     privileged: true
 
 volumes:
@@ -139,7 +140,7 @@ volumes:
   # /dev, /proc and /sys are already mounted inside the app
   # no need to mount them again.
 
-  # Mounting etc configuration inside the app:
+  # Mounting device host /etc configuration inside the app:
   - src=/etc:dst=/etc,type=rbind,options=ro
 
   # If you want to make the root-filesystem available then the
@@ -153,10 +154,6 @@ health-check:
   command:        /bin/health-check
 ```
 
-The `apps` field may contain several entries if you want to launch several IoT
-Apps together, distribute them together, or share the running
-environment. However we would recommend to always have one command per
-App.
 
 The `health-check` field is a special directive that may allow you to do
 health checks on your running apps. Right now it is **in progress - still under
@@ -205,6 +202,7 @@ Group: ionoid-app  - means all applications running with that Group ID can write
 
 Volumes and mounts are the preferred mechanism to persist data on the
 device by applications and share it with others.
+
 
 ## Static Binaries
 

@@ -1,17 +1,15 @@
 # IoT Apps
 
-One of the most interesting features of Ionoid.io platform is the very easy way
-to deploy IoT apps on IoT devices. In just few clicks, you can deploy your app
-on hundreds or thousands of devices.
+Ionoid.io make it easy to deploy IoT and Edge Linux apps on devices, in just 
+few clicks, you can deploy your app on hundreds or thousands of devices.
 
-Using the intuitive dashboard of Ionoid.io
-platform, you can also deploy on a subset of the project devices, basing on,
-say, their name or their current status (for example, deploy only on devices
-with names matching `weather-station-*`, or devices with status `error` to fix a bug).
+The dashboard also provides a way to deploy on a subset of devices, using filters
+based on device names (for example, deploy only on devices
+with names matching `weather-station-*`), or devices with a specific status
+(for example device with status `error` to fix a bug).
 
-In addition to be able to deploy apps, you can also deploy update for these
-apps from the Ionoid.io dashboard, and of course, you can rollback an app
-version if any problem appears.
+From dashboard you can update your applications, but also rollback to previous
+version in case of errors.
 
 In the next sections, we consider that you have:
 
@@ -29,6 +27,7 @@ To deploy an IoT app you have three options:
 - [Deploy on all devices of a project](#deploy-on-all-devices-of-a-project)
 - [Deploy on a subset of devices of a
   project](#deploy-on-a-subset-of-devices-of-a-project)
+
 
 ### Deploy on a single device
 
