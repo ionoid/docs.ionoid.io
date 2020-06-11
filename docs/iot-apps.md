@@ -328,6 +328,7 @@ Sample Apps](https://github.apps.ionoid.net/)
 
 ![Deploy Static Binary](/steps/projects-and-devices/app-deployment.png)
 
+
 **Notes: More robust deployment methods are being developped, they will be added soon.**
 
 
@@ -381,34 +382,27 @@ documentation.
 * Minimal simple way to build archive apps:
 These steps describe how we manually built our previous example [Hello World IoT App](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
 
-    - Create the app directory `hello-world`:
+    - Create the app directory `hello-world`.
+      ```bash
+         mkdir hello-world
+         cd hello-world
+      ```
 
-```bash
-mkdir hello-world
-cd hello-world
-```
+    - Populate the app directory with `app.yaml` and executable files.
+      ```
+         hello-world:/
+             ./app.yaml
+             ./bin/
+                 hello-world
+      ```
 
-    - Populate the app directory with `app.yaml` and executable files:
-
-```
-hello-world:/
-  ./app.yaml
-  ./bin/
-    hello-world
-
-```
-
-
-    - Generate the app tar archive, in the following example, we assume we built for ARMv7:
-
-```bash
-cd hello-world
-tar -cvf ../hello-world-armv7-v0.2.tar *
-```
-
+    - Generate the app tar archive, in the following example, we assume we build for ARMv7.
+      ```bash
+         cd hello-world
+         tar -cvf ../hello-world-armv7-v0.2.tar *
+      ```
 
     - The `hello-world-armv7-v0.2.tar` is our final app that can be deployed to IoT Devices.
-
 
     - Or generate the a zip archive: **Under development, will be supported soon.**
 

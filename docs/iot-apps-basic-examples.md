@@ -1,4 +1,4 @@
-#  IoT Apps Basic Examples
+# Make Linux IoT and Edge App
 
 Ionoid.io IoT Platform supports simple IoT Apps that can run on any Linux and
 integrated with Ionoid.io.
