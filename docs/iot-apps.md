@@ -1,4 +1,4 @@
-# IoT and Edge Linux Apps
+# Linux IoT and Edge Apps
 
 Ionoid.io IoT Apps are apps that are self contained with all their metadata
 included and dependencies.
@@ -13,62 +13,70 @@ For every application, there will be a corresponding directory:
 /data/apps/store/appname
 ```
 
-All files corresponding to an App are located under its path. This make
+All files corresponding to an app are located under its path. This make
 it easy to stop, **disable** then to completely remove applications.
 
 ## Overview
 
 ### IoT Apps
 
-[Ionoid.io](https://ionoid.io/) supports multiple IoT App formats:
+[Ionoid.io](https://ionoid.io/) supports multiple IoT app formats:
 
-- Static binaries without library or other filesystem dependencies.
+- Static binaries without libraries or other filesystem dependencies.
 If you are deploying [Static
 Binaries](https://en.wikipedia.org/wiki/Static_build) then please keep
-reading this document. 
+reading this document. Static binaries will have an auto generated
+[App yaml file](#app-yaml-format). 
 
 
 - Archive
 [tarball](https://en.wikipedia.org/wiki/Tar_(computing) or
 [zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps.
-If you are deplying Archive apps then please keep reading this document.
+If you are deploying Archive apps then please keep reading this
+document. Archive apps must include an [App yaml file](#app-yaml-format)
+that describes how the application will run.
 
 
 - Modern [docker](https://docker.com) containers **in progress - still
 under development**.
 If you are deploying [docker container](https://docker.com) apps then
-please go directly to this link [docker Apps](#docker-apps)
+please go directly to this link [docker apps](#docker-apps).
 
 
 ### App YAML Format
 
-Each App is described using The App yaml format. The App yaml is
+Each app is described using The App yaml format. The App yaml is
 a simple manifest to describe how the app should work, it is fully
 described in the `app.yaml` file, next section, and only works with
 apps that are static binaries or archive apps.
 
+
 Docker apps do not need the `app.yaml` file, they already
 contain their own app manifest and are auto handled withing their
 appropriate agents.
-Visit this link for [docker Apps](#docker-apps) for more information.
+Visit this link for [docker apps](#docker-apps) for more information.
 
 
 The `app.yaml` file should be present in the root directory of an
-archive file. Every App must have its corresponding `app.yaml` file.
-For static binaries with no dependencies, an `app.yaml` file will be
-auto-generated on the fly to define how the App should run.
+archive file. Every app must have its corresponding `app.yaml` file.
+For [static binaries](#static-binaries) with no dependencies, an
+`app.yaml` file will be auto-generated on the fly to define how the
+app should run.
 
 
-The `app.yaml` content is (lines starting with `#` are comments and have no futher semantics):
-
+App Yaml file example:
 
 ```yaml
+# Note: lines starting with `#` are comments and have no semantics.
+
 # Name of APP must be Alphanumeric and can contain the following
 # special characters "_", "." and "-".
 # Minimum 2 characters, up to 64 characters.
+# Mendatory field.
 name: appname
 
 # Version of App
+# Mendatory field.
 version: 1.0
 
 # Description of App
@@ -97,7 +105,7 @@ apps:
     # Can be used to setup environment.
     start-command: /bin/echo "starting hello-world"
 
-    # Main executable app
+    # Main executable app, mendatory field.
     command: /bin/hello-world
 
     # Optional command to be executed after the main app finishes
@@ -122,6 +130,7 @@ apps:
     # root privileges you have set it to true. By default the
     # app will run as a normal `ionoid-app` user.
     privileged: true
+
 
 volumes:
   # Volumes and mounts to be made accessible inside the application.
@@ -159,7 +168,7 @@ The `health-check` field is a special directive that may allow you to do
 health checks on your running apps. Right now it is **in progress - still under
 development**.
 
-So for a first example the [Hello World IoT App Example:](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
+So for a first example the [Hello World IoT app example:](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
 
 The content of the `app.yaml` file would be:
 ```yaml
@@ -267,11 +276,12 @@ env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
 We are going to add more static binaries support for other languages, it is under
 development.
 
-### Deploy Static Binaries Using Ionoid.io
 
-When deploying static binaries with [Ionoid.io](https://ionoid.io/), there is no need
-to put it inside docker or write an `app.yaml` file for it. If your
-application has no external dependencies on either files or other
+### Deploy Static Binaries
+
+When deploying static binaries with [Ionoid.io](https://ionoid.io/), there is
+no need to put it inside docker or write an `app.yaml` file for it. If your
+application has no external dependencies on files or other
 applications, just upload it to the internet and point Ionoid.io
 to its deployment URL.
 
@@ -313,29 +323,30 @@ version: is the Unix timestamp in UTC (Coordinated Universal Time).
 To deploy your static binaries, upload them to the internet, and point the
 deployment URL to the right one.
 
-For more examples please visit our hosted sample Apps here: [Ionoid.io
+For more examples please visit our hosted sample apps here: [Ionoid.io
 Sample Apps](https://github.apps.ionoid.net/)
 
 ![Deploy Static Binary](/steps/projects-and-devices/app-deployment.png)
 
 **Notes: More robust deployment methods are being developped, they will be added soon.**
 
+
 ## Archive Apps
 
-Archive Apps are apps compressed files in
+Archive apps are compressed files in
 [tar](https://en.wikipedia.org/wiki/Tar_(computing)) or
 [zip](https://en.wikipedia.org/wiki/Zip_(file_format)) formats.
 
 
-Archive Apps are composed of the following files:
+Archive apps are composed of the following files:
 ```
 * app.yaml      : App Basic information encoded in a Yaml file
-* meta/         : Meta directory that contains extra App metadata (Optional).
-* bin/          : Binary directory where the App may reside.
-* ...           : Rest of the App file system and other dependencies files.
+* meta/         : Meta directory that contains extra app metadata (Optional).
+* bin/          : Binary directory where the app may reside.
+* ...           : Rest of the app file system and other dependencies files.
 ```
 
-Example of a hello world App:
+Example of a hello world app:
 [IoT App Golang Hello World](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
 
 The content of the `app.yaml` file would be:
@@ -349,18 +360,36 @@ apps:
 
 ### Build Archive Apps
 
-These steps describe how we built our previous example [Hello World IoT App](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
+Since archive apps are archive files that contain the app and its dependencies,
+there are several methods to build such archive files. The following section
+details this for simple applications that do not need a full
+Linux file systems and other tools.
 
-- Create and enter the App directory `hello-world`:
+For more complex applications with dependencies and often docker images, there are
+multiple tools:
+
+* [Debian debootstrap](https://wiki.debian.org/Debootstrap) to bootstrap a basic debian
+image. Then the application, its bundles and the `app.yaml` file should all be
+added the debian image and a tarball should be generated.
+
+
+* [Make IoT Apps](#make-iot-apps) is our standard method to build lightweight self
+contained IoT and Edge apps. Please refer to the next chapter [Make Linux IoT and Edge Apps](#make-iot-apps)
+documentation.
+
+
+* Minimal simple way to build archive apps:
+These steps describe how we manually built our previous example [Hello World IoT App](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
+
+    - Create the app directory `hello-world`:
 
 ```bash
 mkdir hello-world
 cd hello-world
 ```
 
-- Populate the App directory with `app.yaml` and executable files
+    - Populate the app directory with `app.yaml` and executable files:
 
-Content of hello-world directory should be:
 ```
 hello-world:/
   ./app.yaml
@@ -369,31 +398,20 @@ hello-world:/
 
 ```
 
-In the above example the app hello-world filesystem contains the
-`app.yaml` file
 
-- Tar archive file:
-
-To generate the App tar archive follow the example.
-
-Assuming you are building for ARMv7 use `armv7` if you are building for
-ARMv6 or amd64 then you can use corresponding arch. This is not
-mandatory, just best practice to be able to identify deployed tarball
-files.
-
+    - Generate the app tar archive, in the following example, we assume we built for ARMv7:
 
 ```bash
 cd hello-world
 tar -cvf ../hello-world-armv7-v0.2.tar *
 ```
 
-The `hello-world-armv7-v0.2.tar` is our final App that can be deployed
-to our IoT Devices.
+
+    - The `hello-world-armv7-v0.2.tar` is our final app that can be deployed to IoT Devices.
 
 
-- Or to generate the App zip archive
+    - Or generate the a zip archive: **Under development, will be supported soon.**
 
-**Under development, will be supported soon.**
 
 ## Docker Apps
 
@@ -401,18 +419,14 @@ to our IoT Devices.
 
 **This is still under development and will be released soon.**
 
-## Snap Apps
 
-[Ionoid.io](https://ionoid.io/) supports the Universal Linux Apps format
-that is known as [Ubuntu Snap](https://snapcraft.io/) apps. These apps
-are supported only on [Ubuntu Core](https://ubuntu.com/core) Operating
-System.
+## Make IoT Apps
 
-[Ubuntu Core](https://ubuntu.com/core) has 10 years security updates provided by [Canonical](https://canonical.com)
+Ionoid.io IoT and edge Linux apps are archive files that bundle the application,
+libraries, files and other dependencies. Using some of
+[Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
+file system isolation, devices are able to run multiple applications isolated from one another.
 
-**This is still under development and will be released soon.**
-
-## Building a Python Runtime Based on Alpine Linux
 
 This section describes how to create a python runtime, using one of the following method:
 

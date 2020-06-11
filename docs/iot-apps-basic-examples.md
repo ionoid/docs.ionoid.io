@@ -6,12 +6,14 @@ integrated with Ionoid.io.
 Ionoid.io IoT Apps take [Snapcraft](https://docs.snapcraft.io/) the universal
 app store for Linux as a reference, and build on top of it.
 
+
 ## General Concept
 
 In this page you will find a basic view of IoT Apps and how to deploy them.
 
 Ionoid IoT Apps are apps that are self-contained with all their metadata
 included.
+
 
 ## Tools/Steps to Generate an App
 

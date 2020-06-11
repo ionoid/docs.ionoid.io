@@ -65,7 +65,7 @@ module.exports = {
             path: '/docs/deploy-iot-apps.md'
           },
           {
-            title: 'IoT and Edge Linux Apps',
+            title: 'Linux IoT and Edge Apps',
             path: '/docs/iot-apps.md'
           },
           {
