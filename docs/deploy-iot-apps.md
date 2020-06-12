@@ -270,10 +270,10 @@ device**
 
 ## Start/Stop IoT Apps
 
-You can either stop an (already running) app on the whole devices of a project,
+You can either stop an (already running) app on all or some devices of a project,
 or on a single device:
 
-- To stop a running app on the whole project, navigate to <the-project-app-details-page/>.
+- To stop a running app on all devices of a project, navigate to <the-project-app-details-page/>.
 Click on the **&#xFE19;** button, then click on the **Stop app on all devices**:
 
 ![Click on Stop App on all
@@ -303,9 +303,9 @@ Device](/steps/deploy-iot-apps/stop-app-on-this-device.png)
 
 Disaling an IoT app is like [stopping it](#start-stop-iot-apps), except that it
 will not restart the next time the device reboots. You can either disable an
-app on the whole devices of a project, or on a single device:
+app on all, or some devices of a project, or on a single device:
 
-- To disable an app on the whole project, navigate to
+- To disable an app on all devices of a project, navigate to
   <the-project-app-details-page/> and click on **Disable app on this project**
   button:
 
@@ -321,10 +321,10 @@ Device](/steps/deploy-iot-apps/disable-app-on-this-device.png)
 
 ## Delete IoT Apps
 
-You can either delete an app on the whole devices of a project, or on a single
+You can either delete an app on all or some devices of a project, or on a single
 device:
 
-- To delete an app on the whole project, navigate to
+- To delete an app on all devices of a project, navigate to
   <the-project-app-details-page/> and click on **Delete app on this project**
   button:
 
