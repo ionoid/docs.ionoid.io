@@ -19,8 +19,7 @@ of 1979. Using archive files allows to generate standalone packages that include
 needs to run, from software to libraries and configurations. More importantly archive files are well
 supported and most of the tools to process them are standard Open Source tools.
 
-At run-time when the archive file is [deployed on devices](https://docs-dev.ionoid.io/docs/deploy-iot-apps.html) on
-devices, the
+At run-time when the archive file is [deployed on devices](https://docs.ionoid.io/docs/deploy-iot-apps.html), the
 [App Yaml file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) that is on the root directory `/` of the
 archive will be used to define how the application will run.
 
