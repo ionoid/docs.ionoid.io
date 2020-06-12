@@ -99,6 +99,7 @@ module.exports = {
           {
             title: 'Contact',
             path: '/docs/contact.md'
+          },
           {
             title: 'Impressum',
             path: '/docs/impressum.md'
