@@ -1,7 +1,10 @@
 # Linux IoT and Edge Apps
 
-Ionoid.io IoT Apps are apps that are self contained with all their metadata
-included and dependencies.
+Ionoid.io IoT Apps are self contained apps, all the software, metadata,
+libraries and other dependencies are bundled within the app package.
+
+image. Then the application, its bundles and the `app.yaml` file should all be
+added the debian image and a tarball should be generated.
 
 Installed apps are located on device storage at:
 ```
@@ -13,8 +16,9 @@ For every application, there will be a corresponding directory:
 /data/apps/store/appname
 ```
 
-All files corresponding to an app are located under its path. This make
-it easy to stop, **disable** then to completely remove applications.
+All files corresponding to an app are located under its path. This makes
+it easy to stop, **disable**, or completely remove applications.
+
 
 ## Overview
 
@@ -369,14 +373,13 @@ Linux file systems and other tools.
 For more complex applications with dependencies and often docker images, there are
 multiple tools:
 
+* [Make IoT Apps](#make-iot-apps) is our standard method to build lightweight self
+contained IoT and Edge apps.
+
+
 * [Debian debootstrap](https://wiki.debian.org/Debootstrap) to bootstrap a basic debian
 image. Then the application, its bundles and the `app.yaml` file should all be
-added the debian image and a tarball should be generated.
-
-
-* [Make IoT Apps](#make-iot-apps) is our standard method to build lightweight self
-contained IoT and Edge apps. Please refer to the next chapter [Make Linux IoT and Edge Apps](#make-iot-apps)
-documentation.
+added to the debian image that will be used to generate the artifact tarball.
 
 
 * Minimal simple way to build archive apps:
@@ -404,7 +407,7 @@ These steps describe how we manually built our previous example [Hello World IoT
 
     - The `hello-world-armv7-v0.2.tar` is our final app that can be deployed to IoT Devices.
 
-    - Or generate the a zip archive: **Under development, will be supported soon.**
+    - Or generate a zip archive: **Under development, will be supported soon.**
 
 
 ## Docker Apps
@@ -416,350 +419,12 @@ These steps describe how we manually built our previous example [Hello World IoT
 
 ## Make IoT Apps
 
-Ionoid.io IoT and edge Linux apps are archive files that bundle the application,
+Ionoid.io IoT and Edge Linux apps are archive files that bundle the application,
 libraries, files and other dependencies. Using some of
 [Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
 file system isolation, devices are able to run multiple applications isolated from one another.
 
+Please refer to the next chapter [Make Linux IoT and Edge archive Apps]
 
-This section describes how to create a python runtime, using one of the following method:
-
-- [Add-python-package-and-modules-to-a-prepared-runtime](#add-python-package-and-modules-to-a-prepared-runtime)
-- [Build-python-runtime-from-scratch](#build-python-runtime-from-scratch)
-
-> if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the method 1, otherwise use  method 2.
-
-### Add Python Package and Modules to a Prepared Runtime
-
-  - Open a terminal and create a directory for python runtime here named **python-runtime**.
-
-```bash
-mkdir python-runtime
-```
-  - Extract the built runtime prepared in the previous section **alpine-3.9-armhf.tar** in a directory called **python-runtime** using the following command.
-
-```bash
-sudo tar -xvf alpine-3.9-armhf.tar -C python-runtime/
-```
-  - Run the following command to enter the runtime.
-
-```bash
-sudo chroot python-runtime/chroot/ /bin/sh -l
-```
-
-> We use **apk** command to add packages to the runtime, APK stands for Alpine Linux package manager.
-> - To install a package the syntax is :
->```bash
->apk add package-name
->```
-
-  - Add python package to the runtime.
-
-> Every command in the runtime is executed as **root**.
-
-```bash
-apk add --no-cache python3
-```
-  - Install pip, the python package manager.
-
-```
-apk add --no-cache py-pip
-```
-
- - To exit from the runtime type **exit**.
-
-```bash
-exit
-```
-  - Build the python runtime tarball using the following command.
-
-```bash
-sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
-```
-
-### Build Python Runtime From Scratch
-
-#### Create basic runtime based on Alpine Linux
-
-- Open a terminal and change directory into pieman directory.
-
-```bash
-cd pieman
-```
-
-- Run the following command to build the runtime.
-
-```bash
-
-sudo env PROJECT_NAME=python-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
-
-```
-- The built runtime will be located at **build** directory.
-
-```bash
-ls build/
-```
-
-Sample output:
-```bash
-python-runtime
-
-```
-#### Add packages to runtime
-
-- To add packages to your runtime, go to build directory.
-
-```bash
-cd build
-```
-
-- To enter the runtime. Type the following command.
-
-```bash
-sudo chroot python-runtime/chroot/ /bin/sh -l
-```
-
-> Every command in the runtime is executed as **root**.
-
-
-- Setup alpine packages repository.
-
-```bash
-setup-apkrepos
-```
-Sample output:
-
-```bash
-Available mirrors:
-1) dl-cdn.alpinelinux.org
-2) nl.alpinelinux.org
-3) uk.alpinelinux.org
-4) dl-2.alpinelinux.org
-5) dl-3.alpinelinux.org
-6) dl-4.alpinelinux.org
-7) dl-5.alpinelinux.org
-8) dl-8.alpinelinux.org
-9) mirror.yandex.ru
-10) mirrors.gigenet.com
-11) mirror1.hs-esslingen.de
-12) mirror.leaseweb.com
-13) mirror.fit.cvut.cz
-14) alpine.mirror.far.fi
-15) alpine.mirror.wearetriple.com
-...
-
-r) Add random from the above list
-f) Detect and add fastest mirror from above list
-e) Edit /etc/apk/repositories with text editor
-
-Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
-```
-
-
-   - Install **python** package.
-
-```bash
-apk add --no-cache python3
-```
-   - Install **pip**, the python package manager.
-
-```bash
-apk add --no-cache py-pip
-```
-   - Update the python package manger
-
- ```bash
-pip3 install --upgrade pip
- ```
-
- - To exit from the runtime type **exit**.
-
-```bash
-exit
-```
-
-
-#### Build python runtime tarball.
-
-- Once you finish to add all the python modules you need for your runtime, build the python runtime tarball using the following command.
-
-```bash
-sudo tar cvvf python3-alpine-armhf.tar -C python-runtime/chroot/ .
-```
-
-### Add Python Modules
-
-   - You can add additional python module to your runtime before building the tarball using python package manager.
-   - Here as **example** we are going to install module to control Raspberry Pi GPIO channels.
-
-
-```bash
-pip3 install RPi.GPIO
-```
-
-
-## Building a Node.js runtime based on Alpine Linux
-
-This section describes how to create a Node.js runtime , using one of the following method:
-
-- [Add-Node.js-package-to-a-prepared-runtime](#add-node-js-package-and-modules-to-a-prepared-runtime)
-- [Build Node.js runtime from scratch](#build-node-js-runtime-from-scratch)
-
-> if you have built a basic runtime following the previous section **Build Basic Alpine Linux Runtime**, use the method 1, otherwise use  method 2.
-
-### Add Node.js Package and Modules to a Prepared Runtime
-
-- Open a terminal and create a directory for Node.js runtime here named nodejs-runtime.
-
-```bash
-mkdir nodejs-runtime
-```
-- Extract the built runtime prepared in the previous section **alpine-3.9-armhf.tar** in a directory called **nodejs-runtime** using the following command.
-
-```bash
-sudo tar -xvf alpine-3.9-armhf.tar -C nodejs-runtime/
-```
-- Run the following command to enter the runtime.
-
-```bash
-sudo chroot nodejs-runtime/chroot/ /bin/sh -l
-```
-
-> We use **apk** command to add packages to the runtime, APK stands for Alpine Linux package manager.
-> - To install a package the syntax is :
->```bash
->apk add package-name
->```
-
-- Add Node.js package to the runtime.
-
-> Every command in the runtime is executed as **root**.
-
-```bash
-apk add --no-cache nodejs
-```
-- Install npm, the Node.js package manager.
-
-```
-apk add --no-cache npm
-```
-
-- To exit from the runtime type **exit**.
-
-```bash
-exit
-```
-
-- Build the tarball.
-
-```bash
-sudo tar cvvf nodejs-alpine-armhf.tar -C nodejs-runtime/chroot/ .
-```
-
-### Build Node.js Runtime From Scratch
-
-#### Create basic runtime  based on Alpine Linux
-
-- Open a terminal and change directory into pieman directory.
-
-```bash
-cd pieman
-```
-
-- Run the following command to build the runtime.
-
-```bash
-sudo env PROJECT_NAME=nodejs-runtime DEVICE=rpi-3-b OS=alpine-3.9-armhf CREATE_ONLY_CHROOT=true ./pieman.sh
-```
-
-- The built runtime will be located at **build** directory.
-
-```bash
-ls build
-```
-
-Sample output:
-
-```
-nodejs-runtime
-```
-
-#### Add packages to Node.js runtime
-
-- To enter the runtime, run the following command.
-
-> Every command in the runtime is executed as **root**.
-
-```bash
-sudo chroot build/nodejs-runtime/chroot/ /bin/sh -l
-```
-
-- Setup alpine packages repository.
-
-```bash
-setup-apkrepos
-```
-Sample output:
-
-```bash
-Available mirrors:
-1) dl-cdn.alpinelinux.org
-2) nl.alpinelinux.org
-3) uk.alpinelinux.org
-4) dl-2.alpinelinux.org
-5) dl-3.alpinelinux.org
-6) dl-4.alpinelinux.org
-7) dl-5.alpinelinux.org
-8) dl-8.alpinelinux.org
-9) mirror.yandex.ru
-10) mirrors.gigenet.com
-11) mirror1.hs-esslingen.de
-12) mirror.leaseweb.com
-13) mirror.fit.cvut.cz
-14) alpine.mirror.far.fi
-15) alpine.mirror.wearetriple.com
-...
-
-r) Add random from the above list
-f) Detect and add fastest mirror from above list
-e) Edit /etc/apk/repositories with text editor
-
-Enter mirror number (1-44) or URL to add (or r/f/e/done) [f]:
-```
-
-- Install **Node.js** package.
-
-```bash
-apk add --no-cache nodejs
-```
-
-- Install **npm** the Node.js package manager.
-
-```bash
-apk add --no-cache npm
-```
-
-#### Build Node.js runtime tarball
-
-- Once you finish to add all the Node.js modules you need for your runtime, build the tarball.
-
-```bash
-sudo tar cvvf alpine-3.9-armhf-nodejs.tar -C nodejs-runtime/chroot/ .
-```
-
-- exit to leave the runtime.
-
-```bash
-exit
-```
-
-### Add Node.js Modules
-
-- You can add additional python module to your runtime before building the tarball using Node.js package manager.
-- Here as example we are going to install **bootstrap** framework.
-
-```bash
-npm install   bootstrap
-```
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />

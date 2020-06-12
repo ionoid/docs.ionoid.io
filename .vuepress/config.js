@@ -69,8 +69,8 @@ module.exports = {
             path: '/docs/iot-apps.md'
           },
           {
-            title: 'IoT Apps Basic Examples',
-            path: '/docs/iot-apps-basic-examples.md'
+            title: 'Make Linux IoT and Edge archive Apps',
+            path: '/docs/make-iot-archive-apps.md'
           },
           {
             title: 'Organizations and Collaboration',
