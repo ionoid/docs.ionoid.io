@@ -70,7 +70,7 @@ module.exports = {
           },
           {
             title: 'Build IoT and Edge Apps',
-            path: '/docs/make-iot-archive-apps.md'
+            path: '/docs/build-iot-archive-apps.md'
           },
           {
             title: 'Organizations and Collaboration',
