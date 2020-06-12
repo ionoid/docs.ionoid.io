@@ -1,7 +1,7 @@
 # Contact
 
 
-## General contact
+## Sales contact
 
 To get in touch with us, please write us at: <contact@ionoid.io> or visit our [contact
 page](https://www.ionoid.io/contact/) for more details.
