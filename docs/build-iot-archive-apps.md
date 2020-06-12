@@ -1,19 +1,23 @@
-# Make Linux IoT and Edge archive Apps
+# Build Linux IoT and Edge archive Apps
 
-Ionoid.io IoT and edge Linux apps are archive files that bundle the application,
+Ionoid.io IoT and Edge Linux apps are archive files that bundle the application,
 libraries, files and other dependencies. Using some of
 [Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
 file system isolation, devices are able to run multiple applications isolated from one another.
 
 This section describes how to build archive Linux apps that can run on any Linux device. To be able to deploy the
-archive with Ionoid.io and run it on devices, the archive must then include the [App Yaml file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format).
+archive with Ionoid.io and run it on devices, the archive must then include the [App Yaml file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format)
+inside the root directory `/` of the archive.
 
 
-## Concept
+## Linux containers concept
 
 [Linux containers](https://en.wikipedia.org/wiki/List_of_Linux_containe) are a modern technology that packages the
-application and all its dependencies so the applications can run on any Linux system. Ionoid.io supports Linux containers in format of archive files, they are standalone packages that includes everything the application needs to run, from
-software to libraries and configurations.
+application and all its dependencies so the applications can run on any Linux system.
+Ionoid.io supports Linux containers by using classic archive files format that were first released in late
+of 1979. Using archive files allows to generate standalone packages that include everything the application
+needs to run, from software to libraries and configurations. More importantly archive files are well
+supported and most of the tools to process them are standard Open Source tools.
 
 At run-time when the archive file is [deployed on devices](https://docs-dev.ionoid.io/docs/deploy-iot-apps.html) on
 devices, the
@@ -96,7 +100,7 @@ Under development, will be added soon.
 
 
 
-## Node.js environment
+## Node.js Apps
 
 [Node.js](https://nodejs.org) is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web
 browser. [Wikipedia](https://en.wikipedia.org/wiki/Node.js)
@@ -104,7 +108,7 @@ browser. [Wikipedia](https://en.wikipedia.org/wiki/Node.js)
 We can build a `Node.js` environment using one of the supported distributions as a base image for the file system.
 
 
-### Debian based Node.js
+### Node.js Debian based image
 
 The following examples demonstrate how to use `mkiot` to build a `Node.js` environment that is targeted to `ARMv7`
 architectures, as `Node.js` only support `ARMv7` and above, for further documentation please see [Node.js Download
@@ -135,18 +139,23 @@ and edit the `buildspec.yaml` files. Make sure to copy in `script` file that is 
 too, according to [mkiot script command](https://github.com/ionoid/mkiot#build-spec-commands-documentation).
 
 
-### Alpine based Node.js
+### Node.js Alpine based image
 
 Will be added soon.
 
 
-## Python environment
+
+### Node.js Apps examples
+
+
+
+## Python Apps
 
 [Python](https://www.python.org/) is an interpreted, high-level, general-purpose programming language.
 [Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language).
 
 
-### Debian based Python
+### Python Debian based image
 
 The following examples demonstrate how to use `mkiot` to build a `Python` environment that is targeted to `ARM`
 architectures.
@@ -175,7 +184,45 @@ file:
 sudo mkiot build examples/python/debian/buster/buildspec-python3-devtools-debian-armhf.yaml
 ```
 
+### Python Alpine based image
 
+Will be added soon.
+
+
+### Python Apps examples
+
+#### Python Debian based App
+
+* Hello-world app can be built using:
+    - [hello world.py app](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/python/hello-world.py)
+    - [app.yaml file](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/python/app.yaml)
+    - [hello world buildspec files](https://github.com/ionoid/mkiot/tree/master/examples/apps/hello-world/python/debian/buster)
+
+    - In `buildspec.yaml` file we add in artifacts section, `files` to copy which are the `app.yaml` and the app itself:
+    ```yaml
+       files:
+           # copy app.yaml to root artifact /app.yaml
+           - app.yaml /app.yaml
+
+           # copy my application
+           - hello-world.py  /usr/bin/hello-world.py
+    ```
+
+    - To build this example from `mkiot` source:
+    ```bash
+       cd examples/apps/hello-world/python/
+       sudo mkiot build debian/buster/buildspec-python3-minimal-debian-armhf.yaml
+    ```
+
+    - This will generate the final artifact inside `./output/artifact/`.
+
+
+* Tensor flow app
+
+
+
+
+#### Python Alpine based App
 
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />

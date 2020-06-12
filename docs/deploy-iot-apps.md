@@ -1,4 +1,4 @@
-# IoT Apps
+# IoT Apps deployment
 
 Ionoid.io make it easy to deploy IoT and Edge Linux apps on devices, in just 
 few clicks, you can deploy your app on hundreds or thousands of devices.

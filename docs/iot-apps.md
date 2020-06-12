@@ -3,9 +3,6 @@
 Ionoid.io IoT Apps are self contained apps, all the software, metadata,
 libraries and other dependencies are bundled within the app package.
 
-image. Then the application, its bundles and the `app.yaml` file should all be
-added the debian image and a tarball should be generated.
-
 Installed apps are located on device storage at:
 ```
 /data/apps/store/
@@ -35,7 +32,9 @@ reading this document. Static binaries will have an auto generated
 
 - Archive
 [tarball](https://en.wikipedia.org/wiki/Tar_(computing) or
-[zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps.
+[zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps. The archive
+files are standard files format that were released several years ago, they
+are well supported and the tools to process them are all Open Source tools.
 If you are deploying Archive apps then please keep reading this
 document. Archive apps must include an [App yaml file](#app-yaml-format)
 that describes how the application will run.
@@ -401,8 +400,7 @@ These steps describe how we manually built our previous example [Hello World IoT
 
     - Generate the app tar archive, in the following example, we assume we build for ARMv7.
       ```bash
-         cd hello-world
-         tar -cvf ../hello-world-armv7-v0.2.tar *
+         tar cvvf hello-world-armv7-v0.2.tar -C hello-world --transform='s,^./,,' .
       ```
 
     - The `hello-world-armv7-v0.2.tar` is our final app that can be deployed to IoT Devices.
@@ -424,7 +422,7 @@ libraries, files and other dependencies. Using some of
 [Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
 file system isolation, devices are able to run multiple applications isolated from one another.
 
-Please refer to the next chapter [Make Linux IoT and Edge archive Apps]
-
+Please refer to the next chapter [Build IoT and Edge Apps](https://docs-dev.ionoid.io/docs/make-iot-archive-apps.html)
+to build IoT archive apps.
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />

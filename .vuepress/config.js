@@ -65,12 +65,12 @@ module.exports = {
             path: '/docs/deploy-iot-apps.md'
           },
           {
-            title: 'Linux IoT and Edge Apps',
+            title: 'IoT Apps',
             path: '/docs/iot-apps.md'
           },
           {
-            title: 'Make Linux IoT and Edge archive Apps',
-            path: '/docs/make-iot-archive-apps.md'
+            title: 'Build IoT and Edge Apps',
+            path: '/docs/build-iot-archive-apps.md'
           },
           {
             title: 'Organizations and Collaboration',
