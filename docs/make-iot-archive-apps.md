@@ -1,19 +1,23 @@
-# Make Linux IoT and Edge archive Apps
+# Build Linux IoT and Edge archive Apps
 
-Ionoid.io IoT and edge Linux apps are archive files that bundle the application,
+Ionoid.io IoT and Edge Linux apps are archive files that bundle the application,
 libraries, files and other dependencies. Using some of
 [Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
 file system isolation, devices are able to run multiple applications isolated from one another.
 
 This section describes how to build archive Linux apps that can run on any Linux device. To be able to deploy the
-archive with Ionoid.io and run it on devices, the archive must then include the [App Yaml file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format).
+archive with Ionoid.io and run it on devices, the archive must then include the [App Yaml file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format)
+inside the root directory `/` of the archive.
 
 
-## Concept
+## Linux containers concept
 
 [Linux containers](https://en.wikipedia.org/wiki/List_of_Linux_containe) are a modern technology that packages the
-application and all its dependencies so the applications can run on any Linux system. Ionoid.io supports Linux containers in format of archive files, they are standalone packages that includes everything the application needs to run, from
-software to libraries and configurations.
+application and all its dependencies so the applications can run on any Linux system.
+Ionoid.io supports Linux containers by using classic archive files format that were first released in late
+of 1979. Using archive files allows to generate standalone packages that include everything the application
+needs to run, from software to libraries and configurations. More importantly archive files are well
+supported and most of the tools to process them are standard Open Source tools.
 
 At run-time when the archive file is [deployed on devices](https://docs-dev.ionoid.io/docs/deploy-iot-apps.html) on
 devices, the
