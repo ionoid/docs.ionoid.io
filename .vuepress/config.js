@@ -97,6 +97,10 @@ module.exports = {
             path: '/docs/faq.md'
           },
           {
+            title: 'Contact',
+            path: '/docs/contact.md'
+          },
+          {
             title: 'Impressum',
             path: '/docs/impressum.md'
           },

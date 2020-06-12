@@ -422,7 +422,7 @@ libraries, files and other dependencies. Using some of
 [Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
 file system isolation, devices are able to run multiple applications isolated from one another.
 
-Please refer to the next chapter [Build IoT and Edge Apps](https://docs-dev.ionoid.io/docs/build-iot-archive-apps.html)
+Please refer to the next chapter [Build IoT and Edge Apps](https://docs.ionoid.io/docs/build-iot-archive-apps.html)
 to build IoT archive apps.
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />
