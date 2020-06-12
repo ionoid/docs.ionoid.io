@@ -8,6 +8,9 @@ Ionoid.io is structured as organizations where each organization includes a set
 of projects. Registered devices at Ionoid.io always belong to only one project and
 are unique across the whole organization.
 
+To get an overview of the Ionoid.io dashboard, please visit the
+[Dashboard Structure](/docs/dashboard-structure.md) page.
+
 
 ## Create a Project
 
