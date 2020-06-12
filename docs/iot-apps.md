@@ -400,8 +400,7 @@ These steps describe how we manually built our previous example [Hello World IoT
 
     - Generate the app tar archive, in the following example, we assume we build for ARMv7.
       ```bash
-         cd hello-world
-         tar -cvf ../hello-world-armv7-v0.2.tar *
+         tar cvvf hello-world-armv7-v0.2.tar -C hello-world --transform='s,^./,,' .
       ```
 
     - The `hello-world-armv7-v0.2.tar` is our final app that can be deployed to IoT Devices.
