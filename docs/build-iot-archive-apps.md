@@ -142,6 +142,8 @@ Will be added soon.
 
 ### Node.js Apps Examples
 
+Will be added soon.
+
 ## Python Apps
 
 [Python](https://www.python.org/) is an interpreted, high-level, general-purpose programming language.
@@ -215,5 +217,6 @@ Will be added soon.
 
 #### Python Alpine based app
 
+Will be added soon.
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />
