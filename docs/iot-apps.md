@@ -27,7 +27,7 @@ it easy to stop, **disable**, or completely remove applications.
 If you are deploying [Static
 Binaries](https://en.wikipedia.org/wiki/Static_build) then please keep
 reading this document. Static binaries will have an auto generated
-[App yaml file](#app-yaml-format).
+[App YAML file](#app-yaml-format).
 
 
 - Archive
@@ -36,19 +36,19 @@ reading this document. Static binaries will have an auto generated
 files are standard files format that were released several years ago, they
 are well supported and the tools to process them are all Open Source tools.
 If you are deploying Archive apps then please keep reading this
-document. Archive apps must include an [App yaml file](#app-yaml-format)
+document. Archive apps must include an [App YAML file](#app-yaml-format)
 that describes how the application will run.
 
 
-- Modern [docker](https://docker.com) containers **in progress - still
-under development**.
+- Modern [docker](https://docker.com) containers (*in progress - still
+under development*).
 If you are deploying [docker container](https://docker.com) apps then
 please go directly to this link [docker apps](#docker-apps).
 
 
 ### App YAML Format
 
-Each app is described using The App yaml format. The App yaml is
+Each app is described using The App YAML format. The App yaml is
 a simple manifest to describe how the app should work, it is fully
 described in the `app.yaml` file, next section, and only works with
 apps that are static binaries or archive apps.
@@ -67,7 +67,7 @@ For [static binaries](#static-binaries) with no dependencies, an
 app should run.
 
 
-App Yaml file example:
+App YAML file example:
 
 ```yaml
 # Note: lines starting with `#` are comments and have no semantics.
@@ -376,9 +376,9 @@ multiple tools:
 contained IoT and Edge apps.
 
 
-* [Debian debootstrap](https://wiki.debian.org/Debootstrap) to bootstrap a basic debian
+* [Debian debootstrap](https://wiki.debian.org/Debootstrap) to bootstrap a basic Debian
 image. Then the application, its bundles and the `app.yaml` file should all be
-added to the debian image that will be used to generate the artifact tarball.
+added to the Debian image that will be used to generate the artifact tarball.
 
 
 * Minimal simple way to build archive apps:

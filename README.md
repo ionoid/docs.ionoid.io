@@ -5,7 +5,7 @@
 
 ## Install dependecices
 
-Install `Node.js` and `npm` for your Linux distribution as they are need to build the documentation.
+Install Node.js and `npm` for your Linux distribution as they are need to build the documentation.
 
 Then the package dependencies:
 ```bash
