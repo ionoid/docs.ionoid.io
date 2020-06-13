@@ -27,11 +27,11 @@ it easy to stop, **disable**, or completely remove applications.
 If you are deploying [Static
 Binaries](https://en.wikipedia.org/wiki/Static_build) then please keep
 reading this document. Static binaries will have an auto generated
-[App yaml file](#app-yaml-format). 
+[App yaml file](#app-yaml-format).
 
 
 - Archive
-[tarball](https://en.wikipedia.org/wiki/Tar_(computing) or
+[tarball](https://en.wikipedia.org/wiki/Tar_(computing)) or
 [zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps. The archive
 files are standard files format that were released several years ago, they
 are well supported and the tools to process them are all Open Source tools.
