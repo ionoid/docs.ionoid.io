@@ -1,6 +1,6 @@
 # Linux IoT and Edge Apps
 
-Ionoid.io IoT Apps are self contained apps, all the software, metadata,
+Ionoid.io IoT Apps are self contained apps. The application software, metadata,
 libraries and other dependencies are bundled within the app package.
 
 Installed apps are located on device storage at:

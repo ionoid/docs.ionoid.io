@@ -15,9 +15,9 @@ inside the root directory `/` of the archive.
 [Linux containers](https://en.wikipedia.org/wiki/List_of_Linux_containe) are a modern technology that packages the
 application and all its dependencies so the applications can run on any Linux system.
 Ionoid.io supports Linux containers by using classic archive files format that were first released in late
-of 1979. Using archive files allows to generate standalone packages that include everything the application
-needs to run, from software to libraries and configurations. More importantly, archive files are well
-supported and most of the tools to process them are standard open source tools.
+of 1979; this is motivated by the fact that IoT and Edge devices should have a long life time, and by using
+archive files for application packages, Ionoid.io ensures archive apps will continue to work in the future, as
+all the necessary tools to process them are standard open source tools.
 
 At run-time when the archive file is [deployed on devices](https://docs.ionoid.io/docs/deploy-iot-apps.html), the
 [app YAML file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) that is on the root directory `/` of the
@@ -51,7 +51,7 @@ Please follow [mkiot installation](https://github.com/ionoid/mkiot#install) docu
 
 ## Linux IoT Build Environments
 
-This section describes how to generate the IoT and Edge apps build environments.
+This section describes how to generate IoT and Edge apps build environments.
 
 Building an IoT app can somehow be challening, usually we suggest to start with
 a full build enviroment, then try to optimize later using [mkiot multi-stage
@@ -60,10 +60,11 @@ builds](https://github.com/ionoid/mkiot#multi-stage-builds) to reduce the final 
 Ionoid.io supports [Debian](https://www.debian.org) and [Alpine Linux](https://alpinelinux.org/) images, more will be
 added soon.
 
+Assuming [mkiot](https://github.com/ionoid/mkiot/) is installed and ready, let's start building our environments and
+apps.
+
 
 ### Debian Environment
-
-Assuming [mkiot](https://github.com/ionoid/mkiot/) is installed and ready, let's install a basic Debian environment.
 
 From the [mkiot examples](https://github.com/ionoid/mkiot#examples) we use the [Debian minimal
 buildspec.yaml](https://github.com/ionoid/mkiot/blob/master/examples/debian/buildspec.yaml):
@@ -95,6 +96,7 @@ This will generate an artifact in `tar archive format` at:
 ### Alpine Environment
 
 Under development, will be added soon.
+
 
 ## Node.js Apps
 
@@ -136,13 +138,45 @@ and edit the `buildspec.yaml` files. Make sure to copy in `script` file that is 
 too, according to [mkiot script command](https://github.com/ionoid/mkiot#build-spec-commands-documentation).
 
 
+
 ### Node.js Alpine Based Image
 
 Will be added soon.
 
 ### Node.js Apps Examples
 
-Will be added soon.
+#### Node.js Debian based apps
+
+* Hello-world app can be built using:
+    - [hello-world.js app](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/node.js/hello-world.js)
+    - [app.yaml file](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/node.js/app.yaml)
+    - [hello world buildspec files](https://github.com/ionoid/mkiot/tree/master/examples/apps/hello-world/node.js/debian/buster)
+
+    - In `buildspec.yaml` file, we add to the `artifacts` block the `files` block to copy the `app.yaml` and the app python file to the image:
+    ```yaml
+       files:
+           # copy app.yaml to root artifact /app.yaml
+           - app.yaml /app.yaml
+
+           # copy my application
+           - hello-world.js  /usr/bin/hello-world.js
+    ```
+
+    - Then build this example from `mkiot` source:
+    ```bash
+       cd examples/apps/hello-world/node.js/
+       sudo mkiot build debian/buster/hello-world_node-14.0_minimal_debian_armhf.yaml
+    ```
+
+    - This will generate the final artifact inside `./output/artifact/`.
+
+
+* More applications will be added soon.
+
+#### Node.js Alpine based apps
+
+* More applications will be added soon.
+
 
 ## Python Apps
 
@@ -190,7 +224,7 @@ Will be added soon.
 #### Python Debian based app
 
 * Hello-world app can be built using:
-    - [hello world.py app](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/python/hello-world.py)
+    - [hello-world.py app](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/python/hello-world.py)
     - [app.yaml file](https://github.com/ionoid/mkiot/blob/master/examples/apps/hello-world/python/app.yaml)
     - [hello world buildspec files](https://github.com/ionoid/mkiot/tree/master/examples/apps/hello-world/python/debian/buster)
 
@@ -207,7 +241,7 @@ Will be added soon.
     - Then build this example from `mkiot` source:
     ```bash
        cd examples/apps/hello-world/python/
-       sudo mkiot build debian/buster/buildspec-python3-minimal-debian-armhf.yaml
+       sudo mkiot build debian/buster/hello-world_python3_minimal_debian_armhf.yaml
     ```
 
     - This will generate the final artifact inside `./output/artifact/`.
