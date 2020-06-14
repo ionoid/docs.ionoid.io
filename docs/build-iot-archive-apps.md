@@ -172,10 +172,11 @@ Will be added soon.
 
 
 
-* [Node-RED](https://nodered.org/)
-![Node-RED](/resources/node-red-logo.png) Low-code programming for event-driven applications, can be built using:
+* [Node-RED](https://nodered.org/)  - Low-code programming for event-driven applications
 
-    - [Build Node-RED documentation](https://github.com/ionoid/mkiot/tree/master/examples/apps/node-red)
+    - Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+
+    - Node-RED artifacts can be built using the following [build Node-RED](https://github.com/ionoid/mkiot/tree/master/examples/apps/node-red) documentation.
 
 
 * More applications will be added soon.
