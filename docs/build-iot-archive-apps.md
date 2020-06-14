@@ -173,7 +173,7 @@ Will be added soon.
 
 
 * [Node-RED](https://nodered.org/)
-![Node-RED](resources/node-red-logo.png) Low-code programming for event-driven applications, can be built using:
+![Node-RED](/resources/node-red-logo.png) Low-code programming for event-driven applications, can be built using:
 
     - [Build Node-RED documentation](https://github.com/ionoid/mkiot/tree/master/examples/apps/node-red)
 
