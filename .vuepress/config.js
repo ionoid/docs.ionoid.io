@@ -81,6 +81,9 @@ module.exports = {
             path: '/docs/debug-iot-devices.md'
           },
           {
+            title: 'SealOS Secure Linux-IoT',
+            path: '/docs/sealos-doc.md'
+          {
             title: 'Flash OS Image to Storage',
             path: '/docs/flash-os-image-to-storage.md'
           },
