@@ -61,6 +61,10 @@ module.exports = {
             path: '/docs/monitor-and-manage-devices.md'
           },
           {
+            title: 'Organizations and Collaboration',
+            path: '/docs/organizations-and-collaboration.md'
+          },
+          {
             title: 'Deploy IoT Apps',
             path: '/docs/deploy-iot-apps.md'
           },
@@ -73,12 +77,12 @@ module.exports = {
             path: '/docs/build-iot-archive-apps.md'
           },
           {
-            title: 'Organizations and Collaboration',
-            path: '/docs/organizations-and-collaboration.md'
-          },
-          {
             title: 'Debug IoT Devices',
             path: '/docs/debug-iot-devices.md'
+          },
+          {
+            title: 'SealOS Secure Linux-IoT',
+            path: '/docs/sealos-doc.md'
           },
           {
             title: 'Flash OS Image to Storage',
