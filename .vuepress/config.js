@@ -61,6 +61,10 @@ module.exports = {
             path: '/docs/monitor-and-manage-devices.md'
           },
           {
+            title: 'Organizations and Collaboration',
+            path: '/docs/organizations-and-collaboration.md'
+          },
+          {
             title: 'Deploy IoT Apps',
             path: '/docs/deploy-iot-apps.md'
           },
@@ -71,10 +75,6 @@ module.exports = {
           {
             title: 'Build IoT and Edge Apps',
             path: '/docs/build-iot-archive-apps.md'
-          },
-          {
-            title: 'Organizations and Collaboration',
-            path: '/docs/organizations-and-collaboration.md'
           },
           {
             title: 'Debug IoT Devices',
