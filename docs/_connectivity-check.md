@@ -16,6 +16,10 @@ The `Connectiviy Check` support 4 parameters:
 Checks](/steps/projects-and-devices/connectivity-checks.png)
 
 
+The `network reconfiguration` operation will perform:
+    - Reset all `Network Manager` connections
+    - Reset all GSM modems and `Modem Manager` connections.
+
 The `Failure Action` supports the following operations:
     - No action: do not take any action, device state may stay in failure until connectiviy is back. Default.
     - Normal reboot: performs a normal reboot operation.
@@ -25,7 +29,7 @@ The `Failure Action` supports the following operations:
     - Force poweroff: performs a forced poweroff operation by terminating all processes.
     - Immediate poweroff: similar to a hardware poweroff operation, which might result in data loss.
 
-To be supported soon:
+    To be supported soon:
     - exit: performs a `systemd` service manager exit call. Use this only with enabled hardware watchdog.
     - exit-force: porforms a forced exit by `systemd` the service manager. Use this only with enabled hardware watchdog.
 
