@@ -126,6 +126,9 @@ Selecting an incorrect plan may result in billing issues for your account or
 prevent connectivity.
 :::
 
+#### Connectivity Check
+
+<Content :page-key="getPageKey($site.pages, '/docs/_connectivity-check.html')" />
 
 #### Boot Configuration
 
