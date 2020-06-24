@@ -86,54 +86,7 @@ You can change the default
 [Google DNS](https://developers.google.com/speed/public-dns) and
 [NTP](https://developers.google.com/time) servers that will be used by devices.
 
-### Advanced Settings
-
-#### WiFi Configuration
-
-You can add up to 5 WiFi networks by clicking on **Add a WiFi network**, for each
-network you can set:
-
-- The network ID (SSID) (required)
-- The network visibility (default to 'not hidden')
-- The network security mode (default to 'No security')
-- The network password (required unless the security mode is set to 'No
-  security')
-- The network priority: networks with higher priority will be preferred. Default
-is 0. The higher number means higher priority
-
-![Add a WiFi Network](/steps/projects-and-devices/add_wifi_network.png)
-
-You can also add a fallback WiFi network by clicking on **Add a fallback WiFi
-network**, this network will be used in case all other networks are unavailable.
-
-#### Cellular Configuration
-
-You can add up to 2 cellular networks, for each network you have to specify in
-order:
-
-- The country to which the cellular network belongs
-- The network ID (generally the provider name)
-- The APN used for this network ID
-
-Once you choosed the APN, fields 'Plan' and 'Usage' will be filled with the
-corresponding data. Use this data to confirm that APN you choosed is really the
-one you are aiming to use.
-
-![Add a Cellular Network](/steps/projects-and-devices/add_cellular_network.gif)
-
-::: warning
-Selecting an incorrect plan may result in billing issues for your account or
-prevent connectivity.
-:::
-
-#### Connectivity Check
-
-<Content :page-key="getPageKey($site.pages, '/docs/_connectivity-check.html')" />
-
-#### Boot Configuration
-
-Here you can specify the kernel boot options.
-
+<Content :page-key="getPageKey($site.pages, '/docs/_advanced-settings.html')" />
 
 ### Project Environment Variables
 
