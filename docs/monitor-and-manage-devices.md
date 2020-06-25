@@ -11,6 +11,7 @@ them, get their status, deploy apps on them, reboot them, ... etc
 Each device can be accessed through its dedicated information page:
 <the-device-details-page/>. Among the information that are displayed on this page, we have:
 
+- [Device status](#device-status)
 - Device model and hostname
 - Device network information (IP addresses, connected networks, ... etc)
 - Device system information (Linux, SealOS, Systemd, Docker versions, ... etc)
@@ -20,6 +21,23 @@ Each device can be accessed through its dedicated information page:
 
 ![Device Details Page](/steps/monitoring-devices/device-details-page.gif)
 
+## Device Status
+
+The device can be in one the 9 following status:
+
+- **STARTING**: Device is starting
+- **ONLINE**: Device is online and in a clean state
+- **ERRORS**: Device is online but has some errors and/or failures
+- **MAINTENANCE**: Device is online but is in maintenance mode trying to auto
+  recover from failures
+- **OFFLINE**: Device is offline and did not update Ionoid.io with its status.
+  (The device can be running but due to connectivity issues we are unable to
+  determine its state)
+- **UPDATE**: Device is updating the operating system
+- **UPDATE-MANAGER**: Device is updating the Ionoid SealOS Manager
+- **DEPLOYING**: Device is downloading and deploying applications or files
+- **ROLLING-BACK**: Device is performing a rollback operating of software or
+  applications
 
 ## Realtime Activity Logs
 
