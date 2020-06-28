@@ -1,6 +1,6 @@
 # IoT Apps deployment
 
-Ionoid.io make it easy to deploy IoT and Edge Linux apps on devices, in just 
+Ionoid.io make it easy to deploy IoT and Edge Linux apps on devices, in just
 few clicks, you can deploy your app on hundreds or thousands of devices.
 
 The dashboard also provides a way to deploy on a subset of devices, using filters
@@ -14,7 +14,7 @@ version in case of errors.
 In the next sections, we consider that you have:
 
 - [Created](/docs/getting-started.md) an account on Ionoid.io
-- [Created](/docs/create-projects.md) at least one project
+- [Created](/docs/manage-projects.md) at least one project
 - [Registered](/docs/register-devices.md) at least one device on this project
 
 If not, please follow the guidelines on the links above then return to this page.

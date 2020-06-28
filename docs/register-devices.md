@@ -25,7 +25,7 @@ in more details.
 ## Prepare Registering
 
 On Ionoid.io, devices belong to projects. If you didn't yet create a project,
-please follow [these guidlines](/docs/create-projects.md). Once you've created a
+please follow [these guidlines](/docs/manage-projects.md). Once you've created a
 project, open the **ADD A DEVICE** tab, you will notice 5 sections:
 
 
