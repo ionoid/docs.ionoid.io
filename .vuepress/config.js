@@ -49,8 +49,8 @@ module.exports = {
             path: '/docs/getting-started.md'
           },
           {
-            title: 'Create Projects',
-            path: '/docs/create-projects.md'
+            title: 'Manage Projects',
+            path: '/docs/manage-projects.md'
           },
           {
             title: 'Register Devices',

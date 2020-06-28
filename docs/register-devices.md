@@ -54,6 +54,8 @@ You can change the default
 [Google DNS](https://developers.google.com/speed/public-dns) and
 [NTP](https://developers.google.com/time) servers that will be used by devices.
 
+<Content :page-key="getPageKey($site.pages, '/docs/_deployment-settings.html')" />
+
 <Content :page-key="getPageKey($site.pages, '/docs/_advanced-settings.html')" />
 
 ### Project Environment Variables
