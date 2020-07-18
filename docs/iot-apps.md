@@ -78,7 +78,7 @@ App YAML file example:
 # Mendatory field.
 name: appname
 
-# Version of App
+# Version of App to be deployed
 # Mendatory field.
 version: 1.0
 
