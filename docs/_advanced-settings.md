@@ -49,10 +49,9 @@ prevent connectivity.
 If you have cellular connectivity problems or even WiFi related ones, the
 *Connectivity Check* feature will allow you to:
 
-- Monitor connectivity,
-- Try to recover,
-- Or reconfigure the connectivity,
-- And if all fails, reboot the device again.
+- Monitor connectivity status and try to recover.
+- Reconfigure the connectivity.
+- Reboot the device if all fails.
 
 However rebooting devices should be last resort operation, usually reconfiguring
 connectivity will solve the problem.
@@ -75,16 +74,12 @@ The *network reconfiguration* operation will:
 
 The *Failure Action* supports the following operations:
 
-- **No action (by default)**: do not take any action, device state may stay in failure until
-  connectiviy is back
-- **Normal reboot**: perform a normal reboot operation
-- **Force reboot**: perform a forced reboot operation by terminating all processes,
-  should cause no dirty file systems
-- **Immediate reboot**: similar to a hardware reboot, which might result in data loss
-- **Normal poweroff**: perform a normal poweroff operation
-- **Force poweroff**: perform a forced poweroff operation by terminating all processes
-- **Immediate poweroff**: similar to a hardware poweroff operation, which might
-  result in data loss
+- **No action (by default)**: do not take any action, device state may stay in failure or unknown mode, until
+  connectiviy is back.
+- **Normal reboot**: perform a normal reboot operation.
+- **Force reboot**: perform a forced reboot operation, all processes are killed, all file systems are unmounted 
+or remounted read-only. Should cause no dirty file systems.
+- **Immediate reboot**: similar to a hardware reboot, which might result in data loss.
 
 To be supported soon:
 
