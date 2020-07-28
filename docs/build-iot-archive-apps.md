@@ -106,12 +106,12 @@ details.
 
 We can build a Node.js environment using one of the supported distributions as a base image for the file system.
 
-
-### Node.js Debian Based Image
-
 The following examples demonstrate how to use `mkiot` to build a Node.js environment that is targeted to `ARMv7`
 architectures, as Node.js only supports `ARMv7` and above, for further documentation please see [the Node.js Download
 page](https://nodejs.org/en/download/).
+
+
+### Node.js Debian Based Image
 
 To have a Node.js environment from [upstream Node.js
 package](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages)
@@ -133,7 +133,7 @@ sudo mkiot build examples/node.js/14/buster/buildspec-node.js-devtools-debian-ar
 
 Produced artifacts will be inside `./output/artifacts/` in the current working directory.
 
-To change the enviroment in order to update which packages or denpendecies should be installed or removed, please copy
+To change the environment in order to update which packages or denpendecies should be installed or removed, please copy
 and edit the `buildspec.yaml` files. Make sure to copy in `script` file that is used during build to the right location
 too, according to [mkiot script command](https://github.com/ionoid/mkiot#build-spec-commands-documentation).
 
@@ -141,7 +141,28 @@ too, according to [mkiot script command](https://github.com/ionoid/mkiot#build-s
 
 ### Node.js Alpine Based Image
 
-Will be added soon.
+To have a Node.js environment from upsteam Alpine Linux, run `mkiot` with the following
+[Node.js minimal Alpine Linux
+buildspec.yaml](https://github.com/ionoid/mkiot/blob/master/examples/node.js/alpine/buildspec-node.js_minimal_alpine_armhf.yaml)
+
+```bash
+sudo mkiot build examples/node.js/alpine/buildspec-node.js_minimal_alpine_armhf.yaml
+```
+
+To have Node.js installed with some development tools to build npm packages, run `mkiot` build with the following
+[Node.js build-base Alpine
+buildspec.yaml](https://github.com/ionoid/mkiot/blob/master/examples/node.js/alpine/buildspec-node.js_build-base_alpine_armhf.yaml):
+
+```bash
+sudo mkiot build examples/node.js/alpine/buildspec-node.js_build-base_alpine_armhf.yaml
+```
+
+Produced artifacts will be inside `./output/artifacts/` in the current working directory.
+
+To change the environment in order to update which packages or denpendecies should be installed or removed, please copy
+and edit the `buildspec.yaml` files. Make sure to copy in `script` file that is used during build to the right location
+too, according to [mkiot script command](https://github.com/ionoid/mkiot#build-spec-commands-documentation).
+
 
 ### Node.js Apps Examples
 
@@ -224,7 +245,29 @@ sudo mkiot build examples/python/debian/buster/buildspec-python3-devtools-debian
 
 ### Python Alpine Based Image
 
-Will be added soon.
+The following examples demonstrate how to use `mkiot` to build a Python environment based on Alpine Linux that is targeted to `ARM`
+architectures.
+
+To have a `python2` environment on minimal Alpine Linux, run `mkiot` build with the [Python2 on minimal Debian
+buildspec.yaml](https://github.com/ionoid/mkiot/blob/master/examples/python/debian/buster/buildspec-python2-minimal-debian-armhf.yaml) file:
+
+```bash
+sudo mkiot build examples/python/debian/buster/buildspec-python2-minimal-debian-armhf.yaml
+```
+
+To have a `python3` environment on minimal Debian, run `mkiot` build with the [Python3 on minimal Debian
+buildspec.yaml](https://github.com/ionoid/mkiot/blob/master/examples/python/debian/buster/buildspec-python3-minimal-debian-armhf.yaml)
+file:
+
+```bash
+sudo mkiot build examples/python/debian/buster/buildspec-python3-minimal-debian-armhf.yaml
+```
+
+To have a `python3` environment on Debian with some development packages, run `mkiot` build with the [Python3 on
+devtools Debian
+buildspec.yaml](https://github.com/ionoid/mkiot/blob/master/examples/python/debian/buster/buildspec-python3-devtools-debian-armhf.yaml)
+file:
+
 
 
 ### Python Apps Examples

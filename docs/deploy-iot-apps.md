@@ -1,9 +1,9 @@
 # IoT Apps deployment
 
-Ionoid.io make it easy to deploy IoT and Edge Linux apps on devices, in just
-few clicks, you can deploy your app on hundreds or thousands of devices.
+Ionoid.io make it easy to deploy apps on IoT and Edge Linux devices, in just
+few clicks, an App can be deployed on hundreds or thousands of devices.
 
-The dashboard also provides a way to deploy on a subset of devices, using filters
+The dashboard provides a way to deploy on a subset of devices, using filters
 based on device names (for example, deploy only on devices
 with names matching `weather-station-*`), or devices with a specific status
 (for example device with status `error` to fix a bug).
@@ -19,7 +19,7 @@ In the next sections, we consider that you have:
 
 If not, please follow the guidelines on the links above then return to this page.
 
-## Deploy IoT Apps
+## Deploy Apps
 
 To deploy an IoT app you have three options:
 
@@ -119,7 +119,7 @@ progress of the app deployment on each device.
 Once the app deployed on at least one device of the project, you can see it
 listed on <the-project-app-list-page/>.
 
-## Update IoT Apps
+## Update Apps
 
 You can easily update an already deployed app to a newer version, for that you
 have three options:
@@ -214,7 +214,7 @@ https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world
 ) to deploy the version `v0.1`.
 :::
 
-## Rollback IoT Apps
+## Rollback Apps
 
 If you deployed an IoT app, then discovered that it is buggy (on one or more
 devices), do not panic! You can easily rollback the app version, for that you
@@ -268,7 +268,7 @@ device**
 - After few seconds, you will receive realtime messages about the rollback
   process on the selected devices
 
-## Start/Stop IoT Apps
+## Start/Stop Apps
 
 You can either stop an (already running) app on all or some devices of a project,
 or on a single device:
@@ -299,7 +299,7 @@ Device](/steps/deploy-iot-apps/stop-app-on-this-device.png)
   reboot of the device, it will auto-start
 :::
 
-## Disable IoT Apps
+## Disable Apps
 
 Disaling an IoT app is like [stopping it](#start-stop-iot-apps), except that it
 will not restart the next time the device reboots. You can either disable an
@@ -319,7 +319,7 @@ Project](/steps/deploy-iot-apps/disable-app-on-this-project.png)
 ![Click on Disable App on this
 Device](/steps/deploy-iot-apps/disable-app-on-this-device.png)
 
-## Delete IoT Apps
+## Delete Apps
 
 You can either delete an app on all or some devices of a project, or on a single
 device:
