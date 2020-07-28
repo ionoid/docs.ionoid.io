@@ -82,7 +82,7 @@ Confirm by clicking again on the **Disable device** button:
 ![Disable Device](/steps/monitoring-devices/disable-device.png)
 
 Disabling a device will put it in the `Unregistered` mode. This operation can
-also be done manually by creating a file named `disable` in the `/data`
+also be done manually by creating a file named `disable` in the `/data/ionoid/`
 directory of the device storage, for example, using the command:
 
 ```bash
