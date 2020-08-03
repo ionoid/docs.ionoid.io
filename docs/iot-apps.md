@@ -106,14 +106,14 @@ apps:
 
     # Optional command to be executed before the main executable app.
     # Can be used to setup environment.
-    start-command: /bin/echo "starting hello-world"
+    start-command: /bin/echo hello
 
     # Main executable app, mendatory field.
     command: /bin/hello-world
 
     # Optional command to be executed after the main app finishes
     # Can be used to clean up state.
-    stop-command: /bin/echo "hello-world stopped"
+    stop-command: /bin/echo stopped
 
     # Daemon Command type takes one of these values:
     # * simple:     the process configured with command
