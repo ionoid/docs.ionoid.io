@@ -8,8 +8,14 @@ based on device names (for example, deploy only on devices
 with names matching `weather-station-*`), or devices with a specific status
 (for example device with status `error` to fix a bug).
 
-From dashboard you can update your applications, but also rollback to previous
+From dashboard you can update your applications, but also if enabled, rollback to previous
 version in case of errors.
+
+
+## Apps deployment workflow
+
+When deploying [archive or static](https://docs.ionoid.io/docs/iot-apps.html#iot-apps) apps Ionoid.io allows you to have
+chose between the following deployment workflows.
 
 In the next sections, we consider that you have:
 
@@ -18,6 +24,28 @@ In the next sections, we consider that you have:
 - [Registered](/docs/register-devices.md) at least one device on this project
 
 If not, please follow the guidelines on the links above then return to this page.
+
+
+### Dual A/B deployment workflow
+
+This workflow allows you to have two copies of the application stored in device storage. This is known as the **dual A/B** workflow, where for
+each new deployment of the application; we keep the previous one where we can rollback to it, in order to recover from errors, application bugs, etc.
+Before activating this feature, please make sure you have enough space storage on devices for the uncompressed
+application files. Usually if your uncompressed application takes up less than 30% of the entire storage, then it should be fine.
+
+By default it is disabled, to enable this feature, please see [Project configuration](
+https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then [Redeploy project
+configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings) operation to redeploy the
+changes to devices.
+
+
+### Delta updates workflow
+
+If enabled, and if the application is an archive app, then the update mechanism will only download
+the generated `xdelta.xd3` file that represent the files that have changed, and use it to reconstruct the original archive file.
+This allows to reduce download time and bandwidth usage drastically.
+Before activating this feature, please make sure to read the Application delta update documentation and how it works.
+
 
 ## Deploy Apps
 
@@ -30,6 +58,9 @@ To deploy an IoT app you have three options:
 
 
 ### Deploy on a single device
+
+In this example we assume that the deployed applications are `archive` or `static` apps, deploying docker applications
+is same except that we use docker urls.
 
 - On <the-device-details-page/>, click on the **&#xFE19;** button and choose
 **Deploy app on this device** action:

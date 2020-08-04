@@ -32,7 +32,7 @@ reading this document. Static binaries will have an auto generated
 
 - Archive
 [tarball](https://en.wikipedia.org/wiki/Tar_(computing)) or
-[zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps. The archive
+compressed `tar.gz` apps. The archive
 files are standard files format that were released several years ago, they
 are well supported and the tools to process them are all Open Source tools.
 If you are deploying Archive apps then please keep reading this
