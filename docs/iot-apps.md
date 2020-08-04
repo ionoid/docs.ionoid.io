@@ -32,7 +32,7 @@ reading this document. Static binaries will have an auto generated
 
 - Archive
 [tarball](https://en.wikipedia.org/wiki/Tar_(computing)) or
-[zip](https://en.wikipedia.org/wiki/Zip_(file_format)) apps. The archive
+compressed `tar.gz` apps. The archive
 files are standard files format that were released several years ago, they
 are well supported and the tools to process them are all Open Source tools.
 If you are deploying Archive apps then please keep reading this
@@ -90,7 +90,10 @@ description: My App
 # the future.
 apps:
 
-  # App hello-world entry
+  # App hello-world entry, must be Alphanumeric and may contain the
+  # special characters "_", "." and "-".
+  # Minimum 2 characters, up to 64 characters.
+  # Mendatory field.
   hello-world:
 
     # Environment Vars for Hello World Optional
@@ -106,14 +109,14 @@ apps:
 
     # Optional command to be executed before the main executable app.
     # Can be used to setup environment.
-    start-command: /bin/echo "starting hello-world"
+    start-command: /bin/echo hello
 
     # Main executable app, mendatory field.
     command: /bin/hello-world
 
     # Optional command to be executed after the main app finishes
     # Can be used to clean up state.
-    stop-command: /bin/echo "hello-world stopped"
+    stop-command: /bin/echo stopped
 
     # Daemon Command type takes one of these values:
     # * simple:     the process configured with command
