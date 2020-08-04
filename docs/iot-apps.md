@@ -90,7 +90,10 @@ description: My App
 # the future.
 apps:
 
-  # App hello-world entry
+  # App hello-world entry, must be Alphanumeric and may contain the
+  # special characters "_", "." and "-".
+  # Minimum 2 characters, up to 64 characters.
+  # Mendatory field.
   hello-world:
 
     # Environment Vars for Hello World Optional
