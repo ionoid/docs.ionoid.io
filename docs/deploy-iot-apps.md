@@ -3,11 +3,6 @@
 Ionoid.io make it easy to deploy apps on IoT and Edge Linux devices, in just
 few clicks, an App can be deployed on hundreds or thousands of devices.
 
-The dashboard provides a way to deploy on a subset of devices, using filters
-based on device names (for example, deploy only on devices
-with names matching `weather-station-*`), or devices with a specific status
-(for example device with status `error` to fix a bug).
-
 From dashboard you can update your applications, but also if enabled, rollback to previous
 version in case of errors.
 
@@ -41,13 +36,44 @@ changes to devices.
 
 ### Delta updates workflow
 
-If enabled, and if the application is an archive app, then the update mechanism will only download
-the generated `xdelta.xd3` file that represent the files that have changed, and use it to reconstruct the original archive file.
-This allows to reduce download time and bandwidth usage drastically.
-Before activating this feature, please make sure to read the Application delta update documentation and how it works.
+The **delta update** workflow is an update mechanism for applications that only requires the user to download the code
+that has changed, not the whole program. It can significantly save time and bandwidth.
+
+An app can be updated faster and more efficiently due to this mechanism, as an example: a packaged archive app is 100
+megabytes will be updated with new files that add an additional two megabytes to the application's size, in this case
+only two megabytes will be downloaded instead of 102 megabytes.
+
+Ionoid.io uses the [VCDIFF format](https://en.wikipedia.org/wiki/VCDIFF) to perform delta encoding and updates, the full
+specification can be found in [IETF's RFC 3284: The VCDIFF Generic Differencing and Compression Data
+Format](https://tools.ietf.org/html/rfc3284). Ionoid.io uses the open source project [xdelta version
+3](https://en.wikipedia.org/wiki/Xdelta) to handle delta encoding.
+
+
+By default it is disabled, to enable this feature, please see [Project configuration](
+https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then [Redeploy project
+configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings) operation to redeploy the
+changes to devices.
+
+The working flow of delta updates is:
+
+1. Assuming you have packaged two different versions of my-app as `my-app-v1.tar.gz` and `my-app-v2.tar.gz`.
+
+2. Install [xdelta3](https://github.com/jmacd/xdelta) on your Linux working station, make sure it is `xdelta3` with
+**version 3**.
+Example:
+```bash
+$ sudo apt-get install xldeta3   # For debian/ubuntu based distributions
+```
+
+3. To be completed
 
 
 ## Deploy Apps
+
+The dashboard provides a way to deploy on a subset of devices, using filters
+based on device names (for example, deploy only on devices
+with names matching `weather-station-*`), or devices with a specific status
+(for example device with status `error` to fix a bug).
 
 To deploy an IoT app you have three options:
 
