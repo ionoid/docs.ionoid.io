@@ -62,7 +62,7 @@ The working flow of delta updates is:
 **version 3**.
 Example:
 ```bash
-$ sudo apt-get install xldeta3   # For debian/ubuntu based distributions
+$ sudo apt-get install xdelta3   # For debian/ubuntu based distributions
 ```
 
 3. To be completed
