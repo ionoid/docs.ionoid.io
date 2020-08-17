@@ -12,14 +12,6 @@ version in case of errors.
 When deploying [archive or static](https://docs.ionoid.io/docs/iot-apps.html#iot-apps) apps Ionoid.io allows you to have
 chose between the following deployment workflows.
 
-In the next sections, we consider that you have:
-
-- [Created](/docs/getting-started.md) an account on Ionoid.io
-- [Created](/docs/manage-projects.md) at least one project
-- [Registered](/docs/register-devices.md) at least one device on this project
-
-If not, please follow the guidelines on the links above then return to this page.
-
 
 ### Dual A/B deployment workflow
 
@@ -54,21 +46,59 @@ https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then [R
 configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings) operation to redeploy the
 changes to devices.
 
-The working flow of delta updates is:
 
-1. Assuming you have packaged two different versions of my-app as `my-app-v1.tar.gz` and `my-app-v2.tar.gz`.
+#### Delta updates example
 
-2. Install [xdelta3](https://github.com/jmacd/xdelta) on your Linux working station, make sure it is `xdelta3` with
+Assuming your app `my-app` has two different versions packaged as `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz`. The
+working flow of delta updates is:
+
+1. Install [xdelta3](https://github.com/jmacd/xdelta) on your Linux working station, make sure it is `xdelta3` with
 **version 3**.
 Example:
 ```bash
 $ sudo apt-get install xdelta3   # For debian/ubuntu based distributions
 ```
 
-3. To be completed
+2. Host your application `my-app` version `1.0.0` example at:
+```
+https://example.com/software/my-app/1.0.0/my-app-1.0.0.tar.gz
+```
+
+3. Produce the `app.xdelta` file of the `my-app` between `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz` using `xdelta3`:
+```bash
+$ xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
+```
+
+
+4. Host the generated `app.xdelta` file that updates `my-app` from version `1.0.0` to `2.0.0` or to any other last version at:
+```
+https://example.com/software/my-app/1.0.0/app.xdelta
+```
+
+Note: use the same URL directory path where the full package was hosted, point 2.
+
+
+5. Perform a delta update by specifying the Delta URL at:
+```
+https://example.com/software/my-app/
+```
+
+Note: This instructes devices to get the current version of `my-app`, and use it to construct the final URL. As an
+example if the current version is `1.0.0` then the final delta URL will be
+`https://example.com/software/my-app/1.0.0/app.xdelta`, this allows to automatically to update `my-app` from `1.0.0` to
+any version that was used to generate the `app.xdelta` diff file.
 
 
 ## Deploy Apps
+
+In the next sections, we consider that you have:
+
+- [Created](/docs/getting-started.md) an account on Ionoid.io
+- [Created](/docs/manage-projects.md) at least one project
+- [Registered](/docs/register-devices.md) at least one device on this project
+
+If not, please follow the guidelines on the links above then return to this page.
+
 
 The dashboard provides a way to deploy on a subset of devices, using filters
 based on device names (for example, deploy only on devices
