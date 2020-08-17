@@ -1,6 +1,6 @@
 # IoT Apps deployment
 
-Ionoid.io make it easy to deploy apps on IoT and Edge Linux devices, in just
+Ionoid.io makes it easy to deploy apps on IoT and Edge Linux devices, in just
 few clicks, an App can be deployed on hundreds or thousands of devices.
 
 From dashboard you can update your applications, but also if enabled, rollback to previous
@@ -9,11 +9,11 @@ version in case of errors.
 
 ## Apps deployment workflow
 
-When deploying [archive or static](https://docs.ionoid.io/docs/iot-apps.html#iot-apps) apps Ionoid.io allows you to have
-chose between the following deployment workflows.
+When deploying [archive or static](https://docs.ionoid.io/docs/iot-apps.html#iot-apps) apps there are
+two extra deployment workflows that you can select or even combine.
 
 
-### Dual A/B deployment workflow
+### 1. Dual A/B deployment workflow
 
 This workflow allows you to have two copies of the application stored in device storage. This is known as the **dual A/B** workflow, where for
 each new deployment of the application; we keep the previous one where we can rollback to it, in order to recover from errors, application bugs, etc.
@@ -26,7 +26,7 @@ configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project
 changes to devices.
 
 
-### Delta updates workflow
+### 2. Delta updates workflow
 
 The **delta update** workflow is an update mechanism for applications that only requires the user to download the code
 that has changed, not the whole program. It can significantly save time and bandwidth.
@@ -75,7 +75,7 @@ $ xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
 https://example.com/software/my-app/1.0.0/app.xdelta
 ```
 
-Note: use the same URL directory path where the full package was hosted, point 2.
+Use the same URL directory path where the full package was hosted, point 2.
 
 
 5. Perform a delta update by specifying the Delta URL at:
@@ -83,7 +83,7 @@ Note: use the same URL directory path where the full package was hosted, point 2
 https://example.com/software/my-app/
 ```
 
-Note: This instructes devices to get the current version of `my-app`, and use it to construct the final URL. As an
+This instructes devices to get the current version of `my-app`, and use it to construct the final URL. As an
 example if the current version is `1.0.0` then the final delta URL will be
 `https://example.com/software/my-app/1.0.0/app.xdelta`, this allows to automatically to update `my-app` from `1.0.0` to
 any version that was used to generate the `app.xdelta` diff file.
