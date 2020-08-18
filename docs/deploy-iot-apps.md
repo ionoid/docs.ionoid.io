@@ -41,7 +41,7 @@ Format](https://tools.ietf.org/html/rfc3284). Ionoid.io uses the open source pro
 3](https://en.wikipedia.org/wiki/Xdelta) to handle delta encoding.
 
 
-By default it is disabled, to enable this feature, please see [Project configuration](
+By default it is disabled, and app deployment is performed using the full application package. To enable this feature, please see [Project configuration](
 https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then [Redeploy project
 configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings) operation to redeploy the
 changes to devices.
