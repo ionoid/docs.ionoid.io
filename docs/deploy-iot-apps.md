@@ -50,7 +50,7 @@ changes to devices.
 #### Delta updates example
 
 Assuming your app `my-app` has two different versions packaged as `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz`. The
-working flow of delta updates is:
+working flow of a delta update from version `1.0.0` to `2.0.0` or to any other version is described in the next steps.
 
 1. Install [xdelta3](https://github.com/jmacd/xdelta) on your Linux working station, make sure it is `xdelta3` with
 **version 3**.
@@ -64,18 +64,21 @@ $ sudo apt-get install xdelta3   # For debian/ubuntu based distributions
 https://example.com/software/my-app/1.0.0/my-app-1.0.0.tar.gz
 ```
 
-3. Produce the `app.xdelta` file of the `my-app` between `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz` using `xdelta3`:
+Note that the app version of deployed apps is read from the [app.yaml
+file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) on devices, make sure it is always correctly set.
+
+
+3. Produce the diff `app.xdelta` file of the `my-app` between `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz` using `xdelta3`:
 ```bash
 $ xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
 ```
 
 
-4. Host the generated `app.xdelta` file that updates `my-app` from version `1.0.0` to `2.0.0` or to any other last version at:
+4. Host the generated `app.xdelta` file that updates `my-app` from version `1.0.0` to `2.0.0` or to any other last
+version at the same URL directory path where the full package was hosted, point 2.
 ```
 https://example.com/software/my-app/1.0.0/app.xdelta
 ```
-
-Use the same URL directory path where the full package was hosted, point 2.
 
 
 5. Perform a delta update by specifying the Delta URL at:
@@ -83,10 +86,17 @@ Use the same URL directory path where the full package was hosted, point 2.
 https://example.com/software/my-app/
 ```
 
-This instructes devices to get the current version of `my-app`, and use it to construct the final URL. As an
-example if the current version is `1.0.0` then the final delta URL will be
-`https://example.com/software/my-app/1.0.0/app.xdelta`, this allows to automatically to update `my-app` from `1.0.0` to
-any version that was used to generate the `app.xdelta` diff file.
+This instructes devices to:
+
+   - Get current version of the app: read the `my-app` [app.yaml
+file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) on devices, and use it to construct the final URL.
+
+   - Attach the `app.xdelta` to produce the final delta URL:
+```
+https://example.com/software/my-app/1.0.0/app.xdelta
+```
+
+This workflow allows to automatically update `my-app` from version `1.0.0` to any new version that was used to generate the `app.xdelta` diff file.
 
 
 ## Deploy Apps
