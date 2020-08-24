@@ -72,8 +72,8 @@ App YAML file example:
 ```yaml
 # Note: lines starting with `#` are comments and have no semantics.
 
-# Name of APP must be Alphanumeric and can contain the following
-# special characters "_", "." and "-".
+# Name of APP must be unique on the device.
+# Only alphanumeric + the special "_", "." and "-" characters are allowed.
 # Minimum 2 characters, up to 64 characters.
 # Mendatory field.
 name: appname
