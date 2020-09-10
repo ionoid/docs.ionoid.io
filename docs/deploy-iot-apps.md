@@ -305,6 +305,26 @@ progress of the app deployment on each device.
 Once the app deployed on at least one device of the project, you can see it
 listed on <the-project-app-list-page/>.
 
+
+### Predeployed applications
+
+There are cases where the applications should be packed with OS image, installed then run on first boot.
+This is supported by copying the application into the `/data/` partition, inside directory
+`/data/apps/archive/`. The directory has to be created in first place by the user, before booting the
+image.
+
+Example assuming mounted data storage is at `/mnt/data/`:
+```bash
+sudo mkdir -p /mnt/data/apps/archive/
+sudo cp my-app-v1.tar.gz /mnt/data/apps/archive/
+sync /mnt/data/apps/archive/my-app-v1.tar.gz
+umount /mnt/data/apps
+```
+
+When devices are booted, the directory `/data/apps/archive/` will be checked every 10mins to 15mins, all applications inside
+will be installed. After trigerring the installation, the corresponding applications packages are removed.
+
+
 ## Update Apps
 
 You can easily update an already deployed app to a newer version, for that you
