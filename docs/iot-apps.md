@@ -446,7 +446,7 @@ name: node-armv7
 version: v14.10.0
 apps:
   node-armv7:
-    command: node --version
+    command: /usr/local/bin/node --version
 ```
 
 ```bash
