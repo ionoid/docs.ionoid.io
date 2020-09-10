@@ -1,103 +1,192 @@
-# IoT Apps deployment
+# IoT Apps Deployment
 
 Ionoid.io makes it easy to deploy apps on IoT and Edge Linux devices, in just
 few clicks, an App can be deployed on hundreds or thousands of devices.
 
-From dashboard you can update your applications, but also if enabled, rollback to previous
-version in case of errors.
+From dashboard you can update your applications, but also if enabled, rollback
+to previous version in case of errors.
 
 
-## Apps deployment workflow
+## Apps Deployment Workflow
 
-When deploying [archive or static](https://docs.ionoid.io/docs/iot-apps.html#iot-apps) apps there are
-two extra deployment workflows that you can select or even combine.
-
-
-### 1. Dual A/B deployment workflow
-
-This workflow allows you to have two copies of the application stored in device storage. This is known as the **dual A/B** workflow, where for
-each new deployment of the application; we keep the previous one where we can rollback to it, in order to recover from errors, application bugs, etc.
-Before activating this feature, please make sure you have enough space storage on devices for the uncompressed
-application files. Usually if your uncompressed application takes up less than 30% of the entire storage, then it should be fine.
-
-By default it is disabled, to enable this feature, please see [Project configuration](
-https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then [Redeploy project
-configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings) operation to redeploy the
-changes to devices.
+When deploying [archive or static](
+https://docs.ionoid.io/docs/iot-apps.html#iot-apps) apps there are two extra
+deployment workflows that you can select or even combine.
 
 
-### 2. Delta updates workflow
+### 1. Dual A/B Deployment Workflow
 
-The **delta update** workflow is an update mechanism for applications that only requires the user to download the code
-that has changed, not the whole program. It can significantly save time and bandwidth.
+This workflow allows you to have two copies of the application stored in device
+storage. This is known as the **dual A/B** workflow, where for each new
+deployment of the application; we keep the previous one where we can rollback to
+it, in order to recover from errors, application bugs, etc.
 
-An app can be updated faster and more efficiently due to this mechanism, as an example: a packaged archive app is 100
-megabytes will be updated with new files that add an additional two megabytes to the application's size, in this case
-only two megabytes will be downloaded instead of 102 megabytes.
+Before activating this feature, please make sure you have enough space storage
+on devices for the uncompressed application files. Usually if your uncompressed
+application takes up less than 30% of the entire storage, then it should be fine.
 
-Ionoid.io uses the [VCDIFF format](https://en.wikipedia.org/wiki/VCDIFF) to perform delta encoding and updates, the full
-specification can be found in [IETF's RFC 3284: The VCDIFF Generic Differencing and Compression Data
-Format](https://tools.ietf.org/html/rfc3284). Ionoid.io uses the open source project [xdelta version
-3](https://en.wikipedia.org/wiki/Xdelta) to handle delta encoding.
+By default it is disabled, to enable this feature, please see
+[Project Configuration](
+https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then
+[Redeploy Project Configuration](
+https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings)
+operation to redeploy the changes to devices.
 
 
-By default it is disabled, and app deployment is performed using the full application package. To enable this feature, please see [Project configuration](
-https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then [Redeploy project
-configuration](https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings) operation to redeploy the
-changes to devices.
+### 2. Delta Updates Workflow
 
+The **delta update** workflow is an update mechanism for applications that only
+requires the user to download the code that has changed, not the whole program.
+It can significantly save time and bandwidth.
+
+An app can be updated faster and more efficiently due to this mechanism, as an
+example: a packaged archive app that is 100 megabytes will be updated with new
+files that add an additional two megabytes to the application's size, in this
+case only two megabytes will be downloaded instead of 102 megabytes.
+
+Ionoid.io uses the [VCDIFF format](https://en.wikipedia.org/wiki/VCDIFF) to
+perform delta encoding and updates, the full specification can be found in
+[IETF's RFC 3284: The VCDIFF Generic Differencing and Compression Data
+Format](https://tools.ietf.org/html/rfc3284). The open source project
+[xdelta version 3](https://en.wikipedia.org/wiki/Xdelta) is used to handle delta
+encoding.
+
+
+By default, delta updates option is disabled, and app deployment is performed
+using the full application package. To enable this feature, please see
+[Project configuration](
+https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then
+[Redeploy project configuration](
+https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings)
+operation to redeploy the changes to devices.
 
 #### Delta updates example
 
-Assuming your app `my-app` has two different versions packaged as `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz`. The
-working flow of a delta update from version `1.0.0` to `2.0.0` or to any other version is described in the next steps.
+Let's assume that the current app version has been deployed using the package
+file `my-app-1.0.0.tar.gz`, and that you want to deploy a new version packaged
+in file `my-app-2.0.0.tar.gz`. You will not need to upload the whole
+`my-app-2.0.0.tar.gz` file. Instead, you will upload the *difference* between
+the two packages, known under the fancy name of *the delta*.
 
-1. Install [xdelta3](https://github.com/jmacd/xdelta) on your Linux working station, make sure it is `xdelta3` with
-**version 3**.
-Example:
+To generate a delta between two files you will need to install [xdelta3](
+https://github.com/jmacd/xdelta) on your Linux working station (make sure it is
+`xdelta3` with **version 3**):
+
 ```bash
-$ sudo apt-get install xdelta3   # For debian/ubuntu based distributions
+# For example, in debian/ubuntu based distributions:
+sudo apt-get install xdelta3
 ```
 
-2. Host your application `my-app` version `1.0.0` example at:
-```
-https://example.com/software/my-app/1.0.0/my-app-1.0.0.tar.gz
-```
+The steps to perform a delta update are the following:
 
-Note that the app version of deployed apps is read from the [app.yaml
-file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) on devices, make sure it is always correctly set.
+1. Produce a delta file named `app.xdelta` between `my-app-1.0.0.tar.gz` and
+   `my-app-2.0.0.tar.gz` using `xdelta3`:
 
-
-3. Produce the diff `app.xdelta` file of the `my-app` between `my-app-1.0.0.tar.gz` and `my-app-2.0.0.tar.gz` using `xdelta3`:
 ```bash
-$ xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
+xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
 ```
 
+2. Host the generated `app.xdelta` file somewhere such that it must be inside a
+   folder named `1.0.0`, the full URL will be, for example:
 
-4. Host the generated `app.xdelta` file that updates `my-app` from version `1.0.0` to `2.0.0` or to any other last
-version at the same URL directory path where the full package was hosted, point 2.
 ```
 https://example.com/software/my-app/1.0.0/app.xdelta
 ```
 
+::: warning N. B.
+- The current deployed version on device is read from the [app.yaml
+file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) in package
+file `my-app-1.0.0.tar.gz` present on the device, not from the package filename
+itself, which can just as well be named, say, `my-app-first-version.tar.gz`.
+- The file **must be** named `app.xdelta` and the folder **must be** named `1.0.0`.
+:::
 
-5. Perform a delta update by specifying the Delta URL at:
-```
-https://example.com/software/my-app/
-```
+3. Perform the delta update by navigating to <the-project-app-details-page/> or
+<the-device-app-details-page/>, then on the actions menu, click on **Update app
+on all/selected/current device(s)**, make sure that **Delta Update** is enabled
+and paste the following *delta base URL* `https://example.com/software/my-app/`:
 
-This instructes devices to:
+![Paste Delta Update URL](/steps/deploy-iot-apps/delta_update_app_on_devices.png)
 
-   - Get current version of the app: read the `my-app` [app.yaml
-file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) on devices, and use it to construct the final URL.
+::: warning N. B.
+This is the **delta base URL** that must be filled (without the `1.0.0/app.xdelta`)
+and not the **full URL**. Passing the full URL will result in a failure.
+:::
 
-   - Attach the `app.xdelta` to produce the final delta URL:
+This instructs the device to:
+
+- Get the current version of the app from the local [app.yaml
+file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format), in this case
+`1.0.0`.
+
+- Use the current version to construct the final URL by appending
+`1.0.0/app.xdelta` to the delta base URL, to finally produce:
+
 ```
 https://example.com/software/my-app/1.0.0/app.xdelta
 ```
 
-This workflow allows to automatically update `my-app` from version `1.0.0` to any new version that was used to generate the `app.xdelta` diff file.
+- Download the delta file and patch the current packaged version.
 
+::: details Why should I provide the delta base URL and not the full delta URL
+Even if it does not seem to be logical in the previous simple case to provide the
+delta base URL `https://example.com/software/my-app/` instead of the full URL,
+this convention will prove useful when deploying multiple delta updates
+for multiple different obsolete versions.
+
+Suppose you have `my-app` deployed on 10 devices, you regularly deploy updates of
+this app to keep it up to date. But due to connectivity issues, some devices
+still have an obsolete version of the app (latest version is 10.0.0):
+
+- Device A: has version 5.0.0
+- Device B: has version 7.0.0
+- Device C: has version 9.0.0
+
+All remaining devices have version 10.0.0. You will not have to update each
+device individually. Instead, prepare 3 delta files:
+
+- A first one for passage from 5.0.0 to 10.0.0
+- A second one for passage from 7.0.0 to 10.0.0
+- A third one for passage from 9.0.0 to 10.0.0
+
+All delta files need to be named `app.xdelta`, but each of them must be put
+inside a folder named with the starting version, thus:
+
+- The first delta update must be put in folder `5.0.0/`
+- The second delta update must be put in folder `7.0.0/`
+- The third delta update must be put in folder `9.0.0/`
+
+So, folder structure at the `my-app` level must be:
+
+```
+my-app
+├── 5.0.0
+│   └── app.xdelta # represents transition from 5.0.0. to 10.0.0
+├── 7.0.0
+│   └── app.xdelta # represents transition from 7.0.0. to 10.0.0
+└── 9.0.0
+    └── app.xdelta # represents transition from 9.0.0. to 10.0.0
+```
+
+Then, all what you need to do is to visit <the-project-app-details-page/>,
+and choose **Update app on all devices**, then you paste the delta base URL
+`https://example.com/software/my-app/`. Each device will go and look at path
+`CURRENT_VERSION/app.xdelta` in the delta base URL based on the `CURRENT_VERSION`
+of the app installed on it, then download the delta file and patch app package
+with it:
+
+- Device A: will read local version `5.0.0` and fetch path `5.0.0/app.xdelta` in
+  delta base URL
+- Device B: will read local version `7.0.0` and fetch path `7.0.0/app.xdelta` in
+  delta base URL
+- Device A: will read local version `9.0.0` and fetch path `9.0.0/app.xdelta` in
+  delta base URL
+
+Don't worry about up-to-date devices that will try to fetch `10.0.0/app.xdelta`,
+they will simply fail to download the delta file and cancel the update. If you want
+to avoid such inoffensive errors, just select devices with outdated app version
+before updating app.
+:::
 
 ## Deploy Apps
 
