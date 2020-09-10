@@ -412,69 +412,8 @@ App](https://github.com/ionoid/docs-examples/blob/master/archives/hello-world-ar
 IoT and Edge apps to be as simple as possible using the [App YAML file](#app-yaml-format), while at the same time offers the
 unique way to run apps without including complex containers feautres that are more suited for the cloud.
 
-The following steps demonstrates on how to pull a [Node.js docker](https://hub.docker.com/_/node) container for `ARMv7` and export
-it into an archive app, that is then deployed directly using [Ionoid.io
-deployment](https://docs.ionoid.io/docs/deploy-iot-apps.html).
-
-
-<Content :page-key="getPageKey($site.pages, '/docs/_extract-docker-image-requirements.html')" />
-
-
-Steps to extract docker containers (run with sudo if necessary):
-
-
-1. Pull [Node.js for ARMv7](https://hub.docker.com/_/node?tab=tags&page=1&name=alpine) container based on `Alpine Linux`:
-```bash
-docker pull --platform linux/arm/v7 node:current-alpine
-docker images
-REPOSITORY                                                      TAG                                        IMAGE ID            CREATED             SIZE
-node                                                            current-alpine                             013139600021        19 hours ago        107MB
-```
-
-2. Extract docker image layers:
-```bash
-docker save node | undocker --no-whiteouts -d -i -o node-armv7 node:current-alpine
-```
-
-Make sure to use the right `tag`. Example: `current-alpine`. The above command extracts the image into directory
-`node-armv7`.
-
-
-3. Add the following `app.yaml` file to `node-armv7` directory:
-```yaml
-name: node-armv7
-version: v14.10.0
-apps:
-  node-armv7:
-    command: /usr/local/bin/node --version
-```
-
-```bash
-cp app.yaml node-armv7/
-```
-
-4. Tar compress application and produce the app archive from parent directory of `node-armv7`:
-```bash
-sudo tar --numeric-owner --create --auto-compress \
-        --xattrs --xattrs-include=* --file node-v14.10.0-armv7.tar.gz \
-        --directory node-armv7 --transform='s,^./,,' .
-```
-
-5. Upload and deploy your application according to [deploy IoT apps documentation](https://docs.ionoid.io/docs/deploy-iot-apps.html)
-
-The built node.js archive of the previous example can be found here
-[node-v14.10.0-armv7.tar.gz](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz)
-
-
-6. To update your archive using [Delta Update
-workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow)
-
-Produce the `app.xdelta` file then upload it according to the URL schema:
-```
-xdelta3 -e -s node-v14.10.0-armv7.tar.gz node-v14.11.0-armv7.tar.gz app.xdelta
-```
-
-Follow the [Delta Update workflow](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz) to update your application from a specified version to any other version directly.
+Please refer to the next chaper [Build IoT and Edge Apps](https://docs.ionoid.io/docs/build-iot-archive-apps.html)
+to see how to take advantage of docker, export and build archive apps.
 
 
 ### Mkiot Archive Apps
