@@ -1,7 +1,9 @@
 # Linux IoT and Edge Apps
 
-Ionoid.io IoT Apps are self contained apps. The application software, metadata,
-libraries and other dependencies are bundled within the app package.
+[Ionoid.io](https://ionoid.io/) IoT and Edge Linux apps are archive files that bundle the application,
+libraries, files and other dependencies. Using some of
+[Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
+file system isolation, devices are able to run multiple applications isolated from one another.
 
 Installed apps are located on device storage at:
 ```
@@ -40,10 +42,11 @@ document. Archive apps must include an [App YAML file](#app-yaml-format)
 that describes how the application will run.
 
 
-- Modern [docker](https://docker.com) containers (*in progress - still
-under development*).
+- Modern [docker](https://docker.com) containers (*in progress - will be released soon*).
 If you are deploying [docker container](https://docker.com) apps then
 please go directly to this link [docker apps](#docker-apps).
+
+<Content :page-key="getPageKey($site.pages, '/docs/_build-archive-apps-with-docker.html')" />
 
 
 ### App YAML Format
@@ -354,7 +357,7 @@ Archive apps are composed of the following files:
 ```
 
 Example of a hello world app:
-[IoT App Golang Hello World](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
+[IoT App Golang Hello World](https://github.com/ionoid/docs-examples/blob/master/archives/hello-world-armv7-v0.2.tar?raw=true)
 
 The content of the `app.yaml` file would be:
 ```
@@ -365,27 +368,16 @@ apps:
     command: /bin/hello-world
 ```
 
-### Build Archive Apps
-
 Since archive apps are archive files that contain the app and its dependencies,
-there are several methods to build such archive files. The following section
-details this for simple applications that do not need a full
-Linux file systems and other tools.
-
-For more complex applications with dependencies and often docker images, there are
-multiple tools:
-
-* [Make IoT Apps](#make-iot-apps) is our standard method to build lightweight self
-contained IoT and Edge apps.
+there are several Open Source based methods to build such archive files.
+The following sections details this with real examples.
 
 
-* [Debian debootstrap](https://wiki.debian.org/Debootstrap) to bootstrap a basic Debian
-image. Then the application, its bundles and the `app.yaml` file should all be
-added to the Debian image that will be used to generate the artifact tarball.
+### Minimal Archive Apps
 
-
-* Minimal simple way to build archive apps:
-These steps describe how we manually built our previous example [Hello World IoT App](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
+The following is a minimal simple way to build archive apps, these steps describe how we manually built our previous
+example [Hello World IoT
+App](https://github.com/ionoid/docs-examples/blob/master/archives/hello-world-armv7-v0.2.tar?raw=true) for `ARMv7`:
 
     - Create the app directory `hello-world`.
       ```bash
@@ -408,24 +400,104 @@ These steps describe how we manually built our previous example [Hello World IoT
 
     - The `hello-world-armv7-v0.2.tar` is our final app that can be deployed to IoT Devices.
 
-    - Or generate a zip archive: **Under development, will be supported soon.**
+    - The app archive can also be compressed to save data usage later with the following:
+      ```bash
+         tar czvf hello-world-armv7-v0.2.tar.gz -C hello-world --transform='s,^./,,' .
+      ```
 
 
-## Docker Apps
+### Docker Archive Apps
 
-[Ionoid.io](https://ionoid.io/) supports [docker](https://docker.com) containers and apps.
+[Docker](https://docker.com) offers the necessary tooling to build containers, then export them as archive apps. This laverages
+IoT and Edge apps to be as simple as possible using the [App YAML file](#app-yaml-format), while at the same time offers the
+unique way to run apps without including complex containers feautres that are more suited for the cloud.
 
-**This is still under development and will be released soon.**
+The following steps demonstrates on how to pull a [Node.js docker](https://hub.docker.com/_/node) container for `ARMv7` and export
+it into an archive app, that is then deployed directly using [Ionoid.io
+deployment](https://docs.ionoid.io/docs/deploy-iot-apps.html).
 
 
-## Make IoT Apps
+<Content :page-key="getPageKey($site.pages, '/docs/_extract-docker-image-requirements.html')" />
 
-Ionoid.io IoT and Edge Linux apps are archive files that bundle the application,
-libraries, files and other dependencies. Using some of
-[Linux Containers Technology](https://en.wikipedia.org/wiki/List_of_Linux_containers) to implement
-file system isolation, devices are able to run multiple applications isolated from one another.
 
-Please refer to the next chapter [Build IoT and Edge Apps](https://docs.ionoid.io/docs/build-iot-archive-apps.html)
-to build IoT archive apps.
+Steps to extract docker containers (run with sudo if necessary):
+
+
+1. Pull [Node.js for ARMv7](https://hub.docker.com/_/node?tab=tags&page=1&name=alpine) container based on `Alpine Linux`:
+```bash
+docker pull --platform linux/arm/v7 node:current-alpine
+docker images
+REPOSITORY                                                      TAG                                        IMAGE ID            CREATED             SIZE
+node                                                            current-alpine                             013139600021        19 hours ago        107MB
+```
+
+2. Extract docker image layers:
+```bash
+docker save node | undocker --no-whiteouts -d -i -o node-armv7 node:current-alpine
+```
+
+Make sure to use the right `tag`. Example: `current-alpine`. The above command extracts the image into directory
+`node-armv7`.
+
+
+3. Add the following `app.yaml` file to `node-armv7` directory:
+```yaml
+name: node-armv7
+version: v14.10.0
+apps:
+  node-armv7:
+    command: node --version
+```
+
+```bash
+cp app.yaml node-armv7/
+```
+
+4. Tar compress application and produce the app archive from parent directory of `node-armv7`:
+```bash
+sudo tar --numeric-owner --create --auto-compress \
+        --xattrs --xattrs-include=* --file node-v14.10.0-armv7.tar.gz \
+        --directory node-armv7 --transform='s,^./,,' .
+```
+
+5. Upload and deploy your application according to [deploy IoT apps documentation](https://docs.ionoid.io/docs/deploy-iot-apps.html)
+
+The built node.js archive of the previous example can be found here
+[node-v14.10.0-armv7.tar.gz](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz)
+
+
+6. To update your archive using [Delta Update
+workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow)
+
+Produce the `app.xdelta` file then upload it according to the URL schema:
+```
+xdelta3 -e -s node-v14.10.0-armv7.tar.gz node-v14.11.0-armv7.tar.gz app.xdelta
+```
+
+Follow the [Delta Update workflow](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz) to update your application from a specified version to any other version directly.
+
+
+### Mkiot Archive Apps
+
+[Make IoT Apps](#make-iot-apps) is our standard method to build lightweight self
+contained IoT and Edge apps. For more details, please refer to the next chapter [Build IoT and Edge Apps](https://docs.ionoid.io/docs/build-iot-archive-apps.html)
+to build IoT archive apps using [mkiot](https://github.com/ionoid/mkiot).
+
+
+### Debian deboostrap Apps
+
+[Debian debootstrap](https://wiki.debian.org/Debootstrap) is an Open Source tool to bootstrap a basic Debian
+image. The application, its bundles and the `app.yaml` file should all be
+added to the Debian image that will be used to generate the artifact tarball.
+
+
+
+## Docker containers
+
+[Ionoid.io](https://ionoid.io/) supports [docker](https://docker.com) containers and apps that are handled directly by
+docker.
+
+**This will be released soon.**
+
 
 <Content :page-key="getPageKey($site.pages, '/docs/_have-questions.html')" />
