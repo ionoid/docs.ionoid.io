@@ -60,6 +60,9 @@ https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then
 https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings)
 operation to redeploy the changes to devices.
 
+
+
+
 #### Delta updates example
 
 Let's assume that the current app version has been deployed using the package

@@ -78,21 +78,54 @@ sudo tar --numeric-owner --create --auto-compress \
         --directory node-armv7 --transform='s,^./,,' .
 ```
 
+The final size of app archive in this case is:
+```
+node-v14.10.0-armv7.tar.gz  36M
+```
+
+
 5. Upload and deploy your application according to [deploy IoT apps documentation](https://docs.ionoid.io/docs/deploy-iot-apps.html)
 
 The built node.js archive of the previous example can be found here
 [node-v14.10.0-armv7.tar.gz](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz)
 
 
-6. To update your archive using [Delta Update
+6. Later you are able to update your application using the [Delta Update
 workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow)
 
-Produce the `app.xdelta` file then upload it according to the URL schema:
-```
-xdelta3 -e -s node-v14.10.0-armv7.tar.gz node-v14.11.0-armv7.tar.gz app.xdelta
+Taking a real example of [Node.js for Alpine](https://hub.docker.com/_/node?tab=tags&page=1&name=alpine) and using
+docker container tags: [node:14.10-alpine3.11](https://hub.docker.com/layers/node/library/node/14.10-alpine3.11/images/sha256-3d1bdb8c2d026003273dd229d6f1ac2252be4d6fb5676a15f987f7e761e254d2?context=explore)
+and
+[node:14.10.1-alpine3.11](https://hub.docker.com/layers/node/library/node/14.10.1-alpine3.11/images/sha256-fb2e7a5e9511fba4ab2ebcd165d7fbeec0e032e03685b93ce8869787d26f4ea9?context=explore)
+for `ARMv7` platform, the following performs an update of Node.js but also dependencies and Alpine packages:
+
+```bash
+docker pull --platform linux/arm/v7 node:14.10-alpine3.11
+docker pull --platform linux/arm/v7 node:14.10.1-alpine3.11
+docker images
+docker save node | undocker --no-whiteouts -d -i -o node-14.10-alpine3.11-armv7 node:14.10-alpine3.11
+docker save node | undocker --no-whiteouts -d -i -o node-14.10.1-alpine3.11-armv7 node:14.10.1-alpine3.11
+cp app.yaml node-14.10-alpine3.11-armv7/
+cp app.yaml node-14.10.1-alpine3.11-armv7/
+sudo tar --numeric-owner --create --auto-compress --xattrs --xattrs-include=* \
+        --file node-14.10-alpine3.11-armv7.tar.gz \
+        --directory node-14.10-alpine3.11-armv7/ --transform='s,^./,,' .
+sudo tar --numeric-owner --create --auto-compress --xattrs --xattrs-include=* \
+        --file node-14.10.1-alpine3.11-armv7.tar.gz \
+        --directory node-14.10.1-alpine3.11-armv7/ --transform='s,^./,,' .
+node-14.10-alpine3.11-armv7.tar.gz 37M
+node-14.10.1-alpine3.11-armv7.tar.gz 38M
+xdelta3 -f -e -s node-14.10-alpine3.11-armv7.tar.gz node-14.10.1-alpine3.11-armv7.tar.gz app.xdelta
+app.xdelta 11M
 ```
 
-Follow the [Delta Update workflow](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz) to update your application from a specified version to any other version directly.
+The produced `app.xdelta` size is `11M` which represents `70%` reduction of the update size. Please
+note here we performed an `Node.js`, its modules and other packages update, usually an incremental
+update of only some files of the app will result in few kilobytes or even less.
+
+
+To update your application from a specified version to any other version directly, please follow the [Delta Update
+workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow).
 
 
 ## The `mkiot` (make IoT) Tool
