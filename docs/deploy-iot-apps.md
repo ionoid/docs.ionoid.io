@@ -131,7 +131,7 @@ https://example.com/software/my-app/1.0.0/app.xdelta
 
 - Download the delta file and patch the current packaged version.
 
-::: details Why should I provide the delta base URL and not the full delta URL
+::: details Question: why should I provide the delta base URL and not the full delta URL ?
 Even if it does not seem to be logical in the previous simple case to provide the
 delta base URL `https://example.com/software/my-app/` instead of the full URL,
 this convention will prove useful when deploying multiple delta updates
