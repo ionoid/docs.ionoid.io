@@ -99,29 +99,56 @@ and
 [node:14.10.1-alpine3.11](https://hub.docker.com/layers/node/library/node/14.10.1-alpine3.11/images/sha256-fb2e7a5e9511fba4ab2ebcd165d7fbeec0e032e03685b93ce8869787d26f4ea9?context=explore)
 for `ARMv7` platform, the following performs an update of Node.js but also dependencies and Alpine packages:
 
+
 ```bash
+# Lines starting with `#` are comments.
+
+# Pull the containers, here we assume you build yours.
 docker pull --platform linux/arm/v7 node:14.10-alpine3.11
 docker pull --platform linux/arm/v7 node:14.10.1-alpine3.11
+
+# Check the images
 docker images
-docker save node | undocker --no-whiteouts -d -i -o node-14.10-alpine3.11-armv7 node:14.10-alpine3.11
-docker save node | undocker --no-whiteouts -d -i -o node-14.10.1-alpine3.11-armv7 node:14.10.1-alpine3.11
+
+# Save the container image to a directory
+docker save node | undocker --no-whiteouts -d -i \
+        -o node-14.10-alpine3.11-armv7 node:14.10-alpine3.11
+docker save node | undocker --no-whiteouts -d -i \
+        -o node-14.10.1-alpine3.11-armv7 node:14.10.1-alpine3.11
+
+# Add the app.yaml file
 cp app.yaml node-14.10-alpine3.11-armv7/
 cp app.yaml node-14.10.1-alpine3.11-armv7/
+
+
+# Tar compress directories to an App archive
 sudo tar --numeric-owner --create --auto-compress --xattrs --xattrs-include=* \
         --file node-14.10-alpine3.11-armv7.tar.gz \
         --directory node-14.10-alpine3.11-armv7/ --transform='s,^./,,' .
 sudo tar --numeric-owner --create --auto-compress --xattrs --xattrs-include=* \
         --file node-14.10.1-alpine3.11-armv7.tar.gz \
         --directory node-14.10.1-alpine3.11-armv7/ --transform='s,^./,,' .
+
+# Check app archive size
 node-14.10-alpine3.11-armv7.tar.gz 37M
 node-14.10.1-alpine3.11-armv7.tar.gz 38M
-xdelta3 -f -e -s node-14.10-alpine3.11-armv7.tar.gz node-14.10.1-alpine3.11-armv7.tar.gz app.xdelta
+
+
+# Produce a delta update of Node from 14.10 to 14.10-1
+# (this will update dependecies and some modules too)
+# Add -f to force ovewrite previous app.xdelta if any.
+xdelta3 -e -s node-14.10-alpine3.11-armv7.tar.gz node-14.10.1-alpine3.11-armv7.tar.gz \
+        app.xdelta
+
+# Check app.xdelta size
 app.xdelta 11M
 ```
 
-The produced `app.xdelta` size is `11M` which represents `70%` reduction of the update size. Please
-note here we performed an `Node.js`, its modules and other packages update, usually an incremental
-update of only some files of the app will result in few kilobytes or even less.
+The produced `app.xdelta` size is `11M` which represents `70%` reduction of the update size.
+Here we performed an `Node.js`, its modules and other packages update.
+
+Usually an incremental update of only some files of the app will result in few kilobytes or
+even less.
 
 
 To update your application from a specified version to any other version directly, please follow the [Delta Update
