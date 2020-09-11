@@ -84,7 +84,7 @@ To deploy an IoT app you have three options:
   project](#deploy-on-a-subset-of-devices-of-a-project)
 
 
-### Deploy on a single device
+### Deploy on a Single Device
 
 In this example we assume that the deployed applications are `archive` or `static` apps, deploying docker applications
 is same except that we use docker urls.
@@ -116,7 +116,7 @@ progress of the app deployment on the device.
 Once the app deployed on this device, you can see it listed on
 <the-project-app-list-page/> or on <the-device-app-list-page/>.
 
-### Deploy on all devices of a project
+### Deploy on All Devices of a Project
 
 - On <the-project-details-page/> make sure that no device is selected. Click on
 **&#xFE19;** button and choose **Deploy app on all devices** action:
@@ -145,7 +145,7 @@ progress of the app deployment on each device.
 Once the app deployed on at least one device of the project, you can see it
 listed on <the-project-app-list-page/>.
 
-### Deploy on a subset of devices of a project
+### Deploy on a Subset of Devices of a Project
 
 - On <the-project-details-page/>, select the device(s) you want to deploy to
 
@@ -177,6 +177,26 @@ progress of the app deployment on each device.
 Once the app deployed on at least one device of the project, you can see it
 listed on <the-project-app-list-page/>.
 
+
+### Predeployed Applications
+
+There are cases where the applications should be packed with OS image, installed
+then run on first boot. This is supported by copying the application into the
+`/data/` partition, inside directory `/data/apps/archive/`. The directory has
+to be created in first place by the user, before booting the image.
+
+Example assuming mounted data storage is at `/mnt/data/`:
+```bash
+sudo mkdir -p /mnt/data/apps/archive/
+sudo cp my-app-v1.tar.gz /mnt/data/apps/archive/
+sync /mnt/data/apps/archive/my-app-v1.tar.gz
+umount /mnt/data/apps
+```
+
+When devices are booted, the directory `/data/apps/archive/` will be checked
+every 10 minutes to 15 minutes, all applications inside will be installed. After
+trigerring the installation, the corresponding applications packages are removed.
+
 ## Update Apps
 
 You can easily update an already deployed app to a newer version, for that you
@@ -187,7 +207,7 @@ have three options:
 - [Update on a subset of devices of a
   project](#update-on-a-subset-of-devices-of-a-project)
 
-### Update on a single device
+### Update on a Single Device
 
 - On <the-device-app-details-page/>, click on the **&#xFE19;** button, and
 choose **Update app on this device**
@@ -214,7 +234,7 @@ https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world
 ) to deploy the version `v0.1`.
 :::
 
-### Update on all devices of a project
+### Update on All Devices of a Project
 
 - On <the-project-app-details-page/>, click on the **&#xFE19;** button, then
 click on the **Update app on all devices** button:
@@ -241,7 +261,7 @@ https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world
 ) to deploy the version `v0.1`.
 :::
 
-### Update on a subset of devices of a project
+### Update on a Subset of Devices of a Project
 
 - Navigate to <the-project-app-list-page/> then click on the target app
 
@@ -340,7 +360,7 @@ https://example.com/software/my-app/1.0.0/app.xdelta
 
 - Download the delta file and patch the current packaged version.
 
-::: details Why should I provide the delta base URL and not the full delta URL
+::: details Question: Why should I provide the delta base URL and not the full delta URL
 Even if it does not seem to be logical in the previous simple case to provide the
 delta base URL `https://example.com/software/my-app/` instead of the full URL,
 this convention will prove useful when deploying multiple delta updates
@@ -416,7 +436,7 @@ To be able to use this feature, [Dual A/B Deployment](
 #_1-dual-a-b-deployment-workflow) must be enabled.
 :::
 
-### Rollback on a single device
+### Rollback on a Single Device
 
 - On the top of <the-device-app-details-page/>, you can check what is the current
 version, and what is the previous version
@@ -431,7 +451,7 @@ device**
 - After few seconds, you will receive realtime messages about the rollback
   process on the device
 
-### Rollback on all devices of a project
+### Rollback on All Devices of a Project
 
 - On <the-project-app-details-page/>, make sure that no device is selected
 
@@ -445,7 +465,7 @@ device**
 - After few seconds, you will receive realtime messages about the rollback
   process on the device
 
-### Rollback on a subset of devices of a project
+### Rollback on a Subset of Devices of a Project
 
 - On <the-project-app-details-page/>, select the devices you want to update app on
 
