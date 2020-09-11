@@ -411,6 +411,11 @@ have three options:
 - [Rollback on a subset of devices of a
   project](#rollback-on-a-subset-of-devices-of-a-project)
 
+::: tip
+To be able to use this feature, [Dual A/B Deployment](
+#_1-dual-a-b-deployment-workflow) must be enabled.
+:::
+
 ### Rollback on a single device
 
 - On the top of <the-device-app-details-page/>, you can check what is the current
