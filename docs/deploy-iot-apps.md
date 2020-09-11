@@ -51,142 +51,14 @@ Format](https://tools.ietf.org/html/rfc3284). The open source project
 [xdelta version 3](https://en.wikipedia.org/wiki/Xdelta) is used to handle delta
 encoding.
 
-
 By default, delta updates option is disabled, and app deployment is performed
 using the full application package. To enable this feature, please see
 [Project configuration](
 https://docs.ionoid.io/docs/manage-projects.html#configure-the-project), then
 [Redeploy project configuration](
 https://docs.ionoid.io/docs/manage-projects.html#redeploy-project-settings)
-operation to redeploy the changes to devices.
-
-#### Delta updates example
-
-Let's assume that the current app version has been deployed using the package
-file `my-app-1.0.0.tar.gz`, and that you want to deploy a new version packaged
-in file `my-app-2.0.0.tar.gz`. You will not need to upload the whole
-`my-app-2.0.0.tar.gz` file. Instead, you will upload the *difference* between
-the two packages, known under the fancy name of *the delta*.
-
-To generate a delta between two files you will need to install [xdelta3](
-https://github.com/jmacd/xdelta) on your Linux working station (make sure it is
-`xdelta3` with **version 3**):
-
-```bash
-# For example, in debian/ubuntu based distributions:
-sudo apt-get install xdelta3
-```
-
-The steps to perform a delta update are the following:
-
-1. Produce a delta file named `app.xdelta` between `my-app-1.0.0.tar.gz` and
-   `my-app-2.0.0.tar.gz` using `xdelta3`:
-
-```bash
-xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
-```
-
-2. Host the generated `app.xdelta` file somewhere such that it must be inside a
-   folder named `1.0.0`, the full URL will be, for example:
-
-```
-https://example.com/software/my-app/1.0.0/app.xdelta
-```
-
-::: warning N. B.
-- The current deployed version on device is read from the [app.yaml
-file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) in package
-file `my-app-1.0.0.tar.gz` present on the device, not from the package filename
-itself, which can just as well be named, say, `my-app-first-version.tar.gz`.
-- The file **must be** named `app.xdelta` and the folder **must be** named `1.0.0`.
-:::
-
-3. Perform the delta update by navigating to <the-project-app-details-page/> or
-<the-device-app-details-page/>, then on the actions menu, click on **Update app
-on all/selected/current device(s)**, make sure that **Delta Update** is enabled
-and paste the following *delta base URL* `https://example.com/software/my-app/`:
-
-![Paste Delta Update URL](/steps/deploy-iot-apps/delta_update_app_on_devices.png)
-
-::: warning N. B.
-This is the **delta base URL** that must be filled (without the `1.0.0/app.xdelta`)
-and not the **full URL**. Passing the full URL will result in a failure.
-:::
-
-This instructs the device to:
-
-- Get the current version of the app from the local [app.yaml
-file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format), in this case
-`1.0.0`.
-
-- Use the current version to construct the final URL by appending
-`1.0.0/app.xdelta` to the delta base URL, to finally produce:
-
-```
-https://example.com/software/my-app/1.0.0/app.xdelta
-```
-
-- Download the delta file and patch the current packaged version.
-
-::: details Why should I provide the delta base URL and not the full delta URL
-Even if it does not seem to be logical in the previous simple case to provide the
-delta base URL `https://example.com/software/my-app/` instead of the full URL,
-this convention will prove useful when deploying multiple delta updates
-for multiple different obsolete versions.
-
-Suppose you have `my-app` deployed on 10 devices, you regularly deploy updates of
-this app to keep it up to date. But due to connectivity issues, some devices
-still have an obsolete version of the app (latest version is 10.0.0):
-
-- Device A: has version 5.0.0
-- Device B: has version 7.0.0
-- Device C: has version 9.0.0
-
-All remaining devices have version 10.0.0. You will not have to update each
-device individually. Instead, prepare 3 delta files:
-
-- A first one for passage from 5.0.0 to 10.0.0
-- A second one for passage from 7.0.0 to 10.0.0
-- A third one for passage from 9.0.0 to 10.0.0
-
-All delta files need to be named `app.xdelta`, but each of them must be put
-inside a folder named with the starting version, thus:
-
-- The first delta update must be put in folder `5.0.0/`
-- The second delta update must be put in folder `7.0.0/`
-- The third delta update must be put in folder `9.0.0/`
-
-So, folder structure at the `my-app` level must be:
-
-```
-my-app
-├── 5.0.0
-│   └── app.xdelta # represents transition from 5.0.0. to 10.0.0
-├── 7.0.0
-│   └── app.xdelta # represents transition from 7.0.0. to 10.0.0
-└── 9.0.0
-    └── app.xdelta # represents transition from 9.0.0. to 10.0.0
-```
-
-Then, all what you need to do is to visit <the-project-app-details-page/>,
-and choose **Update app on all devices**, then you paste the delta base URL
-`https://example.com/software/my-app/`. Each device will go and look at path
-`CURRENT_VERSION/app.xdelta` in the delta base URL based on the `CURRENT_VERSION`
-of the app installed on it, then download the delta file and patch app package
-with it:
-
-- Device A: will read local version `5.0.0` and fetch path `5.0.0/app.xdelta` in
-  delta base URL
-- Device B: will read local version `7.0.0` and fetch path `7.0.0/app.xdelta` in
-  delta base URL
-- Device A: will read local version `9.0.0` and fetch path `9.0.0/app.xdelta` in
-  delta base URL
-
-Don't worry about up-to-date devices that will try to fetch `10.0.0/app.xdelta`,
-they will simply fail to download the delta file and cancel the update. If you want
-to avoid such inoffensive errors, just select devices with outdated app version
-before updating app.
-:::
+operation to redeploy the changes to devices. See [Delta Updates Example](
+#delta-updates-example) for more details.
 
 ## Deploy Apps
 
@@ -398,6 +270,134 @@ https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world
 ), and [the public URL for ARMv7 devices](
 https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar
 ) to deploy the version `v0.1`.
+:::
+
+### Delta Updates Example
+
+Let's assume that the current app version has been deployed using the package
+file `my-app-1.0.0.tar.gz`, and that you want to deploy a new version packaged
+in file `my-app-2.0.0.tar.gz`. You will not need to upload the whole
+`my-app-2.0.0.tar.gz` file. Instead, you will upload the *difference* between
+the two packages, known under the fancy name of *the delta*.
+
+To generate a delta between two files you will need to install [xdelta3](
+https://github.com/jmacd/xdelta) on your Linux working station (make sure it is
+`xdelta3` with **version 3**):
+
+```bash
+# For example, in debian/ubuntu based distributions:
+sudo apt-get install xdelta3
+```
+
+The steps to perform a delta update are the following:
+
+1. Produce a delta file named `app.xdelta` between `my-app-1.0.0.tar.gz` and
+   `my-app-2.0.0.tar.gz` using `xdelta3`:
+
+```bash
+xdelta3 -e -s my-app-1.0.0.tar.gz my-app-2.0.0.tar.gz app.xdelta
+```
+
+2. Host the generated `app.xdelta` file somewhere such that it must be inside a
+   folder named `1.0.0`, the full URL will be, for example:
+
+```
+https://example.com/software/my-app/1.0.0/app.xdelta
+```
+
+::: warning N. B.
+- The current deployed version on device is read from the [app.yaml
+file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format) in package
+file `my-app-1.0.0.tar.gz` present on the device, not from the package filename
+itself, which can just as well be named, say, `my-app-first-version.tar.gz`.
+- The file **must be** named `app.xdelta` and the folder **must be** named `1.0.0`.
+:::
+
+3. Perform the delta update by navigating to <the-project-app-details-page/> or
+<the-device-app-details-page/>, then on the actions menu, click on **Update app
+on all/selected/current device(s)**, make sure that **Delta Update** is enabled
+and paste the following *delta base URL* `https://example.com/software/my-app/`:
+
+![Paste Delta Update URL](/steps/deploy-iot-apps/delta_update_app_on_devices.png)
+
+::: warning N. B.
+This is the **delta base URL** that must be filled (without the `1.0.0/app.xdelta`)
+and not the **full URL**. Passing the full URL will result in a failure.
+:::
+
+This instructs the device to:
+
+- Get the current version of the app from the local [app.yaml
+file](https://docs.ionoid.io/docs/iot-apps.html#app-yaml-format), in this case
+`1.0.0`.
+
+- Use the current version to construct the final URL by appending
+`1.0.0/app.xdelta` to the delta base URL, to finally produce:
+
+```
+https://example.com/software/my-app/1.0.0/app.xdelta
+```
+
+- Download the delta file and patch the current packaged version.
+
+::: details Why should I provide the delta base URL and not the full delta URL
+Even if it does not seem to be logical in the previous simple case to provide the
+delta base URL `https://example.com/software/my-app/` instead of the full URL,
+this convention will prove useful when deploying multiple delta updates
+for multiple different obsolete versions.
+
+Suppose you have `my-app` deployed on 10 devices, you regularly deploy updates of
+this app to keep it up to date. But due to connectivity issues, some devices
+still have an obsolete version of the app (latest version is 10.0.0):
+
+- **Device A**: has version 5.0.0
+- **Device B**: has version 7.0.0
+- **Device C**: has version 9.0.0
+
+All remaining devices have version 10.0.0. You will not have to update each
+device individually. Instead, prepare 3 delta files:
+
+- A first one for passage from 5.0.0 to 10.0.0
+- A second one for passage from 7.0.0 to 10.0.0
+- A third one for passage from 9.0.0 to 10.0.0
+
+All delta files need to be named `app.xdelta`, but each of them must be put
+inside a folder named with the starting version, thus:
+
+- The first delta update must be put in folder `5.0.0/`
+- The second delta update must be put in folder `7.0.0/`
+- The third delta update must be put in folder `9.0.0/`
+
+So, folder structure at the `my-app` level must be:
+
+```
+my-app
+├── 5.0.0
+│   └── app.xdelta # represents transition from 5.0.0. to 10.0.0
+├── 7.0.0
+│   └── app.xdelta # represents transition from 7.0.0. to 10.0.0
+└── 9.0.0
+    └── app.xdelta # represents transition from 9.0.0. to 10.0.0
+```
+
+Then, all what you need to do is to visit <the-project-app-details-page/>,
+and choose **Update app on all devices**, then you paste the delta base URL
+`https://example.com/software/my-app/`. Each device will go and look at path
+`CURRENT_VERSION/app.xdelta` in the delta base URL based on the `CURRENT_VERSION`
+of the app installed on it, then download the delta file and patch app package
+with it:
+
+- **Device A**: will read local version `5.0.0` and fetch path `5.0.0/app.xdelta` in
+  delta base URL
+- **Device B**: will read local version `7.0.0` and fetch path `7.0.0/app.xdelta` in
+  delta base URL
+- **Device A**: will read local version `9.0.0` and fetch path `9.0.0/app.xdelta` in
+  delta base URL
+
+Don't worry about up-to-date devices that will try to fetch `10.0.0/app.xdelta`,
+they will simply fail to download the delta file and cancel the update. If you want
+to avoid such inoffensive errors, just select devices with outdated app version
+before updating app.
 :::
 
 ## Rollback Apps
