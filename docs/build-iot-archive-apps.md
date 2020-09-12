@@ -64,6 +64,7 @@ name: node-armv7
 version: v14.10.0
 apps:
   node-armv7:
+    # Make sure to write the right path of the app
     command: /usr/local/bin/node --version
 ```
 
@@ -87,7 +88,7 @@ node-v14.10.0-armv7.tar.gz  36M
 5. Upload and deploy your application according to [deploy IoT apps documentation](https://docs.ionoid.io/docs/deploy-iot-apps.html)
 
 The built node.js archive of the previous example can be found here
-[node-v14.10.0-armv7.tar.gz](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-v14.10.0-armv7.tar.gz)
+[node-14.10.1-alpine3.11-armv7.tar.gz](https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-14.10.1-alpine3.11-armv7.tar.gz)
 
 
 6. Later you are able to update your application using the [Delta Update

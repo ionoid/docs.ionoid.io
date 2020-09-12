@@ -114,7 +114,7 @@ apps:
     # Can be used to setup environment.
     start-command: /bin/echo hello
 
-    # Main executable app, mendatory field.
+    # Mendatory field: the full path of the main application
     command: /bin/hello-world
 
     # Optional command to be executed after the main app finishes
