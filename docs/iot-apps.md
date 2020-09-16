@@ -135,9 +135,10 @@ apps:
     # For more details check systemd service documentation.
     daemon: simple | forking | oneshot
 
-    # Starting from newer versions, to have the app run with
-    # root privileges you have set it to true. By default the
-    # app will run as a normal `ionoid-app` user.
+    # Make the application run with root privileges if you want
+    # to access special devices and ports on your hardware that
+    # need special permissions. By default it is false, and the
+    # app will run as `ionoid-app` user.
     privileged: true
 
 
