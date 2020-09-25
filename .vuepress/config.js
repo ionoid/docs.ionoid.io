@@ -77,6 +77,10 @@ module.exports = {
             path: '/docs/build-iot-archive-apps.md'
           },
           {
+            title: 'Update OS',
+            path: '/docs/update-os.md'
+          },
+          {
             title: 'Debug IoT Devices',
             path: '/docs/debug-iot-devices.md'
           },
