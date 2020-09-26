@@ -4,7 +4,7 @@ sidebar: false
 <figure align='center'>
   <img src='/logo-big.png' id="big-logo">
   <h1 id='main-title'>
-    IoT Next Generation Deployment
+    IoT Edge Next Generation Deployment
   </h1>
   <button id="get-started-button" onclick="window.location='/docs/introduction.html'">Get Started</button>
 </figure>
