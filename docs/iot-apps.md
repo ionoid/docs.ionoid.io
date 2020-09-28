@@ -199,12 +199,12 @@ writing to the `/shared/$myappname` directory volume. Every application has by
 default the `/shared/$myappname` volume mounted and available inside its
 filesystem.
 
-From the application point of view:
+From the application point of view, shared data is located at:
 ```bash
 /shared/$myappname
 ```
 
-From the rest of the system point of view and where you will find your data:
+From the rest of the system point of view, shared data is located at:
 ```bash
 /data/apps/shared/$myappname
 ```
