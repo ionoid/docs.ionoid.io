@@ -53,7 +53,7 @@ please go directly to this link [docker apps](#docker-apps).
 
 Each app is described using The App YAML format. The App yaml is
 a simple manifest to describe how the app should work, it is fully
-described in the `app.yaml` file, next section, and only works with
+described in the `app.yaml` file (see next section), and only works with
 apps that are static binaries or archive apps.
 
 
