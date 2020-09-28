@@ -178,9 +178,11 @@ The `health-check` field is a special directive that may allow you to do
 health checks on your running apps. Right now it is **in progress - still under
 development**.
 
-So for a first example the [Hello World IoT app example:](https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.2.tar)
-
-The content of the `app.yaml` file would be:
+The **Hello World app** ([ARMv7](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar)
+, [ARMv6](
+https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.1.tar)
+) is an exemple of a simple IoT app. The content of the `app.yaml` file is:
 ```yaml
 name: hello-world
 version: 1.0
