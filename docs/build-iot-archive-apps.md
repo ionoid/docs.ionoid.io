@@ -18,11 +18,11 @@ directory `/` of the archive.
 [Linux containers](https://en.wikipedia.org/wiki/List_of_Linux_containe) are a
 modern technology that packages the application and all its dependencies so the
 applications can run on any Linux system. Ionoid.io supports Linux containers
-by using classic archive files format that were first released in late of 1979;
-this is motivated by the fact that IoT and Edge devices should have a long life
-time, and by using archive files for application packages, Ionoid.io ensures
-archive apps will continue to work in the future, as all the necessary tools to
-process them are standard open source tools.
+by using the widely supported classic archive files format; this is motivated by
+the fact that IoT and Edge devices should have a long life time, and by using
+archive files for application packages, Ionoid.io ensures archive apps will
+continue to work in the future, as all the necessary tools to process them are
+standard open source tools.
 
 At run-time when the archive file is [deployed on devices](
 https://docs.ionoid.io/docs/deploy-iot-apps.html), the [app YAML file](
@@ -38,55 +38,64 @@ https://docs.ionoid.io/docs/iot-apps.html).
 
 [Docker](https://docker.com/) offers the necessary tooling to build and export
 archive apps. The following steps demonstrates on how to pull a
-[Node.js docker](https://hub.docker.com/_/node) container for `ARMv7` and export
+[Node.js docker](https://hub.docker.com/_/node) image for `ARMv7` and export
 it into an archive app, that is then deployed directly using [Ionoid.io
 deployment](https://docs.ionoid.io/docs/deploy-iot-apps.html).
 
+### Prerequisite
+
 <Content :page-key="getPageKey($site.pages, '/docs/_extract-docker-image-requirements.html')" />
 
-Steps to extract docker containers (run with sudo if necessary):
+### Steps to extract and export docker images: Node.js example
+
+::: tip
+Run the following commands with `sudo` whenever it is necessary.
+:::
 
 1. Pull [Node.js for ARMv7](
-https://hub.docker.com/_/node?tab=tags&page=1&name=alpine) container based on
+https://hub.docker.com/_/node?tab=tags&page=1&name=alpine) image based on
 `Alpine Linux`:
 
 ```bash
 docker pull --platform linux/arm/v7 node:current-alpine
-docker images
-REPOSITORY                                                      TAG                                        IMAGE ID            CREATED             SIZE
-node                                                            current-alpine                             013139600021        19 hours ago        107MB
 ```
 
-2. Extract docker image layers:
+The `docker images` command should return the line of the `node` repository:
+
+```
+REPOSITORY    TAG               IMAGE ID        CREATED         SIZE
+node          current-alpine    013139600021    19 hours ago    107MB
+```
+
+2. Extract the docker image layers, the following command will extract the
+   image layers into the directory `node-armv7/`:
 
 ```bash
 docker save node | undocker --no-whiteouts -d -i -o node-armv7 node:current-alpine
 ```
 
-Make sure to use the right `tag`. Example: `current-alpine`. The above command
-extracts the image into directory `node-armv7`.
+Where `node:current-alpine` is the `repository:tag` pair of desired image.
 
-3. Add the following `app.yaml` file to `node-armv7` directory:
+3. Create the `app.yaml` file inside the `node-armv7` directory with the
+   following content:
 
 ```yaml
 name: node-armv7
 version: v14.10.0
 apps:
   node-armv7:
-    # Make sure to write the right path of the app
     command: /usr/local/bin/node --version
 ```
 
-```bash
-cp app.yaml node-armv7/
-```
+Where `/usr/local/bin/node` is the node executable binary path inside the
+`node-armv7` directory (make sure it is the correct path).
 
 4. Tar compress application and produce the app archive from parent directory of
-`node-armv7`:
+   `node-armv7`:
 
 ```bash
 sudo tar --numeric-owner --create --auto-compress \
-        --xattrs --xattrs-include=* --file node-v14.10.0-armv7.tar.gz \
+        --xattrs --file node-v14.10.0-armv7.tar.gz \
         --directory node-armv7 --transform='s,^./,,' .
 ```
 
@@ -96,23 +105,23 @@ The final size of app archive in this case is:
 node-v14.10.0-armv7.tar.gz  36M
 ```
 
-5. Upload and deploy your application according to
-[deploy IoT apps documentation](https://docs.ionoid.io/docs/deploy-iot-apps.html)
-
-The built node.js archive of the previous example can be found here
-[node-14.10.1-alpine3.11-armv7.tar.gz](
+A copy of the built node.js archive can be found [here](
 https://raw.githubusercontent.com/ionoid/docs-examples/master/archives/node-14.10.1-alpine3.11-armv7.tar.gz)
 
-6. Later you are able to update your application using the [Delta Update
-workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow)
+5. Upload and deploy your application by following documentation at
+[deploy IoT apps documentation](https://docs.ionoid.io/docs/deploy-iot-apps.html)
 
+6. Later you are able to update your application using the [Delta Update
+Workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow)
+
+::: tip Example of a delta update of node.js from v14.10 to v14.10.1
 Taking a real example of [Node.js for Alpine](
 https://hub.docker.com/_/node?tab=tags&page=1&name=alpine) and using docker
 container tags: [node:14.10-alpine3.11](
 https://hub.docker.com/layers/node/library/node/14.10-alpine3.11/images/sha256-3d1bdb8c2d026003273dd229d6f1ac2252be4d6fb5676a15f987f7e761e254d2?context=explore)
 and [node:14.10.1-alpine3.11](
 https://hub.docker.com/layers/node/library/node/14.10.1-alpine3.11/images/sha256-fb2e7a5e9511fba4ab2ebcd165d7fbeec0e032e03685b93ce8869787d26f4ea9?context=explore)
-for `ARMv7` platform, the following performs an update of Node.js but also
+for `ARMv7` platform, the following performs an update of node.js but also
 dependencies and Alpine packages:
 
 ```bash
@@ -169,10 +178,11 @@ kilobytes or even less.
 To update your application from a specified version to any other version
 directly, please follow the [Delta Update
 workflow](https://docs.ionoid.io/docs/deploy-iot-apps.html#_2-delta-updates-workflow).
+:::
 
 ## The `mkiot` (make IoT) Tool
 
-To generate the app archive we use [mkiot](https://github.com/ionoid/mkiot),
+To generate the app archive we can use [mkiot](https://github.com/ionoid/mkiot),
 which uses [debootstrap](https://wiki.debian.org/Debootstrap) and other tools to
 build an app archive.
 
