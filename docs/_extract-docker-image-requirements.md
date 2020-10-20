@@ -36,22 +36,8 @@ Run the following commands with `sudo` whenever it is necessary.
   Docker image layers to a directory:
 
   ```bash
-  pip2.7 install undocker
+  pip3 install undocker
   ```
 
   Use `sudo` if required.
 
-
-::: warning
-Please note that `undocker` is written in Python 2, so you will need to unstall
-it using `pip2.7`. If you have not `pip2.7` on your machine please install it
-using the following commands:
-
-```bash
-wget https://bootstrap.pypa.io/get-pip.py
-python2.7 get-pip.py
-```
-
-Use `sudo` if required.
-
-:::
