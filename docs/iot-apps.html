@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux IoT and Edge Apps | Ionoid IoT Documentation</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <script src="https://kit.fontawesome.com/1b98495d92.js" crossorigin="anonymous"></script>
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.9e3cda56.css" as="style"><link rel="preload" href="/assets/js/app.f5f1b09f.js" as="script"><link rel="preload" href="/assets/js/2.a6564bc5.js" as="script"><link rel="preload" href="/assets/js/33.a118f842.js" as="script"><link rel="preload" href="/assets/js/17.b8d784b9.js" as="script"><link rel="preload" href="/assets/js/20.47dca73b.js" as="script"><link rel="prefetch" href="/assets/js/10.3c6f9591.js"><link rel="prefetch" href="/assets/js/11.dce8e0ae.js"><link rel="prefetch" href="/assets/js/12.1b25a32c.js"><link rel="prefetch" href="/assets/js/13.6535d039.js"><link rel="prefetch" href="/assets/js/14.2c6e9f1e.js"><link rel="prefetch" href="/assets/js/15.17c63b90.js"><link rel="prefetch" href="/assets/js/16.04c502a5.js"><link rel="prefetch" href="/assets/js/18.b22337a3.js"><link rel="prefetch" href="/assets/js/19.d87962d6.js"><link rel="prefetch" href="/assets/js/21.0fd3bfd9.js"><link rel="prefetch" href="/assets/js/22.02ba1219.js"><link rel="prefetch" href="/assets/js/23.2eee9942.js"><link rel="prefetch" href="/assets/js/24.31b1ae88.js"><link rel="prefetch" href="/assets/js/25.cefc449b.js"><link rel="prefetch" href="/assets/js/26.2744eda4.js"><link rel="prefetch" href="/assets/js/27.345891f3.js"><link rel="prefetch" href="/assets/js/28.47b9d390.js"><link rel="prefetch" href="/assets/js/29.1c1162be.js"><link rel="prefetch" href="/assets/js/3.f5a68b81.js"><link rel="prefetch" href="/assets/js/30.a9f76368.js"><link rel="prefetch" href="/assets/js/31.6da45e3e.js"><link rel="prefetch" href="/assets/js/32.31fcd6fc.js"><link rel="prefetch" href="/assets/js/34.511f2e01.js"><link rel="prefetch" href="/assets/js/35.7cb9ddd2.js"><link rel="prefetch" href="/assets/js/36.de2174af.js"><link rel="prefetch" href="/assets/js/37.64a85c7d.js"><link rel="prefetch" href="/assets/js/38.8483408d.js"><link rel="prefetch" href="/assets/js/39.982da246.js"><link rel="prefetch" href="/assets/js/4.72a01b55.js"><link rel="prefetch" href="/assets/js/40.3a86945f.js"><link rel="prefetch" href="/assets/js/41.4fe32b4e.js"><link rel="prefetch" href="/assets/js/42.069703d1.js"><link rel="prefetch" href="/assets/js/5.857a67f3.js"><link rel="prefetch" href="/assets/js/6.140d954f.js"><link rel="prefetch" href="/assets/js/7.5e308246.js"><link rel="prefetch" href="/assets/js/8.0f403b88.js"><link rel="prefetch" href="/assets/js/9.1f12a8b2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e3cda56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/brand.png" alt="Ionoid IoT Documentation" class="logo"> <span class="site-name can-hide">Ionoid IoT Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/introduction.html" class="nav-link">
+  Docs
+</a></div><div class="nav-item"><a href="https://dashboard.ionoid.io/register" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Create Account
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://dashboard.ionoid.io/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Sign in
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://ionoid.io/contact/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Contact
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/ionoid/docs.ionoid.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/introduction.html" class="nav-link">
+  Docs
+</a></div><div class="nav-item"><a href="https://dashboard.ionoid.io/register" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Create Account
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://dashboard.ionoid.io/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Sign in
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://ionoid.io/contact/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Contact
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/ionoid/docs.ionoid.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Ionoid.io Docs</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/introduction.html" class="sidebar-link">Introduction</a></li><li><a href="/docs/getting-started.html" class="sidebar-link">Getting Started</a></li><li><a href="/docs/manage-projects.html" class="sidebar-link">Manage Projects</a></li><li><a href="/docs/register-devices.html" class="sidebar-link">Register Devices</a></li><li><a href="/docs/monitor-and-manage-devices.html" class="sidebar-link">Monitor and Manage Devices</a></li><li><a href="/docs/organizations-and-collaboration.html" class="sidebar-link">Organizations and Collaboration</a></li><li><a href="/docs/deploy-iot-apps.html" class="sidebar-link">Deploy IoT Apps</a></li><li><a href="/docs/iot-apps.html" aria-current="page" class="active sidebar-link">IoT Apps</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/iot-apps.html#overview" class="sidebar-link">Overview</a></li><li class="sidebar-sub-header"><a href="/docs/iot-apps.html#static-binaries" class="sidebar-link">Static Binaries</a></li><li class="sidebar-sub-header"><a href="/docs/iot-apps.html#archive-apps" class="sidebar-link">Archive Apps</a></li><li class="sidebar-sub-header"><a href="/docs/iot-apps.html#docker-containers" class="sidebar-link">Docker containers</a></li></ul></li><li><a href="/docs/build-iot-archive-apps.html" class="sidebar-link">Build IoT and Edge Apps</a></li><li><a href="/docs/update-os.html" class="sidebar-link">Update OS</a></li><li><a href="/docs/debug-iot-devices.html" class="sidebar-link">Debug IoT Devices</a></li><li><a href="/docs/sealos-doc.html" class="sidebar-link">SealOS Secure Linux-IoT</a></li><li><a href="/docs/flash-os-image-to-storage.html" class="sidebar-link">Flash OS Image to Storage</a></li><li><a href="/docs/supported-boards-and-os.html" class="sidebar-link">Supported Boards and OS</a></li><li><a href="/docs/dashboard-structure.html" class="sidebar-link">Dashboard Structure</a></li><li><a href="/docs/faq.html" class="sidebar-link">FAQ</a></li><li><a href="/docs/contact.html" class="sidebar-link">Contact</a></li><li><a href="/docs/impressum.html" class="sidebar-link">Impressum</a></li><li><a href="/docs/legal.html" class="sidebar-link">Legal</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux-iot-and-edge-apps"><a href="#linux-iot-and-edge-apps" class="header-anchor">#</a> Linux IoT and Edge Apps</h1> <p><a href="https://ionoid.io/" target="_blank" rel="noopener noreferrer">Ionoid.io<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> IoT and Edge Linux apps are archive files that
+bundle the application, libraries, files and other dependencies. Using some of
+<a href="https://en.wikipedia.org/wiki/List_of_Linux_containers" target="_blank" rel="noopener noreferrer">Linux Containers Technology<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to implement file system
+isolation, devices are able to run multiple applications isolated from one
+another.</p> <p>Installed apps are located on device storage at:</p> <div class="language- extra-class"><pre class="language-text"><code>/data/apps/store/
+</code></pre></div><p>For every application, there will be a corresponding directory:</p> <div class="language- extra-class"><pre class="language-text"><code>/data/apps/store/appname
+</code></pre></div><p>All files corresponding to an app are located under its path. This makes
+it easy to stop, <strong>disable</strong>, or completely remove applications.</p> <h2 id="overview"><a href="#overview" class="header-anchor">#</a> Overview</h2> <h3 id="iot-apps"><a href="#iot-apps" class="header-anchor">#</a> IoT Apps</h3> <p><a href="https://ionoid.io/" target="_blank" rel="noopener noreferrer">Ionoid.io<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> supports multiple IoT app formats:</p> <ul><li><p>Static binaries without libraries or other filesystem dependencies.
+If you are deploying <a href="https://en.wikipedia.org/wiki/Static_build" target="_blank" rel="noopener noreferrer">Static
+Binaries<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> then please keep
+reading this document. Static binaries will have an auto generated
+<a href="#app-yaml-format">App YAML file</a>.</p></li> <li><p>Archive
+<a href="https://en.wikipedia.org/wiki/Tar_(computing)" target="_blank" rel="noopener noreferrer">tarball<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> or
+compressed <code>tar.gz</code> apps. The archive
+files are standard files format that were released several years ago, they
+are well supported and the tools to process them are all Open Source tools.
+If you are deploying Archive apps then please keep reading this
+document. Archive apps must include an <a href="#app-yaml-format">App YAML file</a>
+that describes how the application will run.</p></li> <li><p>Modern <a href="https://docker.com" target="_blank" rel="noopener noreferrer">docker<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> containers (<em>in progress -
+will be released soon</em>). If you are deploying <a href="https://docker.com" target="_blank" rel="noopener noreferrer">docker container<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> apps then please go directly to this link <a href="#docker-apps">docker apps</a>.</p></li></ul> <div class="content__default"><div class="custom-block tip"><p class="custom-block-title">Build archive apps with Docker</p> <p>You can also use docker to build containers, then export as tarballs to produce
+archive apps. Please see documentation below <a href="#archive-apps">archive apps</a> for
+more details.</p></div></div> <h3 id="app-yaml-format"><a href="#app-yaml-format" class="header-anchor">#</a> App YAML Format</h3> <p>Each app is described using The App YAML format. The App yaml is
+a simple manifest to describe how the app should work, it is fully
+described in the <code>app.yaml</code> file (see next section), and only works with
+apps that are static binaries or archive apps.</p> <p>Docker apps do not need the <code>app.yaml</code> file, they already
+contain their own app manifest and are auto handled withing their
+appropriate agents.
+Visit this link for <a href="#docker-apps">docker apps</a> for more information.</p> <p>The <code>app.yaml</code> file should be present in the root directory of an
+archive file. Every app must have its corresponding <code>app.yaml</code> file.
+For <a href="#static-binaries">static binaries</a> with no dependencies, an
+<code>app.yaml</code> file will be auto-generated on the fly to define how the
+app should run.</p> <p>App YAML file example:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># Note: lines starting with `#` are comments and have no semantics.</span>
+
+<span class="token comment"># Name of APP must be unique on the device.</span>
+<span class="token comment"># Only alphanumeric + the special &quot;_&quot;, &quot;.&quot; and &quot;-&quot; characters are allowed.</span>
+<span class="token comment"># Minimum 2 characters, up to 64 characters.</span>
+<span class="token comment"># Mendatory field.</span>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> appname
+
+<span class="token comment"># Version of App to be deployed</span>
+<span class="token comment"># Mendatory field.</span>
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">1.0</span>
+
+<span class="token comment"># Description of App</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> My App
+
+<span class="token comment"># List of Applications inside the same IoT App archive, for now we only</span>
+<span class="token comment"># support one single app. Support of multiple apps inside will be added in</span>
+<span class="token comment"># the future.</span>
+<span class="token key atrule">apps</span><span class="token punctuation">:</span>
+
+  <span class="token comment"># App hello-world entry, must be Alphanumeric and may contain the</span>
+  <span class="token comment"># special characters &quot;_&quot;, &quot;.&quot; and &quot;-&quot;.</span>
+  <span class="token comment"># Minimum 2 characters, up to 64 characters.</span>
+  <span class="token comment"># Mendatory field.</span>
+  <span class="token key atrule">hello-world</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># Environment Vars for Hello World Optional</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">A</span><span class="token punctuation">:</span> <span class="token string">&quot;ABC&quot;</span>
+
+    <span class="token comment"># Semilar to environment but reads the environment variables</span>
+    <span class="token comment"># from a text file. The text file should contain new-line-separated</span>
+    <span class="token comment"># variable assignments.</span>
+    <span class="token key atrule">environmentfiles</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;/etc/hello-world-environment1&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;/etc/hello-world-environment2&quot;</span>
+
+    <span class="token comment"># Optional command to be executed before the main executable app.</span>
+    <span class="token comment"># Can be used to setup environment.</span>
+    <span class="token key atrule">start-command</span><span class="token punctuation">:</span> /bin/echo hello
+
+    <span class="token comment"># Mendatory field: the full path of the main application</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> /bin/hello<span class="token punctuation">-</span>world
+
+    <span class="token comment"># Optional command to be executed after the main app finishes</span>
+    <span class="token comment"># Can be used to clean up state.</span>
+    <span class="token key atrule">stop-command</span><span class="token punctuation">:</span> /bin/echo stopped
+
+    <span class="token comment"># Daemon Command type takes one of these values:</span>
+    <span class="token comment"># * simple:     the process configured with command</span>
+    <span class="token comment">#               is the main process of the service.</span>
+    <span class="token comment">#               This is the default value if daemon is</span>
+    <span class="token comment">#               not set.</span>
+    <span class="token comment"># * forking:    it is expected that the process configured</span>
+    <span class="token comment">#               with command will call fork() as part</span>
+    <span class="token comment">#               of its start-up.</span>
+    <span class="token comment"># * oneshot:    it is expected that the process configured</span>
+    <span class="token comment">#               with command will exit or terminate.</span>
+    <span class="token comment">#</span>
+    <span class="token comment"># For more details check systemd service documentation.</span>
+    <span class="token key atrule">daemon</span><span class="token punctuation">:</span> simple <span class="token punctuation">|</span> forking <span class="token punctuation">|</span> oneshot
+
+    <span class="token comment"># Make the application run with root privileges if you want</span>
+    <span class="token comment"># to access special devices and ports on your hardware that</span>
+    <span class="token comment"># need special permissions. By default it is false, and the</span>
+    <span class="token comment"># app will run as `ionoid-app` user.</span>
+    <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token comment"># Volumes and mounts to be made accessible inside the application.</span>
+  <span class="token comment">#</span>
+  <span class="token comment"># Volumes support two types of mount 'rbind' and 'norbind':</span>
+  <span class="token comment">#   * rbind: perform a recursive bind mount of the volume.</span>
+  <span class="token comment">#   * norbind: perform a non-recusive bind mount.</span>
+  <span class="token comment">#</span>
+  <span class="token comment"># Volumes support different options:</span>
+  <span class="token comment">#   * rw: perform a regular writable bind mount (unless source is read-only).</span>
+  <span class="token comment">#   * ro: perform a read-only bind mount.</span>
+  <span class="token comment">#</span>
+  <span class="token punctuation">-</span> src=filesystem_path<span class="token punctuation">:</span>dst=app_path<span class="token punctuation">:</span>type=rbind<span class="token punctuation">:</span>options=rw
+  <span class="token punctuation">-</span> src=filesystem_path<span class="token punctuation">:</span>dst=app_path<span class="token punctuation">:</span>type=norbind<span class="token punctuation">:</span>options=ro
+
+  <span class="token comment"># /dev, /proc and /sys are already mounted inside the app</span>
+  <span class="token comment"># no need to mount them again.</span>
+
+  <span class="token comment"># Mounting device host /etc configuration inside the app:</span>
+  <span class="token punctuation">-</span> src=/etc<span class="token punctuation">:</span>dst=/etc<span class="token punctuation">,</span>type=rbind<span class="token punctuation">,</span>options=ro
+
+  <span class="token comment"># If you want to make the root-filesystem available then the</span>
+  <span class="token comment"># following volume mount is the safest instruction.</span>
+  <span class="token punctuation">-</span> src=/<span class="token punctuation">:</span>dst=/<span class="token punctuation">:</span>type=norbind<span class="token punctuation">,</span>options=ro
+
+<span class="token comment"># Health check is a special command to do health checking on</span>
+<span class="token comment"># your one or multiple apps</span>
+<span class="token comment"># still under development</span>
+<span class="token key atrule">health-check</span><span class="token punctuation">:</span>
+  <span class="token key atrule">command</span><span class="token punctuation">:</span>        /bin/health<span class="token punctuation">-</span>check
+</code></pre></div><p>The <code>health-check</code> field is a special directive that may allow you to do
+health checks on your running apps. Right now it is <strong>in progress - still under
+development</strong>.</p> <p>The <strong>Hello World app</strong> (<a href="https://storage.googleapis.com/public.opendevices.io/apps/arch/armv7/hello-world/hello-world-armv7-v0.1.tar" target="_blank" rel="noopener noreferrer">ARMv7<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+, <a href="https://storage.googleapis.com/public.opendevices.io/apps/arch/armv6/hello-world/hello-world-armv6-v0.1.tar" target="_blank" rel="noopener noreferrer">ARMv6<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+) is an exemple of a simple IoT app. The content of the <code>app.yaml</code> file is:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>world
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">1.0</span>
+<span class="token key atrule">apps</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hello-world</span><span class="token punctuation">:</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> /bin/hello<span class="token punctuation">-</span>world
+</code></pre></div><h3 id="app-persist-data"><a href="#app-persist-data" class="header-anchor">#</a> App Persist Data</h3> <p>If you want to persist your data on the device and share it with other
+applications and the rest of the system, then this can be easily done by
+writing to the <code>/shared/$myappname</code> directory volume. Every application has by
+default the <code>/shared/$myappname</code> volume mounted and available inside its
+filesystem.</p> <p>From the application point of view, shared data is located at:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>/shared/<span class="token variable">$myappname</span>
+</code></pre></div><p>From the rest of the system point of view, shared data is located at:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>/data/apps/shared/<span class="token variable">$myappname</span>
+</code></pre></div><p>The <code>/shared/$myappname</code> directory is <strong>world readable and accessible</strong>
+to the system. If you write secret files there, then make sure to set the
+appropriate access permissions, especially if your device is used by non-trusted
+third parties.</p> <p>The <code>/shared/$myappaname</code> directory is owned by:</p> <ul><li>User <code>ionoid-app</code>: meaning that all applications running with that <em>User ID</em>
+can write to it.</li> <li>Group <code>ionoid-app</code>: meaning that all applications running with that <em>Group ID</em>
+can write to it and share data.</li></ul> <p>Volumes and mounts are the preferred mechanism to persist data on the
+device by applications and share it with others.</p> <h2 id="static-binaries"><a href="#static-binaries" class="header-anchor">#</a> Static Binaries</h2> <p>Static binaries are apps without libraries or other filesystem
+dependencies. Please visit <a href="https://en.wikipedia.org/wiki/Static_build" target="_blank" rel="noopener noreferrer">wikipedia Static
+Binaries<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> link to read more
+about it.</p> <p>Building static binaries differs from one language and environment to another,
+the following documentation will try to help you get started with it.</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>The target OS here is of course <code>Linux</code>.</p></div> <h3 id="golang-static-binaries"><a href="#golang-static-binaries" class="header-anchor">#</a> Golang Static Binaries</h3> <p>Before we start with our steps on how to produce static binaries from
+<a href="https://fr.wikipedia.org/wiki/Go_(langage)" target="_blank" rel="noopener noreferrer">Golang<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> sources, let's see some
+variables and environments that we have to set, this will allows us to really
+produce statically linked binaries:</p> <ul><li><p><code>CGO_ENABLED=0</code> Instruct compiler to disable CGO and statically link C
+bindings.</p></li> <li><p><code>GOOS=linux</code> Our target Operating System is Linux.</p></li> <li><p><code>GOARCH=$arch</code> Our target board architecure. If in doubts please visit
+our <a href="https://docs.ionoid.io/#/../NewProject/newProject?id=supported-boards-and-operating-systems-table" target="_blank" rel="noopener noreferrer">Supported boards
+Table<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.
+Current supported values for <code>$arch</code> are <code>amd64</code>, <code>arm</code> or <code>arm64</code>.</p></li> <li><p><code>GOARM=$version</code> If the target board architecture is <code>arm</code> then you have
+to set the <code>GOARM</code> or the <em>machine variable</em>. Current supported values
+are <code>6</code> or <code>7</code>. For a detailed explanation please visit the official
+<a href="https://github.com/golang/go/wiki/GoArm" target="_blank" rel="noopener noreferrer">Golang ARM Wiki<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p></li></ul> <p>Here is how to build Golang static binaries for each architecture:</p> <ul><li>ARMv6</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">env</span> <span class="token assign-left variable">CGO_ENABLED</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">GOOS</span><span class="token operator">=</span>linux <span class="token assign-left variable">GOARCH</span><span class="token operator">=</span>arm <span class="token assign-left variable">GOARM</span><span class="token operator">=</span><span class="token number">6</span> <span class="token punctuation">\</span>
+  go build -tags <span class="token string">'osusergo netgo'</span> -ldflags <span class="token string">'-extldflags &quot;-static&quot;'</span> main.go
+</code></pre></div><ul><li>ARMv7</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">env</span> <span class="token assign-left variable">CGO_ENABLED</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">GOOS</span><span class="token operator">=</span>linux <span class="token assign-left variable">GOARCH</span><span class="token operator">=</span>arm <span class="token assign-left variable">GOARM</span><span class="token operator">=</span><span class="token number">7</span> <span class="token punctuation">\</span>
+  go build -tags <span class="token string">'osusergo netgo'</span> -ldflags <span class="token string">'-extldflags &quot;-static&quot;'</span> main.go
+</code></pre></div><ul><li>amd64</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">env</span> <span class="token assign-left variable">CGO_ENABLED</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">GOOS</span><span class="token operator">=</span>linux <span class="token assign-left variable">GOARCH</span><span class="token operator">=</span>amd64 <span class="token punctuation">\</span>
+  go build -tags <span class="token string">'osusergo netgo'</span> -ldflags <span class="token string">'-extldflags &quot;-static&quot;'</span> main.go
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">More Static Binaries</p> <p>Support for static binaries from other languages is under development and will
+be added soon.</p></div> <h3 id="deploy-static-binaries"><a href="#deploy-static-binaries" class="header-anchor">#</a> Deploy Static Binaries</h3> <p>When deploying static binaries with <a href="https://ionoid.io/" target="_blank" rel="noopener noreferrer">Ionoid.io<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, there is
+no need to put it inside docker or write an <code>app.yaml</code> file for it. If your
+application has no external dependencies on files or other
+applications, just upload it to the internet and point Ionoid.io
+to its deployment URL.</p> <p>An <code>app.yaml</code> file will be auto-generated on the fly at the devices
+level using the following format:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> $myappname
+<span class="token key atrule">version</span><span class="token punctuation">:</span> $unixtimestamp
+<span class="token key atrule">apps</span><span class="token punctuation">:</span>
+  <span class="token key atrule">$myappname</span><span class="token punctuation">:</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> /bin/$myappname
+</code></pre></div><h4 id="example-of-a-generated-app-yaml-file"><a href="#example-of-a-generated-app-yaml-file" class="header-anchor">#</a> Example of a generated <code>app.yaml</code> file</h4> <p>Given the <em>hello-world</em> example app (visit <a href="https://github.com/ionoid-io-projects/apps/tree/master/hello-world" target="_blank" rel="noopener noreferrer">this link<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to find
+the complete source files and binaries of the app), the auto-generated
+<code>app.yaml</code> file will be:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>world
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">1583693787</span>
+<span class="token key atrule">apps</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hello-world</span><span class="token punctuation">:</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span>  /bin/hello<span class="token punctuation">-</span>world
+</code></pre></div><p>Where:</p> <ul><li><p><em>hello-world</em> is the the last resource file name from the URL path.
+For example that taken from the followinf URL
+<code>https://github.apps.ionoid.net/hello-world/arm6/build/bin/hello-world</code></p></li> <li><p><em>1583693787</em> is the Unix timestamp at the moment of deployment.</p></li></ul> <p>To deploy your static binaries, upload them to the internet, and point the
+deployment URL to the right one:</p> <p><img src="/steps/projects-and-devices/app-deployment.png" alt="Deploy Static Binary"></p> <p>For more examples please visit our hosted sample apps here: <a href="https://github.apps.ionoid.net/" target="_blank" rel="noopener noreferrer">Ionoid.io
+Sample Apps<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="custom-block tip"><p class="custom-block-title">Note</p> <p>More robust deployment methods are being developed, they will be added soon.</p></div> <h2 id="archive-apps"><a href="#archive-apps" class="header-anchor">#</a> Archive Apps</h2> <p>Archive apps are compressed files in
+<a href="https://en.wikipedia.org/wiki/Tar_(computing)" target="_blank" rel="noopener noreferrer">tar<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> or
+<a href="https://en.wikipedia.org/wiki/Zip_(file_format)" target="_blank" rel="noopener noreferrer">zip<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> formats. They are
+composed of the following parts:</p> <ul><li>The <code>app.yaml</code> file: it encodes the basic information of the app</li> <li>The <code>bin/</code> directory: it is the binary directory where the app resides</li> <li>The <code>meta/</code> directory (Optional): it contains extra app metadata</li> <li>Other files and/or directories (Optional): it consists of the rest of app
+file system and other dependency files.</li></ul> <p>The content of the <code>app.yaml</code> file would be (as in the
+<a href="https://github.com/ionoid/docs-examples/blob/master/archives/hello-world-armv7-v0.2.tar?raw=true" target="_blank" rel="noopener noreferrer">IoT App Golang Hello World<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+for example):</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>world
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">1.0</span>
+<span class="token key atrule">apps</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hello-world</span><span class="token punctuation">:</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> /bin/hello<span class="token punctuation">-</span>world
+</code></pre></div><p>Since archive apps are archive files that contain the app and its dependencies,
+there are several Open Source based methods to build such archive files.
+The following sections details this with real examples.</p> <h3 id="minimal-archive-apps"><a href="#minimal-archive-apps" class="header-anchor">#</a> Minimal Archive Apps</h3> <p>The following is a minimal simple way to build archive apps, these steps describe
+how to manually build the previous <a href="https://github.com/ionoid/docs-examples/blob/master/archives/hello-world-armv7-v0.2.tar?raw=true" target="_blank" rel="noopener noreferrer">Hello World IoT App<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> example for <code>ARMv7</code>:</p> <ul><li>Create the app directory <code>hello-world</code>:</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> hello-world
+<span class="token builtin class-name">cd</span> hello-world
+</code></pre></div><p>1 - Populate the app directory with <code>app.yaml</code> and executable files:</p> <div class="language- extra-class"><pre class="language-text"><code>hello-world
+├── app.yaml
+└── bin
+    └── hello-world
+</code></pre></div><p>2 - Generate the app tar archive, in the following example, we assume we build
+for ARMv7 so we make it clear in the file name:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">tar</span> cvvf hello-world-armv7-v0.2.tar -C hello-world --transform<span class="token operator">=</span><span class="token string">'s,^./,,'</span> <span class="token builtin class-name">.</span>
+</code></pre></div><p>3 - The <code>hello-world-armv7-v0.2.tar</code> is our final app that can be deployed to
+IoT Devices</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>When generating the app archive, it can be compressed to save deployment data
+usage with the following command:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">tar</span> czvf hello-world-armv7-v0.2.tar.gz -C hello-world --transform<span class="token operator">=</span><span class="token string">'s,^./,,'</span> <span class="token builtin class-name">.</span>
+</code></pre></div></div> <h3 id="docker-archive-apps"><a href="#docker-archive-apps" class="header-anchor">#</a> Docker Archive Apps</h3> <p><a href="https://docker.com" target="_blank" rel="noopener noreferrer">Docker<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> offers the necessary tooling to build containers,
+then export them as archive apps. This laverages IoT and Edge apps to be as
+simple as possible using the <a href="#app-yaml-format">App YAML file</a>, while at the
+same time offers the unique way to run apps without including complex containers
+feautres that are more suited for the cloud.</p> <p>Please refer to the next chaper <a href="https://docs.ionoid.io/docs/build-iot-archive-apps.html" target="_blank" rel="noopener noreferrer">Build IoT and Edge Apps<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to see how to take
+advantage of docker, export and build archive apps.</p> <h3 id="mkiot-archive-apps"><a href="#mkiot-archive-apps" class="header-anchor">#</a> Mkiot Archive Apps</h3> <p><a href="#make-iot-apps">Make IoT Apps</a> is our standard method to build lightweight self
+contained IoT and Edge apps. For more details, please refer to the next chapter
+<a href="https://docs.ionoid.io/docs/build-iot-archive-apps.html" target="_blank" rel="noopener noreferrer">Build IoT and Edge Apps<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to build IoT archive
+apps using <a href="https://github.com/ionoid/mkiot" target="_blank" rel="noopener noreferrer">mkiot<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h3 id="debian-deboostrap-apps"><a href="#debian-deboostrap-apps" class="header-anchor">#</a> Debian deboostrap Apps</h3> <p><a href="https://wiki.debian.org/Debootstrap" target="_blank" rel="noopener noreferrer">Debian debootstrap<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> is an Open Source tool
+to bootstrap a basic Debian image. The application, its bundles and the
+<code>app.yaml</code> file should all be added to the Debian image that will be used to
+generate the artifact tarball.</p> <h2 id="docker-containers"><a href="#docker-containers" class="header-anchor">#</a> Docker containers</h2> <p><a href="https://ionoid.io/" target="_blank" rel="noopener noreferrer">Ionoid.io<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> supports <a href="https://docker.com" target="_blank" rel="noopener noreferrer">docker<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> containers
+and apps that are handled directly by docker.</p> <p><strong>This will be released soon.</strong></p> <div class="content__default"><div class="custom-block tip"><p class="custom-block-title">Have Questions?</p> <p>We're always happy to help with IoT projects or other questions you might have!
+Check our <a href="https://docs.ionoid.io/" target="_blank" rel="noopener noreferrer">documentation<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, contact our
+support team at <a href="mailto:support@ionoid.io">support@ionoid.io</a>, or our sales team <a href="mailto:sales@opendevices.io">sales@opendevices.io</a>.
+You can also ask questions on <a href="https://forums.ionoid.io/" target="_blank" rel="noopener noreferrer">our forums<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> or
+<a href="https://github.com/ionoid/docs.ionoid.io/issues" target="_blank" rel="noopener noreferrer">open an issue on Github<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/deploy-iot-apps.html" class="prev">
+        Deploy IoT Apps
+      </a></span> <span class="next"><a href="/docs/build-iot-archive-apps.html">
+        Build IoT and Edge Apps
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f5f1b09f.js" defer></script><script src="/assets/js/2.a6564bc5.js" defer></script><script src="/assets/js/33.a118f842.js" defer></script><script src="/assets/js/17.b8d784b9.js" defer></script><script src="/assets/js/20.47dca73b.js" defer></script>
+  </body>
+</html>
